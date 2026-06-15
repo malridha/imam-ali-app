@@ -24,7 +24,7 @@ import { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import {
-  TEACHINGS_THEMES,
+  ALL_WISDOM,
   POETRY_SECTION,
   DUA_SECTION,
   LETTERS_SECTION,
@@ -122,21 +122,24 @@ export default function Search() {
       )
     }
 
-    // Wisdom — flatten themes (dedupe entries that appear in multiple themes).
+    // Wisdom — search the ENTIRE corpus (every authenticated saying),
+    // not just the curated themes. Dedupe identical entries and cap the
+    // number rendered so a very broad query stays responsive.
+    const WISDOM_CAP = 150
     const seenWisdom = new Set<string>()
-    for (const theme of TEACHINGS_THEMES) {
-      for (const e of theme.entries) {
-        const key = e.arabic + '|' + e.english
-        if (seenWisdom.has(key)) continue
-        if (matchEntry(e)) {
-          out.push({
-            kind: 'short',
-            type: 'wisdom',
-            entry: e,
-            section: theme.title[lang],
-          })
-          seenWisdom.add(key)
-        }
+    let wisdomCount = 0
+    for (const e of ALL_WISDOM) {
+      const key = e.arabic + '|' + e.english
+      if (seenWisdom.has(key)) continue
+      seenWisdom.add(key)
+      if (matchEntry(e)) {
+        out.push({
+          kind: 'short',
+          type: 'wisdom',
+          entry: e,
+          section: e.source,
+        })
+        if (++wisdomCount >= WISDOM_CAP) break
       }
     }
 

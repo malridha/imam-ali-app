@@ -122,7 +122,7 @@ const CORPUS_WISDOM: BaselineEntry[] = [
 ]
 
 // ── Combined library — all wisdom from corpus + baseline.
-const ALL_WISDOM: BaselineEntry[] = [...CORPUS_WISDOM, ...BASELINE_WISDOM]
+export const ALL_WISDOM: BaselineEntry[] = [...CORPUS_WISDOM, ...BASELINE_WISDOM]
 
 // Helper: gather entries whose theme tag contains any of the keywords.
 function entriesMatching(keywords: string[]): BaselineEntry[] {
@@ -605,6 +605,58 @@ export const TEACHINGS_THEMES: TeachingsTheme[] = [
     ]),
   },
 ]
+
+// ── Browse-by-source view — a COMPLETE partition of every wisdom entry
+// by its origin text. Unlike TEACHINGS_THEMES (a curated, keyword-matched
+// subset), these four sections together contain all of ALL_WISDOM, so
+// every authenticated saying has a browsable home — not only the ~12%
+// that happen to match a curated theme's keywords.
+function entriesFromSource(test: (source: string) => boolean): BaselineEntry[] {
+  return ALL_WISDOM.filter((e) => test(e.source))
+}
+
+export const WISDOM_BY_SOURCE: TeachingsTheme[] = [
+  {
+    id: 'src-ghurar',
+    title: { en: 'Ghurar al-Hikam', ar: 'غُرَر الحِكَم' },
+    lead: {
+      en: "The collected aphorisms of Imam Ali — al-Āmidī's classic compilation of his short wisdom.",
+      ar: 'مجموعة حِكَم الإمام عليّ القصار — تصنيف الآمِدي.',
+    },
+    entries: entriesFromSource((s) => s.includes('Ghurar')),
+  },
+  {
+    id: 'src-nahj-sayings',
+    title: { en: 'Nahj al-Balagha — Sayings', ar: 'نهج البلاغة — الحِكَم' },
+    lead: {
+      en: 'The short sayings (ḥikam) gathered in Nahj al-Balagha.',
+      ar: 'الحِكَم القِصار المجموعة في نهج البلاغة.',
+    },
+    entries: entriesFromSource(
+      (s) => s.includes('Nahj') && !/sermon/i.test(s),
+    ),
+  },
+  {
+    id: 'src-nahj-sermons',
+    title: { en: 'Nahj al-Balagha — Sermons', ar: 'نهج البلاغة — الخُطَب' },
+    lead: {
+      en: 'Excerpts from the sermons (khuṭab) of Nahj al-Balagha.',
+      ar: 'مقاطع من خُطَب نهج البلاغة.',
+    },
+    entries: entriesFromSource((s) => s.includes('Nahj') && /sermon/i.test(s)),
+  },
+  {
+    id: 'src-other',
+    title: { en: 'Other Authenticated Traditions', ar: 'مرويات موثّقة أخرى' },
+    lead: {
+      en: 'From al-Kafi, the Ṣaḥīḥ collections, and other authenticated sources.',
+      ar: 'من الكافي والصِّحاح ومصادر موثّقة أخرى.',
+    },
+    entries: entriesFromSource(
+      (s) => !s.includes('Ghurar') && !s.includes('Nahj'),
+    ),
+  },
+].filter((section) => section.entries.length > 0)
 
 // ── Poetry section, drawn entirely from BASELINE_POETRY.
 export const POETRY_SECTION = {

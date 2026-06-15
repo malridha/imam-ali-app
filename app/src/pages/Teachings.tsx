@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import {
   TEACHINGS_THEMES,
+  WISDOM_BY_SOURCE,
   POETRY_SECTION,
   DUA_SECTION,
   LETTERS_SECTION,
@@ -37,6 +38,11 @@ export default function Teachings() {
   const isAr = lang === 'ar'
   const [search, setSearch] = useState('')
   const [speakingId, setSpeakingId] = useState<string | null>(null)
+  // How many entries to render per section (large source sections are
+  // paginated so the page stays light — "Show more" extends them).
+  const [shown, setShown] = useState<Record<string, number>>({})
+  const INITIAL = 15
+  const STEP = 30
 
   const allSections: (ShortSection | LongFormSection)[] = useMemo(
     () => [
@@ -45,6 +51,7 @@ export default function Teachings() {
       LETTERS_SECTION,
       SERMONS_SECTION,
       POETRY_SECTION,
+      ...WISDOM_BY_SOURCE,
     ],
     [],
   )
@@ -232,27 +239,67 @@ export default function Teachings() {
                 {section.lead[lang]}
               </div>
 
-              {isLongForm(section)
-                ? section.entries.map((entry, i) => (
-                    <LongCard
-                      key={`${section.id}-${i}`}
-                      entry={entry}
-                      id={`${section.id}-${i}`}
-                      speakingId={speakingId}
-                      onSpeak={speak}
-                      lang={lang}
-                    />
-                  ))
-                : section.entries.map((entry, i) => (
-                    <TeachingCard
-                      key={`${section.id}-${i}`}
-                      entry={entry}
-                      id={`${section.id}-${i}`}
-                      speakingId={speakingId}
-                      onSpeak={speak}
-                      lang={lang}
-                    />
-                  ))}
+              {(() => {
+                const limit = shown[section.id] ?? INITIAL
+                const total = section.entries.length
+                const remaining = total - Math.min(limit, total)
+                const showMore = remaining > 0 && (
+                  <button
+                    onClick={() =>
+                      setShown((s) => ({ ...s, [section.id]: limit + STEP }))
+                    }
+                    style={{
+                      display: 'block',
+                      width: '100%',
+                      padding: '9px 14px',
+                      marginTop: 4,
+                      borderRadius: 8,
+                      border: '1px solid var(--border)',
+                      background: 'transparent',
+                      color: 'var(--gold)',
+                      cursor: 'pointer',
+                      fontSize: 12,
+                      letterSpacing: '0.04em',
+                    }}
+                  >
+                    {isAr
+                      ? `عرض المزيد (${remaining} متبقّية)`
+                      : `Show more (${remaining} remaining)`}
+                  </button>
+                )
+                if (isLongForm(section)) {
+                  return (
+                    <>
+                      {section.entries.slice(0, limit).map((entry, i) => (
+                        <LongCard
+                          key={`${section.id}-${i}`}
+                          entry={entry}
+                          id={`${section.id}-${i}`}
+                          speakingId={speakingId}
+                          onSpeak={speak}
+                          lang={lang}
+                        />
+                      ))}
+                      {showMore}
+                    </>
+                  )
+                }
+                return (
+                  <>
+                    {section.entries.slice(0, limit).map((entry, i) => (
+                      <TeachingCard
+                        key={`${section.id}-${i}`}
+                        entry={entry}
+                        id={`${section.id}-${i}`}
+                        speakingId={speakingId}
+                        onSpeak={speak}
+                        lang={lang}
+                      />
+                    ))}
+                    {showMore}
+                  </>
+                )
+              })()}
             </section>
           ))
         )}
