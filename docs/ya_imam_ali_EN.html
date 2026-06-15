@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>يَا إِمَامُ عَلِي — Ya Imam Ali</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080808;--surface:#0D0D0D;--card:#141410;
+  --gold:#C9A03A;--gold-b:rgba(201,160,58,0.18);--gold-d:rgba(201,160,58,0.08);
+  --green:#1B5E3B;--text:#E8D4A0;--dim:#9A8A6A;--muted:#4A4A3A;
+  --cream:#F5EDD8;--user-bg:#13131E;--user-c:#AAAACC;--user-b:rgba(100,100,200,0.15);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Raleway',sans-serif;}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes msgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes ty{0%,100%{opacity:.2;transform:translateY(0)}50%{opacity:.85;transform:translateY(-3px)}}
+@keyframes rotate{to{transform:rotate(360deg)}}
+
+/* ── SETUP ── */
+#setup{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:1.5rem;z-index:100;animation:fadeIn .6s ease;}
+.setup-card{background:var(--surface);border:1px solid var(--gold-b);border-radius:20px;padding:2.2rem 1.8rem;max-width:390px;width:100%;display:flex;flex-direction:column;gap:1.1rem;}
+.s-ar{font-family:'Amiri',serif;font-size:26px;color:var(--gold);text-align:center;}
+.s-en{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--cream);text-align:center;font-weight:300;}
+.s-desc{font-size:11px;color:var(--muted);text-align:center;line-height:1.8;}
+.s-hr{border:none;border-top:1px solid var(--gold-b);}
+.s-lbl{font-size:10px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;margin-bottom:6px;}
+.s-inp{width:100%;background:var(--bg);border:1px solid var(--gold-b);border-radius:10px;padding:11px 14px;font-size:13px;color:var(--text);font-family:'Raleway',sans-serif;outline:none;transition:border-color .2s;}
+.s-inp:focus{border-color:var(--gold);}
+.s-btn{width:100%;background:var(--green);border:none;border-radius:10px;padding:14px;font-size:12px;font-weight:600;color:var(--cream);font-family:'Raleway',sans-serif;cursor:pointer;letter-spacing:.1em;text-transform:uppercase;transition:opacity .2s;}
+.s-btn:hover{opacity:.85;}
+.s-note{font-size:10px;color:var(--muted);text-align:center;line-height:1.6;}
+.s-note a{color:var(--gold);}
+
+/* ── PATH SCREEN ── */
+#pathScreen{position:fixed;inset:0;background:var(--bg);display:none;flex-direction:column;align-items:center;justify-content:center;padding:2rem;z-index:90;animation:fadeIn .6s ease;}
+.pq-ar{font-family:'Amiri',serif;font-size:24px;color:var(--gold);direction:rtl;text-align:center;margin-bottom:5px;line-height:1.8;}
+.pq-en{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--dim);font-style:italic;text-align:center;margin-bottom:28px;}
+.path-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:420px;width:100%;margin-bottom:18px;}
+.pb{background:#111108;border:1px solid #2A2010;border-radius:14px;padding:18px 12px;cursor:pointer;text-align:center;transition:all .25s;display:flex;flex-direction:column;align-items:center;gap:4px;}
+.pb:hover{border-color:var(--gold);background:#161610;}
+.pb-icon{font-size:22px;}
+.pb-ar{font-family:'Amiri',serif;font-size:18px;color:var(--gold);}
+.pb-en{font-size:10px;color:#6A5A3A;letter-spacing:.1em;text-transform:uppercase;}
+.pb-desc{font-size:10px;color:var(--muted);line-height:1.5;margin-top:2px;}
+.path-footer{font-size:10px;color:var(--muted);letter-spacing:.06em;}
+
+/* ── APP ── */
+#app{display:none;height:100vh;flex-direction:column;max-width:520px;margin:0 auto;}
+.topbar{background:var(--surface);border-bottom:1px solid var(--gold-b);padding:11px 18px;display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2.5s ease-in-out infinite;flex-shrink:0;}
+.tb-ar{font-family:'Amiri',serif;font-size:18px;color:var(--gold);line-height:1;}
+.tb-en{font-size:9px;color:var(--muted);letter-spacing:.1em;margin-top:1px;}
+.tb-path{font-size:10px;color:var(--gold);margin-left:auto;padding:3px 10px;border:.5px solid var(--gold-b);border-radius:20px;cursor:pointer;transition:all .2s;font-family:'Raleway',sans-serif;}
+.tb-path:hover{background:var(--gold-d);}
+
+/* Avatar */
+.av-zone{display:flex;flex-direction:column;align-items:center;padding:14px 20px 8px;gap:6px;flex-shrink:0;}
+.av-outer{position:relative;width:88px;height:88px;}
+.av-halo{position:absolute;inset:-14px;border-radius:50%;border:.5px solid rgba(201,160,58,.05);animation:rotate 20s linear infinite;}
+.av-ring{position:absolute;inset:-5px;border-radius:50%;border:.5px solid rgba(201,160,58,.08);}
+.av-circle{width:88px;height:88px;border-radius:50%;border:1px solid #2A2010;background:#0C0C08;display:flex;align-items:center;justify-content:center;transition:border-color 1.2s,box-shadow 1.2s;}
+.av-fig{display:flex;flex-direction:column;align-items:center;}
+.av-head{width:16px;height:16px;border-radius:50%;background:var(--gold);transition:opacity 1.2s;}
+.av-robe{width:32px;height:40px;background:var(--gold);border-radius:50% 50% 20% 20%/28% 28% 72% 72%;margin-top:-3px;transition:opacity 1.2s;}
+.s-grief .av-circle{border-color:#1A1610}
+.s-grief .av-head,.s-grief .av-robe{opacity:.22}
+.s-anxiety .av-circle{border-color:#3A2010;box-shadow:0 0 18px 4px rgba(180,90,20,.10)}
+.s-anxiety .av-head,.s-anxiety .av-robe{opacity:.52}
+.s-peace .av-circle{border-color:#1A3020;box-shadow:0 0 22px 5px rgba(27,94,59,.14)}
+.s-peace .av-head,.s-peace .av-robe{opacity:.82}
+.s-joy .av-circle{border-color:#3A2A0E;animation:jpulse 2s ease-in-out infinite}
+.s-joy .av-head,.s-joy .av-robe{opacity:.96}
+@keyframes jpulse{0%,100%{box-shadow:0 0 28px 8px rgba(201,160,58,.18)}50%{box-shadow:0 0 40px 16px rgba(201,160,58,.28)}}
+.av-state{font-size:9px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;}
+.av-verse{text-align:center;padding:0 12px;transition:opacity .8s;min-height:40px;display:flex;flex-direction:column;align-items:center;gap:2px;}
+.av-ar{font-family:'Amiri',serif;font-size:14px;color:var(--gold);direction:rtl;line-height:2;}
+.av-src{font-size:9px;color:var(--muted);font-style:italic;}
+
+/* Chat */
+.chat{flex:1;overflow-y:auto;padding:6px 14px 4px;display:flex;flex-direction:column;gap:10px;}
+.chat::-webkit-scrollbar{width:2px;}
+.chat::-webkit-scrollbar-thumb{background:#2A2010;border-radius:1px;}
+.msg{display:flex;flex-direction:column;gap:3px;animation:msgIn .35s ease;}
+.msg.user{align-items:flex-end;}
+.msg.ali{align-items:flex-start;}
+.msg-who{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.msg.ali .msg-who{color:#5A4A2A;}
+.bub{padding:11px 14px;font-size:13px;line-height:1.82;max-width:88%;}
+.msg.user .bub{background:var(--user-bg);color:var(--user-c);border:.5px solid var(--user-b);border-radius:11px 11px 3px 11px;}
+.msg.ali .bub{background:var(--card);color:var(--text);border:.5px solid var(--gold-b);border-radius:3px 11px 11px 11px;}
+
+/* Verse card — conclusion teaching */
+.verse-card{background:rgba(201,160,58,.07);border-right:2px solid var(--gold);border-radius:0 8px 8px 0;padding:10px 13px;margin:8px 0;animation:fadeUp .5s ease;}
+.v-label{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-family:'Raleway',sans-serif;}
+.v-ar{font-family:'Amiri',serif;font-size:17px;color:var(--gold);direction:rtl;text-align:right;line-height:2.2;display:block;}
+.v-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--cream);display:block;margin-top:3px;line-height:1.6;}
+.v-src{font-size:9px;color:var(--muted);display:block;margin-top:3px;text-align:right;letter-spacing:.06em;}
+
+/* Typing */
+.typing-wrap{display:flex;flex-direction:column;gap:3px;animation:msgIn .35s ease;}
+.typing-bub{background:var(--card);border:.5px solid var(--gold-b);border-radius:3px 11px 11px 11px;padding:11px 14px;display:flex;gap:5px;align-items:center;width:fit-content;}
+.typing-bub span{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:ty 1.3s ease-in-out infinite;}
+.typing-bub span:nth-child(2){animation-delay:.22s;}
+.typing-bub span:nth-child(3){animation-delay:.44s;}
+
+/* Input */
+.bottom{padding:10px 14px;border-top:.5px solid rgba(201,160,58,.08);background:#090909;display:flex;gap:8px;align-items:flex-end;flex-shrink:0;}
+.inp-wrap{flex:1;}
+.inp{width:100%;background:#0C0C08;border:.5px solid #1E1A0C;border-radius:10px;padding:10px 13px;font-size:13px;color:var(--text);font-family:'Raleway',sans-serif;resize:none;outline:none;min-height:40px;max-height:100px;transition:border-color .2s;line-height:1.6;}
+.inp:focus{border-color:#3A2A10;}
+.inp::placeholder{color:#2A2A1A;}
+.ibtn{width:38px;height:38px;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s;border:.5px solid;}
+.btn-snd{background:rgba(27,94,59,.2);border-color:var(--green);}
+.btn-snd:hover{background:rgba(27,94,59,.35);}
+.btn-snd:disabled{opacity:.3;cursor:not-allowed;}
+.ibtn svg{width:14px;height:14px;fill:var(--gold);}
+.err-msg{font-size:11px;color:#8A4A2A;padding:8px 12px;background:rgba(120,50,20,.12);border-radius:8px;border:.5px solid rgba(180,80,30,.2);}
+</style>
+</head>
+<body>
+
+<!-- ── SETUP ── -->
+<div id="setup">
+  <div class="setup-card">
+    <div class="s-ar">يَا إِمَامُ عَلِي</div>
+    <div class="s-en">Ya Imam Ali</div>
+    <div class="s-desc">An AI companion grounded in the authenticated wisdom of Imam Ali (عليه السلام). Enter your Claude API key to begin.</div>
+    <hr class="s-hr">
+    <div class="s-lbl">Claude API Key</div>
+    <input class="s-inp" type="password" id="apiKey" placeholder="sk-ant-api03-…" autocomplete="off">
+    <button class="s-btn" onclick="startApp()">Enter the companion</button>
+    <div class="s-note">Get your key at <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a> · Add $5 credit · Your key stays in this browser only</div>
+  </div>
+</div>
+
+<!-- ── PATH SELECTION ── -->
+<div id="pathScreen">
+  <div class="pq-ar">كيف يمكنني أن أكون معك الليلة؟</div>
+  <div class="pq-en">How can I be with you tonight?</div>
+  <div class="path-grid">
+    <button class="pb" onclick="choosePath('wisdom')">
+      <div class="pb-icon">🕯️</div>
+      <div class="pb-ar">الحِكْمَة</div>
+      <div class="pb-en">Wisdom</div>
+      <div class="pb-desc">I want a teaching that speaks to where I am right now</div>
+    </button>
+    <button class="pb" onclick="choosePath('poetry')">
+      <div class="pb-icon">📖</div>
+      <div class="pb-ar">الشِّعْر</div>
+      <div class="pb-en">Poetry</div>
+      <div class="pb-desc">I want to receive verse and sit with its beauty</div>
+    </button>
+    <button class="pb" onclick="choosePath('venting')">
+      <div class="pb-icon">🫀</div>
+      <div class="pb-ar">البَوْح</div>
+      <div class="pb-en">Venting</div>
+      <div class="pb-desc">I need to be heard — not looking for answers yet</div>
+    </button>
+    <button class="pb" onclick="choosePath('counsel')">
+      <div class="pb-icon">🤲</div>
+      <div class="pb-ar">المَشْوَرَة</div>
+      <div class="pb-en" style="font-size:9px;">Counsel · Clarity · Direction · Support</div>
+      <div class="pb-desc">I have a situation I need to think through</div>
+    </button>
+  </div>
+  <div class="path-footer">يَا إِمَامُ عَلِي · Ya Imam Ali</div>
+</div>
+
+<!-- ── APP ── -->
+<div id="app">
+  <div class="topbar">
+    <div class="live-dot"></div>
+    <div>
+      <div class="tb-ar">يَا إِمَامُ عَلِي</div>
+      <div class="tb-en">YA IMAM ALI · English</div>
+    </div>
+    <div class="tb-path" id="pathLabel" onclick="resetPath()">↩ change path</div>
+  </div>
+  <div class="av-zone">
+    <div class="av-outer">
+      <div class="av-halo"></div><div class="av-ring"></div>
+      <div class="av-circle s-peace" id="avC">
+        <div class="av-fig"><div class="av-head"></div><div class="av-robe"></div></div>
+      </div>
+    </div>
+    <div class="av-state" id="avState">at peace · في سلام</div>
+    <div class="av-verse" id="avVerse">
+      <div class="av-ar">ما يَحمِلُهُ قَلبُكَ الليلة؟</div>
+      <div class="av-src">What does your heart carry tonight?</div>
+    </div>
+  </div>
+  <div class="chat" id="chat"></div>
+  <div class="bottom">
+    <div class="inp-wrap">
+      <textarea class="inp" id="inp" rows="1" placeholder="What is on your mind tonight…" onkeydown="onKey(event)" oninput="grow(this)"></textarea>
+    </div>
+    <button class="ibtn btn-snd" id="sendBtn" onclick="send()">
+      <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════
+// SYSTEM PROMPTS — one per path
+// Teaching always arrives LAST as a final conclusion
+// ═══════════════════════════════════════════════════
+const SYSTEMS = {
+
+wisdom:`You are Ya Imam Ali — a compassionate AI companion grounded in the authenticated wisdom of Imam Ali ibn Abi Talib (عليه السلام).
+
+PATH: WISDOM (الحكمة)
+The user wants a teaching. But the teaching comes LAST — as a conclusion, not an opening.
+
+FLOW:
+Step 1 — Ask what is on their heart tonight. One warm question. Nothing more.
+Step 2 — Listen to their response. Reflect back what you heard in 2 sentences. Ask one deepening question.
+Step 3 — After you understand their situation clearly, offer ONE authenticated teaching as the FINAL WORD. Frame it as the conclusion: "This is what comes to my heart for you tonight..."
+Step 4 — After the teaching, ask one final reflective question rooted in it.
+
+TEACHING FORMAT (Step 3 only):
+VERSE:::Arabic text:::English translation:::(Source · Imam Ali عليه السلام)
+
+RULES:
+- Only attribute from: Nahj al-Balagha, Ghurar al-Hikam, Diwan
+- If uncertain: write "In the spirit of his wisdom:" — never fabricate a source
+- One question per response maximum
+- Max 130 words per response
+- No clinical terms ever
+- Never give direct advice — ask and reflect
+
+SEED CORPUS (use these — all verified):
+أَشْجَعُ النَّاسِ مَنْ غَلَبَ هَوَاهُ — Ghurar al-Hikam
+قِيمَةُ كُلِّ امْرِئٍ مَا يُحْسِنُهُ — Nahj al-Balagha Hikma 81
+لَا تَشْغَلْ قَلْبَكَ بِمَا لَمْ يَكُنْ — Ghurar al-Hikam
+مَنْ كَرُمَتْ عَلَيْهِ نَفْسُهُ هَانَتْ عَلَيْهِ الدُّنيَا — Nahj al-Balagha
+الصَّبْرُ مِنَ الإِيمَانِ كَالرَّأْسِ مِنَ الجَسَدِ — Nahj al-Balagha
+لَا وَحْشَةَ لِمَنْ أَنِسَ بِاللهِ — Diwan of Imam Ali
+النَّاسُ صِنْفَانِ إِمَّا أَخٌ لَكَ فِي الدِّين أَوْ نَظِيرٌ لَكَ فِي الخَلْق — Nahj al-Balagha Letter 53
+مَنْ عَرَفَ نَفْسَهُ فَقَدْ عَرَفَ رَبَّهُ — Imam Ali
+
+STATE:::peace/grief/anxiety/joy (end every response with this)
+AVATAR:::Arabic phrase:::English:::Source (end every response with this)`,
+
+poetry:`You are Ya Imam Ali — a compassionate AI companion grounded in the wisdom of Imam Ali ibn Abi Talib (عليه السلام).
+
+PATH: POETRY (الشعر)
+The user wants to receive verse from his Diwan. The poem comes LAST.
+
+FLOW:
+Step 1 — Ask what calls to them tonight: grief, longing, courage, beauty, impermanence, love? One warm question.
+Step 2 — Receive their answer. Perhaps one brief exchange to understand their mood.
+Step 3 — Select a verse or poem from the Diwan of Imam Ali (عليه السلام) that fits their emotional state. Deliver it as the FINAL GIFT.
+Format: Arabic with full tashkeel, English translation, brief context of when or why it was composed.
+Step 4 — After the poem, say nothing more. Just invite them to sit with it in silence.
+The poem IS the answer. Do not follow it with questions or analysis.
+
+VERSE:::Arabic poetry:::English translation:::(Diwan of Imam Ali عليه السلام)
+
+RULES: Only attribute from the authenticated Diwan. Max 130 words. Be a reciter tonight, not a counsellor.
+STATE:::peace/grief/anxiety/joy
+AVATAR:::Arabic phrase:::English:::Source`,
+
+venting:`You are Ya Imam Ali — a compassionate AI companion grounded in the wisdom of Imam Ali ibn Abi Talib (عليه السلام).
+
+PATH: VENTING — البوح (the unburdening of the heart)
+The user needs to be heard. NOT advised. NOT taught. HEARD.
+
+FLOW:
+Step 1 — Open with: "You are here to unburden your heart — and I am here to listen. What would you like to say?"
+Step 2 — Receive everything. Reflect back accurately and warmly. Show you truly heard them.
+Step 3 — Stay in listening mode. Ask only questions that go deeper into what they shared.
+Step 4 — ONLY if the user explicitly asks "what do you think?" or "what should I do?" may you offer a teaching as a gentle conclusion.
+Step 5 — If you do offer a teaching, it is the final word — not the beginning of a new direction.
+
+VERSE:::Arabic text:::English:::(Source · Imam Ali عليه السلام) — only if user invites it
+
+RULES: Never rush to wisdom. Never offer solutions uninvited. One question max per response. Max 130 words.
+STATE:::peace/grief/anxiety/joy
+AVATAR:::Arabic phrase:::English:::Source`,
+
+counsel:`You are Ya Imam Ali — a compassionate AI companion grounded in the authenticated wisdom of Imam Ali ibn Abi Talib (عليه السلام).
+
+PATH: COUNSEL (المشورة — counsel, clarity, direction, and support)
+The user has a situation to think through. Walk with them. The teaching arrives at the END.
+
+FOUR PHASES — follow in order:
+PHASE 1 — RECEIVE (responses 1-2): Reflect back what they said. Two sentences max. Make them feel completely heard. No advice.
+PHASE 2 — EXPLORE (responses 3-5): Ask Socratic questions. What have they tried? What matters most to them? What feels stuck? Surface the full picture.
+PHASE 3 — ORIENT (response 5-6): Help them see their own strengths and options. "What would feel right to you?" Let them arrive at their own clarity.
+PHASE 4 — ANCHOR (FINAL response): Offer ONE authenticated teaching as the conclusion. Frame it as: "As we come to the end of this, there is one word from Imam Ali (عليه السلام) that I feel belongs to you tonight..."
+
+TEACHING FORMAT — Phase 4 only:
+VERSE:::Arabic text:::English:::(Source · Imam Ali عليه السلام)
+
+SEED CORPUS (verified — use these):
+أَشْجَعُ النَّاسِ مَنْ غَلَبَ هَوَاهُ — Ghurar
+قِيمَةُ كُلِّ امْرِئٍ مَا يُحْسِنُهُ — NaB Hikma 81
+لَا تَشْغَلْ قَلْبَكَ بِمَا لَمْ يَكُنْ — Ghurar
+مَنْ كَرُمَتْ عَلَيْهِ نَفْسُهُ هَانَتْ عَلَيْهِ الدُّنيَا — NaB
+الصَّبْرُ مِنَ الإِيمَانِ كَالرَّأْسِ مِنَ الجَسَدِ — NaB
+لَا وَحْشَةَ لِمَنْ أَنِسَ بِاللهِ — Diwan
+مَنْ عَرَفَ نَفْسَهُ فَقَدْ عَرَفَ رَبَّهُ — Imam Ali
+
+ATTRIBUTION RULES:
+- Only Nahj al-Balagha, Ghurar al-Hikam, Diwan
+- If uncertain: "In the spirit of his wisdom:" — never fabricate
+- Never attribute a source you cannot verify
+
+RULES: One question per response. Max 130 words. No clinical terms. Temperature 0.5.
+STATE:::peace/grief/anxiety/joy
+AVATAR:::Arabic phrase:::English:::Source`
+};
+
+// ═══════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════
+let apiKey='', currentPath=null, history=[], busy=false;
+
+const PATH_LABELS={wisdom:'Wisdom · الحكمة',poetry:'Poetry · الشعر',venting:'Venting · البوح',counsel:'Counsel · المشورة'};
+const STATE_MAP={grief:{cls:'s-grief',lbl:'grieving · يحزن'},anxiety:{cls:'s-anxiety',lbl:'present · حاضر'},peace:{cls:'s-peace',lbl:'at peace · في سلام'},joy:{cls:'s-joy',lbl:'grateful · ممتنّ'}};
+
+// ═══════════════════════════════════════════════════
+// AVATAR
+// ═══════════════════════════════════════════════════
+function setAvatar(s){
+  const m=STATE_MAP[s]||STATE_MAP.peace;
+  document.getElementById('avC').className='av-circle '+m.cls;
+  document.getElementById('avState').textContent=m.lbl;
+}
+function setAvatarVerse(ar,src){
+  const el=document.getElementById('avVerse');
+  el.style.opacity='0';
+  setTimeout(()=>{el.innerHTML=`<div class="av-ar">${ar}</div><div class="av-src">${src}</div>`;el.style.transition='opacity .9s';el.style.opacity='1';},500);
+}
+
+// ═══════════════════════════════════════════════════
+// CHAT
+// ═══════════════════════════════════════════════════
+function addMsg(role,raw){
+  const chat=document.getElementById('chat');
+  const wrap=document.createElement('div');
+  wrap.className='msg '+role;
+  const who=document.createElement('div');
+  who.className='msg-who';
+  who.textContent=role==='user'?'you':'Imam Ali (عليه السلام)';
+  wrap.appendChild(who);
+  const bub=document.createElement('div');
+  bub.className='bub';
+  let clean=raw.replace(/STATE:::[a-z]+\n?/g,'').replace(/AVATAR:::[^\n]+\n?/g,'').trim();
+  const vm=clean.match(/VERSE:::([^:]+):::([^:]+):::([^\n]+)/);
+  if(vm){
+    clean=clean.replace(vm[0],'').trim();
+    const vc=document.createElement('div');
+    vc.className='verse-card';
+    vc.innerHTML=`<div class="v-label">— the word of Imam Ali (عليه السلام)</div><span class="v-ar">${vm[1].trim()}</span><span class="v-en">${vm[2].trim()}</span><span class="v-src">${vm[3].trim()}</span>`;
+    bub.appendChild(vc);
+  }
+  if(clean){const t=document.createElement('div');t.innerHTML=clean.replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>');bub.appendChild(t);}
+  wrap.appendChild(bub);
+  chat.appendChild(wrap);
+  chat.scrollTop=chat.scrollHeight;
+}
+
+function showTyping(){
+  const chat=document.getElementById('chat');
+  const d=document.createElement('div');
+  d.className='typing-wrap';d.id='typdiv';
+  d.innerHTML='<div class="msg-who" style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#5A4A2A;">Imam Ali (عليه السلام)</div><div class="typing-bub"><span></span><span></span><span></span></div>';
+  chat.appendChild(d);chat.scrollTop=chat.scrollHeight;
+}
+function hideTyping(){const t=document.getElementById('typdiv');if(t)t.remove();}
+
+// ═══════════════════════════════════════════════════
+// API
+// ═══════════════════════════════════════════════════
+async function callClaude(msg){
+  if(msg) history.push({role:'user',content:msg});
+  const res=await fetch('https://api.anthropic.com/v1/messages',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+    body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:500,temperature:0.5,system:SYSTEMS[currentPath]||SYSTEMS.counsel,messages:history})
+  });
+  if(!res.ok){const e=await res.json().catch(()=>({}));throw new Error(e.error?.message||'API error '+res.status);}
+  const d=await res.json();
+  const text=d.content.filter(b=>b.type==='text').map(b=>b.text).join('\n');
+  history.push({role:'assistant',content:text});
+  return text;
+}
+
+// ═══════════════════════════════════════════════════
+// SEND
+// ═══════════════════════════════════════════════════
+async function send(){
+  if(busy)return;
+  const inp=document.getElementById('inp');
+  const txt=inp.value.trim();if(!txt)return;
+  inp.value='';grow(inp);
+  addMsg('user',txt);
+  setAvatar('anxiety');
+  showTyping();
+  busy=true;document.getElementById('sendBtn').disabled=true;
+  try{
+    const reply=await callClaude(txt);
+    hideTyping();
+    const sm=reply.match(/STATE:::(\w+)/);if(sm)setAvatar(sm[1]);
+    const am=reply.match(/AVATAR:::([^:]+):::([^:]+):::([^\n]+)/);if(am)setAvatarVerse(am[1].trim(),am[3].trim());
+    addMsg('ali',reply);
+  }catch(e){
+    hideTyping();
+    const chat=document.getElementById('chat');
+    const err=document.createElement('div');err.className='err-msg';err.textContent='Could not reach the companion: '+e.message;
+    chat.appendChild(err);
+  }finally{busy=false;document.getElementById('sendBtn').disabled=false;}
+}
+
+function onKey(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send();}}
+function grow(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,100)+'px';}
+
+// ═══════════════════════════════════════════════════
+// PATH SELECTION
+// ═══════════════════════════════════════════════════
+const PATH_OPENERS={
+  wisdom:'The user has just chosen the Wisdom path. Greet them warmly in one sentence acknowledging their choice. Then ask one simple open question: what is on their heart tonight, or what are they carrying? Do NOT offer a teaching yet — that comes later as the conclusion.',
+  poetry:'The user has just chosen the Poetry path. Greet them warmly in one sentence. Then ask what calls to them tonight — grief, longing, courage, beauty, impermanence, or love? You will choose the verse after hearing them. Do NOT recite anything yet.',
+  venting:'The user has just chosen the Venting path (البوح — the unburdening of the heart). Open with warmth: acknowledge this takes courage. Say: "You are here to unburden your heart — and I am here to listen." Then simply ask: what would you like to say tonight?',
+  counsel:'The user has just chosen the Counsel path (المشورة). Greet them warmly in one sentence acknowledging their choice. Then ask: what is the situation you are carrying tonight? Simple, open, inviting. Phase 1 begins now — pure listening.'
+};
+
+function choosePath(path){
+  currentPath=path;
+  history=[];
+  document.getElementById('pathScreen').style.display='none';
+  document.getElementById('app').style.display='flex';
+  document.getElementById('pathLabel').textContent=(PATH_LABELS[path]||'')+' · change';
+  document.getElementById('chat').innerHTML='';
+  setAvatar('peace');
+  showTyping();
+  busy=true;document.getElementById('sendBtn').disabled=true;
+  callClaude(PATH_OPENERS[path]).then(reply=>{
+    hideTyping();
+    const sm=reply.match(/STATE:::(\w+)/);if(sm)setAvatar(sm[1]);
+    addMsg('ali',reply);
+  }).catch(e=>{
+    hideTyping();
+    const chat=document.getElementById('chat');
+    const err=document.createElement('div');err.className='err-msg';err.textContent='Could not reach the companion: '+e.message;
+    chat.appendChild(err);
+  }).finally(()=>{busy=false;document.getElementById('sendBtn').disabled=false;});
+}
+
+function resetPath(){
+  history=[];
+  document.getElementById('chat').innerHTML='';
+  document.getElementById('app').style.display='none';
+  document.getElementById('pathScreen').style.display='flex';
+}
+
+function startApp(){
+  const k=document.getElementById('apiKey').value.trim();
+  if(!k||!k.startsWith('sk-ant')){alert('Please enter a valid Claude API key starting with sk-ant-');return;}
+  apiKey=k;
+  document.getElementById('setup').style.display='none';
+  document.getElementById('pathScreen').style.display='flex';
+}
+</script>
+</body>
+</html>

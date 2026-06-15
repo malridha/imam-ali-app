@@ -1,0 +1,313 @@
+/* ── Avatar — radiant presence on midnight ─────── */
+.av-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 20px 8px;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.av-outer {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.av-halo {
+  position: absolute;
+  inset: -22px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(201, 160, 58, 0.10);
+  animation: av-rotate 22s linear infinite;
+}
+
+.av-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(201, 160, 58, 0.16);
+}
+
+.av-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 179, 100, 0.32);
+  background: radial-gradient(
+    circle at 50% 45%,
+    #1c2c5e 0%,
+    #122149 70%,
+    #08122c 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 1.2s, box-shadow 1.2s;
+  overflow: hidden;
+  box-shadow: 0 0 36px 6px rgba(212, 179, 100, 0.14) inset,
+    0 0 32px 5px rgba(212, 179, 100, 0.22);
+}
+
+.av-fig {
+  width: 100px;
+  height: 130px;
+  display: block;
+  transition: opacity 1.2s, filter 1.2s;
+  /* Ambient breath — slow scale shift, suggests life at rest */
+  animation: av-breathe 6s ease-in-out infinite;
+  transform-origin: 50% 75%;
+}
+
+/* v44 §73 — when an image portrait is used instead of the SVG figure,
+   it fills the circle and is cover-fit. The breath animation still
+   applies via .av-fig above. */
+.av-fig-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+}
+.av-circle.has-image {
+  background: #02050d;
+}
+
+/* ── Sub-element animations (always on, very subtle) ─── */
+
+/* Bisht — gentle cloak sway, like cloth in a calm room */
+.av-bisht {
+  transform-origin: 40px 56px;
+  animation: av-cloak-sway 7.5s ease-in-out infinite;
+}
+
+/* Turban — barely-perceptible head settle */
+.av-turban {
+  transform-origin: 40px 18px;
+  animation: av-head-settle 9s ease-in-out infinite;
+}
+
+/* Hand at heart — hidden by default, fades up during speech */
+.av-hand {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.is-speaking .av-hand {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+/* ── Four emotional states — colour the aura ───── */
+.s-grief .av-circle {
+  border-color: rgba(110, 130, 150, 0.40);
+  box-shadow: 0 0 24px 4px rgba(80, 100, 130, 0.20) inset,
+    0 0 22px 3px rgba(80, 100, 130, 0.22);
+}
+.s-grief .av-fig {
+  filter: hue-rotate(-15deg) saturate(0.75) brightness(0.88);
+  opacity: 0.78;
+}
+
+.s-anxiety .av-circle {
+  border-color: rgba(217, 119, 66, 0.5);
+  box-shadow: 0 0 28px 5px rgba(217, 119, 66, 0.22) inset,
+    0 0 28px 4px rgba(217, 119, 66, 0.24);
+}
+.s-anxiety .av-fig {
+  filter: saturate(1.05) brightness(0.96);
+  opacity: 0.96;
+}
+
+.s-peace .av-circle {
+  border-color: rgba(46, 125, 91, 0.45);
+  box-shadow: 0 0 30px 5px rgba(46, 125, 91, 0.24) inset,
+    0 0 30px 4px rgba(46, 125, 91, 0.26);
+}
+.s-peace .av-fig {
+  opacity: 1;
+}
+
+.s-joy .av-circle {
+  border-color: rgba(201, 160, 58, 0.65);
+  animation: av-jpulse 2s ease-in-out infinite;
+}
+.s-joy .av-fig {
+  filter: brightness(1.1);
+  opacity: 1;
+}
+
+/* ── Speaking — gold-green breathing while audio plays ── */
+.av-circle.is-speaking {
+  animation: av-speak 1.4s ease-in-out infinite;
+}
+.av-circle.is-speaking .av-fig {
+  animation: av-speak-figure 1.4s ease-in-out infinite,
+    av-breathe 6s ease-in-out infinite;
+}
+
+/* ── Walking — Threshold uses this for the arrival ── */
+.av-circle.is-walking .av-fig {
+  animation: av-walk-in 3.4s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+.av-circle.is-walking {
+  /* During the walk, briefly deepen the inner gradient so the figure
+     "arrives from the night" rather than appearing inside its frame */
+  background: #04081a;
+  /* The frame itself swells outward as he steps forward, so it feels
+     like he is coming out of the page, not just enlarging in place. */
+  animation: av-frame-emerge 3.4s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+
+@keyframes av-frame-emerge {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 179, 100, 0);
+  }
+  60% {
+    box-shadow: 0 0 60px 14px rgba(212, 179, 100, 0.30) inset,
+      0 0 80px 18px rgba(212, 179, 100, 0.38);
+  }
+  100% {
+    box-shadow: 0 0 36px 6px rgba(212, 179, 100, 0.14) inset,
+      0 0 32px 5px rgba(212, 179, 100, 0.22);
+  }
+}
+
+/* ── State / verse labels ─── */
+.av-state {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--dim);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ── v21 §41 — permanent sub-avatar text (theological positioning) ─── */
+.av-subtext {
+  font-size: 9px;
+  line-height: 1.4;
+  color: var(--gold);
+  text-align: center;
+  margin-top: 4px;
+  max-width: 240px;
+  opacity: 0.72;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+.av-verse {
+  text-align: center;
+  margin-top: 6px;
+  animation: fadeIn 0.8s ease;
+}
+.av-ar {
+  font-family: var(--font-arabic);
+  font-size: 15px;
+  color: var(--gold);
+  direction: rtl;
+  line-height: 1.8;
+}
+.av-src {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 2px;
+  font-style: italic;
+}
+
+/* ── Keyframes ─────────────────────────────────── */
+@keyframes av-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes av-breathe {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.014); }
+}
+
+@keyframes av-cloak-sway {
+  0%, 100% { transform: rotate(-0.9deg); }
+  50%      { transform: rotate(0.9deg); }
+}
+
+@keyframes av-head-settle {
+  0%, 100% { transform: rotate(-0.3deg) translateY(0); }
+  50%      { transform: rotate(0.3deg) translateY(-0.4px); }
+}
+
+@keyframes av-jpulse {
+  0%, 100% {
+    box-shadow: 0 0 32px 6px rgba(201, 160, 58, 0.30) inset,
+      0 0 34px 6px rgba(201, 160, 58, 0.30);
+  }
+  50% {
+    box-shadow: 0 0 44px 14px rgba(201, 160, 58, 0.42) inset,
+      0 0 48px 14px rgba(201, 160, 58, 0.46);
+  }
+}
+
+@keyframes av-speak {
+  0%, 100% {
+    box-shadow: 0 0 30px 5px rgba(46, 125, 91, 0.32) inset,
+      0 0 30px 5px rgba(46, 125, 91, 0.32);
+    border-color: rgba(46, 125, 91, 0.65);
+  }
+  50% {
+    box-shadow: 0 0 46px 13px rgba(201, 160, 58, 0.42) inset,
+      0 0 48px 14px rgba(201, 160, 58, 0.46);
+    border-color: rgba(201, 160, 58, 0.75);
+  }
+}
+
+@keyframes av-speak-figure {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.022); }
+}
+
+/* Walking — figure approaches from far depth and grows out of the page.
+   Starts tiny and very blurred (a distant glimmer), then steps forward
+   with footstep bobs, blooms past full size, and settles. */
+@keyframes av-walk-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.08) translateY(28px);
+    filter: blur(6px);
+  }
+  15% {
+    opacity: 0.35;
+    transform: scale(0.18) translateY(22px);
+    filter: blur(4.5px);
+  }
+  30% {
+    transform: scale(0.34) translateY(16px);
+    opacity: 0.6;
+    filter: blur(3px);
+  }
+  45% {
+    /* Footstep — slight vertical bounce */
+    transform: scale(0.55) translateY(11px);
+    opacity: 0.78;
+    filter: blur(1.8px);
+  }
+  60% {
+    transform: scale(0.78) translateY(7px);
+    opacity: 0.92;
+    filter: blur(0.9px);
+  }
+  78% {
+    /* Final step before he reaches us */
+    transform: scale(1.04) translateY(2px);
+    opacity: 1;
+    filter: blur(0);
+  }
+  90% {
+    /* Tiny settle — overshoot slightly, then back */
+    transform: scale(1.08) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}

@@ -1,0 +1,209 @@
+:root {
+  /* ── Colour palette — Najaf night: blue, white, gold ───
+     Inspired by the actual interior of Imam Ali's shrine:
+     deep blue tilework, white calligraphy and grout, gold
+     dome and accents. The mood we want is "evening in a
+     peaceful courtyard, the door is open" — not "vigil in
+     a dark room". Blue dominates; white carries the words;
+     gold is the dome glimpsed above, used sparingly. */
+
+  --bg: #0c1a3a;                            /* night sky over the shrine */
+  --surface: #15224b;                       /* elevated panels */
+  --card: #1a2a55;                          /* Ali's message bubble — a tile */
+
+  /* Gold — the dome at twilight. Accent only. */
+  --gold: #d4b364;
+  --gold-b: rgba(212, 179, 100, 0.45);      /* gold accent borders */
+  --gold-d: rgba(212, 179, 100, 0.12);      /* soft gold wash */
+
+  /* White borders — the grout between the blue tiles.
+     This is the new primary border colour for cards,
+     pills, and the chat input — clean, illuminated-
+     manuscript feel. Gold borders are reserved for
+     places that carry Ali's voice (verse cards). */
+  --border: rgba(255, 255, 255, 0.28);
+  --border-soft: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.55);
+
+  --green: #3a9466;                         /* garden green at dusk */
+
+  --text: #f5f0e1;                          /* ivory — body text */
+  --cream: #ffffff;                         /* pure white — emphasis */
+  --dim: #c5d2e8;                           /* soft blue-tinted secondary */
+  --muted: #8a9bbf;                         /* tertiary / micro labels */
+
+  --user-bg: #1d2c5c;                       /* slightly lighter blue tile */
+  --user-c: #f5f0e1;                        /* ivory text on blue */
+  --user-b: rgba(255, 255, 255, 0.30);      /* white grout border */
+
+  /* ── Typography ──────────────────────────────── */
+  --font-sans: 'Raleway', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-arabic: 'Amiri', serif;            /* classical — for verses */
+  --font-arabic-body: 'Noto Naskh Arabic', 'Amiri', serif;
+  --font-arabic-ui: 'Cairo', system-ui, sans-serif;
+
+  /* ── Fluid scale tokens (v48) ──────────────────
+     Hand-tuned clamp() values let components opt in to size
+     proportional to viewport width without breaking on tablets
+     (the upper bound) or pinching too tight on iPhone SE (the
+     lower bound). Use these in inline styles via var() for any
+     value that should scale: padding, gaps, container widths.
+     Existing fixed-px components keep working as-is. */
+  --space-1: clamp(4px, 0.8vw, 6px);          /* tiny gaps */
+  --space-2: clamp(8px, 1.6vw, 12px);         /* small gaps */
+  --space-3: clamp(12px, 2.4vw, 18px);        /* default padding */
+  --space-4: clamp(16px, 3.2vw, 24px);        /* section padding */
+  --space-5: clamp(24px, 4.8vw, 36px);        /* large spacing */
+
+  --text-xs: clamp(10px, 2.4vw, 11px);        /* micro labels */
+  --text-sm: clamp(11px, 2.8vw, 13px);        /* secondary text */
+  --text-base: clamp(13px, 3.4vw, 15px);      /* body */
+  --text-lg: clamp(15px, 4vw, 18px);          /* lead text */
+  --text-xl: clamp(18px, 5.5vw, 24px);        /* section titles */
+  --text-2xl: clamp(22px, 7vw, 30px);         /* page titles */
+
+  /* Maximum content widths — keep lines comfortable on tablets
+     and desktops where the design would otherwise stretch. */
+  --content-narrow: 520px;                    /* setup, story */
+  --content-wide: 720px;                      /* teachings, biography */
+
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  /* Belt and braces: never allow horizontal scroll. Without this, any
+     single element that overflows by even a pixel — long unbreakable
+     Arabic word, oversized image, accidentally-fixed-width container —
+     turns the whole page into a horizontal scroller on iPhone. The
+     iPhone 15 Pro Max under iOS 17 is particularly strict about this
+     because its safe-area handling differs slightly from the 14 Pro Max
+     even though logical resolution matches. */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  /* Long Arabic terms or English compound words can break out of their
+     container if they have no break opportunity. Allow soft-wrapping
+     mid-word as a last resort so nothing pushes past the screen edge. */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  /* Honour the rounded-corner / Dynamic Island safe areas on iPhones
+     with viewport-fit=cover. The bottom nav already pads for
+     safe-area-inset-bottom; we add left/right here so content does not
+     hide under the rounded display corners on Pro Max devices. */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* The root react container should never be wider than the body. */
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
+.ar {
+  font-family: var(--font-arabic);
+  direction: rtl;
+}
+
+/* When the document is in Arabic, switch UI to Cairo and body text to Noto Naskh */
+html[lang='ar'] body {
+  font-family: var(--font-arabic-body);
+}
+html[lang='ar'] button,
+html[lang='ar'] input,
+html[lang='ar'] textarea,
+html[lang='ar'] select {
+  font-family: var(--font-arabic-ui);
+}
+
+/* iOS Safari auto-zooms any text input whose font-size is below 16px
+   when it gains focus, which resizes the page and can knock action
+   buttons (like send) off-screen. Enforce a 16px floor everywhere as
+   a safety net even if a component forgets. Per-component styles
+   may go above this (e.g. 17px, 18px) — they just can't go below. */
+@supports (-webkit-touch-callout: none) {
+  input,
+  textarea,
+  select {
+    font-size: max(16px, 1em);
+  }
+}
+
+/* ── Responsive guard-rails for very narrow screens (v48) ─────
+   iPhone SE / older Android / one-hand mode shrink down toward
+   320–360px wide. The 7-icon bottom nav and 1rem horizontal
+   page padding both bite at that size. Tighten them in. */
+@media (max-width: 360px) {
+  /* Slightly smaller default text so 8-character Arabic labels
+     don't push the bottom nav buttons apart. */
+  body { font-size: 14px; }
+}
+
+/* ── Tablet & larger: relax the design (v48) ──────────────────
+   On iPad and desktop the phone-sized column still works but
+   feels a little prim. Give content rooms to breathe. */
+@media (min-width: 768px) {
+  body { font-size: 16px; }
+}
+
+/* Every interactive element should be at least 44×44 (Apple's
+   tap-target guideline). This is a backstop in case a button
+   styled with small inline padding ends up below the threshold. */
+@media (pointer: coarse) {
+  button,
+  a[role='button'] {
+    min-height: 36px;          /* allow inline icon-buttons to be small visually */
+  }
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-b);
+  border-radius: 2px;
+}
+
+/* ── Shared animations (also used by prototypes) ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.3; }
+}
