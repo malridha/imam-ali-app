@@ -136,7 +136,6 @@ export const BASELINE_DUAS: BaselineEntry[] = [
     source: "Qur'an, 20:25-28 — the prayer of Musa (peace be upon him)",
     theme: 'before a difficult conversation, before speaking up, before clarity is needed',
   },
-  // ── v46.1 corpus expansion · authentic du'as ───────────────────
   {
     arabic: 'الْحَمْدُ لِلَّهِ الَّذِي بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ',
     english: 'All praise is for God, by whose blessing all good things are completed.',
@@ -301,7 +300,6 @@ export const BASELINE_DUAS: BaselineEntry[] = [
     source: 'al-Sahifa al-Sajjadiyya, du\'a 6 (the morning and evening supplication)',
     theme: 'morning adhkar, beginning the day, asking for a noble day ahead',
   },
-  // ── Hereafter, death, repentance ────────────────────────────────
   {
     arabic:
       'اَللَّهُمَّ اغْفِرْ لِيَ الذُّنُوبَ الَّتِي تَحْبِسُ الدُّعَاءَ',
@@ -406,7 +404,6 @@ export const BASELINE_DUAS: BaselineEntry[] = [
     source: 'Du\'a al-Mashlul (al-Shabb al-Mashlul, from Imam Ali); Mafatih al-Jinan',
     theme: 'comprehensive repentance for all sins, hope before the grave',
   },
-  // ── Medium-length passages for quiet reading ────────────────────
   {
     arabic:
       'إِلَهِي لَا تُؤَدِّبْنِي بِعُقُوبَتِكَ\nوَلَا تَمْكُرْ بِي فِي حِيلَتِكَ\nمِنْ أَيْنَ لِيَ الْخَيْرُ يَا رَبِّ وَلَا يُوجَدُ إِلَّا مِنْ عِنْدِكَ\nوَمِنْ أَيْنَ لِيَ النَّجَاةُ وَلَا تُسْتَطَاعُ إِلَّا بِكَ\nلَا الَّذِي أَحْسَنَ اسْتَغْنَى عَنْ عَوْنِكَ وَرَحْمَتِكَ\nوَلَا الَّذِي أَسَاءَ وَاجْتَرَأَ عَلَيْكَ وَلَمْ يُرْضِكَ خَرَجَ عَنْ قُدْرَتِكَ',
@@ -479,7 +476,6 @@ export const BASELINE_DUAS: BaselineEntry[] = [
     source: "al-Sahifa al-Sajjadiyya, du'a 31 (on seeking forgiveness)",
     theme: 'on sincere repentance, on tawba naṣūḥ, for quiet reading',
   },
-  // ── Protection, family, refuge ──────────────────────────────────
   {
     arabic:
       'رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا',
@@ -551,6 +547,270 @@ export const BASELINE_DUAS: BaselineEntry[] = [
       "In the name of God — close the doors and mention the name of God, for Shayṭān does not open a closed door upon which God's name has been mentioned.",
     source: 'Sahih al-Bukhari, 3304; Sahih Muslim, 2012',
     theme: 'sealing the house at night, for the family at bedtime',
+  },
+  {
+    arabic: 'يَا مَنْ لَا تَنْقَضِي عَجَائِبُ عَظَمَتِهِ، صَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَاحْجُبْنَا عَنِ الْإِلْحَادِ فِي عَظَمَتِكَ. يَا مَنْ لَا تَنْتَهِي مُدَّةُ مُلْكِهِ، صَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَأَعْتِقْ رِقَابَنَا مِنْ نَقِمَتِكَ. يَا مَنْ لَا تَفْنَى خَزَائِنُ رَحْمَتِهِ، صَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ لَنَا نَصِيباً فِي رَحْمَتِكَ.',
+    english: 'O He whose wonders of mightiness will never end! Bless Muhammad and his Household and prevent us from deviation concerning Thy mightiness. O He whose kingdom will never cease! Release our necks from Thy vengeance. O He whose treasuries of mercy will never be exhausted! Appoint for us a portion of Thy mercy.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when seeking refuge in divine mercy, when overwhelmed by fear of God, when beginning a supplication',
+  },
+  {
+    arabic: 'اللَّهُمَّ فَصَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَقِنَا مِنْكَ وَاحْفَظْنَا بِكَ، وَاهْدِنَا إِلَيْكَ، وَلَا تُبَاعِدْنَا عَنْكَ. إِنَّ مَنْ تَقِهِ يَسْلَمْ، وَمَنْ تَهْدِهِ يَعْلَمْ، وَمَنْ تُقَرِّبْهُ إِلَيْكَ يَغْنَمْ.',
+    english: 'O God, bless Muhammad and his Household, protect us from Thyself, safeguard us through Thyself, guide us to Thyself, and take us not far from Thyself. He whom Thou protectest stays safe, he whom Thou guidest knows, and he whom Thou bringest near Thyself takes the spoils.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when seeking divine guidance and protection, when feeling spiritually distant from God',
+  },
+  {
+    arabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ سَلَامَةَ قُلُوبِنَا فِي ذِكْرِ عَظَمَتِكَ، وَفَرَاغَ أَبْدَانِنَا فِي شُكْرِ نِعْمَتِكَ، وَانْطِلَاقَ أَلْسِنَتِنَا فِي وَصْفِ مِنَّتِكَ.',
+    english: 'O God, bless Muhammad and his Household and put the soundness of our hearts into the remembrance of Thy mightiness, the idleness of our bodies into giving thanks for Thy favour, and the flow of our tongues into the description of Thy kindness.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when seeking wholeness of heart and tongue, when wanting worship to pervade all of life',
+  },
+  {
+    arabic: 'الْحَمْدُ لِلَّهِ الَّذِي خَلَقَ اللَّيْلَ وَالنَّهَارَ بِقُوَّتِهِ، وَمَيَّزَ بَيْنَهُمَا بِقُدْرَتِهِ. أَصْبَحْنَا فِي قَبْضَتِكَ يَحْوِينَا مُلْكُكَ وَسُلْطَانُكَ، وَتَضُمُّنَا مَشِيَّتُكَ، وَنَتَصَرَّفُ عَنْ أَمْرِكَ، وَنَتَقَلَّبُ فِي تَدْبِيرِكَ. لَيْسَ لَنَا مِنَ الْأَمْرِ إِلَّا مَا قَضَيْتَ، وَلَا مِنَ الْخَيْرِ إِلَّا مَا أَعْطَيْتَ.',
+    english: 'Praise belongs to God, who created night and day through His strength and set them apart through His power. We rise in the morning in Thy grasp: Thy kingdom and authority contain us and Thy will embraces us. We move about by Thy command and turn this way and that through Thy governing. We own nothing of the affair except what Thou hast decreed and nothing of the good except what Thou hast given.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when beginning a new day, when reflecting on divine sovereignty and complete dependence on God',
+  },
+  {
+    arabic: 'يَا مَنْ تُحَلُّ بِهِ عُقَدُ الْمَكَارِهِ، وَيَا مَنْ يَفْثَأُ بِهِ حَدُّ الشَّدَائِدِ، وَيَا مَنْ يُلْتَمَسُ مِنْهُ الْمَخْرَجُ إِلَى رَوْحِ الْفَرَجِ. ذَلَّتْ لِقُدْرَتِكَ الصِّعَابُ، وَتَسَبَّبَتْ بِلُطْفِكَ الْأَسْبَابُ، وَجَرَى بِقُدْرَتِكَ الْقَضَاءُ، وَمَضَتْ عَلَى إِرَادَتِكَ الْأَشْيَاءُ.',
+    english: 'O He through whom the knots of detested things are untied! O He through whom the cutting edge of hardships is blunted! O He from whom is begged the outlet to the freshness of relief! Intractable affairs yield to Thy power, means are made ready by Thy gentleness, the decree goes into effect through Thy power, and all things proceed according to Thy desire.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when facing a difficult trial or hardship, when seeking relief from distress, when all other means have failed',
+  },
+  {
+    arabic: 'أَنْتَ الْمَدْعُوُّ لِلْمُهِمَّاتِ، وَأَنْتَ الْمَفْزَعُ فِي الْمُلِمَّاتِ، لَا يَنْدَفِعُ مِنْهَا إِلَّا مَا دَفَعْتَ، وَلَا يَنْكَشِفُ مِنْهَا إِلَّا مَا كَشَفْتَ. فَقَدْ ضِقْتُ لِمَا نَزَلَ بِي يَا رَبِّ ذَرْعاً، وَامْتَلَأْتُ بِحَمْلِ مَا حَدَثَ عَلَيَّ هَمّاً، وَأَنْتَ الْقَادِرُ عَلَى كَشْفِ مَا مُنِيتُ بِهِ، فَافْعَلْ بِي ذَلِكَ وَإِنْ لَمْ أَسْتَوْجِبْهُ مِنْكَ.',
+    english: 'Thou art the supplicated in worries and the place of flight in misfortunes; none of them is repelled unless Thou repellest, none is removed unless Thou removest. My capacity has been straitened, my Lord, by what has come down on me, and I am filled with worry, while Thou hast power to remove what has afflicted me. So do that for me though I merit it not from Thee, O Possessor of the Mighty Throne!',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when burdened by trials, when feeling incapable and asking for unmerited grace, when crying to God in distress',
+  },
+  {
+    arabic: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ هَيَجَانِ الْحِرْصِ، وَسَوْرَةِ الْغَضَبِ، وَغَلَبَةِ الْحَسَدِ، وَضَعْفِ الصَّبْرِ، وَقِلَّةِ الْقَنَاعَةِ، وَشَكَاسَةِ الْخُلُقِ، وَإِلْحَاحِ الشَّهْوَةِ، وَمُتَابَعَةِ الْهَوَى، وَمُخَالَفَةِ الْهُدَى.',
+    english: 'O God, I seek refuge in Thee from the agitation of craving, the violence of wrath, the domination of envy, the frailty of patience, the lack of contentment, surliness of character, urgency of passion, following caprice, and opposing guidance.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when seeking protection from bad character traits, when striving against the ego and its vices',
+  },
+  {
+    arabic: 'وَنَعُوذُ بِكَ مِنَ الْحَسْرَةِ الْعُظْمَى، وَالْمُصِيبَةِ الْكُبْرَى، وَأَشْقَى الشَّقَاءِ، وَسُوءِ الْمَآبِ، وَحِرْمَانِ الثَّوَابِ، وَحُلُولِ الْعِقَابِ. اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَأَعِذْنِي مِنْ كُلِّ ذَلِكَ بِرَحْمَتِكَ، يَا أَرْحَمَ الرَّاحِمِينَ.',
+    english: 'We seek refuge in Thee from the most dreadful remorse, the greatest affliction, the most wretched wretchedness, the evil end to the journey, the deprivation of reward, and the advent of punishment. O God, bless Muhammad and his Household and through Thy mercy give me refuge from all of that, O Most Merciful of the merciful!',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when fearing a bad end, when seeking refuge from divine punishment, when contemplating the afterlife',
+  },
+  {
+    arabic: 'وَلَا تُخَلِّ فِي ذَلِكَ بَيْنَ نُفُوسِنَا وَاخْتِيَارِهَا، فَإِنَّهَا مُخْتَارَةٌ لِلْبَاطِلِ إِلَّا مَا وَفَّقْتَ، أَمَّارَةٌ بِالسُّوءِ إِلَّا مَا رَحِمْتَ.',
+    english: 'Leave not our souls alone to choose, for they choose falsehood except inasmuch as Thou givest success, and they command to evil except inasmuch as Thou hast mercy.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when acknowledging the soul\'s inclination to wrong, when asking God not to leave one to oneself',
+  },
+  {
+    arabic: 'اللَّهُمَّ إِنْ تَشَأْ تَعْفُ عَنَّا فَبِفَضْلِكَ، وَإِنْ تَشَأْ تُعَذِّبْنَا فَبِعَدْلِكَ. فَسَهِّلْ لَنَا عَفْوَكَ بِمَنِّكَ، وَأَجِرْنَا مِنْ عَذَابِكَ بِتَجَاوُزِكَ، فَإِنَّهُ لَا طَاقَةَ لَنَا بِعَدْلِكَ، وَلَا نَجَاةَ لِأَحَدٍ مِنَّا دُونَ عَفْوِكَ.',
+    english: 'O God, if Thou willest, Thou wilt pardon us through Thy bounty, and if Thou willest, Thou wilt chastise us through Thy justice. So make our ways smooth to Thy pardon through Thy kindness and grant us sanctuary from Thy chastisement through Thy forbearance, for none of us has the endurance for Thy justice and none of us can reach deliverance without Thy pardon!',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when confessing complete dependence on divine pardon, when seeking asylum in God from divine justice',
+  },
+  {
+    arabic: 'يَا غَنِيَّ الْأَغْنِيَاءِ، هَا نَحْنُ عِبَادُكَ بَيْنَ يَدَيْكَ، وَأَنَا أَفْقَرُ الْفُقَرَاءِ إِلَيْكَ، فَاجْبُرْ فَاقَتَنَا بِوُسْعِكَ، وَلَا تَقْطَعْ رَجَاءَنَا بِمَنْعِكَ. فَإِلَى مَنْ حِينَئِذٍ مُنْقَلَبُنَا عَنْكَ، وَإِلَى أَيْنَ مَذْهَبُنَا عَنْ بَابِكَ.',
+    english: 'O Richest of the rich! Here we are, Thy servants, before Thee. I am the neediest of the needy toward Thee, so redress our neediness through Thy plenty and cut us not off from our hopes through Thy withholding. Then to whom would we return after Thee? Where would we go from Thy gate?',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when professing complete neediness before God, when there is nowhere else to turn',
+  },
+  {
+    arabic: 'يَا مَنْ ذِكْرُهُ شَرَفٌ لِلذَّاكِرِينَ، وَيَا مَنْ شُكْرُهُ فَوْزٌ لِلشَّاكِرِينَ، وَيَا مَنْ طَاعَتُهُ نَجَاةٌ لِلْمُطِيعِينَ، صَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَاشْغَلْ قُلُوبَنَا بِذِكْرِكَ عَنْ كُلِّ ذِكْرٍ، وَأَلْسِنَتَنَا بِشُكْرِكَ عَنْ كُلِّ شُكْرٍ، وَجَوَارِحَنَا بِطَاعَتِكَ عَنْ كُلِّ طَاعَةٍ.',
+    english: 'O He remembering whom brings honour to those who remember! O He thanking whom brings triumph to those who give thanks! O He obeying whom brings deliverance to those who obey! Bless Muhammad and his Household, and divert our hearts through remembering Thee from every act of remembrance, our tongues through thanking Thee from every act of thanksgiving, our limbs through obeying Thee from every act of obedience!',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when seeking to fill one\'s life entirely with God\'s remembrance, when wanting all worship to be solely for God',
+  },
+  {
+    arabic: 'إِنَّكَ رَحِيمٌ بِمَنْ دَعَاكَ، وَمُسْتَجِيبٌ لِمَنْ نَادَاكَ. وَإِذَا انْقَضَتْ أَيَّامُ حَيَاتِنَا وَتَصَرَّمَتْ مُدَدُ أَعْمَارِنَا، فَصَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ خِتَامَ مَا تُحْصِي عَلَيْنَا كَتَبَةُ أَعْمَالِنَا تَوْبَةً مَقْبُولَةً.',
+    english: 'Verily Thou art compassionate to him who supplicates Thee, the responder to him who calls upon Thee! And when the days of our life have passed by and the terms of our lifetimes have elapsed, bless Muhammad and his Household and make the outcome of what the writers of our works count against us an accepted repentance.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when thinking of death and one\'s final state, when asking for a good ending and accepted repentance',
+  },
+  {
+    arabic: 'فَهَا أَنَا ذَا يَا إِلَهِي وَاقِفٌ بِبَابِ عِزِّكَ وُقُوفَ الْمُسْتَسْلِمِ الذَّلِيلِ، وَسَائِلُكَ عَلَى الْحَيَاءِ مِنِّي سُؤَالَ الْبَائِسِ الْمُعِيلِ. سُبْحَانَكَ لَا أَيْأَسُ مِنْكَ وَقَدْ فَتَحْتَ لِي بَابَ التَّوْبَةِ إِلَيْكَ.',
+    english: 'So here I am, my God, standing at the gate of Thy might, the standing of the lowly, the surrendered, asking Thee in my shame, the asking of the destitute, the pitiful. Glory be to Thee! I do not despair of Thee, for Thou hast opened the door of repentance toward Thyself.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when standing before God in shame yet hope, when refusing to despair of God\'s mercy',
+  },
+  {
+    arabic: 'عَالِمٍ بِأَنَّ الْعَفْوَ عَنِ الذَّنْبِ الْعَظِيمِ لَا يَتَعَاظَمُكَ، وَأَنَّ التَّجَاوُزَ عَنِ الْإِثْمِ الْجَلِيلِ لَا يَسْتَصْعِبُكَ، وَأَنَّ أَحَبَّ عِبَادِكَ إِلَيْكَ مَنْ تَرَكَ الِاسْتِكْبَارَ عَلَيْكَ، وَجَانَبَ الْإِصْرَارَ، وَلَزِمَ الِاسْتِغْفَارَ.',
+    english: 'Knowing that pardoning great sins is nothing great for Thee, overlooking enormous misdeeds is not difficult for Thee, and that the most beloved of Thy servants to Thee is he who refrains from arrogance before Thee, pulls aside from persistence in sin, and holds fast to praying forgiveness.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when confessing sins before God, when understanding that forgiveness costs God nothing, when returning from sin',
+  },
+  {
+    arabic: 'فَإِنَّكَ مَلِيءٌ بِالْعَفْوِ، مَرْجُوٌّ لِلْمَغْفِرَةِ، مَعْرُوفٌ بِالتَّجَاوُزِ، لَيْسَ لِحَاجَتِي مَطْلَبٌ سِوَاكَ، وَلَا لِذَنْبِي غَافِرٌ غَيْرُكَ. وَلَا أَخَافُ عَلَى نَفْسِي إِلَّا إِيَّاكَ، إِنَّكَ أَهْلُ التَّقْوَى وَأَهْلُ الْمَغْفِرَةِ.',
+    english: 'Thou art full of pardon, the hoped-for source of forgiveness, well known for Thy forbearance. My need has no object but Thee, my sin no forgiver other than Thee. I have no fear for myself except from Thee; Thou art worthy of reverential fear, and worthy to forgive.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when seeking forgiveness with complete sincerity, when acknowledging God as the only forgiver',
+  },
+  {
+    arabic: 'اللَّهُمَّ يَا مُنْتَهَى مَطْلَبِ الْحَاجَاتِ، وَيَا مَنْ عِنْدَهُ نَيْلُ الطَّلِبَاتِ، وَيَا مَنْ لَا يَبِيعُ نِعَمَهُ بِالْأَثْمَانِ، وَيَا مَنْ لَا يُكَدِّرُ عَطَايَاهُ بِالِامْتِنَانِ، وَيَا مَنْ يُسْتَغْنَى بِهِ وَلَا يُسْتَغْنَى عَنْهُ.',
+    english: 'O God, O ultimate object of needs! O He through whom requests are attained! O He whose favours are not bought by prices! O He who does not muddy His gifts by the imposition of obligations! O He along with whom nothing is needed and without whom nothing can be done!',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when turning to God with every need, when recognising God as the only true source of all gifts',
+  },
+  {
+    arabic: 'وَعَلِمْتُ أَنَّ كَثِيرَ مَا أَسْأَلُكَ يَسِيرٌ فِي وُجْدِكَ، وَأَنَّ خَطِيرَ مَا أَسْتَوْهِبُكَ حَقِيرٌ فِي وُسْعِكَ، وَأَنَّ كَرَمَكَ لَا يَضِيقُ عَنْ سُؤَالِ أَحَدٍ، وَأَنَّ يَدَكَ بِالْعَطَايَا أَعْلَى مِنْ كُلِّ يَدٍ.',
+    english: 'I came to know that the many I request from Thee are few before Thy wealth, the weighty I ask from Thee is vile before Thy plenty; Thy generosity is not constrained by anyone\'s asking, and Thy hand is higher in bestowing gifts than every hand.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when daring to ask great things of God, when reflecting on God\'s boundless generosity',
+  },
+  {
+    arabic: 'اللَّهُمَّ لَكَ الْحَمْدُ عَلَى مَا لَمْ أَزَلْ أَتَصَرَّفُ فِيهِ مِنْ سَلَامَةِ بَدَنِي، وَلَكَ الْحَمْدُ عَلَى مَا أَحْدَثْتَ بِي مِنْ عِلَّةٍ فِي جَسَدِي. فَمَا أَدْرِي يَا إِلَهِي أَيُّ الْحَالَيْنِ أَحَقُّ بِالشُّكْرِ لَكَ، وَأَيُّ الْوَقْتَيْنِ أَوْلَى بِالْحَمْدِ لَكَ: أَوَقْتُ الصِّحَّةِ أَمْ وَقْتُ الْعِلَّةِ.',
+    english: 'O God, to Thee belongs praise for the good health of my body which lets me move about, and to Thee belongs praise for the ailments which Thou causest to arise in my flesh! For I know not, my God, which of the two states deserves more my thanking Thee and which of the two times is more worthy for my praise of Thee: the time of health or the time of illness.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when sick or afflicted, when finding gratitude in illness as well as health',
+  },
+  {
+    arabic: 'اللَّهُمَّ يَا مَنْ بِرَحْمَتِهِ يَسْتَغِيثُ الْمُذْنِبُونَ، وَيَا مَنْ إِلَى ذِكْرِ إِحْسَانِهِ يَفْزَعُ الْمُضْطَرُّونَ، وَيَا مَنْ لِخِيفَتِهِ يَنْتَحِبُ الْخَاطِئُونَ. يَا أُنْسَ كُلِّ مُسْتَوْحِشٍ غَرِيبٍ، وَيَا فَرَجَ كُلِّ مَكْرُوبٍ كَئِيبٍ.',
+    english: 'O God, O He through whose mercy sinners seek aid! O He to the remembrance of whose beneficence the distressed flee! O He in fear of whom the offenders weep! O Comfort of every lonely stranger! O Relief of all who are downcast and distressed!',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when feeling lonely, distressed, or crushed by sin, when seeking comfort only from God',
+  },
+  {
+    arabic: 'أَنْتَ الَّذِي وَصَفْتَ نَفْسَكَ بِالرَّحْمَةِ، فَصَلِّ عَلَى مُحَمَّدٍ وَآلِهِ وَارْحَمْنِي. وَأَنْتَ الَّذِي سَمَّيْتَ نَفْسَكَ بِالْعَفْوِ فَاعْفُ عَنِّي. قَدْ تَرَى يَا إِلَهِي فَيْضَ دَمْعِي مِنْ خِيفَتِكَ، وَوَجِيبَ قَلْبِي مِنْ خَشْيَتِكَ، وَانْتِقَاضَ جَوَارِحِي مِنْ هَيْبَتِكَ.',
+    english: 'Thou art He who has described Himself by mercy, so bless Muhammad and his Household and have mercy upon me! Thou art He who has named Himself by pardon, so pardon me! Thou hast seen, my God, the flow of my tears in fear of Thee, the throbbing of my heart in dread of Thee, and the infirmity of my limbs in awe of Thee.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when weeping from fear and awe of God, when asking mercy by invoking God\'s own attributes of mercy',
+  },
+  {
+    arabic: 'يَا إِلَهِي فَلَكَ الْحَمْدُ فَكَمْ مِنْ عَائِبَةٍ سَتَرْتَهَا عَلَيَّ فَلَمْ تَفْضَحْنِي، وَكَمْ مِنْ ذَنْبٍ غَطَّيْتَهُ عَلَيَّ فَلَمْ تَشْهَرْنِي، وَكَمْ مِنْ شَائِبَةٍ أَلْمَمْتُ بِهَا فَلَمْ تَهْتِكْ عَنِّي سِتْرَهَا.',
+    english: 'My God, so to Thee belongs praise! How many of my flaws Thou hast covered over without exposing me! How many of my sins Thou hast cloaked without making me notorious! How many faults I have committed, yet Thou didst not tear away from me their covering or make their dishonour plain to those who search for my defects.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when reflecting on God\'s concealment of one\'s sins, when offering gratitude for divine protection from shame',
+  },
+  {
+    arabic: 'وَإِنَّمَا أُوَبِّخُ بِهَذَا نَفْسِي طَمَعاً فِي رَأْفَتِكَ الَّتِي بِهَا صَلَاحُ أَمْرِ الْمُذْنِبِينَ، وَرَجَاءً لِرَحْمَتِكَ الَّتِي بِهَا فَكَاكُ رِقَابِ الْخَاطِئِينَ. اللَّهُمَّ وَهَذِهِ رَقَبَتِي قَدْ أَرَقَّتْهَا الذُّنُوبُ، فَصَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَأَعْتِقْهَا بِعَفْوِكَ.',
+    english: 'I only scold my own soul craving Thy gentleness, through which the affairs of sinners are set right, and hoping for Thy mercy, through which the necks of the offenders are freed. O God, this is my neck, enslaved by sins, bless Muhammad and his Household and release it through Thy pardon!',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when seeking freedom from the bondage of sin, when confessing to God and begging for release',
+  },
+  {
+    arabic: 'يَا إِلَهِي لَوْ بَكَيْتُ إِلَيْكَ حَتَّى تَسْقُطَ أَشْفَارُ عَيْنَيَّ، وَانْتَحَبْتُ حَتَّى يَنْقَطِعَ صَوْتِي، وَقُمْتُ لَكَ حَتَّى تَتَنَشَّرَ قَدَمَايَ، وَسَجَدْتُ لَكَ حَتَّى تَتَفَقَّأَ حَدَقَتَايَ، مَا اسْتَوْجَبْتُ بِذَلِكَ مَحْوَ سَيِّئَةٍ وَاحِدَةٍ مِنْ سَيِّئَاتِي.',
+    english: 'My God, were I to weep to Thee until my eyelids drop off, wail until my voice wears out, stand before Thee until my feet swell up, and prostrate to Thee until my eyeballs fall out, yet would I not merit through all of that the erasing of a single one of my evil deeds.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when overwhelmed by the weight of one\'s sins, when recognizing that forgiveness can only be a gift of grace',
+  },
+  {
+    arabic: 'إِلَهِي فَإِذْ قَدْ تَغَمَّدْتَنِي بِسِتْرِكَ فَلَمْ تَفْضَحْنِي، وَتَأَنَّيْتَنِي بِكَرَمِكَ فَلَمْ تُعَاجِلْنِي، وَحَلُمْتَ عَنِّي بِتَفَضُّلِكَ فَلَمْ تُغَيِّرْ نِعْمَتَكَ عَلَيَّ، فَارْحَمْ طُولَ تَضَرُّعِي وَشِدَّةَ مَسْكَنَتِي وَسُوءَ مَوْقِفِي.',
+    english: 'My God, since Thou hast shielded me with Thy covering and not exposed me, waited patiently for me through Thy generosity and not hurried me to punishment, and shown me clemency through Thy bounty and not changed Thy favour upon me, have mercy on my drawn out pleading, my intense misery, and my evil situation.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when pleading after a long history of sin and divine patience, when using God\'s past forbearance as a basis for hope',
+  },
+  {
+    arabic: 'اللَّهُمَّ إِنَّا نَعُوذُ بِكَ مِنْ نَزَغَاتِ الشَّيْطَانِ الرَّجِيمِ وَكَيْدِهِ وَمَكَايِدِهِ. اللَّهُمَّ اخْسَأْهُ عَنَّا بِعِبَادَتِكَ، وَاكْبِتْهُ بِدُءُوبِنَا فِي مَحَبَّتِكَ، وَاجْعَلْ بَيْنَنَا وَبَيْنَهُ سِتْراً لَا يَهْتِكُهُ وَرَدْماً مُصْمِتاً لَا يَفْتُقُهُ.',
+    english: 'O God, we seek refuge in Thee from the instigations of the accursed Satan, his trickery and his traps. Drive him away from us through Thy worship, throw him down through our perseverance in Thy love, and place between him and us a covering that he cannot tear away and a solid barrier that he cannot cut through.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when seeking protection from Satan and his whispers, when fighting spiritual temptation',
+  },
+  {
+    arabic: 'اللَّهُمَّ إِلَى مَغْفِرَتِكَ وَفَدْتُ، وَإِلَى عَفْوِكَ قَصَدْتُ، وَإِلَى تَجَاوُزِكَ اشْتَقْتُ، وَبِفَضْلِكَ وَثِقْتُ، وَلَيْسَ عِنْدِي مَا يُوجِبُ لِي مَغْفِرَتَكَ، وَلَا فِي عَمَلِي مَا أَسْتَحِقُّ بِهِ عَفْوَكَ، وَمَا لِي بَعْدَ أَنْ حَكَمْتُ عَلَى نَفْسِي إِلَّا فَضْلُكَ.',
+    english: 'O God, I come to Thy forgiveness, I go straight to Thy pardon, I yearn for Thy forbearance, and I trust in Thy bounty, but there is nothing with me to make me warrant Thy forgiveness, nothing in my works to make me merit Thy pardon, and nothing on my behalf after I judge my soul but Thy bounty.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when turning to God with nothing but hope in His grace, when acknowledging that salvation is from God\'s bounty alone',
+  },
+  {
+    arabic: 'اللَّهُمَّ أَنْتَ عُدَّتِي إِنْ حَزِنْتُ، وَأَنْتَ مُنْتَجَعِي إِنْ حُرِمْتُ، وَبِكَ اسْتِغَاثَتِي إِنْ كَرِثْتُ، وَعِنْدَكَ مِمَّا فَاتَ خَلَفٌ، وَلِمَا فَسَدَ صَلَاحٌ، وَفِيمَا أَنْكَرْتَ تَغْيِيرٌ، فَامْنُنْ عَلَيَّ قَبْلَ الْبَلَاءِ بِالْعَافِيَةِ، وَقَبْلَ الطَّلَبِ بِالْجِدَةِ، وَقَبْلَ الضَّلَالِ بِالرَّشَادِ.',
+    english: 'O God, Thou art my stores when I sorrow, Thou art my recourse when I am deprived, from Thee I seek aid when troubled, and with Thee is a substitute for everything gone by, a correction for everything corrupted, and a change from everything Thou disapprovest. So show kindness to me with well-being before affliction, wealth before asking, right conduct before misguidance.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when sorrowing or deprived and turning to God as the only refuge, when asking for prevention before affliction comes',
+  },
+  {
+    arabic: 'اللَّهُمَّ يَا كَافِيَ الْفَرْدِ الضَّعِيفِ وَوَاقِيَ الْأَمْرِ الْمَخُوفِ. وَبِيَدِكَ يَا إِلَهِي جَمِيعُ ذَلِكَ السَّبَبِ، وَإِلَيْكَ الْمَفَرُّ وَالْمَهْرَبُ. إِنِّي عَبْدُكَ وَفِي قَبْضَتِكَ، نَاصِيَتِي بِيَدِكَ. لَا أَمْرَ لِي مَعَ أَمْرِكَ، مَاضٍ فِيَّ حُكْمُكَ، عَدْلٌ فِيَّ قَضَاؤُكَ.',
+    english: 'O God, O Sufficer of the isolated and weak and Protector against terrifying affairs! In Thy hand, my God, is the thread of all that, in Thee the place of escape and flight. I am Thy servant and in Thy grasp; my forelock is in Thy hand. I have no command along with Thy command. Accomplished is Thy judgement of me, just Thy decree for me.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when feeling isolated, weak, or terrified, when surrendering completely to God\'s decree',
+  },
+  {
+    arabic: 'إِلَهِي أَصْبَحْتُ وَأَمْسَيْتُ عَبْداً دَاخِراً لَكَ، لَا أَمْلِكُ لِنَفْسِي نَفْعاً وَلَا ضَرّاً إِلَّا بِكَ، أَشْهَدُ بِذَلِكَ عَلَى نَفْسِي، وَأَعْتَرِفُ بِضَعْفِ قُوَّتِي وَقِلَّةِ حِيلَتِي، فَأَنْجِزْ لِي مَا وَعَدْتَنِي، فَإِنِّي عَبْدُكَ الْمِسْكِينُ الْمُسْتَكِينُ الضَّعِيفُ الْفَقِيرُ الْخَائِفُ الْمُسْتَجِيرُ.',
+    english: 'My God, I rise in the morning and enter into evening as Thy lowly slave. I own no profit and loss for myself except through Thee. I witness to that over myself and I confess to the frailty of my strength and the paucity of my stratagems, for I am Thy slave, miserable, abased, frail, distressed, vile, poor, fearful, and seeking sanctuary!',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when acknowledging complete servitude to God, when confessing weakness and relying entirely on God',
+  },
+  {
+    arabic: 'اللَّهُمَّ لَكَ الْحَمْدُ عَلَى حُسْنِ قَضَائِكَ، وَبِمَا صَرَفْتَ عَنِّي مِنْ بَلَائِكَ. فَغَيْرُ كَثِيرٍ مَا عَاقِبَتُهُ الْفَنَاءُ، وَغَيْرُ قَلِيلٍ مَا عَاقِبَتُهُ الْبَقَاءُ.',
+    english: 'O God, to Thee belongs praise for Thy excellent accomplishment and for Thy trial which Thou hast turned away from me! For that which ends in annihilation is not great and that which ends in subsistence is not little.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when saved from a peril, when putting worldly things and eternal things in their proper perspective',
+  },
+  {
+    arabic: 'اللَّهُمَّ اسْقِنَا الْغَيْثَ وَانْشُرْ عَلَيْنَا رَحْمَتَكَ بِغَيْثِكَ الْمُغْدِقِ. اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِ مُحَمَّدٍ، وَارْزُقْنَا مِنْ بَرَكَاتِ السَّمَاوَاتِ وَالْأَرْضِ، إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.',
+    english: 'O God, water us with rain, unfold upon us Thy mercy through Thy copious rain. O God, bless Muhammad and the Household of Muhammad and provide us with the blessings of the heavens and the earth! Thou art powerful over everything.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when asking for provision and divine blessing, when seeking God\'s mercy in times of scarcity',
+  },
+  {
+    arabic: 'اللَّهُمَّ اجْعَلْنِي أَصُولُ بِكَ عِنْدَ الضَّرُورَةِ، وَأَسْأَلُكَ عِنْدَ الْحَاجَةِ، وَأَتَضَرَّعُ إِلَيْكَ عِنْدَ الْمَسْكَنَةِ، وَلَا تَفْتِنِّي بِالِاسْتِعَانَةِ بِغَيْرِكَ إِذَا اضْطُرِرْتُ، وَلَا بِالْخُضُوعِ لِسُؤَالِ غَيْرِكَ إِذَا افْتَقَرْتُ، يَا أَرْحَمَ الرَّاحِمِينَ.',
+    english: 'O God, make me leap to Thee in times of distress, ask from Thee in needs, and plead to Thee in misery! Tempt me not to seek help from other than Thee when I am distressed, to humble myself in asking from someone else when I am poor, or to plead with someone less than Thee when I fear, O Most Merciful of the merciful!',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when facing need or distress, when seeking to direct all pleading to God alone and no other',
+  },
+  {
+    arabic: 'اللَّهُمَّ أَغْنِنَا عَنْ هِبَةِ الْوَهَّابِينَ بِهِبَتِكَ، وَاكْفِنَا وَحْشَةَ الْقَاطِعِينَ بِصِلَتِكَ، حَتَّى لَا نَرْغَبَ إِلَى أَحَدٍ مَعَ بَذْلِكَ، وَلَا نَسْتَوْحِشَ مِنْ أَحَدٍ مَعَ فَضْلِكَ.',
+    english: 'O God, remove our need for the gifts of the givers through Thy gift, spare us the loneliness of those who break off through Thy joining, that we may beseech no one along with Thy free giving, and that we may feel lonely at no one\'s absence along with Thy bounty.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when seeking contentment and independence from reliance on people, when God\'s gifts are seen as sufficient',
+  },
+  {
+    arabic: 'اللَّهُمَّ إِنَّكَ أَمَرْتَنِي فَتَرَكْتُ، وَنَهَيْتَنِي فَرَكِبْتُ، وَسَوَّلَ لِيَ الْخَطَاءَ خَاطِرُ السُّوءِ فَفَرَّطْتُ. وَهَذَا مَقَامُ مَنِ اسْتَحْيَا لِنَفْسِهِ مِنْكَ، وَسَخِطَ عَلَيْهَا، وَرَضِيَ عَنْكَ، فَتَلَقَّاكَ بِنَفْسٍ خَاشِعَةٍ وَرَقَبَةٍ خَاضِعَةٍ وَظَهْرٍ مُثْقَلٍ مِنَ الْخَطَايَا، وَاقِفاً بَيْنَ الرَّغْبَةِ إِلَيْكَ وَالرَّهْبَةِ مِنْكَ.',
+    english: 'O God, Thou hast commanded me and I have left off, Thou hast prohibited me and I have committed, and the impulse to evil has seduced me into negligence. This is the station of him who is ashamed before Thee for his soul, who is displeased with it, and who is pleased with Thee, coming to Thee with a humble soul, a submissive neck, and a back weighed down by sins, standing between desire for Thee and dread of Thee.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when coming to God after disobedience, when standing between hope and fear in sincere repentance',
+  },
+  {
+    arabic: 'لَا شَفِيعٌ يَشْفَعُ لِي إِلَيْكَ، وَلَا خَفِيرٌ يُؤْمِنُنِي عَلَيْكَ، وَلَا حِصْنٌ يَحْجُبُنِي عَنْكَ، وَلَا مَلَاذٌ أَلْجَأُ إِلَيْهِ مِنْكَ. فَهَذَا مَقَامُ الْعَائِذِ بِكَ، وَمَحَلُّ الْمُعْتَرِفِ لَكَ، فَلَا يَضِيقَنَّ عَنِّي فَضْلُكَ، وَلَا يَقْصُرَنَّ دُونِي عَفْوُكَ، وَاغْفِرْ لِي إِنَّكَ خَيْرُ الْغَافِرِينَ.',
+    english: 'There is no intercessor who intercedes for me with Thee, no protector who gives me security before Thee, no fortress to veil me from Thee, and no refuge to which I may flee from Thee. This is the station of him who takes refuge in Thee and the place of him who confesses to Thee, so let not Thy bounty be too narrow for me, let not Thy pardon fall short of me, and forgive me, for Thou art the best of forgivers.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when totally alone and without worldly recourse, when confessing sins and asking for forgiveness with no intermediary',
+  },
+  {
+    arabic: 'وَأَنْتَ أَوْلَى مَنْ رَجَاهُ، وَأَحَقُّ مَنْ خَشِيَهُ وَاتَّقَاهُ، فَأَعْطِنِي يَا رَبِّ مَا رَجَوْتُ، وَآمِنِّي مَا حَذِرْتُ، وَعُدْ عَلَيَّ بِعَائِدَةِ رَحْمَتِكَ، إِنَّكَ أَكْرَمُ الْمَسْئُولِينَ. اللَّهُمَّ وَإِذْ سَتَرْتَنِي بِعَفْوِكَ وَتَغَمَّدْتَنِي بِفَضْلِكَ فِي دَارِ الْفَنَاءِ فَأَجِرْنِي مِنْ فَضِيحَاتِ دَارِ الْبَقَاءِ.',
+    english: 'Thou art the most worthy of those in whom hope is placed and the most deserving to be feared and revered, so give me, my Lord, what I have hoped, grant me security from what I dread, and return to me with the bounty of Thy mercy, for Thou art the most generous of those who are asked. O God, since Thou hast covered me with Thy pardon and immersed me in Thy bounty in the abode of annihilation, give me refuge from the disgraces of the abode of permanence.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when asking for salvation in the next world, when asking God to complete in the hereafter what He began with mercy in this world',
+  },
+  {
+    arabic: 'اللَّهُمَّ وَأَنْتَ حَدَرْتَنِي مَاءً مَهِيناً مِنْ صُلْبٍ، ثُمَّ نُطْفَةً ثُمَّ عَلَقَةً ثُمَّ مُضْغَةً ثُمَّ عَظْماً ثُمَّ كَسَوْتَ الْعِظَامَ لَحْماً ثُمَّ أَنْشَأْتَنِي خَلْقاً آخَرَ كَمَا شِئْتَ. وَلَوْ تَكِلُنِي يَا رَبِّ فِي تِلْكَ الْحَالَاتِ إِلَى حَوْلِي لَمْ أَجِدْ إِلَيْهِ سَبِيلًا.',
+    english: 'O God, Thou sent me down as mean water from loins, then as a sperm-drop, then as a clot, then as a tissue, then as bones, then Thou clothed the bones in flesh, then Thou produced me as another creature as Thou willed. And had Thou left me to myself in those states, I would have found no way to it.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when reflecting on God\'s continuous creation and care from origin, when acknowledging that God\'s grace has been present since before one could even ask',
+  },
+  {
+    arabic: 'اللَّهُمَّ وَمَا سَوَّلَ لَنَا مِنْ بَاطِلٍ فَعَرِّفْنَاهُ، وَإِذَا عَرَّفْتَنَاهُ فَقِنَاهُ، وَبَصِّرْنَا مَا نُكَايِدُهُ بِهِ. اللَّهُمَّ وَأَشْرِبْ قُلُوبَنَا إِنْكَارَ عَمَلِهِ وَالْطُفْ لَنَا فِي نَقْضِ حِيَلِهِ. اللَّهُمَّ لَا تَجْعَلْ لَهُ فِي قُلُوبِنَا مَدْخَلًا وَلَا تُوطِنَنَّ لَهُ فِيمَا لَدَيْنَا مَنْزِلًا.',
+    english: 'O God, whenever Satan has shown us falsehood, cause us to recognize it, and once Thou hast caused us to recognize it, protect us from it! Make us see what will allow us to outwit him. Saturate our hearts with the rejection of his works and be gentle to us by destroying his stratagems. Assign him no place of entrance into our hearts and do not allow him to make his home in that which is with us!',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when fighting against evil whisperings, when asking God to expose deception and protect the heart from Satan',
+  },
+  {
+    arabic: 'اللَّهُمَّ لَا شَيْءَ يَعْدِلُ رِضَاكَ وَلَا شَيْءَ دُونَ سَخَطِكَ، فَاجْعَلْ رِضَاكَ لِي وَصُنِّي عَنْ سَخَطِكَ. اللَّهُمَّ إِنِّي أَسْأَلُكَ سُؤَالَ مَنِ اشْتَدَّتْ فَاقَتُهُ وَضَعُفَتْ قُوَّتُهُ وَكَثُرَتْ ذُنُوبُهُ، سُؤَالَ مَنْ لَا يَجِدُ لِذَنْبِهِ غَافِراً غَيْرَكَ.',
+    english: 'O God, nothing equals Thy good pleasure and nothing is below Thy wrath, so appoint Thy good pleasure for me and preserve me from Thy wrath. O God, I ask Thee with the asking of him whose neediness is intense, whose strength is frail, and whose sins are many, the asking of one who finds no forgiver of his sin other than Thee.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when desperate and burdened by sin, when seeking God\'s pleasure above all else and asking with the asking of the utterly needy',
+  },
+  {
+    arabic: 'اللَّهُمَّ مَنْ أَصْبَحَ لَهُ ثِقَةٌ أَوْ رَجَاءٌ غَيْرُكَ، فَقَدْ أَصْبَحْتُ وَأَنْتَ ثِقَتِي وَرَجَائِي فِي الْأُمُورِ كُلِّهَا، فَاقْضِ لِي بِخَيْرِهَا عَاقِبَةً، وَنَجِّنِي مِنْ مَضَلَّاتِ الْفِتَنِ بِرَحْمَتِكَ، يَا أَرْحَمَ الرَّاحِمِينَ.',
+    english: 'O God, some rise in the morning having trust or hope in other than Thee. I rise in the morning, and Thou art my trust and my hope in all affairs, so decree for me those which are best in outcome and deliver me from misguiding trials, O Most Merciful of the merciful!',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when rising in the morning with trust solely in God, when seeking divine guidance in all affairs of the day',
+  },
+  {
+    arabic: 'يَا وَاحِدُ يَا أَحَدُ يَا صَمَدُ، يَا مَنْ لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُنْ لَهُ كُفُواً أَحَدٌ، اعْصِمْنِي وَطَهِّرْنِي وَاذْهَبْ بِبَلِيَّتِي.',
+    english: 'O One, O Unique, O Eternal Refuge! O He Who has not begotten, nor has been begotten, and equal to Whom is not any one! Preserve me, purify me, and take away my affliction.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when seeking God\'s protection through His names, when asking for purification and relief from affliction',
+  },
+  {
+    arabic: 'يَا فَارِجَ الْهَمِّ وَكَاشِفَ الْغَمِّ، يَا رَحْمَانَ الدُّنْيَا وَالْآخِرَةِ وَرَحِيمَهُمَا، صَلِّ عَلَى مُحَمَّدٍ وَآلِ مُحَمَّدٍ، وَافْرُجْ هَمِّي وَاكْشِفْ غَمِّي.',
+    english: 'O Reliever of worry! O Remover of grief! O Merciful in this world and the next and Compassionate in both! Bless Muhammad and his Household, relieve my worry, and remove my grief!',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when overcome by grief or anxiety, when calling on God as the remover of sorrow',
+  },
+  {
+    arabic: 'اللَّهُمَّ خُذْ لِنَفْسِكَ مِنْ نَفْسِي مَا يُخَلِّصُهَا، وَأَبْقِ لِنَفْسِي مِنْ نَفْسِي مَا يُصْلِحُهَا، فَإِنَّ نَفْسِي هَالِكَةٌ أَوْ تَعْصِمَهَا.',
+    english: 'O God, take to Thyself from my soul what will purify it and leave for my soul that of my soul that will set it right, for my soul will perish unless Thou preservest it.',
+    source: 'Sahifa Sajjadiyya, Du',
+    theme: 'when fearing spiritual ruin and asking God to take charge of one\'s soul, when acknowledging the soul cannot save itself',
   },
 ]
 
@@ -795,7 +1055,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 333',
     theme: 'on wealth, on the long view, on letting go',
   },
-  // ── v46.1 corpus expansion · patience, hardship, calamity ─────
   {
     arabic: 'إِذَا كُنْتَ فِي إِدْبَارٍ وَالْمَوْتُ فِي إِقْبَالٍ، فَمَا أَسْرَعَ الْمُلْتَقَى',
     english: 'When you are in retreat and death is in advance, how swift is the meeting.',
@@ -910,7 +1169,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha',
     theme: 'on patience, on endurance, on what carries you through hardship',
   },
-  // ── v46.1 corpus expansion · knowledge, speech, intellect ─────
   {
     arabic: 'الْعِلْمُ وِرَاثَةٌ كَرِيمَةٌ، وَالْآدَابُ حُلَلٌ حِسَانٌ، وَالْفِكْرُ مِرْآةٌ صَافِيَةٌ',
     english:
@@ -1006,7 +1264,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on silence, on wisdom, on speech, on rare virtues',
   },
-  // ── v46.1 corpus expansion · justice, power, leadership ───────
   {
     arabic:
       'وَأَيْمُ اللَّهِ لَأُنْصِفَنَّ الْمَظْلُومَ مِنْ ظَالِمِهِ، وَلَأَقُودَنَّ الظَّالِمَ بِخِزَامَتِهِ، حَتَّى أُورِدَهُ مَنْهَلَ الْحَقِّ وَإِنْ كَانَ كَارِهًا',
@@ -1158,8 +1415,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Sermon 216',
     theme: 'on mutual responsibility, on no one above duty, on the dignity of the small, on shared accountability',
   },
-
-  // ── Humility & gratitude ─────────────────────────────────────────
   {
     arabic: 'مَنْ تَوَاضَعَ رَفَعَهُ اللَّهُ، وَمَنْ تَكَبَّرَ وَضَعَهُ اللَّهُ',
     english: 'Whoever humbles themselves, God raises them; whoever exalts themselves, God lowers them.',
@@ -1295,8 +1550,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha (saying)',
     theme: 'on gratitude, on accountability, on blessings rightly used',
   },
-
-  // ── Charity & generosity ─────────────────────────────────────────
   {
     arabic:
       'السَّخَاءُ مَا كَانَ ابْتِدَاءً، فَأَمَّا مَا كَانَ عَنْ مَسْأَلَةٍ فَحَيَاءٌ وَتَذَمُّمٌ',
@@ -1425,8 +1678,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on miserliness, on the cost of stinginess, when feeling miserly',
   },
-
-  // ── Jihad al-nafs (inner struggle) ───────────────────────────────
   {
     arabic:
       'حَاسِبُوا أَنْفُسَكُمْ قَبْلَ أَنْ تُحَاسَبُوا، وَزِنُوهَا قَبْلَ أَنْ تُوزَنُوا',
@@ -1544,8 +1795,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on freedom from the lower self, on the inner struggle',
   },
-
-  // ── Dignity & self-respect ───────────────────────────────────────
   {
     arabic: 'الْقَنَاعَةُ مَالٌ لَا يَنْفَدُ',
     english: 'Contentment is wealth that does not run out.',
@@ -1673,8 +1922,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 168',
     theme: 'on self-respect as foundation, on character begins within, on dignity precedes virtue',
   },
-
-  // ── Tawakkul, riḍā, rizq, qadar ─────────────────────────────────
   {
     arabic: 'التَّوَكُّلُ خَيْرُ عِمَادٍ',
     english: 'Reliance upon God is the best support.',
@@ -1777,8 +2024,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Well-attested transmission (Prophetic)',
     theme: 'on reliance on God, on effort coupled with surrender',
   },
-
-  // ── Friendship & companionship ───────────────────────────────────
   {
     arabic: 'لَا تَتَّخِذَنَّ عَدُوَّ صَدِيقِكَ صَدِيقًا فَتُعَادِيَ صَدِيقَكَ',
     english:
@@ -1908,8 +2153,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 214',
     theme: 'on gentleness attracts friends, on character draws companions, on ease in company',
   },
-
-  // ── Justice & speaking truth to power ────────────────────────────
   {
     arabic: 'الْعَدْلُ أَسَاسٌ بِهِ قِوَامُ الْعَالَمِ',
     english: 'Justice is the foundation upon which the world stands.',
@@ -2035,8 +2278,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 341',
     theme: 'on divine reckoning, on the oppressor\'s fate, on hope for the wronged',
   },
-
-  // ── Speech & silence ─────────────────────────────────────────────
   {
     arabic: 'اللِّسَانُ سَبُعٌ، إِنْ خُلِّيَ عَنْهُ عَقَرَ',
     english: 'The tongue is a beast of prey — if it is let loose, it wounds.',
@@ -2147,8 +2388,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 174',
     theme: 'on guarding the tongue, on piety begins at the lips',
   },
-
-  // ── Specific hardships & sabr ───────────────────────────────────
   {
     arabic:
       'إِنَّ عَظِيمَ الْأَجْرِ مَعَ عَظِيمِ الْبَلَاءِ، وَمَا أَحَبَّ اللَّهُ قَوْمًا إِلَّا ابْتَلَاهُمْ',
@@ -2270,8 +2509,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 191',
     theme: 'on the human condition under trial',
   },
-
-  // ── Tawba (repentance & return) ──────────────────────────────────
   {
     arabic:
       'التَّوْبَةُ نَدَمٌ بِالْقَلْبِ، وَاسْتِغْفَارٌ بِاللِّسَانِ، وَتَرْكٌ بِالْجَوَارِحِ، وَإِضْمَارُ أَلَّا يَعُودَ',
@@ -2400,8 +2637,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: "al-Kafi, Kitab al-Iman wa al-Kufr, Bab al-Tawba",
     theme: 'on tawba, when feeling unworthy after return',
   },
-
-  // ── Rifq, ḥilm, mercy ───────────────────────────────────────────
   {
     arabic: 'الرِّفْقُ مِفْتَاحُ النَّجَاحِ',
     english: 'Gentleness is the key to success.',
@@ -2512,8 +2747,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 142',
     theme: 'on kindness, on the duties of wealth',
   },
-
-  // ── Family bonds, parents, kin ───────────────────────────────────
   {
     arabic: 'صِلْ مَنْ قَطَعَكَ، وَأَعْطِ مَنْ حَرَمَكَ، وَأَحْسِنْ إِلَى مَنْ أَسَاءَ إِلَيْكَ',
     english: 'Maintain ties with the one who has severed you, give to the one who has deprived you, and be kind to the one who has wronged you.',
@@ -2635,8 +2868,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: "al-Kafi, Bāb Ṣilat al-Raḥim",
     theme: 'on ṣilat al-raḥim, on the minimum bond',
   },
-
-  // ── Niyya (intention) & ikhlās (sincerity) ──────────────────────
   {
     arabic: 'نِيَّةُ الْمَرْءِ خَيْرٌ مِنْ عَمَلِهِ',
     english: "A person's intention is better than their action.",
@@ -2751,8 +2982,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on niyya, on the root of every deed',
   },
-
-  // ── Maʿrifat Allāh (intimate knowledge of God) ───────────────────
   {
     arabic: 'مَا كُنْتُ أَعْبُدُ رَبًّا لَمْ أَرَهُ',
     english: 'I would not worship a Lord I have not seen.',
@@ -2863,8 +3092,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Sermon 1 (opening)',
     theme: 'on hamd, on the limits of praise',
   },
-
-  // ── Patience with those close — when wronged by your own ────────
   {
     arabic: 'أَشَدُّ الْمَصَائِبِ سُوءُ الْخَلَفِ',
     english: 'The most severe of calamities is the wickedness of those who succeed you.',
@@ -2970,8 +3197,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 24',
     theme: 'on overlooking past wrongs, on relieving those who once wronged you',
   },
-
-  // ── On the Qur'an ────────────────────────────────────────────────
   {
     arabic:
       'وَاعْلَمُوا أَنَّ هَذَا الْقُرْآنَ هُوَ النَّاصِحُ الَّذِي لَا يَغُشُّ، وَالْهَادِي الَّذِي لَا يُضِلُّ، وَالْمُحَدِّثُ الَّذِي لَا يَكْذِبُ',
@@ -3074,8 +3299,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 97',
     theme: 'on certainty, on the inward state of worship',
   },
-
-  // ── Dhikr (remembrance of God) ───────────────────────────────────
   {
     arabic: 'ذِكْرُ اللَّهِ جِلَاءُ الصُّدُورِ، وَطُمَأْنِينَةُ الْقُلُوبِ',
     english: 'The remembrance of God is the polish of breasts and the tranquillity of hearts.',
@@ -3174,8 +3397,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on dhikr, on companionship with God',
   },
-
-  // ── Rajāʾ (hope in God) ──────────────────────────────────────────
   {
     arabic: 'لَا يَرْجُوَنَّ أَحَدٌ مِنْكُمْ إِلَّا رَبَّهُ، وَلَا يَخَافَنَّ إِلَّا ذَنْبَهُ',
     english: 'Let none of you hope in any but his Lord, and let none of you fear any but his sin.',
@@ -3268,8 +3489,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on rajāʾ as already reward, on despair as already punishment',
   },
-
-  // ── Taqwā (God-consciousness) ────────────────────────────────────
   {
     arabic: 'اِتَّقُوا اللَّهَ تَقِيَّةَ مَنْ شَمَّرَ تَجْرِيدًا، وَجَدَّ تَشْمِيرًا',
     english: 'Fear God with the fearing of one who has stripped himself for action and girded up his loins with seriousness.',
@@ -3363,8 +3582,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Sermon 16',
     theme: 'on the metaphor of sins as runaway horses',
   },
-
-  // ── Time, the worth of moments ──────────────────────────────────
   {
     arabic: 'إِنَّ اللَّيْلَ وَالنَّهَارَ يَعْمَلَانِ فِيكَ، فَاعْمَلْ فِيهِمَا، وَيَأْخُذَانِ مِنْكَ، فَخُذْ مِنْهُمَا',
     english: 'The night and the day work upon you, so work in them; they take from you, so take from them.',
@@ -3471,8 +3688,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on hastening to deeds',
   },
-
-  // ── The believer's character (mu'min sketches) ───────────────────
   {
     arabic: 'الْمُؤْمِنُ مِرْآةُ الْمُؤْمِنِ',
     english: 'The believer is the mirror of the believer.',
@@ -3571,8 +3786,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on the believer\'s trustworthiness',
   },
-
-  // ── Munāfiq (warnings against duplicity) ─────────────────────────
   {
     arabic:
       'شَرُّ النَّاسِ مَنْ كَانَ ذَا وَجْهَيْنِ وَلِسَانَيْنِ، يُطْرِي أَخَاهُ شَاهِدًا وَيَأْكُلُهُ غَائِبًا',
@@ -3687,8 +3900,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on the wretchedness of duplicity',
   },
-
-  // ── Death-readiness ──────────────────────────────────────────────
   {
     arabic:
       'تَجَهَّزُوا رَحِمَكُمُ اللَّهُ فَقَدْ نُودِيَ فِيكُمْ بِالرَّحِيلِ، وَأَقِلُّوا الْعُرْجَةَ عَلَى الدُّنْيَا، وَانْقَلِبُوا بِصَالِحِ مَا بِحَضْرَتِكُمْ مِنَ الزَّادِ',
@@ -3779,8 +3990,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 406',
     theme: 'on dignity in poverty, on reliance on God before the grave',
   },
-
-  // ── Intercession (shafāʿa) ───────────────────────────────────────
   {
     arabic: 'إِنَّ أَفْضَلَ الشُّفَعَاءِ لَكَ عَمَلُكَ',
     english: 'The best of intercessors for you is your own deed.',
@@ -3849,8 +4058,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 269',
     theme: 'on the Hereafter as intercessor',
   },
-
-  // ── Health, body, moderation ─────────────────────────────────────
   {
     arabic: 'الصِّحَّةُ أَفْضَلُ النِّعَمِ',
     english: 'Health is the most excellent of blessings.',
@@ -3938,8 +4145,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Letter 53',
     theme: 'on the body in worship, on rhythm of devotion',
   },
-
-  // ── Prayer (ṣalāh) ───────────────────────────────────────────────
   {
     arabic: 'إِنَّ الصَّلَاةَ تَنْزِيهٌ عَنِ الْكِبْرِ',
     english: 'Truly prayer is a purification from arrogance.',
@@ -4009,8 +4214,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'al-Kafi, Kitab al-Salah',
     theme: 'on presence of heart in prayer',
   },
-
-  // ── Night vigil (qiyām al-layl) ──────────────────────────────────
   {
     arabic: 'نِعْمَ الْقُرَنَاءُ الْعِبَادَةُ فِي ظُلَمِ اللَّيْلِ',
     english: 'What excellent companions is worship in the darkness of the night.',
@@ -4097,8 +4300,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on tahajjud, on love of God',
   },
-
-  // ── Envy (ḥasad) ────────────────────────────────────────────────
   {
     arabic: 'الْحَسَدُ شَرُّ الْأَمْرَاضِ',
     english: 'Envy is the worst of diseases.',
@@ -4183,8 +4384,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on the envier never at peace',
   },
-
-  // ── Truthfulness (ṣidq) & honesty ────────────────────────────────
   {
     arabic: 'الصِّدْقُ أَمَانَةٌ وَالْكَذِبُ خِيَانَةٌ',
     english: 'Truthfulness is a trust, and lying is a betrayal.',
@@ -4271,8 +4470,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on the tongue as the measure of the believer',
   },
-
-  // ── Worship (al-ʿibāda) ──────────────────────────────────────────
   {
     arabic: 'مَا عَبَدَ اللَّهَ سُبْحَانَهُ أَحَدٌ حَقَّ عِبَادَتِهِ',
     english: 'No one has worshipped God with the worship that is truly His due.',
@@ -4354,8 +4551,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 44',
     theme: 'on the worshipper who tastes',
   },
-
-  // ── Mercy (raḥma) ───────────────────────────────────────────────
   {
     arabic: 'سَبَقَتْ رَحْمَتُهُ غَضَبَهُ، وَوَسِعَتْ رَحْمَتُهُ كُلَّ شَيْءٍ',
     english: 'His mercy outstrips His wrath, and His mercy encompasses all things.',
@@ -4442,8 +4637,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on mercy toward the weak',
   },
-
-  // ── Hereafter (ākhira) ──────────────────────────────────────────
   {
     arabic: 'أَلَا وَإِنَّ الْجَنَّةَ حُفَّتْ بِالْمَكَارِهِ، وَإِنَّ النَّارَ حُفَّتْ بِالشَّهَوَاتِ',
     english: 'Behold, Paradise is surrounded by hardships, and the Fire is surrounded by lusts.',
@@ -4526,8 +4719,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Sermon 230',
     theme: 'on the soul prepared for the Hereafter',
   },
-
-  // ── Sins, the danger of small wrongs ────────────────────────────
   {
     arabic: 'لَا صَغِيرَةَ مَعَ الْإِصْرَارِ، وَلَا كَبِيرَةَ مَعَ الِاسْتِغْفَارِ',
     english: 'There is no minor sin with persistence, and no major sin with seeking forgiveness.',
@@ -4620,8 +4811,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'al-Kafi, vol. 2, Bab Asnaf al-Dhunub',
     theme: 'on the three kinds of sins',
   },
-
-  // ── The heart (al-qalb) ─────────────────────────────────────────
   {
     arabic: 'إِنَّ هَذِهِ الْقُلُوبَ أَوْعِيَةٌ، فَخَيْرُهَا أَوْعَاهَا',
     english: 'These hearts are vessels — and the best of them is the most retentive.',
@@ -4707,8 +4896,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on the heart alive through remembrance of death',
   },
-
-  // ── Wisdom (ḥikma) ──────────────────────────────────────────────
   {
     arabic:
       'الْحِكْمَةُ ضَالَّةُ الْمُؤْمِنِ، فَخُذِ الْحِكْمَةَ وَلَوْ مِنْ أَهْلِ النِّفَاقِ',
@@ -4783,8 +4970,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on wisdom as the heart\'s light',
   },
-
-  // ── Wealth, poverty (unique sayings only) ────────────────────────
   {
     arabic: 'الْغِنَى وَالْفَقْرُ بَعْدَ الْعَرْضِ عَلَى اللَّهِ',
     english: 'Wealth and poverty will only be made manifest after the presentation before God.',
@@ -4821,8 +5006,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 371',
     theme: 'on contentment as treasure',
   },
-
-  // ── Gratitude expanded ──────────────────────────────────────────
   {
     arabic:
       'إِنَّ لِلَّهِ فِي كُلِّ نِعْمَةٍ حَقًّا، فَمَنْ أَدَّاهُ زَادَهُ مِنْهَا، وَمَنْ قَصَّرَ فِيهِ خَاطَرَ بِزَوَالِ نِعْمَتِهِ',
@@ -4874,8 +5057,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on the blessings beyond words',
   },
-
-  // ── The marks of the wise person (al-ʿāqil) ─────────────────────
   {
     arabic: 'الْعَاقِلُ مَنْ وَضَعَ الْأَشْيَاءَ مَوَاضِعَهَا',
     english: 'The wise person is the one who puts things in their proper places.',
@@ -4944,8 +5125,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on the marks of the wise',
   },
-
-  // ── Patience expanded ──────────────────────────────────────────
   {
     arabic: 'وَلَا إِيمَانَ لِمَنْ لَا صَبْرَ لَهُ',
     english: 'There is no faith for one who has no patience.',
@@ -5007,8 +5186,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on the rank of the patient',
   },
-
-  // ── Ghība, slander, protecting honour ───────────────────────────
   {
     arabic: 'الْغِيبَةُ جُهْدُ الْعَاجِزِ',
     english: 'Backbiting is the effort of the incapable.',
@@ -5082,8 +5259,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on defending the absent believer',
   },
-
-  // ── Mosque, community, congregation ──────────────────────────────
   {
     arabic:
       'مَنِ اخْتَلَفَ إِلَى الْمَسْجِدِ أَصَابَ إِحْدَى الثَّمَانِ: أَخًا مُسْتَفَادًا فِي اللَّهِ، أَوْ عِلْمًا مُسْتَطْرَفًا، أَوْ آيَةً مُحْكَمَةً، أَوْ رَحْمَةً مُنْتَظَرَةً، أَوْ كَلِمَةً تَرُدُّهُ عَنْ رَدًى، أَوْ يَسْمَعُ كَلِمَةً تَدُلُّهُ عَلَى هُدًى، أَوْ يَتْرُكُ ذَنْبًا خَشْيَةً أَوْ حَيَاءً',
@@ -5150,8 +5325,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'al-Kafi, Kitab al-Salah',
     theme: 'on rebuke of the absent neighbour',
   },
-
-  // ── The rights of the neighbour, hospitality ────────────────────
   {
     arabic: 'الْجَارُ ثُمَّ الدَّارُ',
     english: 'The neighbour first, then the house.',
@@ -5219,8 +5392,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'al-Kafi, Kitab al-Iman wa al-Kufr',
     theme: 'on the believer\'s open door',
   },
-
-  // ── Service to others ──────────────────────────────────────────
   {
     arabic: 'قَضَاءُ حُقُوقِ الْمُؤْمِنِينَ مِنْ أَفْضَلِ الْأَعْمَالِ',
     english: 'Fulfilling the rights of the believers is among the most excellent of deeds.',
@@ -5287,8 +5458,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on selfless service',
   },
-
-  // ── Humility expanded ──────────────────────────────────────────
   {
     arabic: 'إِذَا رَأَيْتُمُ الْعَالِمَ مُحِبًّا لِدُنْيَاهُ فَاتَّهِمُوهُ عَلَى دِينِهِ',
     english: 'When you see a scholar enamoured with his worldly life, suspect him concerning his religion.',
@@ -5343,8 +5512,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on humility as the highest lineage',
   },
-
-  // ── The strong believer ────────────────────────────────────────
   {
     arabic: 'أَقْوَى النَّاسِ مَنْ قَوِيَ عَلَى نَفْسِهِ',
     english: 'The strongest of people is the one who is strong over his own self.',
@@ -5406,8 +5573,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 31',
     theme: 'on the four pillars of faith',
   },
-
-  // ── Consultation (shūrā, mashūra) ──────────────────────────────
   {
     arabic: 'لَا ظَهِيرَ كَالْمُشَاوَرَةِ',
     english: 'There is no support like consultation.',
@@ -5470,8 +5635,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on the cost of refusing counsel',
   },
-
-  // ── Apology, accepting it, magnanimous overlooking ──────────────
   {
     arabic: 'اقْبَلْ عُذْرَ أَخِيكَ، وَإِنْ لَمْ يَكُنْ لَهُ عُذْرٌ فَالْتَمِسْ لَهُ عُذْرًا',
     english: 'Accept the excuse of your brother — and if he has no excuse, find one for him.',
@@ -5521,8 +5684,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on the virtue of pardon',
   },
-
-  // ── Effort coupled with acceptance ──────────────────────────────
   {
     arabic:
       'اعْمَلْ لِدُنْيَاكَ كَأَنَّكَ تَعِيشُ أَبَدًا، وَاعْمَلْ لِآخِرَتِكَ كَأَنَّكَ تَمُوتُ غَدًا',
@@ -5578,8 +5739,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on the fruit of surrender',
   },
-
-  // ── Istiqāma (uprightness) ──────────────────────────────────────
   {
     arabic: 'الِاسْتِقَامَةُ فَضِيلَةٌ',
     english: 'Uprightness is a virtue.',
@@ -5623,8 +5782,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 106',
     theme: 'on the cost of trading religion for the world',
   },
-
-  // ── Muḥāsaba (self-reckoning, knowing one's own faults) ────────
   {
     arabic: 'ثَمَرَةُ الْمُحَاسَبَةِ إِصْلَاحُ النَّفْسِ',
     english: 'The fruit of self-reckoning is the reform of the soul.',
@@ -5667,8 +5824,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam',
     theme: 'on self-knowledge leading to contentment',
   },
-
-  // ── Three final classical sayings ──────────────────────────────
   {
     arabic:
       'خَالِطُوا النَّاسَ مُخَالَطَةً إِنْ مُتُّمْ مَعَهَا بَكَوْا عَلَيْكُمْ، وَإِنْ عِشْتُمْ حَنُّوا إِلَيْكُمْ',
@@ -5690,14 +5845,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 5',
     theme: 'on knowledge as inheritance, on good manners as adornment',
   },
-
-  // ── Wave 12 — Source-grounded extraction (2026-06-15) ─────────────
-  // 80 entries pulled directly from the digital sources/extracted/ corpus
-  // rather than generated from model memory: 60 from Ghurar al-Hikam
-  // (Tahir Ridha Jaffer translation, Ansariyan Publications 2012) and
-  // 20 short sayings from Nahj al-Balagha al-Hikam al-Qasira. Each
-  // entry preserves Arabic exactly as in the source file and cites the
-  // section + number so the LLM can verify provenance.
   {
     arabic: 'حَلاوَةُ الآخِرَةِ تُذهِبُ مَضاضَةَ شقاءِ الدُّنيا.',
     english: 'The sweetness of the Hereafter removes the pangs of misery of this world.',
@@ -6124,11 +6271,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 424',
     theme: 'when self-mastery is the work, when temper and craving must both be managed',
   },
-
-  // ── Wave 13 — source-grounded additions (Ghurar + Nahj, 2026-06-15) ──
-  // 296 entries extracted by build_seed.py (max 10 per Ghurar section,
-  // domain-diversified by round-robin). All Arabic from the source files.
-
   {
     arabic: 'اَلأدَبُ أحَدُ الْحَسَبَيْنِ.',
     english: 'Good etiquette is one of the two distinguishing merits.',
@@ -7905,9 +8047,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam, Religion And Sharia Law §10',
     theme: 'when belief is tested, when God feels distant',
   },
-
-  // Wave 14A — 538 additional Ghurar entries (new sections)
-
   {
     arabic: 'نالَ المُنى مَنْ عَمِلَ لِدارِ البَقاءِ.',
     english: 'He who works for his Eternal Abode obtains what he desires.',
@@ -11136,8 +11275,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam, Tolerance §1',
     theme: 'when tolerance is the teaching',
   },
-  // Wave 15 — 500 third-pass Ghurar (remaining sections)
-
   {
     arabic: 'الإيثارُ سَجِيَّةُ الأبْرارِ، وَشيمَةُ الأَخيارِ.',
     english: 'Self-sacrifice is a trait of the virtuous and a quality of the righteous.',
@@ -14138,8 +14275,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam, Profit And Gain §1',
     theme: 'when profit and gain is the teaching',
   },
-  // Wave 16 — 597 fourth-pass Ghurar entries
-
   {
     arabic: 'بِالإيثارِ على نَفْسِكَ تَمْلِكُ الرِّقابَ.',
     english: 'By preferring others over yourself, you gain [their] servitude.',
@@ -17722,7 +17857,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam, Emancipation- §1',
     theme: 'when emancipation- is the teaching needed',
   },
-// Wave 14 Agent — additional Ghurar sections
   {
     arabic: 'اَلعَقْلُ نِعْمَةٌ جَليلَةٌ.',
     english: 'The intellect is a great blessing.',
@@ -19007,1751 +19141,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     source: 'Ghurar al-Hikam, Wisdom §35',
     theme: 'when insight is understood as a divine gift not a human achievement, when wisdom originates from beyond what can be seen or studied, when the deepest understanding flows from the hidden',
   },
-
-// Sahifa Sajjadiyya — du'a entries
-  {
-    arabic: 'يَا مَنْ لَا تَنْقَضِي عَجَائِبُ عَظَمَتِهِ، صَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَاحْجُبْنَا عَنِ الْإِلْحَادِ فِي عَظَمَتِكَ. يَا مَنْ لَا تَنْتَهِي مُدَّةُ مُلْكِهِ، صَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَأَعْتِقْ رِقَابَنَا مِنْ نَقِمَتِكَ. يَا مَنْ لَا تَفْنَى خَزَائِنُ رَحْمَتِهِ، صَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ لَنَا نَصِيباً فِي رَحْمَتِكَ.',
-    english: 'O He whose wonders of mightiness will never end! Bless Muhammad and his Household and prevent us from deviation concerning Thy mightiness. O He whose kingdom will never cease! Release our necks from Thy vengeance. O He whose treasuries of mercy will never be exhausted! Appoint for us a portion of Thy mercy.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when seeking refuge in divine mercy, when overwhelmed by fear of God, when beginning a supplication',
-  },
-  {
-    arabic: 'اللَّهُمَّ فَصَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَقِنَا مِنْكَ وَاحْفَظْنَا بِكَ، وَاهْدِنَا إِلَيْكَ، وَلَا تُبَاعِدْنَا عَنْكَ. إِنَّ مَنْ تَقِهِ يَسْلَمْ، وَمَنْ تَهْدِهِ يَعْلَمْ، وَمَنْ تُقَرِّبْهُ إِلَيْكَ يَغْنَمْ.',
-    english: 'O God, bless Muhammad and his Household, protect us from Thyself, safeguard us through Thyself, guide us to Thyself, and take us not far from Thyself. He whom Thou protectest stays safe, he whom Thou guidest knows, and he whom Thou bringest near Thyself takes the spoils.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when seeking divine guidance and protection, when feeling spiritually distant from God',
-  },
-  {
-    arabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ سَلَامَةَ قُلُوبِنَا فِي ذِكْرِ عَظَمَتِكَ، وَفَرَاغَ أَبْدَانِنَا فِي شُكْرِ نِعْمَتِكَ، وَانْطِلَاقَ أَلْسِنَتِنَا فِي وَصْفِ مِنَّتِكَ.',
-    english: 'O God, bless Muhammad and his Household and put the soundness of our hearts into the remembrance of Thy mightiness, the idleness of our bodies into giving thanks for Thy favour, and the flow of our tongues into the description of Thy kindness.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when seeking wholeness of heart and tongue, when wanting worship to pervade all of life',
-  },
-  {
-    arabic: 'الْحَمْدُ لِلَّهِ الَّذِي خَلَقَ اللَّيْلَ وَالنَّهَارَ بِقُوَّتِهِ، وَمَيَّزَ بَيْنَهُمَا بِقُدْرَتِهِ. أَصْبَحْنَا فِي قَبْضَتِكَ يَحْوِينَا مُلْكُكَ وَسُلْطَانُكَ، وَتَضُمُّنَا مَشِيَّتُكَ، وَنَتَصَرَّفُ عَنْ أَمْرِكَ، وَنَتَقَلَّبُ فِي تَدْبِيرِكَ. لَيْسَ لَنَا مِنَ الْأَمْرِ إِلَّا مَا قَضَيْتَ، وَلَا مِنَ الْخَيْرِ إِلَّا مَا أَعْطَيْتَ.',
-    english: 'Praise belongs to God, who created night and day through His strength and set them apart through His power. We rise in the morning in Thy grasp: Thy kingdom and authority contain us and Thy will embraces us. We move about by Thy command and turn this way and that through Thy governing. We own nothing of the affair except what Thou hast decreed and nothing of the good except what Thou hast given.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when beginning a new day, when reflecting on divine sovereignty and complete dependence on God',
-  },
-  {
-    arabic: 'يَا مَنْ تُحَلُّ بِهِ عُقَدُ الْمَكَارِهِ، وَيَا مَنْ يَفْثَأُ بِهِ حَدُّ الشَّدَائِدِ، وَيَا مَنْ يُلْتَمَسُ مِنْهُ الْمَخْرَجُ إِلَى رَوْحِ الْفَرَجِ. ذَلَّتْ لِقُدْرَتِكَ الصِّعَابُ، وَتَسَبَّبَتْ بِلُطْفِكَ الْأَسْبَابُ، وَجَرَى بِقُدْرَتِكَ الْقَضَاءُ، وَمَضَتْ عَلَى إِرَادَتِكَ الْأَشْيَاءُ.',
-    english: 'O He through whom the knots of detested things are untied! O He through whom the cutting edge of hardships is blunted! O He from whom is begged the outlet to the freshness of relief! Intractable affairs yield to Thy power, means are made ready by Thy gentleness, the decree goes into effect through Thy power, and all things proceed according to Thy desire.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when facing a difficult trial or hardship, when seeking relief from distress, when all other means have failed',
-  },
-  {
-    arabic: 'أَنْتَ الْمَدْعُوُّ لِلْمُهِمَّاتِ، وَأَنْتَ الْمَفْزَعُ فِي الْمُلِمَّاتِ، لَا يَنْدَفِعُ مِنْهَا إِلَّا مَا دَفَعْتَ، وَلَا يَنْكَشِفُ مِنْهَا إِلَّا مَا كَشَفْتَ. فَقَدْ ضِقْتُ لِمَا نَزَلَ بِي يَا رَبِّ ذَرْعاً، وَامْتَلَأْتُ بِحَمْلِ مَا حَدَثَ عَلَيَّ هَمّاً، وَأَنْتَ الْقَادِرُ عَلَى كَشْفِ مَا مُنِيتُ بِهِ، فَافْعَلْ بِي ذَلِكَ وَإِنْ لَمْ أَسْتَوْجِبْهُ مِنْكَ.',
-    english: 'Thou art the supplicated in worries and the place of flight in misfortunes; none of them is repelled unless Thou repellest, none is removed unless Thou removest. My capacity has been straitened, my Lord, by what has come down on me, and I am filled with worry, while Thou hast power to remove what has afflicted me. So do that for me though I merit it not from Thee, O Possessor of the Mighty Throne!',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when burdened by trials, when feeling incapable and asking for unmerited grace, when crying to God in distress',
-  },
-  {
-    arabic: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ هَيَجَانِ الْحِرْصِ، وَسَوْرَةِ الْغَضَبِ، وَغَلَبَةِ الْحَسَدِ، وَضَعْفِ الصَّبْرِ، وَقِلَّةِ الْقَنَاعَةِ، وَشَكَاسَةِ الْخُلُقِ، وَإِلْحَاحِ الشَّهْوَةِ، وَمُتَابَعَةِ الْهَوَى، وَمُخَالَفَةِ الْهُدَى.',
-    english: 'O God, I seek refuge in Thee from the agitation of craving, the violence of wrath, the domination of envy, the frailty of patience, the lack of contentment, surliness of character, urgency of passion, following caprice, and opposing guidance.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when seeking protection from bad character traits, when striving against the ego and its vices',
-  },
-  {
-    arabic: 'وَنَعُوذُ بِكَ مِنَ الْحَسْرَةِ الْعُظْمَى، وَالْمُصِيبَةِ الْكُبْرَى، وَأَشْقَى الشَّقَاءِ، وَسُوءِ الْمَآبِ، وَحِرْمَانِ الثَّوَابِ، وَحُلُولِ الْعِقَابِ. اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَأَعِذْنِي مِنْ كُلِّ ذَلِكَ بِرَحْمَتِكَ، يَا أَرْحَمَ الرَّاحِمِينَ.',
-    english: 'We seek refuge in Thee from the most dreadful remorse, the greatest affliction, the most wretched wretchedness, the evil end to the journey, the deprivation of reward, and the advent of punishment. O God, bless Muhammad and his Household and through Thy mercy give me refuge from all of that, O Most Merciful of the merciful!',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when fearing a bad end, when seeking refuge from divine punishment, when contemplating the afterlife',
-  },
-  {
-    arabic: 'وَلَا تُخَلِّ فِي ذَلِكَ بَيْنَ نُفُوسِنَا وَاخْتِيَارِهَا، فَإِنَّهَا مُخْتَارَةٌ لِلْبَاطِلِ إِلَّا مَا وَفَّقْتَ، أَمَّارَةٌ بِالسُّوءِ إِلَّا مَا رَحِمْتَ.',
-    english: 'Leave not our souls alone to choose, for they choose falsehood except inasmuch as Thou givest success, and they command to evil except inasmuch as Thou hast mercy.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when acknowledging the soul\'s inclination to wrong, when asking God not to leave one to oneself',
-  },
-  {
-    arabic: 'اللَّهُمَّ إِنْ تَشَأْ تَعْفُ عَنَّا فَبِفَضْلِكَ، وَإِنْ تَشَأْ تُعَذِّبْنَا فَبِعَدْلِكَ. فَسَهِّلْ لَنَا عَفْوَكَ بِمَنِّكَ، وَأَجِرْنَا مِنْ عَذَابِكَ بِتَجَاوُزِكَ، فَإِنَّهُ لَا طَاقَةَ لَنَا بِعَدْلِكَ، وَلَا نَجَاةَ لِأَحَدٍ مِنَّا دُونَ عَفْوِكَ.',
-    english: 'O God, if Thou willest, Thou wilt pardon us through Thy bounty, and if Thou willest, Thou wilt chastise us through Thy justice. So make our ways smooth to Thy pardon through Thy kindness and grant us sanctuary from Thy chastisement through Thy forbearance, for none of us has the endurance for Thy justice and none of us can reach deliverance without Thy pardon!',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when confessing complete dependence on divine pardon, when seeking asylum in God from divine justice',
-  },
-  {
-    arabic: 'يَا غَنِيَّ الْأَغْنِيَاءِ، هَا نَحْنُ عِبَادُكَ بَيْنَ يَدَيْكَ، وَأَنَا أَفْقَرُ الْفُقَرَاءِ إِلَيْكَ، فَاجْبُرْ فَاقَتَنَا بِوُسْعِكَ، وَلَا تَقْطَعْ رَجَاءَنَا بِمَنْعِكَ. فَإِلَى مَنْ حِينَئِذٍ مُنْقَلَبُنَا عَنْكَ، وَإِلَى أَيْنَ مَذْهَبُنَا عَنْ بَابِكَ.',
-    english: 'O Richest of the rich! Here we are, Thy servants, before Thee. I am the neediest of the needy toward Thee, so redress our neediness through Thy plenty and cut us not off from our hopes through Thy withholding. Then to whom would we return after Thee? Where would we go from Thy gate?',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when professing complete neediness before God, when there is nowhere else to turn',
-  },
-  {
-    arabic: 'يَا مَنْ ذِكْرُهُ شَرَفٌ لِلذَّاكِرِينَ، وَيَا مَنْ شُكْرُهُ فَوْزٌ لِلشَّاكِرِينَ، وَيَا مَنْ طَاعَتُهُ نَجَاةٌ لِلْمُطِيعِينَ، صَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَاشْغَلْ قُلُوبَنَا بِذِكْرِكَ عَنْ كُلِّ ذِكْرٍ، وَأَلْسِنَتَنَا بِشُكْرِكَ عَنْ كُلِّ شُكْرٍ، وَجَوَارِحَنَا بِطَاعَتِكَ عَنْ كُلِّ طَاعَةٍ.',
-    english: 'O He remembering whom brings honour to those who remember! O He thanking whom brings triumph to those who give thanks! O He obeying whom brings deliverance to those who obey! Bless Muhammad and his Household, and divert our hearts through remembering Thee from every act of remembrance, our tongues through thanking Thee from every act of thanksgiving, our limbs through obeying Thee from every act of obedience!',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when seeking to fill one\'s life entirely with God\'s remembrance, when wanting all worship to be solely for God',
-  },
-  {
-    arabic: 'إِنَّكَ رَحِيمٌ بِمَنْ دَعَاكَ، وَمُسْتَجِيبٌ لِمَنْ نَادَاكَ. وَإِذَا انْقَضَتْ أَيَّامُ حَيَاتِنَا وَتَصَرَّمَتْ مُدَدُ أَعْمَارِنَا، فَصَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ خِتَامَ مَا تُحْصِي عَلَيْنَا كَتَبَةُ أَعْمَالِنَا تَوْبَةً مَقْبُولَةً.',
-    english: 'Verily Thou art compassionate to him who supplicates Thee, the responder to him who calls upon Thee! And when the days of our life have passed by and the terms of our lifetimes have elapsed, bless Muhammad and his Household and make the outcome of what the writers of our works count against us an accepted repentance.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when thinking of death and one\'s final state, when asking for a good ending and accepted repentance',
-  },
-  {
-    arabic: 'فَهَا أَنَا ذَا يَا إِلَهِي وَاقِفٌ بِبَابِ عِزِّكَ وُقُوفَ الْمُسْتَسْلِمِ الذَّلِيلِ، وَسَائِلُكَ عَلَى الْحَيَاءِ مِنِّي سُؤَالَ الْبَائِسِ الْمُعِيلِ. سُبْحَانَكَ لَا أَيْأَسُ مِنْكَ وَقَدْ فَتَحْتَ لِي بَابَ التَّوْبَةِ إِلَيْكَ.',
-    english: 'So here I am, my God, standing at the gate of Thy might, the standing of the lowly, the surrendered, asking Thee in my shame, the asking of the destitute, the pitiful. Glory be to Thee! I do not despair of Thee, for Thou hast opened the door of repentance toward Thyself.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when standing before God in shame yet hope, when refusing to despair of God\'s mercy',
-  },
-  {
-    arabic: 'عَالِمٍ بِأَنَّ الْعَفْوَ عَنِ الذَّنْبِ الْعَظِيمِ لَا يَتَعَاظَمُكَ، وَأَنَّ التَّجَاوُزَ عَنِ الْإِثْمِ الْجَلِيلِ لَا يَسْتَصْعِبُكَ، وَأَنَّ أَحَبَّ عِبَادِكَ إِلَيْكَ مَنْ تَرَكَ الِاسْتِكْبَارَ عَلَيْكَ، وَجَانَبَ الْإِصْرَارَ، وَلَزِمَ الِاسْتِغْفَارَ.',
-    english: 'Knowing that pardoning great sins is nothing great for Thee, overlooking enormous misdeeds is not difficult for Thee, and that the most beloved of Thy servants to Thee is he who refrains from arrogance before Thee, pulls aside from persistence in sin, and holds fast to praying forgiveness.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when confessing sins before God, when understanding that forgiveness costs God nothing, when returning from sin',
-  },
-  {
-    arabic: 'فَإِنَّكَ مَلِيءٌ بِالْعَفْوِ، مَرْجُوٌّ لِلْمَغْفِرَةِ، مَعْرُوفٌ بِالتَّجَاوُزِ، لَيْسَ لِحَاجَتِي مَطْلَبٌ سِوَاكَ، وَلَا لِذَنْبِي غَافِرٌ غَيْرُكَ. وَلَا أَخَافُ عَلَى نَفْسِي إِلَّا إِيَّاكَ، إِنَّكَ أَهْلُ التَّقْوَى وَأَهْلُ الْمَغْفِرَةِ.',
-    english: 'Thou art full of pardon, the hoped-for source of forgiveness, well known for Thy forbearance. My need has no object but Thee, my sin no forgiver other than Thee. I have no fear for myself except from Thee; Thou art worthy of reverential fear, and worthy to forgive.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when seeking forgiveness with complete sincerity, when acknowledging God as the only forgiver',
-  },
-  {
-    arabic: 'اللَّهُمَّ يَا مُنْتَهَى مَطْلَبِ الْحَاجَاتِ، وَيَا مَنْ عِنْدَهُ نَيْلُ الطَّلِبَاتِ، وَيَا مَنْ لَا يَبِيعُ نِعَمَهُ بِالْأَثْمَانِ، وَيَا مَنْ لَا يُكَدِّرُ عَطَايَاهُ بِالِامْتِنَانِ، وَيَا مَنْ يُسْتَغْنَى بِهِ وَلَا يُسْتَغْنَى عَنْهُ.',
-    english: 'O God, O ultimate object of needs! O He through whom requests are attained! O He whose favours are not bought by prices! O He who does not muddy His gifts by the imposition of obligations! O He along with whom nothing is needed and without whom nothing can be done!',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when turning to God with every need, when recognising God as the only true source of all gifts',
-  },
-  {
-    arabic: 'وَعَلِمْتُ أَنَّ كَثِيرَ مَا أَسْأَلُكَ يَسِيرٌ فِي وُجْدِكَ، وَأَنَّ خَطِيرَ مَا أَسْتَوْهِبُكَ حَقِيرٌ فِي وُسْعِكَ، وَأَنَّ كَرَمَكَ لَا يَضِيقُ عَنْ سُؤَالِ أَحَدٍ، وَأَنَّ يَدَكَ بِالْعَطَايَا أَعْلَى مِنْ كُلِّ يَدٍ.',
-    english: 'I came to know that the many I request from Thee are few before Thy wealth, the weighty I ask from Thee is vile before Thy plenty; Thy generosity is not constrained by anyone\'s asking, and Thy hand is higher in bestowing gifts than every hand.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when daring to ask great things of God, when reflecting on God\'s boundless generosity',
-  },
-  {
-    arabic: 'اللَّهُمَّ لَكَ الْحَمْدُ عَلَى مَا لَمْ أَزَلْ أَتَصَرَّفُ فِيهِ مِنْ سَلَامَةِ بَدَنِي، وَلَكَ الْحَمْدُ عَلَى مَا أَحْدَثْتَ بِي مِنْ عِلَّةٍ فِي جَسَدِي. فَمَا أَدْرِي يَا إِلَهِي أَيُّ الْحَالَيْنِ أَحَقُّ بِالشُّكْرِ لَكَ، وَأَيُّ الْوَقْتَيْنِ أَوْلَى بِالْحَمْدِ لَكَ: أَوَقْتُ الصِّحَّةِ أَمْ وَقْتُ الْعِلَّةِ.',
-    english: 'O God, to Thee belongs praise for the good health of my body which lets me move about, and to Thee belongs praise for the ailments which Thou causest to arise in my flesh! For I know not, my God, which of the two states deserves more my thanking Thee and which of the two times is more worthy for my praise of Thee: the time of health or the time of illness.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when sick or afflicted, when finding gratitude in illness as well as health',
-  },
-  {
-    arabic: 'اللَّهُمَّ يَا مَنْ بِرَحْمَتِهِ يَسْتَغِيثُ الْمُذْنِبُونَ، وَيَا مَنْ إِلَى ذِكْرِ إِحْسَانِهِ يَفْزَعُ الْمُضْطَرُّونَ، وَيَا مَنْ لِخِيفَتِهِ يَنْتَحِبُ الْخَاطِئُونَ. يَا أُنْسَ كُلِّ مُسْتَوْحِشٍ غَرِيبٍ، وَيَا فَرَجَ كُلِّ مَكْرُوبٍ كَئِيبٍ.',
-    english: 'O God, O He through whose mercy sinners seek aid! O He to the remembrance of whose beneficence the distressed flee! O He in fear of whom the offenders weep! O Comfort of every lonely stranger! O Relief of all who are downcast and distressed!',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when feeling lonely, distressed, or crushed by sin, when seeking comfort only from God',
-  },
-  {
-    arabic: 'أَنْتَ الَّذِي وَصَفْتَ نَفْسَكَ بِالرَّحْمَةِ، فَصَلِّ عَلَى مُحَمَّدٍ وَآلِهِ وَارْحَمْنِي. وَأَنْتَ الَّذِي سَمَّيْتَ نَفْسَكَ بِالْعَفْوِ فَاعْفُ عَنِّي. قَدْ تَرَى يَا إِلَهِي فَيْضَ دَمْعِي مِنْ خِيفَتِكَ، وَوَجِيبَ قَلْبِي مِنْ خَشْيَتِكَ، وَانْتِقَاضَ جَوَارِحِي مِنْ هَيْبَتِكَ.',
-    english: 'Thou art He who has described Himself by mercy, so bless Muhammad and his Household and have mercy upon me! Thou art He who has named Himself by pardon, so pardon me! Thou hast seen, my God, the flow of my tears in fear of Thee, the throbbing of my heart in dread of Thee, and the infirmity of my limbs in awe of Thee.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when weeping from fear and awe of God, when asking mercy by invoking God\'s own attributes of mercy',
-  },
-  {
-    arabic: 'يَا إِلَهِي فَلَكَ الْحَمْدُ فَكَمْ مِنْ عَائِبَةٍ سَتَرْتَهَا عَلَيَّ فَلَمْ تَفْضَحْنِي، وَكَمْ مِنْ ذَنْبٍ غَطَّيْتَهُ عَلَيَّ فَلَمْ تَشْهَرْنِي، وَكَمْ مِنْ شَائِبَةٍ أَلْمَمْتُ بِهَا فَلَمْ تَهْتِكْ عَنِّي سِتْرَهَا.',
-    english: 'My God, so to Thee belongs praise! How many of my flaws Thou hast covered over without exposing me! How many of my sins Thou hast cloaked without making me notorious! How many faults I have committed, yet Thou didst not tear away from me their covering or make their dishonour plain to those who search for my defects.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when reflecting on God\'s concealment of one\'s sins, when offering gratitude for divine protection from shame',
-  },
-  {
-    arabic: 'وَإِنَّمَا أُوَبِّخُ بِهَذَا نَفْسِي طَمَعاً فِي رَأْفَتِكَ الَّتِي بِهَا صَلَاحُ أَمْرِ الْمُذْنِبِينَ، وَرَجَاءً لِرَحْمَتِكَ الَّتِي بِهَا فَكَاكُ رِقَابِ الْخَاطِئِينَ. اللَّهُمَّ وَهَذِهِ رَقَبَتِي قَدْ أَرَقَّتْهَا الذُّنُوبُ، فَصَلِّ عَلَى مُحَمَّدٍ وَآلِهِ، وَأَعْتِقْهَا بِعَفْوِكَ.',
-    english: 'I only scold my own soul craving Thy gentleness, through which the affairs of sinners are set right, and hoping for Thy mercy, through which the necks of the offenders are freed. O God, this is my neck, enslaved by sins, bless Muhammad and his Household and release it through Thy pardon!',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when seeking freedom from the bondage of sin, when confessing to God and begging for release',
-  },
-  {
-    arabic: 'يَا إِلَهِي لَوْ بَكَيْتُ إِلَيْكَ حَتَّى تَسْقُطَ أَشْفَارُ عَيْنَيَّ، وَانْتَحَبْتُ حَتَّى يَنْقَطِعَ صَوْتِي، وَقُمْتُ لَكَ حَتَّى تَتَنَشَّرَ قَدَمَايَ، وَسَجَدْتُ لَكَ حَتَّى تَتَفَقَّأَ حَدَقَتَايَ، مَا اسْتَوْجَبْتُ بِذَلِكَ مَحْوَ سَيِّئَةٍ وَاحِدَةٍ مِنْ سَيِّئَاتِي.',
-    english: 'My God, were I to weep to Thee until my eyelids drop off, wail until my voice wears out, stand before Thee until my feet swell up, and prostrate to Thee until my eyeballs fall out, yet would I not merit through all of that the erasing of a single one of my evil deeds.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when overwhelmed by the weight of one\'s sins, when recognizing that forgiveness can only be a gift of grace',
-  },
-  {
-    arabic: 'إِلَهِي فَإِذْ قَدْ تَغَمَّدْتَنِي بِسِتْرِكَ فَلَمْ تَفْضَحْنِي، وَتَأَنَّيْتَنِي بِكَرَمِكَ فَلَمْ تُعَاجِلْنِي، وَحَلُمْتَ عَنِّي بِتَفَضُّلِكَ فَلَمْ تُغَيِّرْ نِعْمَتَكَ عَلَيَّ، فَارْحَمْ طُولَ تَضَرُّعِي وَشِدَّةَ مَسْكَنَتِي وَسُوءَ مَوْقِفِي.',
-    english: 'My God, since Thou hast shielded me with Thy covering and not exposed me, waited patiently for me through Thy generosity and not hurried me to punishment, and shown me clemency through Thy bounty and not changed Thy favour upon me, have mercy on my drawn out pleading, my intense misery, and my evil situation.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when pleading after a long history of sin and divine patience, when using God\'s past forbearance as a basis for hope',
-  },
-  {
-    arabic: 'اللَّهُمَّ إِنَّا نَعُوذُ بِكَ مِنْ نَزَغَاتِ الشَّيْطَانِ الرَّجِيمِ وَكَيْدِهِ وَمَكَايِدِهِ. اللَّهُمَّ اخْسَأْهُ عَنَّا بِعِبَادَتِكَ، وَاكْبِتْهُ بِدُءُوبِنَا فِي مَحَبَّتِكَ، وَاجْعَلْ بَيْنَنَا وَبَيْنَهُ سِتْراً لَا يَهْتِكُهُ وَرَدْماً مُصْمِتاً لَا يَفْتُقُهُ.',
-    english: 'O God, we seek refuge in Thee from the instigations of the accursed Satan, his trickery and his traps. Drive him away from us through Thy worship, throw him down through our perseverance in Thy love, and place between him and us a covering that he cannot tear away and a solid barrier that he cannot cut through.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when seeking protection from Satan and his whispers, when fighting spiritual temptation',
-  },
-  {
-    arabic: 'اللَّهُمَّ إِلَى مَغْفِرَتِكَ وَفَدْتُ، وَإِلَى عَفْوِكَ قَصَدْتُ، وَإِلَى تَجَاوُزِكَ اشْتَقْتُ، وَبِفَضْلِكَ وَثِقْتُ، وَلَيْسَ عِنْدِي مَا يُوجِبُ لِي مَغْفِرَتَكَ، وَلَا فِي عَمَلِي مَا أَسْتَحِقُّ بِهِ عَفْوَكَ، وَمَا لِي بَعْدَ أَنْ حَكَمْتُ عَلَى نَفْسِي إِلَّا فَضْلُكَ.',
-    english: 'O God, I come to Thy forgiveness, I go straight to Thy pardon, I yearn for Thy forbearance, and I trust in Thy bounty, but there is nothing with me to make me warrant Thy forgiveness, nothing in my works to make me merit Thy pardon, and nothing on my behalf after I judge my soul but Thy bounty.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when turning to God with nothing but hope in His grace, when acknowledging that salvation is from God\'s bounty alone',
-  },
-  {
-    arabic: 'اللَّهُمَّ أَنْتَ عُدَّتِي إِنْ حَزِنْتُ، وَأَنْتَ مُنْتَجَعِي إِنْ حُرِمْتُ، وَبِكَ اسْتِغَاثَتِي إِنْ كَرِثْتُ، وَعِنْدَكَ مِمَّا فَاتَ خَلَفٌ، وَلِمَا فَسَدَ صَلَاحٌ، وَفِيمَا أَنْكَرْتَ تَغْيِيرٌ، فَامْنُنْ عَلَيَّ قَبْلَ الْبَلَاءِ بِالْعَافِيَةِ، وَقَبْلَ الطَّلَبِ بِالْجِدَةِ، وَقَبْلَ الضَّلَالِ بِالرَّشَادِ.',
-    english: 'O God, Thou art my stores when I sorrow, Thou art my recourse when I am deprived, from Thee I seek aid when troubled, and with Thee is a substitute for everything gone by, a correction for everything corrupted, and a change from everything Thou disapprovest. So show kindness to me with well-being before affliction, wealth before asking, right conduct before misguidance.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when sorrowing or deprived and turning to God as the only refuge, when asking for prevention before affliction comes',
-  },
-  {
-    arabic: 'اللَّهُمَّ يَا كَافِيَ الْفَرْدِ الضَّعِيفِ وَوَاقِيَ الْأَمْرِ الْمَخُوفِ. وَبِيَدِكَ يَا إِلَهِي جَمِيعُ ذَلِكَ السَّبَبِ، وَإِلَيْكَ الْمَفَرُّ وَالْمَهْرَبُ. إِنِّي عَبْدُكَ وَفِي قَبْضَتِكَ، نَاصِيَتِي بِيَدِكَ. لَا أَمْرَ لِي مَعَ أَمْرِكَ، مَاضٍ فِيَّ حُكْمُكَ، عَدْلٌ فِيَّ قَضَاؤُكَ.',
-    english: 'O God, O Sufficer of the isolated and weak and Protector against terrifying affairs! In Thy hand, my God, is the thread of all that, in Thee the place of escape and flight. I am Thy servant and in Thy grasp; my forelock is in Thy hand. I have no command along with Thy command. Accomplished is Thy judgement of me, just Thy decree for me.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when feeling isolated, weak, or terrified, when surrendering completely to God\'s decree',
-  },
-  {
-    arabic: 'إِلَهِي أَصْبَحْتُ وَأَمْسَيْتُ عَبْداً دَاخِراً لَكَ، لَا أَمْلِكُ لِنَفْسِي نَفْعاً وَلَا ضَرّاً إِلَّا بِكَ، أَشْهَدُ بِذَلِكَ عَلَى نَفْسِي، وَأَعْتَرِفُ بِضَعْفِ قُوَّتِي وَقِلَّةِ حِيلَتِي، فَأَنْجِزْ لِي مَا وَعَدْتَنِي، فَإِنِّي عَبْدُكَ الْمِسْكِينُ الْمُسْتَكِينُ الضَّعِيفُ الْفَقِيرُ الْخَائِفُ الْمُسْتَجِيرُ.',
-    english: 'My God, I rise in the morning and enter into evening as Thy lowly slave. I own no profit and loss for myself except through Thee. I witness to that over myself and I confess to the frailty of my strength and the paucity of my stratagems, for I am Thy slave, miserable, abased, frail, distressed, vile, poor, fearful, and seeking sanctuary!',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when acknowledging complete servitude to God, when confessing weakness and relying entirely on God',
-  },
-  {
-    arabic: 'اللَّهُمَّ لَكَ الْحَمْدُ عَلَى حُسْنِ قَضَائِكَ، وَبِمَا صَرَفْتَ عَنِّي مِنْ بَلَائِكَ. فَغَيْرُ كَثِيرٍ مَا عَاقِبَتُهُ الْفَنَاءُ، وَغَيْرُ قَلِيلٍ مَا عَاقِبَتُهُ الْبَقَاءُ.',
-    english: 'O God, to Thee belongs praise for Thy excellent accomplishment and for Thy trial which Thou hast turned away from me! For that which ends in annihilation is not great and that which ends in subsistence is not little.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when saved from a peril, when putting worldly things and eternal things in their proper perspective',
-  },
-  {
-    arabic: 'اللَّهُمَّ اسْقِنَا الْغَيْثَ وَانْشُرْ عَلَيْنَا رَحْمَتَكَ بِغَيْثِكَ الْمُغْدِقِ. اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَآلِ مُحَمَّدٍ، وَارْزُقْنَا مِنْ بَرَكَاتِ السَّمَاوَاتِ وَالْأَرْضِ، إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.',
-    english: 'O God, water us with rain, unfold upon us Thy mercy through Thy copious rain. O God, bless Muhammad and the Household of Muhammad and provide us with the blessings of the heavens and the earth! Thou art powerful over everything.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when asking for provision and divine blessing, when seeking God\'s mercy in times of scarcity',
-  },
-  {
-    arabic: 'اللَّهُمَّ اجْعَلْنِي أَصُولُ بِكَ عِنْدَ الضَّرُورَةِ، وَأَسْأَلُكَ عِنْدَ الْحَاجَةِ، وَأَتَضَرَّعُ إِلَيْكَ عِنْدَ الْمَسْكَنَةِ، وَلَا تَفْتِنِّي بِالِاسْتِعَانَةِ بِغَيْرِكَ إِذَا اضْطُرِرْتُ، وَلَا بِالْخُضُوعِ لِسُؤَالِ غَيْرِكَ إِذَا افْتَقَرْتُ، يَا أَرْحَمَ الرَّاحِمِينَ.',
-    english: 'O God, make me leap to Thee in times of distress, ask from Thee in needs, and plead to Thee in misery! Tempt me not to seek help from other than Thee when I am distressed, to humble myself in asking from someone else when I am poor, or to plead with someone less than Thee when I fear, O Most Merciful of the merciful!',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when facing need or distress, when seeking to direct all pleading to God alone and no other',
-  },
-  {
-    arabic: 'اللَّهُمَّ أَغْنِنَا عَنْ هِبَةِ الْوَهَّابِينَ بِهِبَتِكَ، وَاكْفِنَا وَحْشَةَ الْقَاطِعِينَ بِصِلَتِكَ، حَتَّى لَا نَرْغَبَ إِلَى أَحَدٍ مَعَ بَذْلِكَ، وَلَا نَسْتَوْحِشَ مِنْ أَحَدٍ مَعَ فَضْلِكَ.',
-    english: 'O God, remove our need for the gifts of the givers through Thy gift, spare us the loneliness of those who break off through Thy joining, that we may beseech no one along with Thy free giving, and that we may feel lonely at no one\'s absence along with Thy bounty.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when seeking contentment and independence from reliance on people, when God\'s gifts are seen as sufficient',
-  },
-  {
-    arabic: 'اللَّهُمَّ إِنَّكَ أَمَرْتَنِي فَتَرَكْتُ، وَنَهَيْتَنِي فَرَكِبْتُ، وَسَوَّلَ لِيَ الْخَطَاءَ خَاطِرُ السُّوءِ فَفَرَّطْتُ. وَهَذَا مَقَامُ مَنِ اسْتَحْيَا لِنَفْسِهِ مِنْكَ، وَسَخِطَ عَلَيْهَا، وَرَضِيَ عَنْكَ، فَتَلَقَّاكَ بِنَفْسٍ خَاشِعَةٍ وَرَقَبَةٍ خَاضِعَةٍ وَظَهْرٍ مُثْقَلٍ مِنَ الْخَطَايَا، وَاقِفاً بَيْنَ الرَّغْبَةِ إِلَيْكَ وَالرَّهْبَةِ مِنْكَ.',
-    english: 'O God, Thou hast commanded me and I have left off, Thou hast prohibited me and I have committed, and the impulse to evil has seduced me into negligence. This is the station of him who is ashamed before Thee for his soul, who is displeased with it, and who is pleased with Thee, coming to Thee with a humble soul, a submissive neck, and a back weighed down by sins, standing between desire for Thee and dread of Thee.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when coming to God after disobedience, when standing between hope and fear in sincere repentance',
-  },
-  {
-    arabic: 'لَا شَفِيعٌ يَشْفَعُ لِي إِلَيْكَ، وَلَا خَفِيرٌ يُؤْمِنُنِي عَلَيْكَ، وَلَا حِصْنٌ يَحْجُبُنِي عَنْكَ، وَلَا مَلَاذٌ أَلْجَأُ إِلَيْهِ مِنْكَ. فَهَذَا مَقَامُ الْعَائِذِ بِكَ، وَمَحَلُّ الْمُعْتَرِفِ لَكَ، فَلَا يَضِيقَنَّ عَنِّي فَضْلُكَ، وَلَا يَقْصُرَنَّ دُونِي عَفْوُكَ، وَاغْفِرْ لِي إِنَّكَ خَيْرُ الْغَافِرِينَ.',
-    english: 'There is no intercessor who intercedes for me with Thee, no protector who gives me security before Thee, no fortress to veil me from Thee, and no refuge to which I may flee from Thee. This is the station of him who takes refuge in Thee and the place of him who confesses to Thee, so let not Thy bounty be too narrow for me, let not Thy pardon fall short of me, and forgive me, for Thou art the best of forgivers.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when totally alone and without worldly recourse, when confessing sins and asking for forgiveness with no intermediary',
-  },
-  {
-    arabic: 'وَأَنْتَ أَوْلَى مَنْ رَجَاهُ، وَأَحَقُّ مَنْ خَشِيَهُ وَاتَّقَاهُ، فَأَعْطِنِي يَا رَبِّ مَا رَجَوْتُ، وَآمِنِّي مَا حَذِرْتُ، وَعُدْ عَلَيَّ بِعَائِدَةِ رَحْمَتِكَ، إِنَّكَ أَكْرَمُ الْمَسْئُولِينَ. اللَّهُمَّ وَإِذْ سَتَرْتَنِي بِعَفْوِكَ وَتَغَمَّدْتَنِي بِفَضْلِكَ فِي دَارِ الْفَنَاءِ فَأَجِرْنِي مِنْ فَضِيحَاتِ دَارِ الْبَقَاءِ.',
-    english: 'Thou art the most worthy of those in whom hope is placed and the most deserving to be feared and revered, so give me, my Lord, what I have hoped, grant me security from what I dread, and return to me with the bounty of Thy mercy, for Thou art the most generous of those who are asked. O God, since Thou hast covered me with Thy pardon and immersed me in Thy bounty in the abode of annihilation, give me refuge from the disgraces of the abode of permanence.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when asking for salvation in the next world, when asking God to complete in the hereafter what He began with mercy in this world',
-  },
-  {
-    arabic: 'اللَّهُمَّ وَأَنْتَ حَدَرْتَنِي مَاءً مَهِيناً مِنْ صُلْبٍ، ثُمَّ نُطْفَةً ثُمَّ عَلَقَةً ثُمَّ مُضْغَةً ثُمَّ عَظْماً ثُمَّ كَسَوْتَ الْعِظَامَ لَحْماً ثُمَّ أَنْشَأْتَنِي خَلْقاً آخَرَ كَمَا شِئْتَ. وَلَوْ تَكِلُنِي يَا رَبِّ فِي تِلْكَ الْحَالَاتِ إِلَى حَوْلِي لَمْ أَجِدْ إِلَيْهِ سَبِيلًا.',
-    english: 'O God, Thou sent me down as mean water from loins, then as a sperm-drop, then as a clot, then as a tissue, then as bones, then Thou clothed the bones in flesh, then Thou produced me as another creature as Thou willed. And had Thou left me to myself in those states, I would have found no way to it.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when reflecting on God\'s continuous creation and care from origin, when acknowledging that God\'s grace has been present since before one could even ask',
-  },
-  {
-    arabic: 'اللَّهُمَّ وَمَا سَوَّلَ لَنَا مِنْ بَاطِلٍ فَعَرِّفْنَاهُ، وَإِذَا عَرَّفْتَنَاهُ فَقِنَاهُ، وَبَصِّرْنَا مَا نُكَايِدُهُ بِهِ. اللَّهُمَّ وَأَشْرِبْ قُلُوبَنَا إِنْكَارَ عَمَلِهِ وَالْطُفْ لَنَا فِي نَقْضِ حِيَلِهِ. اللَّهُمَّ لَا تَجْعَلْ لَهُ فِي قُلُوبِنَا مَدْخَلًا وَلَا تُوطِنَنَّ لَهُ فِيمَا لَدَيْنَا مَنْزِلًا.',
-    english: 'O God, whenever Satan has shown us falsehood, cause us to recognize it, and once Thou hast caused us to recognize it, protect us from it! Make us see what will allow us to outwit him. Saturate our hearts with the rejection of his works and be gentle to us by destroying his stratagems. Assign him no place of entrance into our hearts and do not allow him to make his home in that which is with us!',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when fighting against evil whisperings, when asking God to expose deception and protect the heart from Satan',
-  },
-  {
-    arabic: 'اللَّهُمَّ لَا شَيْءَ يَعْدِلُ رِضَاكَ وَلَا شَيْءَ دُونَ سَخَطِكَ، فَاجْعَلْ رِضَاكَ لِي وَصُنِّي عَنْ سَخَطِكَ. اللَّهُمَّ إِنِّي أَسْأَلُكَ سُؤَالَ مَنِ اشْتَدَّتْ فَاقَتُهُ وَضَعُفَتْ قُوَّتُهُ وَكَثُرَتْ ذُنُوبُهُ، سُؤَالَ مَنْ لَا يَجِدُ لِذَنْبِهِ غَافِراً غَيْرَكَ.',
-    english: 'O God, nothing equals Thy good pleasure and nothing is below Thy wrath, so appoint Thy good pleasure for me and preserve me from Thy wrath. O God, I ask Thee with the asking of him whose neediness is intense, whose strength is frail, and whose sins are many, the asking of one who finds no forgiver of his sin other than Thee.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when desperate and burdened by sin, when seeking God\'s pleasure above all else and asking with the asking of the utterly needy',
-  },
-  {
-    arabic: 'اللَّهُمَّ مَنْ أَصْبَحَ لَهُ ثِقَةٌ أَوْ رَجَاءٌ غَيْرُكَ، فَقَدْ أَصْبَحْتُ وَأَنْتَ ثِقَتِي وَرَجَائِي فِي الْأُمُورِ كُلِّهَا، فَاقْضِ لِي بِخَيْرِهَا عَاقِبَةً، وَنَجِّنِي مِنْ مَضَلَّاتِ الْفِتَنِ بِرَحْمَتِكَ، يَا أَرْحَمَ الرَّاحِمِينَ.',
-    english: 'O God, some rise in the morning having trust or hope in other than Thee. I rise in the morning, and Thou art my trust and my hope in all affairs, so decree for me those which are best in outcome and deliver me from misguiding trials, O Most Merciful of the merciful!',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when rising in the morning with trust solely in God, when seeking divine guidance in all affairs of the day',
-  },
-  {
-    arabic: 'يَا وَاحِدُ يَا أَحَدُ يَا صَمَدُ، يَا مَنْ لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُنْ لَهُ كُفُواً أَحَدٌ، اعْصِمْنِي وَطَهِّرْنِي وَاذْهَبْ بِبَلِيَّتِي.',
-    english: 'O One, O Unique, O Eternal Refuge! O He Who has not begotten, nor has been begotten, and equal to Whom is not any one! Preserve me, purify me, and take away my affliction.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when seeking God\'s protection through His names, when asking for purification and relief from affliction',
-  },
-  {
-    arabic: 'يَا فَارِجَ الْهَمِّ وَكَاشِفَ الْغَمِّ، يَا رَحْمَانَ الدُّنْيَا وَالْآخِرَةِ وَرَحِيمَهُمَا، صَلِّ عَلَى مُحَمَّدٍ وَآلِ مُحَمَّدٍ، وَافْرُجْ هَمِّي وَاكْشِفْ غَمِّي.',
-    english: 'O Reliever of worry! O Remover of grief! O Merciful in this world and the next and Compassionate in both! Bless Muhammad and his Household, relieve my worry, and remove my grief!',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when overcome by grief or anxiety, when calling on God as the remover of sorrow',
-  },
-  {
-    arabic: 'اللَّهُمَّ خُذْ لِنَفْسِكَ مِنْ نَفْسِي مَا يُخَلِّصُهَا، وَأَبْقِ لِنَفْسِي مِنْ نَفْسِي مَا يُصْلِحُهَا، فَإِنَّ نَفْسِي هَالِكَةٌ أَوْ تَعْصِمَهَا.',
-    english: 'O God, take to Thyself from my soul what will purify it and leave for my soul that of my soul that will set it right, for my soul will perish unless Thou preservest it.',
-    source: 'Sahifa Sajjadiyya, Du',
-    theme: 'when fearing spiritual ruin and asking God to take charge of one\'s soul, when acknowledging the soul cannot save itself',
-  },
-
-]
-
-// ── Letters & sermons — long-form excerpts ─────────────────────────
-// These are substantial excerpts from the most famous letters and
-// sermons in Nahj al-Balagha. Longer than wisdom maxims; each carries
-// its own attribution and a brief lead-in.
-export type LongFormEntry = {
-  title: { en: string; ar: string }
-  /** Arabic text — line breaks preserved */
-  arabic: string
-  /** English translation, faithful (not poeticised) */
-  english: string
-  /** Source citation */
-  source: string
-  /** 1-2 sentence brief description, bilingual */
-  brief: { en: string; ar: string }
-  /** Theme tag used by the LLM for matching */
-  theme: string
-}
-
-export const BASELINE_LETTERS: LongFormEntry[] = [
-  {
-    title: {
-      en: 'From the Letter to Malik al-Ashtar — On Governance',
-      ar: 'من رسالة إلى مالك الأشتر — في الحكم',
-    },
-    arabic:
-      'وَأَشْعِرْ قَلْبَكَ الرَّحْمَةَ لِلرَّعِيَّةِ، وَالمَحَبَّةَ لَهُمْ، وَاللُّطْفَ بِهِمْ، وَلَا تَكُونَنَّ عَلَيْهِمْ سَبُعًا ضَارِيًا تَغْتَنِمُ أَكْلَهُمْ، فَإِنَّهُمْ صِنْفَانِ: إِمَّا أَخٌ لَكَ فِي الدِّينِ، أَوْ نَظِيرٌ لَكَ فِي الخَلْقِ، يَفْرُطُ مِنْهُمُ الزَّلَلُ، وَتَعْرِضُ لَهُمُ العِلَلُ، وَيُؤْتَى عَلَى أَيْدِيهِمْ فِي العَمْدِ وَالخَطَأِ، فَأَعْطِهِمْ مِنْ عَفْوِكَ وَصَفْحِكَ مِثْلَ الَّذِي تُحِبُّ أَنْ يُعْطِيَكَ اللَّهُ مِنْ عَفْوِهِ وَصَفْحِهِ.',
-    english:
-      "And clothe your heart with mercy for the people, love for them, and kindness toward them. Do not become to them a beast of prey, seeking to devour them. For they are of two kinds: either your brother in faith, or your equal in creation. Slips will come from them. Illnesses will visit them. They will commit deliberate wrongs and unintentional ones. Give them, from your pardon and forgiveness, the same that you wish God to give you from His.",
-    source: 'Nahj al-Balagha, Letter 53 — to Malik al-Ashtar on appointing him governor of Egypt',
-    brief: {
-      en: "The most-quoted document on Islamic ethics of governance. Written when Imam Ali sent his loyal commander Malik al-Ashtar to govern Egypt.",
-      ar: 'أكثر وثيقة استشهاداً في الأخلاق السياسية الإسلامية. كُتبت حين أرسل الإمام عليّ قائده المخلص مالك الأشتر والياً على مصر.',
-    },
-    theme: 'on governance, on mercy, on power',
-  },
-  {
-    title: {
-      en: 'From the Letter to His Son Hasan',
-      ar: 'من الرسالة إلى ولده الحسن',
-    },
-    arabic:
-      'أَيْ بُنَيَّ، إِنِّي وَإِنْ لَمْ أَكُنْ عُمِّرْتُ عُمْرَ مَنْ كَانَ قَبْلِي، فَقَدْ نَظَرْتُ فِي أَعْمَالِهِمْ، وَفَكَّرْتُ فِي أَخْبَارِهِمْ، وَسِرْتُ فِي آثَارِهِمْ، حَتَّى عُدْتُ كَأَحَدِهِمْ، بَلْ كَأَنِّي بِمَا انْتَهَى إِلَيَّ مِنْ أُمُورِهِمْ قَدْ عُمِّرْتُ مَعَ أَوَّلِهِمْ إِلَى آخِرِهِمْ.',
-    english:
-      'My son — although I have not been given the lifespan of those before me, I have looked into their deeds, reflected on their stories, and walked through their traces — until I have become like one of them. Indeed, from what has reached me of their affairs, it is as though I have lived with the first of them through to the last.',
-    source: 'Nahj al-Balagha, Letter 31 — to his son al-Hasan after returning from Siffin',
-    brief: {
-      en: "Written by Imam Ali to his son after the Battle of Siffin — a father's complete testament. The letter runs many pages and is one of the most cited documents on parenting and the inner life across the tradition.",
-      ar: 'كتبها الإمام عليّ إلى ولده بعد صفّين — وصيّة أبٍ كاملة. تمتدّ الرسالة عبر صفحات كثيرة، وهي من أكثر الوثائق استشهاداً في التربية والحياة الداخلية في التقليد.',
-    },
-    theme: 'on parenting, on what to leave behind, on the inner work',
-  },
-  {
-    title: {
-      en: 'The Final Testament — to Hasan and Husayn',
-      ar: 'الوصيّة الأخيرة — للحسن والحسين',
-    },
-    arabic:
-      'أُوصِيكُمَا بِتَقْوَى اللَّهِ، وَأَلَّا تَبْغِيَا الدُّنْيَا وَإِنْ بَغَتْكُمَا، وَلَا تَأْسَفَا عَلَى شَيْءٍ مِنْهَا زُوِيَ عَنْكُمَا. وَقُولَا الحَقَّ، وَاعْمَلَا لِلْأَجْرِ، وَكُونَا لِلظَّالِمِ خَصْمًا، وَلِلْمَظْلُومِ عَوْنًا.',
-    english:
-      'I counsel you both with mindfulness of God: do not seek the world even when it seeks you, and do not grieve over anything of it withheld from you. Speak the truth. Work for what is rewarded. Be an opponent to the oppressor — and an aid to the oppressed.',
-    source: 'Nahj al-Balagha, Letter 47 — written two days before his death',
-    brief: {
-      en: 'Imam Ali wrote this on his deathbed — to his two sons Hasan and Husayn, and through them to all who would come after. The line "Be an opponent to the oppressor and an aid to the oppressed" has echoed through fourteen centuries.',
-      ar: 'كتبها الإمام عليّ على فراش الموت — إلى ابنَيه الحسن والحسين، وعبرهما إلى كلّ من يأتي بعدُه. وقد ترددت العبارة "كونا للظالم خصماً وللمظلوم عوناً" عبر أربعة عشر قرناً.',
-    },
-    theme: 'on what to leave behind, on justice, on dying well',
-  },
-  {
-    title: {
-      en: 'On Equity in Distribution',
-      ar: 'في إنصاف القسمة',
-    },
-    arabic:
-      'وَاللَّهِ لَوْ وَجَدْتُهُ قَدْ تُزُوِّجَ بِهِ النِّسَاءُ، وَمُلِكَ بِهِ الإِمَاءُ لَرَدَدْتُهُ. فَإِنَّ فِي العَدْلِ سَعَةً، وَمَنْ ضَاقَ عَلَيْهِ العَدْلُ فَالجَوْرُ عَلَيْهِ أَضْيَقُ.',
-    english:
-      'By God, were I to find that something had been given out improperly — even if it had been used to wed women or buy bondmaids — I would take it back. In justice there is room for all. And whoever finds justice constricting, will find injustice more constricting still.',
-    source: 'Nahj al-Balagha, Sermon 15 — on returning property unfairly distributed under Uthman',
-    brief: {
-      en: "Said when Imam Ali, on taking the caliphate, faced calls to leave alone the inequitable land distributions made under the previous administration. His answer was firm — and his caliphate followed it.",
-      ar: 'قاله الإمام عليّ حين تولّى الخلافة وواجه دعواتٍ ليترك تقسيمات الأرض غير العادلة تحت الإدارة السابقة. كان جوابه حازماً — وكانت خلافته تابعة لذلك.',
-    },
-    theme: 'on justice, on power, on what cannot be left alone',
-  },
-  {
-    title: {
-      en: 'To a Companion Doubting Sincerity',
-      ar: 'إلى صاحبٍ شكّ في الإخلاص',
-    },
-    arabic:
-      'فَأَفِقْ مِنْ سَكْرَتِكَ، وَاسْتَيْقِظْ مِنْ غَفْلَتِكَ، وَاخْتَصِرْ مِنْ عَجَلَتِكَ، وَأَنْعِمِ الفِكْرَ فِيمَا جَاءَكَ عَلَى لِسَانِ النَّبِيِّ الْأُمِّيِّ.',
-    english:
-      'Wake from your stupor. Rise from your distraction. Cut short your hurry. And give kindly thought to what has come to you through the tongue of the unlettered Prophet.',
-    source: "Nahj al-Balagha, Letter 10 — to Mu'awiyah",
-    brief: {
-      en: 'A passage from a letter that combined firmness with an offer of return.',
-      ar: 'مقطع من رسالة جمعت بين الحزم وعرض العودة.',
-    },
-    theme: 'on inner alertness, on hearing, on awakening',
-  },
-  {
-    title: {
-      en: 'From Letter 31 — On Teaching the Heart Early',
-      ar: 'من الرسالة ٣١ — في تعليم القلب باكراً',
-    },
-    arabic:
-      'وَإِنَّمَا قَلْبُ الْحَدَثِ كَالْأَرْضِ الْخَالِيَةِ، مَا أُلْقِيَ فِيهَا مِنْ شَيْءٍ قَبِلَتْهُ.\nفَبَادَرْتُكَ بِالْأَدَبِ قَبْلَ أَنْ يَقْسُوَ قَلْبُكَ، وَيَشْتَغِلَ لُبُّكَ،\nلِتَسْتَقْبِلَ بِجِدِّ رَأْيِكَ مِنَ الْأَمْرِ مَا قَدْ كَفَاكَ أَهْلُ التَّجَارِبِ بُغْيَتَهُ وَتَجْرِبَتَهُ،\nفَتَكُونَ قَدْ كُفِيتَ مَؤُونَةَ الطَّلَبِ، وَعُوفِيتَ مِنْ عِلَاجِ التَّجْرِبَةِ،\nفَأَتَاكَ مِنْ ذَلِكَ مَا قَدْ كُنَّا نَأْتِيهِ، وَاسْتَبَانَ لَكَ مَا رُبَّمَا أَظْلَمَ عَلَيْنَا مِنْهُ.\nأَيْ بُنَيَّ، إِنِّي وَإِنْ لَمْ أَكُنْ عُمِّرْتُ عُمْرَ مَنْ كَانَ قَبْلِي، فَإِنِّي قَدْ نَظَرْتُ فِي أَعْمَالِهِمْ،\nوَفَكَّرْتُ فِي أَخْبَارِهِمْ، حَتَّى صِرْتُ كَأَحَدِهِمْ.',
-    english:
-      'The heart of a young person is like empty ground — whatever is cast into it, it accepts. So I hurried to discipline you before your heart hardened and your mind became occupied, so that you would approach matters with the firmness of your own judgment, having been spared the trouble of seeking, since those of experience have already gathered for you what they sought and tested. Thus what we had to come to, has come to you ready — and what was sometimes dark to us has been made clear for you. My son, though I have not lived the span of those before me, I have looked into their deeds and reflected on their reports, until I became like one of them.',
-    source: 'Nahj al-Balagha, Letter 31 — to his son al-Hasan',
-    brief: {
-      en: "Imam Ali's reason for writing his great testament so early: a young heart accepts whatever is planted in it, and he wished to plant before the soil hardened.",
-      ar: 'سبب كتابة الإمام عليّ وصيّته الكبرى مبكّراً: قلب الحدث يقبل ما يُلقى فيه، فأراد أن يَغرس قبل أن تقسو الأرض.',
-    },
-    theme: 'on parenting, on raising sons, on what to invest in early',
-  },
-  {
-    title: {
-      en: 'From Letter 31 — Make Yourself the Scale',
-      ar: 'من الرسالة ٣١ — اجعل نفسك ميزاناً',
-    },
-    arabic:
-      'يَا بُنَيَّ، اجْعَلْ نَفْسَكَ مِيزَانًا فِيمَا بَيْنَكَ وَبَيْنَ غَيْرِكَ،\nفَأَحْبِبْ لِغَيْرِكَ مَا تُحِبُّ لِنَفْسِكَ، وَاكْرَهْ لَهُ مَا تَكْرَهُ لَهَا،\nوَلَا تَظْلِمْ كَمَا لَا تُحِبُّ أَنْ تُظْلَمَ، وَأَحْسِنْ كَمَا تُحِبُّ أَنْ يُحْسَنَ إِلَيْكَ،\nوَاسْتَقْبِحْ مِنْ نَفْسِكَ مَا تَسْتَقْبِحُهُ مِنْ غَيْرِكَ،\nوَارْضَ مِنَ النَّاسِ بِمَا تَرْضَاهُ لَهُمْ مِنْ نَفْسِكَ،\nوَلَا تَقُلْ مَا لَا تَعْلَمُ وَإِنْ قَلَّ مَا تَعْلَمُ،\nوَلَا تَقُلْ مَا لَا تُحِبُّ أَنْ يُقَالَ لَكَ.',
-    english:
-      'My son, make yourself a scale between you and others. Love for others what you love for yourself; hate for them what you hate for yourself. Do not wrong, as you would not wish to be wronged; do good, as you wish good to be done to you. Find ugly in yourself what you would find ugly in others. Be content from people with what you would be content for them to receive from you. Do not speak of what you do not know, even if what you know is little. And do not say of others what you would not wish said of you.',
-    source: 'Nahj al-Balagha, Letter 31 — to his son al-Hasan',
-    brief: {
-      en: 'A practical rule for living among people, given by a father to his son: take yourself as the measure for how you treat everyone else.',
-      ar: 'قاعدة عمليّة للعيش بين الناس، يعطيها أبٌ لولده.',
-    },
-    theme: 'on parenting, on character, on how to treat people',
-  },
-  {
-    title: {
-      en: 'From Letter 47 — Bind to the Rope of the Family',
-      ar: 'من الرسالة ٤٧ — التمسّك بحبل الجماعة',
-    },
-    arabic:
-      'اللَّهَ اللَّهَ فِي الْأَيْتَامِ، فَلَا تُغِبُّوا أَفْوَاهَهُمْ، وَلَا يَضِيعُوا بِحَضْرَتِكُمْ.\nوَاللَّهَ اللَّهَ فِي جِيرَانِكُمْ، فَإِنَّهُمْ وَصِيَّةُ نَبِيِّكُمْ، مَا زَالَ يُوصِي بِهِمْ حَتَّى ظَنَنَّا أَنَّهُ سَيُوَرِّثُهُمْ.\nوَاللَّهَ اللَّهَ فِي الْقُرْآنِ، لَا يَسْبِقْكُمْ بِالْعَمَلِ بِهِ غَيْرُكُمْ.\nوَاللَّهَ اللَّهَ فِي الصَّلَاةِ، فَإِنَّهَا عَمُودُ دِينِكُمْ.\nوَاللَّهَ اللَّهَ فِي بَيْتِ رَبِّكُمْ، لَا تُخَلُّوهُ مَا بَقِيتُمْ، فَإِنَّهُ إِنْ تُرِكَ لَمْ تُنَاظَرُوا.\nوَاللَّهَ اللَّهَ فِي الْجِهَادِ بِأَمْوَالِكُمْ وَأَنْفُسِكُمْ وَأَلْسِنَتِكُمْ فِي سَبِيلِ اللَّهِ.',
-    english:
-      'God, God, regarding the orphans — do not let their mouths go hungry between meals, and do not let them be lost in your presence. God, God, regarding your neighbours — they are the charge of your Prophet, who kept commending them until we thought he would make them heirs. God, God, regarding the Qur\'an — let no one outstrip you in acting by it. God, God, regarding prayer — it is the pillar of your faith. God, God, regarding the House of your Lord — do not leave it empty while you live, for if it is abandoned you will be granted no reprieve. God, God, regarding striving in God\'s way — with your wealth, your selves, and your tongues.',
-    source: 'Nahj al-Balagha, Letter 47 — his final will, two days before his death',
-    brief: {
-      en: "From Imam Ali's dying testament: a list of things 'God, God' is invoked upon — the orphan, the neighbour, the Qur'an, prayer, the House, striving.",
-      ar: 'من وصيّة الإمام عند موته: لائحة بما يُستحلَف عليه باسم الله — اليتيم، الجار، القرآن، الصلاة، البيت، الجهاد.',
-    },
-    theme: 'on what to leave behind, on dying well, on the rights upon us',
-  },
-  {
-    title: {
-      en: 'From Letter 53 — On the Common People',
-      ar: 'من الرسالة ٥٣ — في عامّة الناس',
-    },
-    arabic:
-      'وَلْيَكُنْ أَحَبَّ الْأُمُورِ إِلَيْكَ أَوْسَطُهَا فِي الْحَقِّ، وَأَعَمُّهَا فِي الْعَدْلِ،\nوَأَجْمَعُهَا لِرِضَى الرَّعِيَّةِ، فَإِنَّ سُخْطَ الْعَامَّةِ يُجْحِفُ بِرِضَى الْخَاصَّةِ،\nوَإِنَّ سُخْطَ الْخَاصَّةِ يُغْتَفَرُ مَعَ رِضَى الْعَامَّةِ.\nوَلَيْسَ أَحَدٌ مِنَ الرَّعِيَّةِ أَثْقَلَ عَلَى الْوَالِي مَؤُونَةً فِي الرَّخَاءِ،\nوَأَقَلَّ مَعُونَةً لَهُ فِي الْبَلَاءِ، وَأَكْرَهَ لِلْإِنْصَافِ،\nوَأَسْأَلَ بِالْإِلْحَافِ، وَأَقَلَّ شُكْرًا عِنْدَ الْإِعْطَاءِ،\nوَأَبْطَأَ عُذْرًا عِنْدَ الْمَنْعِ، وَأَضْعَفَ صَبْرًا عِنْدَ مُلِمَّاتِ الدَّهْرِ مِنْ أَهْلِ الْخَاصَّةِ.\nوَإِنَّمَا عِمَادُ الدِّينِ وَجِمَاعُ الْمُسْلِمِينَ، وَالْعُدَّةُ لِلْأَعْدَاءِ، الْعَامَّةُ مِنَ الْأُمَّةِ، فَلْيَكُنْ صِغْوُكَ لَهُمْ، وَمَيْلُكَ مَعَهُمْ.',
-    english:
-      "Let the dearest of affairs to you be the most balanced in truth, the most encompassing in justice, and the most gathering of the people's contentment. For the displeasure of the common people overrides the contentment of the elite, while the displeasure of the elite is excused when the common people are content. There is none of the people heavier in burden upon the governor in times of ease, less helpful to him in times of trial, more averse to fairness, more insistent in their asking, less grateful when given, slower to excuse when refused, and weaker in patience under the blows of time than the elite. For the pillar of the religion, the gathering of the Muslims, and the muster against enemies — these are the common people of the community. So let your leaning be toward them, and your inclination with them.",
-    source: 'Nahj al-Balagha, Letter 53 — to Malik al-Ashtar',
-    brief: {
-      en: 'A passage from the Malik letter: Imam Ali ranks the contentment of the masses above the contentment of the elite, and gives reasons.',
-      ar: 'مقطعٌ من رسالة مالك: يقدّم الإمامُ رضى العامّة على رضى الخاصّة، ويعلّل ذلك.',
-    },
-    theme: 'on governance, on the common people, on power',
-  },
-  {
-    title: {
-      en: 'From Letter 53 — On the Choice of Judges',
-      ar: 'من الرسالة ٥٣ — في اختيار القضاة',
-    },
-    arabic:
-      'ثُمَّ اخْتَرْ لِلْحُكْمِ بَيْنَ النَّاسِ أَفْضَلَ رَعِيَّتِكَ فِي نَفْسِكَ،\nمِمَّنْ لَا تَضِيقُ بِهِ الْأُمُورُ، وَلَا تُمَحِّكُهُ الْخُصُومُ،\nوَلَا يَتَمَادَى فِي الزَّلَّةِ، وَلَا يَحْصَرُ مِنَ الْفَيْءِ إِلَى الْحَقِّ إِذَا عَرَفَهُ،\nوَلَا تُشْرِفُ نَفْسُهُ عَلَى طَمَعٍ، وَلَا يَكْتَفِي بِأَدْنَى فَهْمٍ دُونَ أَقْصَاهُ،\nوَأَوْقَفَهُمْ فِي الشُّبُهَاتِ، وَآخَذَهُمْ بِالْحُجَجِ،\nوَأَقَلَّهُمْ تَبَرُّمًا بِمُرَاجَعَةِ الْخَصْمِ،\nوَأَصْبَرَهُمْ عَلَى تَكَشُّفِ الْأُمُورِ، وَأَصْرَمَهُمْ عِنْدَ اتِّضَاحِ الْحُكْمِ،\nمِمَّنْ لَا يَزْدَهِيهِ إِطْرَاءٌ، وَلَا يَسْتَمِيلُهُ إِغْرَاءٌ، وَأُولَئِكَ قَلِيلٌ.',
-    english:
-      'Then choose, to judge between people, the best of your subjects in your own estimation — one whom affairs do not overwhelm, whom adversaries do not provoke into stubbornness, who does not persist in his slip, who is not held back from returning to the truth once he sees it, whose soul does not lean toward greed, who is not satisfied with the lesser understanding before reaching the furthest, the most cautious of them in cases of doubt, the most binding to evidence, the least wearied by the litigant\'s coming back again, the most patient in waiting for matters to come clear, the most decisive once the ruling becomes plain — one whom praise does not delight and enticement does not sway. Such people are few.',
-    source: 'Nahj al-Balagha, Letter 53 — to Malik al-Ashtar',
-    brief: {
-      en: "Imam Ali's standard for the judge — a portrait so demanding it ends with the admission, 'such people are few.'",
-      ar: 'معيار الإمام للقاضي — صورةٌ مرتفعة في شروطها حتى ينتهي قائلاً: "وأولئك قليل".',
-    },
-    theme: 'on governance, on judgment, on choosing people',
-  },
-  {
-    title: {
-      en: 'From Letter 51 — To the Tax Collectors, on the Peasants',
-      ar: 'من الرسالة ٥١ — إلى عمّال الخراج، في الفلّاحين',
-    },
-    arabic:
-      'أَمَّا بَعْدُ، فَإِنَّ مَنْ لَمْ يَحْذَرْ مَا هُوَ صَائِرٌ إِلَيْهِ لَمْ يُقَدِّمْ لِنَفْسِهِ مَا يُحْرِزُهَا.\nوَاعْلَمُوا أَنَّ مَا كُلِّفْتُمْ بِهِ يَسِيرٌ، وَأَنَّ ثَوَابَهُ كَثِيرٌ.\nفَأَنْصِفُوا النَّاسَ مِنْ أَنْفُسِكُمْ، وَاصْبِرُوا لِحَوَائِجِهِمْ،\nفَإِنَّكُمْ خُزَّانُ الرَّعِيَّةِ، وَوُكَلَاءُ الْأُمَّةِ، وَسُفَرَاءُ الْأَئِمَّةِ.\nوَلَا تُحْشِمُوا أَحَدًا عَنْ حَاجَتِهِ، وَلَا تَحْبِسُوهُ عَنْ طَلِبَتِهِ،\nوَلَا تَبِيعُنَّ لِلنَّاسِ فِي الْخَرَاجِ كِسْوَةَ شِتَاءٍ وَلَا صَيْفٍ،\nوَلَا دَابَّةً يَعْتَمِلُونَ عَلَيْهَا، وَلَا عَبْدًا،\nوَلَا تَضْرِبُنَّ أَحَدًا سَوْطًا لِمَكَانِ دِرْهَمٍ.',
-    english:
-      'Now then — whoever does not take warning of what he is moving toward will not put forward for himself what would save him. Know that what is asked of you is little and its reward is much. So be fair to people from your own selves, and be patient with their needs — for you are the treasurers of the people, the agents of the community, and the envoys of the leaders. Do not deter anyone from his need, nor hold him back from his request. Do not sell off, for taxes, anyone\'s winter garment or summer garment, nor a beast he works with, nor a slave — and do not strike anyone with a single lash for the sake of a dirham.',
-    source: 'Nahj al-Balagha, Letter 51 — to those collecting the land tax',
-    brief: {
-      en: 'A directive to his tax collectors: the limits of state power over the poor, laid down in concrete prohibitions — not the winter cloak, not the working animal, not a single lash for a coin.',
-      ar: 'توجيهٌ لعمّال الخراج: حدود سلطة الدولة على الفقير، في محرّمات ملموسة — لا ثوب الشتاء، ولا دابّة العمل، ولا سوطٌ واحد لأجل درهم.',
-    },
-    theme: 'on governance, on the treatment of subjects, on the limits of state power',
-  },
-  {
-    title: { en: 'Letter 25 — To the Zakāt Collectors', ar: 'الكِتاب ٢٥ — إلى عمّال الصَّدَقات' },
-    arabic:
-      'انْطَلِقْ عَلَى تَقْوَى اللَّهِ وَحْدَهُ لَا شَرِيكَ لَهُ، وَلَا تُرَوِّعَنَّ مُسْلِمًا، وَلَا تَجْتَازَنَّ عَلَيْهِ كَارِهًا،\nوَلَا تَأْخُذَنَّ مِنْهُ أَكْثَرَ مِنْ حَقِّ اللَّهِ فِي مَالِهِ.\nفَإِذَا قَدِمْتَ عَلَى الْحَيِّ فَانْزِلْ بِمَائِهِمْ مِنْ غَيْرِ أَنْ تُخَالِطَ أَبْيَاتَهُمْ،\nثُمَّ امْضِ إِلَيْهِمْ بِالسَّكِينَةِ وَالْوَقَارِ حَتَّى تَقُومَ بَيْنَهُمْ فَتُسَلِّمَ عَلَيْهِمْ، وَلَا تُخْدِجْ بِالتَّحِيَّةِ لَهُمْ.\nثُمَّ تَقُولَ: عِبَادَ اللَّهِ، أَرْسَلَنِي إِلَيْكُمْ وَلِيُّ اللَّهِ وَخَلِيفَتُهُ لِآخُذَ مِنْكُمْ حَقَّ اللَّهِ فِي أَمْوَالِكُمْ،\nفَهَلْ لِلَّهِ فِي أَمْوَالِكُمْ مِنْ حَقٍّ فَتُؤَدُّوهُ إِلَى وَلِيِّهِ؟\nفَإِنْ قَالَ قَائِلٌ: لَا، فَلَا تُرَاجِعْهُ، وَإِنْ أَنْعَمَ لَكَ مُنْعِمٌ فَانْطَلِقْ مَعَهُ مِنْ غَيْرِ أَنْ تُخِيفَهُ أَوْ تُوعِدَهُ أَوْ تَعْسِفَهُ أَوْ تُرْهِقَهُ.\nوَلَا تَأْخُذَنَّ دَابَّةً بِسَوْطٍ وَلَا تَضْرِبَنَّهَا، وَلَا تَأْخُذَنَّ مَرْكُوبَ الرَّجُلِ.\nوَآسِ بَيْنَ الْمُسْلِمِينَ بِوَجْهِكَ وَمَجْلِسِكَ، وَأَنْصِفْ لِلْمَظْلُومِ مِنَ الظَّالِمِ.',
-    english:
-      "Set forth in the fear of God alone, who has no partner. Do not frighten any Muslim, nor pass over his land against his will, nor take from him more than the right of God in his property.\nWhen you arrive at the tribe, alight at their watering-place; do not enter their houses. Then walk towards them with calm and dignity, until you stand in their midst and greet them — and do not be sparing in your salutation.\nThen say: 'Servants of God, the friend of God and his vicegerent has sent me to you, to take from you God's due in your wealth. Is there any due of God in your wealth, that you may render it to His friend?'\nIf anyone says no, do not press him. If anyone answers yes, go with him — without intimidating him, threatening him, treating him harshly, or burdening him.\nDo not strike his animal with a whip, nor beat it, and do not take the mount he rides.\nTreat the Muslims equally in your countenance and your seat, and grant the wronged his right against the wrongdoer.",
-    source: 'Nahj al-Balagha, Letter 25 — to those appointed over the zakāt',
-    brief: {
-      en: "A protocol for tax collectors: arrive with dignity, ask not demand, never frighten, take only God's due, and never strike a man's beast.",
-      ar: 'آدابٌ لجابي الصدقات: وقارٌ في الإقبال، وسؤالٌ لا انتزاع، ولا ترويع ولا عسف.',
-    },
-    theme: 'on governance, on the treatment of subjects, on justice in administration',
-  },
-  {
-    title: { en: 'Letter 41 — To a Kinsman Who Betrayed the Trust', ar: 'الكِتاب ٤١ — إلى بعض عمّاله' },
-    arabic:
-      'أَمَّا بَعْدُ، فَإِنِّي كُنْتُ أَشْرَكْتُكَ فِي أَمَانَتِي، وَجَعَلْتُكَ شِعَارِي وَبِطَانَتِي،\nوَلَمْ يَكُنْ رَجُلٌ مِنْ أَهْلِي أَوْثَقَ مِنْكَ فِي نَفْسِي لِمُوَاسَاتِي وَمُوَازَرَتِي وَأَدَاءِ الْأَمَانَةِ إِلَيَّ.\nفَلَمَّا رَأَيْتَ الزَّمَانَ عَلَى ابْنِ عَمِّكَ قَدْ كَلِبَ، وَالْعَدُوَّ قَدْ حَرِبَ،\nقَلَبْتَ لِابْنِ عَمِّكَ ظَهْرَ الْمِجَنِّ،\nفَفَارَقْتَهُ مَعَ الْمُفَارِقِينَ، وَخَذَلْتَهُ مَعَ الْخَاذِلِينَ، وَخُنْتَهُ مَعَ الْخَائِنِينَ.\nفَلَا ابْنَ عَمِّكَ آسَيْتَ، وَلَا الْأَمَانَةَ أَدَّيْتَ.\nفَلَمَّا أَمْكَنَتْكَ الشِّدَّةُ فِي خِيَانَةِ الْأُمَّةِ أَسْرَعْتَ الْكَرَّةَ، وَعَاجَلْتَ الْوَثْبَةَ،\nوَاخْتَطَفْتَ مَا قَدَرْتَ عَلَيْهِ مِنْ أَمْوَالِهِمُ الْمَصُونَةِ لِأَرَامِلِهِمْ وَأَيْتَامِهِمُ،\nاخْتِطَافَ الذِّئْبِ الْأَزَلِّ دَامِيَةَ الْمِعْزَى الْكَسِيرَةَ.\nفَاتَّقِ اللَّهَ وَارْدُدْ إِلَى هَؤُلَاءِ الْقَوْمِ أَمْوَالَهُمْ، فَإِنَّكَ إِنْ لَمْ تَفْعَلْ ثُمَّ أَمْكَنَنِي اللَّهُ مِنْكَ لَأُعْذِرَنَّ إِلَى اللَّهِ فِيكَ.',
-    english:
-      'To proceed: I had made you a partner in my trust and taken you as my innermost confidant. No man of my own household was more trusted by me than you for sharing my burden, supporting me, and discharging the trust I placed in you.\nBut when you saw that the times had turned cruel against your cousin and that the enemy had grown fierce — you turned the back of your shield upon your cousin. You broke from him with those who broke away, deserted him with the deserters, and betrayed him with the betrayers.\nYou neither stood by your cousin nor delivered up the trust.\nThe moment you found an opening to betray the community, you sprang to it. You hurried the raid, leaped quickly, and snatched whatever you could of their money set aside for their widows and orphans —\nthe snatching of a fierce wolf at a maimed she-goat dripping with blood.\nSo fear God and return to these people their property. For if you do not, and God then gives me power over you, I will discharge my duty before God in your case.',
-    source: 'Nahj al-Balagha, Letter 41 — to a kinsman-governor who stole from the public treasury',
-    brief: {
-      en: "A letter of bitter reproach to a relative who stole from the public treasury — money set aside for widows and orphans — and a warning that God's judgement, and the Imam's, are both coming.",
-      ar: 'عتابٌ مريرٌ لعاملٍ من أهله خانَ بيتَ المال، وأخذَ مالَ الأرامل والأيتام، وتهديدٌ بقضاء الله.',
-    },
-    theme: 'on betrayal of trust, on accountability of those in power',
-  },
-  {
-    title: { en: 'Letter 27 — To Muhammad ibn Abi Bakr, Governor of Egypt', ar: 'الكِتاب ٢٧ — إلى محمد بن أبي بكر' },
-    arabic:
-      'فَاخْفِضْ لَهُمْ جَنَاحَكَ، وَأَلِنْ لَهُمْ جَانِبَكَ، وَابْسُطْ لَهُمْ وَجْهَكَ، وَآسِ بَيْنَهُمْ فِي اللَّحْظَةِ وَالنَّظْرَةِ،\nحَتَّى لَا يَطْمَعَ الْعُظَمَاءُ فِي حَيْفِكَ لَهُمْ، وَلَا يَيْأَسَ الضُّعَفَاءُ مِنْ عَدْلِكَ عَلَيْهِمْ.\nفَإِنَّ اللَّهَ تَعَالَى يُسَائِلُكُمْ مَعْشَرَ عِبَادِهِ عَنِ الصَّغِيرَةِ مِنْ أَعْمَالِكُمْ وَالْكَبِيرَةِ، وَالظَّاهِرَةِ وَالْمَسْتُورَةِ.\nفَإِنْ يُعَذِّبْ فَأَنْتُمْ أَظْلَمُ، وَإِنْ يَعْفُ فَهُوَ أَكْرَمُ.\nوَاعْلَمُوا عِبَادَ اللَّهِ، أَنَّ الْمُتَّقِينَ ذَهَبُوا بِعَاجِلِ الدُّنْيَا وَآجِلِ الْآخِرَةِ،\nفَشَارَكُوا أَهْلَ الدُّنْيَا فِي دُنْيَاهُمْ، وَلَمْ يُشَارِكْهُمْ أَهْلُ الدُّنْيَا فِي آخِرَتِهِمْ.\nسَكَنُوا الدُّنْيَا بِأَفْضَلِ مَا سُكِنَتْ، وَأَكَلُوهَا بِأَفْضَلِ مَا أُكِلَتْ،\nثُمَّ انْقَلَبُوا عَنْهَا بِالزَّادِ الْمُبَلِّغِ وَالْمَتْجَرِ الرَّابِحِ.',
-    english:
-      "Lower your wing to them, soften your side, spread out your face for them, and be equal among them in the glance and the gaze — so that the great may not covet your bias toward them, nor the weak despair of your justice over them.\nFor God will question you — community of His servants — about the smallest of your deeds and the greatest, the open and the hidden. If He punishes, you have been the greater wrongdoers; if He pardons, He is the more generous.\nKnow, servants of God, that the God-fearing have carried off both this world's near reward and the next world's later one. They shared with the people of this world in their world, and the people of this world did not share with them in their hereafter.\nThey inhabited the world in the best of habitations, and ate of it in the best of ways. Then they departed from it with provision enough to reach the end, and a profitable trade.",
-    source: 'Nahj al-Balagha, Letter 27 — to Muhammad ibn Abi Bakr on his appointment to Egypt',
-    brief: {
-      en: 'Instructions to a young governor: be equal among the people in your very glances, fear the audit of small deeds, and remember that the God-fearing won both worlds while the worldly won only one.',
-      ar: 'وصايا لوالٍ شابّ: المساواة بين الناس حتى في اللحظة، وخوف المحاسبة، وأنّ المتّقين فازوا بالدنيا والآخرة.',
-    },
-    theme: 'on governance, on justice toward the people, on the two worlds',
-  },
-  {
-    title: { en: "Letter 12 — To Ma'qil ibn Qays on the March", ar: 'الكِتاب ١٢ — إلى مَعقِل بن قَيس' },
-    arabic:
-      'اتَّقِ اللَّهَ الَّذِي لَا بُدَّ لَكَ مِنْ لِقَائِهِ، وَلَا مُنْتَهَى لَكَ دُونَهُ،\nوَلَا تُقَاتِلَنَّ إِلَّا مَنْ قَاتَلَكَ.\nوَسِرِ الْبَرْدَيْنِ، وَغَوِّرْ بِالنَّاسِ، وَرَفِّهْ فِي السَّيْرِ.\nوَلَا تَسِرْ أَوَّلَ اللَّيْلِ، فَإِنَّ اللَّهَ جَعَلَهُ سَكَنًا، وَقَدَّرَهُ مُقَامًا لَا ظَعْنًا،\nفَأَرِحْ فِيهِ بَدَنَكَ، وَرَوِّحْ ظَهْرَكَ.\nفَإِذَا وَقَفْتَ حِينَ يَنْبَطِحُ السَّحَرُ، أَوْ حِينَ يَنْفَجِرُ الْفَجْرُ، فَسِرْ عَلَى بَرَكَةِ اللَّهِ.\nفَإِذَا لَقِيتَ الْعَدُوَّ فَقِفْ مِنْ أَصْحَابِكَ وَسَطًا،\nوَلَا تَدْنُ مِنَ الْقَوْمِ دُنُوَّ مَنْ يُرِيدُ أَنْ يُنْشِبَ الْحَرْبَ،\nوَلَا تَبَاعَدْ عَنْهُمْ تَبَاعُدَ مَنْ يَهَابُ الْبَأْسَ.',
-    english:
-      'Fear God, whom you must inevitably meet, and beyond whom there is no destination.\nDo not fight any except those who fight you.\nMarch in the two cools of the day, give the people rest at midday, and go gently in the journey.\nDo not travel in the first part of the night, for God has made it a time of rest, ordained for stillness, not for moving —\nso ease your body in it, and give your mounts repose.\nThen when you halt at the stretching of the predawn, or at the breaking of dawn, set out upon the blessing of God.\nWhen you meet the enemy, stand in the middle of your companions:\ndo not draw near the foe like one who wishes to kindle battle,\nand do not stand off from them like one who dreads combat.',
-    source: "Nahj al-Balagha, Letter 12 — to Ma'qil ibn Qays",
-    brief: {
-      en: 'March orders to a commander — fear God, fight only the aggressor, rest the men, stand neither too forward nor too far back.',
-      ar: 'أوامر المسير لقائد: التقوى، وعدم البدء بالقتال، وإراحة الجند، والوقوف في الوسط بين الإقدام والإحجام.',
-    },
-    theme: 'on the ethics of command, on the conduct of war',
-  },
-  {
-    title: { en: 'Letter 23 — His Final Will from the Death-Bed', ar: 'الكِتاب ٢٣ — وصيّتُه من فِراش الشهادة' },
-    arabic:
-      'وَصِيَّتِي لَكُمْ: أَلَّا تُشْرِكُوا بِاللَّهِ شَيْئًا،\nوَمُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ فَلَا تُضَيِّعُوا سُنَّتَهُ.\nأَقِيمُوا هَذَيْنِ الْعَمُودَيْنِ، وَأَوْقِدُوا هَذَيْنِ الْمِصْبَاحَيْنِ،\nوَخَلَاكُمْ ذَمٌّ مَا لَمْ تَشْرُدُوا.\nحُمِّلَ كُلُّ امْرِئٍ مِنْكُمْ مَجْهُودَهُ، وَخُفِّفَ عَنِ الْجَهَلَةِ.\nرَبٌّ رَحِيمٌ، وَدِينٌ قَوِيمٌ، وَإِمَامٌ عَلِيمٌ.\nأَنَا بِالْأَمْسِ صَاحِبُكُمْ، وَالْيَوْمَ عِبْرَةٌ لَكُمْ، وَغَدًا مُفَارِقُكُمْ.\nإِنْ أَبْقَ فَأَنَا وَلِيُّ دَمِي، وَإِنْ أَفْنَ فَالْفَنَاءُ مِيعَادِي،\nوَإِنْ أَعْفُ فَالْعَفْوُ لِي قُرْبَةٌ، وَهُوَ لَكُمْ حَسَنَةٌ، فَاعْفُوا.\nأَلَا تُحِبُّونَ أَنْ يَغْفِرَ اللَّهُ لَكُمْ؟',
-    english:
-      'My will to you: associate nothing with God,\nand as for Muhammad — God\'s blessings upon him and his family — do not let his way be lost.\nHold up these two pillars, light these two lamps,\nand no blame is on you so long as you do not stray.\nEach of you has been charged only with what he can bear, and the ignorant have been given lightening.\nA merciful Lord, an upright religion, a knowing Imam.\nYesterday I was your companion, today I am a lesson for you, and tomorrow I depart from you.\nIf I survive, I am the master of my own blood; if I perish, perishing is my appointed time;\nand if I pardon, pardon is for me a nearness to God and for you a good deed — so pardon.\nWould you not love that God should forgive you?',
-    source: 'Nahj al-Balagha, Letter 23 — spoken from his death-bed after the strike',
-    brief: {
-      en: "Imam Ali's last words to his community: hold the two pillars (Tawhid and the Prophet's way), and pardon — for it is dearer to God.",
-      ar: 'آخر كلمات الإمام لأمّته: تمسّكوا بالعمودين (التوحيد وسنّة النبيّ)، واعفوا — فهو أحبّ إلى الله.',
-    },
-    theme: 'on the final testament, on pardon, on parting',
-  },
-  {
-    title: { en: 'Letter 22 — To Ibn Abbas', ar: 'الكِتاب ٢٢ — إلى ابن عبّاس' },
-    arabic:
-      'أَمَّا بَعْدُ، فَإِنَّ الْمَرْءَ قَدْ يَسُرُّهُ دَرْكُ مَا لَمْ يَكُنْ لِيَفُوتَهُ،\nوَيَسُوؤُهُ فَوْتُ مَا لَمْ يَكُنْ لِيُدْرِكَهُ.\nفَلْيَكُنْ سُرُورُكَ بِمَا نِلْتَ مِنْ آخِرَتِكَ،\nوَلْيَكُنْ أَسَفُكَ عَلَى مَا فَاتَكَ مِنْهَا.\nوَمَا نِلْتَ مِنْ دُنْيَاكَ فَلَا تُكْثِرْ بِهِ فَرَحًا،\nوَمَا فَاتَكَ مِنْهَا فَلَا تَأْسَ عَلَيْهِ جَزَعًا،\nوَلْيَكُنْ هَمُّكَ فِيمَا بَعْدَ الْمَوْتِ.',
-    english:
-      'Now then — a man is sometimes pleased at attaining what was never going to slip from him, and grieved at losing what he was never going to attain.\nSo let your joy be in what you have gained for your hereafter,\nand let your sorrow be over what you have let slip of it.\nAs for what you have gained of this world, do not be excessive in delight at it;\nand what you have lost of it — do not give way to anguish over it.\nLet your concern be with what comes after death.',
-    source: 'Nahj al-Balagha, Letter 22 — to Ibn Abbas',
-    brief: {
-      en: 'Discipline of joy and grief — measure them by the next world, not this one.',
-      ar: 'تهذيب الفرح والحزن بميزان الآخرة لا الدنيا.',
-    },
-    theme: 'on detachment, on measuring joy and grief, on the discipline of the heart',
-  },
-]
-
-export const BASELINE_SERMONS: LongFormEntry[] = [
-  {
-    title: {
-      en: 'On the Pious',
-      ar: 'في صفات المتّقين',
-    },
-    arabic:
-      'فَالمُتَّقُونَ فِيهَا هُمْ أَهْلُ الفَضَائِلِ: مَنْطِقُهُمُ الصَّوَابُ، وَمَلْبَسُهُمُ الِاقْتِصَادُ، وَمَشْيُهُمُ التَّوَاضُعُ. غَضُّوا أَبْصَارَهُمْ عَمَّا حَرَّمَ اللَّهُ عَلَيْهِمْ، وَوَقَفُوا أَسْمَاعَهُمْ عَلَى العِلْمِ النَّافِعِ لَهُمْ. نُزِّلَتْ أَنْفُسُهُمْ مِنْهُمْ فِي البَلَاءِ كَالَّتِي نُزِّلَتْ فِي الرَّخَاءِ.',
-    english:
-      'The mindful are people of virtue: their speech is right, their dress moderate, their walking humble. They have lowered their gaze from what God has forbidden them, and stopped their ears at what is beneficial for them to hear. Their selves in hardship hold the same position they held in ease.',
-    source: 'Nahj al-Balagha, Sermon 193 — "The Sermon of the Pious" (al-Muttaqin), delivered to Hammam',
-    brief: {
-      en: 'A companion named Hammam asked Imam Ali to describe the pious in such a way that he could see them as if before his eyes. The Imam hesitated, then delivered this sermon. It is said that on hearing it Hammam fell into a state from which he did not recover, and died on the spot.',
-      ar: 'سأل صاحبٌ يُدعى همّامٌ الإمامَ عليّاً أن يصف المتّقين وصفاً يراهم به كأنّه ينظر إليهم. تردّد الإمام، ثمّ ألقى هذه الخطبة. ويُقال إنّ همّاماً سقط على إثرها مغشيّاً عليه ولم يُفِق، ومات في موضعه.',
-    },
-    theme: 'on character, on what mindfulness looks like, on integrity',
-  },
-  {
-    title: {
-      en: 'On the Beginning of Creation',
-      ar: 'في بدء الخلق',
-    },
-    arabic:
-      'الحَمْدُ لِلَّهِ الَّذِي لَا يَبْلُغُ مِدْحَتَهُ القَائِلُونَ، وَلَا يُحْصِي نَعْمَاءَهُ العَادُّونَ، وَلَا يُؤَدِّي حَقَّهُ المُجْتَهِدُونَ، الَّذِي لَا يُدْرِكُهُ بُعْدُ الهِمَمِ، وَلَا يَنَالُهُ غَوْصُ الفِطَنِ.',
-    english:
-      'Praise be to God whose praise no speaker reaches, whose blessings no counter exhausts, whose right no striver fulfils — who cannot be grasped by the reach of aspirations, nor caught by the dive of intellects.',
-    source: 'Nahj al-Balagha, Sermon 1 — the opening sermon, on creation',
-    brief: {
-      en: 'The first sermon in Nahj al-Balagha — a sustained meditation on the nature of God, creation, the angels, and the human journey. Considered one of the high points of Arabic prose across all centuries.',
-      ar: 'الخطبة الأولى في نهج البلاغة — تأمّل مستفيض في طبيعة الله، والخلق، والملائكة، ورحلة الإنسان. تُعدّ من قمم النثر العربيّ عبر العصور.',
-    },
-    theme: 'on God, on creation, on the limits of intellect',
-  },
-  {
-    title: {
-      en: 'On Why I Took the Caliphate',
-      ar: 'في علّة قبول الخلافة',
-    },
-    arabic:
-      'أَمَا وَالَّذِي فَلَقَ الحَبَّةَ وَبَرَأَ النَّسَمَةَ، لَوْلَا حُضُورُ الحَاضِرِ، وَقِيَامُ الحُجَّةِ بِوُجُودِ النَّاصِرِ، وَمَا أَخَذَ اللَّهُ عَلَى العُلَمَاءِ أَنْ لَا يُقَارُّوا عَلَى كِظَّةِ ظَالِمٍ، وَلَا سَغَبِ مَظْلُومٍ — لَأَلْقَيْتُ حَبْلَهَا عَلَى غَارِبِهَا.',
-    english:
-      'By the One who split the seed and brought forth the soul — were it not for the presence of those present, the standing of the proof by the availability of supporters, and the pledge God has taken from the learned not to remain content with the gluttony of an oppressor or the hunger of the oppressed — I would have cast its reins upon its withers.',
-    source: 'Nahj al-Balagha, Sermon 3 — the Shaqshaqiyya Sermon',
-    brief: {
-      en: "Imam Ali's most famous sermon on power — explaining why he accepted the caliphate when the people came to him after the death of the third Caliph. The phrase 'gluttony of an oppressor or hunger of the oppressed' became a constant reference in Islamic political ethics.",
-      ar: 'أشهر خطب الإمام عليّ في السلطة — يفسّر فيها لماذا قَبِل الخلافة حين جاءه الناس بعد مقتل الخليفة الثالث. وقد صارت عبارة "كِظّة ظالم وسَغَب مظلوم" مرجعاً ثابتاً في الأخلاق السياسية الإسلامية.',
-    },
-    theme: 'on power, on responsibility, on why one accepts a burden',
-  },
-  {
-    title: {
-      en: 'On the World',
-      ar: 'في الدنيا',
-    },
-    arabic:
-      'فَإِنَّ الدُّنْيَا قَدْ تَوَلَّتْ حَذَّاءَ، فَلَمْ يَبْقَ مِنْهَا إِلَّا صُبَابَةٌ كَصُبَابَةِ الإِنَاءِ اصْطَبَّهَا مُصْطَبُّهَا. أَلَا وَإِنَّ الدُّنْيَا قَدْ آذَنَتْ بِوَدَاعٍ، وَالآخِرَةَ قَدْ أَشْرَفَتْ بِاطِّلَاعٍ.',
-    english:
-      'This world has turned away in haste — nothing remains of it except a dribble like the dribble at the bottom of a vessel that has been emptied. The world has announced its farewell, and the next has overlooked from above.',
-    source: 'Nahj al-Balagha, Sermon 28',
-    brief: {
-      en: 'A short reflection on the brevity of life — frequently read aloud by classical orators across the centuries.',
-      ar: 'تأمّل قصير في قِصَر العمر — كثيراً ما يقرأه الخطباء الكلاسيكيّون عبر القرون.',
-    },
-    theme: 'on the brevity of life, on the long view, on death',
-  },
-  {
-    title: {
-      en: 'A Description of His Own Companions',
-      ar: 'في وصف أصحابه',
-    },
-    arabic:
-      'لَقَدْ رَأَيْتُ أَصْحَابَ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ، فَمَا أَرَى أَحَدًا يُشْبِهُهُمْ. لَقَدْ كَانُوا يُصْبِحُونَ شُعْثًا غُبْرًا، وَقَدْ بَاتُوا سُجَّدًا وَقِيَامًا — يُرَاوِحُونَ بَيْنَ جِبَاهِهِمْ وَخُدُودِهِمْ، وَيَقِفُونَ عَلَى مِثْلِ الجَمْرِ مِنْ ذِكْرِ مَعَادِهِمْ.',
-    english:
-      'I knew the companions of Muhammad (peace be upon him and his family) — and I see none who resemble them. They would rise in the morning dishevelled and dust-covered, having spent the night in prostration and standing — alternating between their foreheads and cheeks — and stood on what felt like burning coals from remembering their return to God.',
-    source: 'Nahj al-Balagha, Sermon 96',
-    brief: {
-      en: 'A witness from Imam Ali about the early companions he knew personally — and a measure of how he saw the generation after them.',
-      ar: 'شهادة من الإمام عليّ في أصحاب النبيّ الذين عرفهم شخصيّاً — ومقياس لما يراه في الجيل الذي بعدهم.',
-    },
-    theme: 'on devotion, on the early generation, on what changed',
-  },
-  // ── v46.1 corpus expansion · sermons ──────────────────────────
-  {
-    title: {
-      en: 'The Sermon of Jihad',
-      ar: 'في الحثّ على الجهاد',
-    },
-    arabic:
-      'أَمَّا بَعْدُ، فَإِنَّ الجِهَادَ بَابٌ مِنْ أَبْوَابِ الجَنَّةِ، فَتَحَهُ اللَّهُ لِخَاصَّةِ أَوْلِيَائِهِ، وَهُوَ لِبَاسُ التَّقْوَى، وَدِرْعُ اللَّهِ الحَصِينَةُ، وَجُنَّتُهُ الوَثِيقَةُ. فَمَنْ تَرَكَهُ رَغْبَةً عَنْهُ أَلْبَسَهُ اللَّهُ ثَوْبَ الذُّلِّ، وَشَمِلَهُ البَلَاءُ.',
-    english:
-      'To proceed: jihad is one of the gates of Paradise, which God has opened for His closest friends. It is the garment of mindfulness, the impenetrable armour of God, and His trustworthy shield. Whoever abandons it out of distaste, God clothes him in the garment of humiliation, and calamity envelops him.',
-    source: 'Nahj al-Balagha, Sermon 27 — "The Sermon of Jihad"',
-    brief: {
-      en: 'Imam Ali delivered this after the Syrian forces of Muawiya raided Anbar and killed civilians; he rebuked the Kufans for their reluctance to mobilise in defence of the wronged.',
-      ar: 'ألقى الإمامُ عليٌّ هذه الخطبةَ بعد إغارةِ جيوشِ الشّامِ على الأنبارِ وقتلِ أهلِها، موبِّخاً أهلَ الكوفةِ على تخاذلِهم عن نُصرةِ المظلومين.',
-    },
-    theme: 'on courage, on the cost of passivity, on standing for the wronged',
-  },
-  {
-    title: {
-      en: 'On the Prophet, Peace Be Upon Him',
-      ar: 'في وصف النبيّ صلّى الله عليه وآله',
-    },
-    arabic:
-      'أَرْسَلَهُ عَلَى حِينِ فَتْرَةٍ مِنَ الرُّسُلِ، وَطُولِ هَجْعَةٍ مِنَ الأُمَمِ، وَانْتِقَاضٍ مِنَ المُبْرَمِ، فَجَاءَهُمْ بِتَصْدِيقِ الَّذِي بَيْنَ يَدَيْهِ، وَالنُّورِ المُقْتَدَى بِهِ. ذَلِكَ القُرْآنُ فَاسْتَنْطِقُوهُ، وَلَنْ يَنْطِقَ، وَلَكِنْ أُخْبِرُكُمْ عَنْهُ: أَلَا إِنَّ فِيهِ عِلْمَ مَا يَأْتِي، وَالحَدِيثَ عَنِ المَاضِي، وَدَوَاءَ دَائِكُمْ، وَنَظْمَ مَا بَيْنَكُمْ.',
-    english:
-      'God sent him during an interval between messengers, during a long slumber of the nations, when firm covenants were unravelling. He came confirming what was before him and bearing a light to be followed. That is the Quran — so make it speak, though it will never speak. But I will tell you about it: in it is the knowledge of what is to come, the account of what is past, the cure for your ailment, and the ordering of all that lies between you.',
-    source: 'Nahj al-Balagha, Sermon 158',
-    brief: {
-      en: "A celebrated passage on the timing of the Prophet's mission and the living function of the Quran as guidance, diagnosis, and remedy for every age.",
-      ar: 'مقطعٌ مشهورٌ يصفُ زمنَ بعثةِ النبيِّ ومهمَّتَه، ووظيفةَ القرآنِ بوصفِه هدايةً ودواءً للأمَّةِ في كلِّ زمان.',
-    },
-    theme: 'on the Prophet, on the Quran, on guidance',
-  },
-  {
-    title: {
-      en: 'On Death and the Grave',
-      ar: 'في ذكر الموت وما بعده',
-    },
-    arabic:
-      'فَلَوْ رَأَيْتَ، عِبَادَ اللَّهِ، حَيْثُ يَتَرَدَّى بَعْدَ الحَيَاةِ ضِيقَ القَبْرِ، فَيَا لَهَا حَفِيرَةً، عَلَى سَاكِنِهَا مَا أَضْيَقَهَا، وَفِي أَيِّ بُقْعَةٍ بَلَدِهَا مَا أَوْحَشَهَا. وَإِنَّ لِلْمَوْتِ لَغَمَرَاتٍ هِيَ أَفْظَعُ مِنْ أَنْ تُسْتَغْرَقَ بِصِفَةٍ. كَأَنَّكَ بِالأَمْرِ قَدْ نَزَلَ بِكَ، فَأَعَدَّ لَهُ جَوَابَهُ، وَأَكْثِرْ زَادَهُ.',
-    english:
-      'O servants of God, if only you could see where, after life, one tumbles into the narrowness of the grave — what a pit it is, how cramped upon its inhabitant, what an isolating place in any land it occupies. Death has agonies too dreadful to be captured in description. It is as if the matter has already descended upon you — so prepare your answer for it, and pack abundant provision.',
-    source: 'Nahj al-Balagha, Sermon 221',
-    brief: {
-      en: "A meditation on the moment of dying and the silence of the grave, delivered to shake hearts numbed by the routine of worldly life.",
-      ar: 'تأمُّلٌ في لحظةِ الموتِ ووحشةِ القبرِ، ألقاه الإمامُ ليُنبِّهَ القلوبَ الَّتي ألهتْها الحياةُ الدّنيا.',
-    },
-    theme: 'on mortality, on preparation, on the grave',
-  },
-  {
-    title: {
-      en: 'The Mutual Right of Ruler and Ruled',
-      ar: 'في حقّ الوالي والرعيّة',
-    },
-    arabic:
-      'أَمَّا بَعْدُ، فَقَدْ جَعَلَ اللَّهُ سُبْحَانَهُ لِي عَلَيْكُمْ حَقًّا بِوِلَايَةِ أَمْرِكُمْ، وَلَكُمْ عَلَيَّ مِنَ الحَقِّ مِثْلُ الَّذِي لِي عَلَيْكُمْ. فَالحَقُّ أَوْسَعُ الأَشْيَاءِ فِي التَّوَاصُفِ، وَأَضْيَقُهَا فِي التَّنَاصُفِ. لَا يَجْرِي لِأَحَدٍ إِلَّا جَرَى عَلَيْهِ، وَلَا يَجْرِي عَلَيْهِ إِلَّا جَرَى لَهُ.',
-    english:
-      'God has placed a right upon you for me through my guardianship of your affair, and you have upon me a right equal to mine upon you. Right is the broadest of things in description and the narrowest in mutual fulfilment. It runs for no one without also running against him, and runs against no one without also running for him.',
-    source: 'Nahj al-Balagha, Sermon 216',
-    brief: {
-      en: "A foundational statement on reciprocal rights: authority creates obligation in both directions, with no one excepted from mutual accountability except God.",
-      ar: 'بيانٌ تأسيسيٌّ في الحقوقِ المتبادلةِ، يُعلِنُ فيه الإمامُ أنَّ الولايةَ تُنشئُ التزاماً في الاتِّجاهين، ولا يستثنى أحدٌ من المساءلةِ المتبادلةِ إلَّا الله.',
-    },
-    theme: 'on justice, on leadership, on mutual obligation',
-  },
-  {
-    title: {
-      en: 'On the Creation of the Peacock',
-      ar: 'في خلق الطاووس',
-    },
-    arabic:
-      'وَمِنْ أَعْجَبِهَا خَلْقًا الطَّاوُوسُ، الَّذِي أَقَامَهُ فِي أَحْكَمِ تَعْدِيلٍ، وَنَضَّدَ أَلْوَانَهُ فِي أَحْسَنِ تَنْضِيدٍ، بِجَنَاحٍ أَشْرَجَ قَصَبَهُ، وَذَنَبٍ أَطَالَ مَسْحَبَهُ. إِذَا دَرَجَ إِلَى الأُنْثَى نَشَرَهُ مِنْ طَيِّهِ، وَسَمَا بِهِ مُطِلًّا عَلَى رَأْسِهِ كَأَنَّهُ قِلْعُ دَارِيٍّ عَنَجَهُ نُوتِيُّهُ. يَخْتَالُ بِأَلْوَانِهِ، وَيَمِيسُ بِزَيَفَانِهِ.',
-    english:
-      "Among the most wondrous of God's creatures in form is the peacock, whom He set up in the most exquisite balance and whose colours He arranged in the finest arrangement, with a wing whose quills He fitted together, and a tail whose train He lengthened. When he struts toward the female, he unfurls it from its folds and raises it overhead like the sail of a Darian ship hauled up by its sailor. He swaggers with his colours and sways with his prancing.",
-    source: 'Nahj al-Balagha, Sermon 165',
-    brief: {
-      en: "A famous passage of natural theology — Imam Ali contemplating the peacock as evidence of the Maker's artistry, dwelling on its colours, display, and design.",
-      ar: 'مقطعٌ مشهورٌ من الخطبةِ يتأمَّلُ فيه الإمامُ خلقَ الطّاووسِ دليلاً على صنعِ الخالقِ، واصفاً ألوانَه ومشيتَه وبديعَ تركيبِه.',
-    },
-    theme: 'on creation, on the signs of God, on wonder',
-  },
-  {
-    title: {
-      en: 'On the Transience of This World',
-      ar: 'في زهرة الدنيا وفنائها',
-    },
-    arabic:
-      'أَيُّهَا النَّاسُ، انْظُرُوا إِلَى الدُّنْيَا نَظَرَ الزَّاهِدِينَ فِيهَا، الصَّادِفِينَ عَنْهَا، فَإِنَّهَا وَاللَّهِ عَمَّا قَلِيلٍ تُزِيلُ السَّاكِنَ الآمِنَ، وَتَفْجَعُ المُتْرَفَ الوَادِعَ. لَا يَرْجِعُ مَا تَوَلَّى مِنْهَا فَأَدْبَرَ. سُرُورُهَا مَشُوبٌ بِالحُزْنِ، وَجَلَدُ الرِّجَالِ فِيهَا إِلَى الضَّعْفِ وَالوَهْنِ. فَلَا يَغُرَّنَّكُمْ كَثْرَةُ مَا يُعْجِبُكُمْ فِيهَا، لِقِلَّةِ مَا يَصْحَبُكُمْ مِنْهَا.',
-    english:
-      'O people, look upon the world with the gaze of those who turn from it in detachment. For by God, before long it dislodges the settled and the secure, and strikes the comfortable with grief. What has gone from it and turned its back does not return. Its delight is mingled with sorrow, and the strength of men within it ends in feebleness. So do not let the multitude of things that please you in it deceive you, for little of it will accompany you.',
-    source: 'Nahj al-Balagha, Sermon 103',
-    brief: {
-      en: 'A sober address urging the listener to look at the world with the detached eye of one who knows its impermanence — neither seduced by its pleasures nor surprised by its losses.',
-      ar: 'خطابٌ رزينٌ يدعو السَّامعَ إلى النّظرِ إلى الدّنيا بعينِ الزّاهدِ العارفِ بفنائِها، فلا تخدعه ملذَّاتُها ولا تفجؤه مصائبُها.',
-    },
-    theme: 'on detachment, on impermanence, on inner clarity',
-  },
-  {
-    title: {
-      en: 'I Was Like a Mountain — Why I Held My Hand',
-      ar: 'في الصبر على المظلمة',
-    },
-    arabic:
-      'فَنَظَرْتُ فَإِذَا لَيْسَ لِي مُعِينٌ إِلَّا أَهْلُ بَيْتِي، فَضَنِنْتُ بِهِمْ عَنِ المَوْتِ، وَأَغْضَيْتُ عَلَى القَذَى، وَشَرِبْتُ عَلَى الشَّجَا، وَصَبَرْتُ عَلَى أَخْذِ الكَظَمِ، وَعَلَى أَمَرَّ مِنْ طَعْمِ العَلْقَمِ.',
-    english:
-      'I looked and found I had no helper but the people of my house — and I was unwilling to expose them to death. So I closed my eyes despite the dust in them, swallowed despite the lump in my throat, and bore patiently the choking grip and what was bitterer than the taste of colocynth.',
-    source: 'Nahj al-Balagha, Sermon 26',
-    brief: {
-      en: "A wrenching account of why Imam Ali withheld his hand after the Prophet's death: lacking helpers beyond his immediate family, he chose patience over conflict.",
-      ar: 'وصفٌ مؤثِّرٌ يبيِّن فيه الإمامُ سببَ صبرِه بعد وفاةِ النبيِّ، إذ لم يجدْ ناصراً سوى أهلِ بيتِه، فاختار الصّبرَ على القتالِ حفاظاً عليهم.',
-    },
-    theme: 'on patience, on principled restraint, on bearing injustice',
-  },
-  {
-    title: { en: 'The Graveyard Address', ar: 'خِطابُ أَهْلِ القُبور' },
-    arabic:
-      'يَا أَهْلَ الدِّيَارِ الْمُوحِشَةِ، وَالمَحَالِّ المُقْفِرَةِ، وَالقُبُورِ المُظْلِمَةِ.\nيَا أَهْلَ التُّرْبَةِ، يَا أَهْلَ الغُرْبَةِ، يَا أَهْلَ الوَحْدَةِ، يَا أَهْلَ الوَحْشَةِ.\nأَنْتُمْ لَنَا فَرَطٌ سَابِقٌ، وَنَحْنُ لَكُمْ تَبَعٌ لَاحِقٌ.\nأَمَّا الدُّورُ فَقَدْ سُكِنَتْ، وَأَمَّا الأَزْوَاجُ فَقَدْ نُكِحَتْ، وَأَمَّا الأَمْوَالُ فَقَدْ قُسِّمَتْ.\nهَذَا خَبَرُ مَا عِنْدَنَا، فَمَا خَبَرُ مَا عِنْدَكُمْ؟\nثُمَّ الْتَفَتَ إِلَى أَصْحَابِهِ فَقَالَ: أَمَا لَوْ أُذِنَ لَهُمْ فِي الكَلَامِ لَأَخْبَرُوكُمْ أَنَّ خَيْرَ الزَّادِ التَّقْوَى.',
-    english:
-      'O people of the desolate dwellings, the empty quarters, the dark graves.\nO people of the dust, O people of estrangement, O people of solitude, O people of dread.\nYou have gone ahead of us, and we are following behind.\nAs for the houses — they have been inhabited. As for the spouses — they have been remarried. As for the wealth — it has been divided.\nThis is the news from our side; so what is the news from yours?\nThen he turned to his companions and said: If they were permitted to speak, they would tell you that the best provision is fear of God.',
-    source: 'Nahj al-Balagha, Saying 130 (the graveyard address near Kufa)',
-    brief: {
-      en: 'Imam Ali stopped at the graves on his return from Siffin and addressed the dead — one of the most piercing passages on mortality in the tradition.',
-      ar: 'وقف الإمامُ على المقابرِ عند رجوعِه من صفّين فخاطبَ الموتى، وهو من أبلغِ ما قيلَ في الموتِ.',
-    },
-    theme: 'on the grave, on visiting the dead, when sensing mortality',
-  },
-  {
-    title: { en: 'What Death Truly Is', ar: 'حَقيقَةُ المَوْتِ' },
-    arabic:
-      'فَلَوْ رَأَيْتَ، عِبَادَ اللَّهِ، مَا قَدْ نَزَلُوا حَيْثُ نَزَلُوا.\nقَدِ ارْتَهَنَتْهُمْ هُنَاكَ الأَعْمَالُ، وَغَلَبَتْهُمُ الأَهْوَالُ.\nأَكَلَتِ الأَرْضُ مِنْ لُحُومِهِمْ، فَأَصْبَحُوا فِي حُفَرِ الأَجْدَاثِ جِيرَانًا لَا يَتَزَاوَرُونَ، وَنُدَمَاءَ لَا يَتَعَاشَرُونَ.\nبَلِيَتْ بَيْنَهُمْ عُرَى التَّعَارُفِ، وَانْقَطَعَتْ مِنْهُمْ أَسْبَابُ الإِخَاءِ.\nفَكُلُّهُمْ وَحِيدٌ وَهُمْ جَمِيعٌ، وَبِجَانِبِ الهَجْرِ وَهُمْ أَخِلَّاءُ.\nلَا يَتَعَارَفُونَ لِلَيْلٍ صَبَاحًا، وَلَا لِنَهَارٍ مَسَاءً.',
-    english:
-      'If you could only see, O servants of God, where they have descended and where they have come to rest.\nThere their deeds have taken them hostage, and the terrors have overwhelmed them.\nThe earth has eaten from their flesh, and they have become in the pits of the graves neighbours who do not visit one another, companions who do not converse.\nThe bonds of mutual acquaintance among them have worn away, and the ties of brotherhood have been severed.\nEach of them is alone though they are together, on the side of estrangement though they are intimates.\nThey do not know morning from a night, nor evening from a day.',
-    source: "Nahj al-Balagha, Sermon 221 (after recitation of 'Vying for more distracts you')",
-    brief: {
-      en: 'From the sermon delivered after reciting Surat al-Takathur — a vivid description of the state of the dead in their graves.',
-      ar: 'من الخطبةِ التي ألقاها بعد تلاوةِ سورةِ التكاثرِ، يصفُ فيها حالَ الموتى في قبورِهم.',
-    },
-    theme: 'on death, on the grave, on what waits in the earth',
-  },
-  {
-    title: { en: 'What Did He Send Ahead?', ar: 'مَاذَا قَدَّمَ؟' },
-    arabic:
-      'أَيُّهَا النَّاسُ، إِنَّمَا الدُّنْيَا دَارُ مَجَازٍ، وَالآخِرَةُ دَارُ قَرَارٍ.\nفَخُذُوا مِنْ مَمَرِّكُمْ لِمَقَرِّكُمْ.\nوَلَا تَهْتِكُوا أَسْتَارَكُمْ عِنْدَ مَنْ يَعْلَمُ أَسْرَارَكُمْ.\nوَأَخْرِجُوا مِنَ الدُّنْيَا قُلُوبَكُمْ مِنْ قَبْلِ أَنْ تَخْرُجَ مِنْهَا أَبْدَانُكُمْ.\nفَفِي الدُّنْيَا حُيِّيتُمْ، وَلِغَيْرِهَا خُلِقْتُمْ.\nإِنَّ المَرْءَ إِذَا هَلَكَ قَالَ النَّاسُ: مَا تَرَكَ؟ وَقَالَتِ المَلَائِكَةُ: مَا قَدَّمَ؟\nفَلِلَّهِ آبَاؤُكُمْ، فَقَدِّمُوا بَعْضًا يَكُنْ لَكُمْ قَرْضًا، وَلَا تُخَلِّفُوا كُلًّا فَيَكُونَ عَلَيْكُمْ كَلًّا.',
-    english:
-      'O people, this world is only a place of passage, and the Hereafter is the abode of permanence.\nSo take from your thoroughfare for your dwelling.\nDo not tear away your veils before the One who knows your secrets.\nTake your hearts out of this world before your bodies leave it.\nFor in this world you have been kept alive, but for another you were created.\nWhen a man perishes, the people say: "What did he leave behind?" but the angels say: "What did he send ahead?"\nMay God bless your fathers — send something ahead so it may be a loan in your favour, and do not leave everything behind, lest it become a burden against you.',
-    source: 'Nahj al-Balagha, Saying 203',
-    brief: {
-      en: 'A short address contrasting the two questions asked at death — the one the world asks, and the one the angels ask.',
-      ar: 'خطابٌ قصيرٌ يقابلُ بين سؤالِ الناسِ وسؤالِ الملائكةِ عند موتِ الإنسانِ.',
-    },
-    theme: 'on death, on what we send ahead, when preparing for the journey',
-  },
-  {
-    title: { en: 'The Pangs of Death', ar: 'سَكَرَاتُ المَوْتِ' },
-    arabic:
-      'اجْتَمَعَتْ عَلَيْهِمْ سَكْرَةُ المَوْتِ وَحَسْرَةُ الفَوْتِ.\nفَفَتَرَتْ لَهَا أَطْرَافُهُمْ، وَتَغَيَّرَتْ لَهَا أَلْوَانُهُمْ.\nثُمَّ ازْدَادَ المَوْتُ فِيهِمْ وُلُوجًا، فَحِيلَ بَيْنَ أَحَدِهِمْ وَبَيْنَ مَنْطِقِهِ.\nوَإِنَّهُ لَبَيْنَ أَهْلِهِ يَنْظُرُ بِبَصَرِهِ، وَيَسْمَعُ بِأُذُنِهِ، عَلَى صِحَّةٍ مِنْ عَقْلِهِ وَبَقَاءٍ مِنْ لُبِّهِ.\nيُفَكِّرُ فِيمَ أَفْنَى عُمُرَهُ، وَفِيمَ أَذْهَبَ دَهْرَهُ.\nوَيَتَذَكَّرُ أَمْوَالًا جَمَعَهَا، أَغْمَضَ فِي مَطَالِبِهَا، وَأَخَذَهَا مِنْ مُصَرَّحَاتِهَا وَمُشْتَبِهَاتِهَا.\nقَدْ لَزِمَتْهُ تَبِعَاتُ جَمْعِهَا، وَأَشْرَفَ عَلَى فِرَاقِهَا.\nتَبْقَى لِمَنْ وَرَاءَهُ يَنْعَمُونَ فِيهَا، وَيَتَمَتَّعُونَ بِهَا.\nفَيَكُونُ المَهْنَأُ لِغَيْرِهِ، وَالعِبْءُ عَلَى ظَهْرِهِ.',
-    english:
-      'The agony of death and the regret of loss come upon them together.\nTheir limbs grow slack at it, and their complexions change.\nThen death drives deeper into them, and a man is cut off from his own speech.\nYet he is among his family, still seeing with his eye, hearing with his ear, his mind sound, his intellect intact.\nHe ponders: in what did I waste my life? In what did I let my time pass?\nHe remembers wealth he gathered, closing his eyes to how he sought it, taking it from the lawful and the doubtful alike.\nThe consequences of gathering it now cling to him, and he is on the verge of departing from it.\nIt will remain for those after him to enjoy and take pleasure in.\nThe ease is for another, but the load is on his back.',
-    source: 'Nahj al-Balagha, Sermon 109',
-    brief: {
-      en: 'Imam Ali describes the moment of death from the inside — the dying man still aware, watching what he built slip into other hands.',
-      ar: 'يصفُ الإمامُ لحظةَ الموتِ من داخلِها، والمحتضرُ يرى مالَه ينتقلُ إلى غيرِه.',
-    },
-    theme: 'on death, on the deathbed, on what we leave behind',
-  },
-  {
-    title: { en: 'The Bridge and the Day of Resurrection', ar: 'الصِّرَاطُ وَيَوْمُ القِيَامَةِ' },
-    arabic:
-      'وَاعْلَمُوا أَنَّ مَجَازَكُمْ عَلَى الصِّرَاطِ وَمَزَالِقِ دَحْضِهِ، وَأَهَاوِيلِ زَلَلِهِ، وَتَارَاتِ أَهْوَالِهِ.\nفَاتَّقُوا اللَّهَ عِبَادَ اللَّهِ تَقِيَّةَ ذِي لُبٍّ شَغَلَ التَّفَكُّرُ قَلْبَهُ.\nوَأَنْصَبَ الخَوْفُ بَدَنَهُ، وَأَسْهَرَ التَّهَجُّدُ غِرَارَ نَوْمِهِ.\nوَأَظْمَأَ الرَّجَاءُ هَوَاجِرَ يَوْمِهِ.\nوَظَلَفَ الزُّهْدُ شَهَوَاتِهِ، وَأَوْجَفَ الذِّكْرُ بِلِسَانِهِ.\nوَقَدَّمَ الخَوْفَ لِأَمَانِهِ، وَتَنَكَّبَ المَخَالِجَ عَنْ وَضَحِ السَّبِيلِ.\nوَسَلَكَ أَقْصَدَ المَسَالِكِ إِلَى النَّهْجِ المَطْلُوبِ.',
-    english:
-      'Know that your crossing is upon the Bridge — its slippery footing, the terrors of its stumbling, the waves of its horrors.\nSo fear God, O servants of God, with the fear of a man of reason whose heart is preoccupied with reflection.\nFear has wearied his body, and the night vigil has banished the snatches of his sleep.\nHope has parched his hot midday with thirst.\nAsceticism has restrained his desires, and remembrance has set his tongue in motion.\nHe has put fear forward for the sake of his security, turned aside from the deviations off the clear road,\nand traveled the straightest path toward the sought-after way.',
-    source: "Nahj al-Balagha, Sermon 83 (al-Gharra')",
-    brief: {
-      en: "From the famed Gharra' sermon — the crossing of the Bridge on the Day of Resurrection and the portrait of the soul prepared for that day.",
-      ar: 'من خطبةِ الغرّاءِ المشهورةِ، يصفُ المجازَ على الصراطِ وحالَ من استعدَّ لذلك اليومِ.',
-    },
-    theme: 'on the reckoning, on the Day of Judgment, on the Bridge',
-  },
-  {
-    title: { en: 'The Gathering and the Reckoning', ar: 'المَحْشَرُ وَالحِسَابُ' },
-    arabic:
-      'اعْلَمُوا عِبَادَ اللَّهِ أَنَّ عَلَيْكُمْ رَصَدًا مِنْ أَنْفُسِكُمْ، وَعُيُونًا مِنْ جَوَارِحِكُمْ.\nوَحُفَّاظَ صِدْقٍ يَحْفَظُونَ أَعْمَالَكُمْ، وَعَدَدَ أَنْفَاسِكُمْ.\nلَا تَسْتُرُكُمْ مِنْهُمْ ظُلْمَةُ لَيْلٍ دَاجٍ، وَلَا يُكِنُّكُمْ مِنْهُمْ بَابٌ ذُو رِتَاجٍ.\nوَإِنَّ غَدًا مِنَ اليَوْمِ قَرِيبٌ.\nيَذْهَبُ اليَوْمُ بِمَا فِيهِ، وَيَجِيءُ الغَدُ لَاحِقًا بِهِ.\nفَكَأَنَّ كُلَّ امْرِئٍ مِنْكُمْ قَدْ بَلَغَ مِنَ الأَرْضِ مَنْزِلَ وَحْدَتِهِ، وَمَخَطَّ حُفْرَتِهِ.\nفَيَا لَهُ مِنْ بَيْتِ وَحْدَةٍ، وَمَنْزِلِ وَحْشَةٍ، وَمُفْرَدِ غُرْبَةٍ!\nوَكَأَنَّ الصَّيْحَةَ قَدْ أَتَتْكُمْ، وَالسَّاعَةَ قَدْ غَشِيَتْكُمْ.\nوَبَرَزْتُمْ لِفَصْلِ القَضَاءِ، قَدْ زَاحَتْ عَنْكُمُ الأَبَاطِيلُ، وَاضْمَحَلَّتْ عَنْكُمُ العِلَلُ.',
-    english:
-      'Know, O servants of God, that watchers from your own selves are upon you, and spies from your own limbs,\nand truthful keepers who record your deeds and the number of your breaths.\nNo darkness of a deep night conceals you from them, no bolted door shuts you off from them.\nTomorrow is near to today.\nToday goes with what is in it, and tomorrow follows it.\nIt is as if each of you has already reached his solitary station in the earth, the pit dug for him.\nO what a house of loneliness, what a dwelling of dread, what an abode of estrangement alone!\nIt is as if the Cry has reached you, the Hour has overtaken you,\nand you have emerged for the final judgment — falsehoods have departed from you, excuses have fallen away.',
-    source: 'Nahj al-Balagha, Sermon 157',
-    brief: {
-      en: 'Imam Ali brings the Day of Gathering close — collapsing the distance between today and the moment of standing for judgment.',
-      ar: 'يقرّبُ الإمامُ يومَ المحشرِ، فيلغي المسافةَ بين اليومِ ولحظةِ الوقوفِ للحسابِ.',
-    },
-    theme: 'on the reckoning, on the Day of Judgment, on the gathering',
-  },
-  {
-    title: { en: 'He Is Not Known by Likeness', ar: 'لَا يُعْرَفُ بِالْمُمَاثَلَةِ' },
-    arabic:
-      'الْحَمْدُ لِلَّهِ الَّذِي لَا تُدْرِكُهُ الشَّوَاهِدُ، وَلَا تَحْوِيهِ الْمَشَاهِدُ.\nوَلَا تَرَاهُ النَّوَاظِرُ، وَلَا تَحْجُبُهُ السَّوَاتِرُ.\nالدَّالِّ عَلَى قِدَمِهِ بِحُدُوثِ خَلْقِهِ، وَبِحُدُوثِ خَلْقِهِ عَلَى وُجُودِهِ.\nوَبِاشْتِبَاهِهِمْ عَلَى أَنْ لَا شَبَهَ لَهُ.\nالَّذِي صَدَقَ فِي مِيعَادِهِ، وَارْتَفَعَ عَنْ ظُلْمِ عِبَادِهِ.\nوَقَامَ بِالْقِسْطِ فِي خَلْقِهِ، وَعَدَلَ عَلَيْهِمْ فِي حُكْمِهِ.\nوَاحِدٌ لَا بِعَدَدٍ، وَدَائِمٌ لَا بِأَمَدٍ، وَقَائِمٌ لَا بِعَمَدٍ.',
-    english:
-      'Praise be to God whom the senses cannot perceive, and whom no place can contain.\nWhom no eye can see, and whom no veil can hide.\nHe who proves His eternity by the origination of His creation, and by the origination of His creation upon His own existence,\nand by their resemblance to one another that He has no likeness.\nHe is the true keeper of His promise, far above wronging His servants.\nHe stands by equity among His creation and rules over them with justice.\nOne, not by number; everlasting, not by duration; standing, not by props.',
-    source: 'Nahj al-Balagha, Sermon 152',
-    brief: {
-      en: 'Created things testify to their Creator precisely by their poverty: their origination proves His pre-eternity, their resemblance proves His unlikeness.',
-      ar: 'المخلوقاتُ تدلُّ على خالقِها بفقرِها، وحدوثُها شاهدٌ على أزليّتِه.',
-    },
-    theme: 'on tawhid, on knowing God through creation',
-  },
-  {
-    title: { en: 'The Foremost in Religion Is to Know Him', ar: 'أَوَّلُ الدِّينِ مَعْرِفَتُهُ' },
-    arabic:
-      'أَوَّلُ الدِّينِ مَعْرِفَتُهُ، وَكَمَالُ مَعْرِفَتِهِ التَّصْدِيقُ بِهِ.\nوَكَمَالُ التَّصْدِيقِ بِهِ تَوْحِيدُهُ، وَكَمَالُ تَوْحِيدِهِ الْإِخْلَاصُ لَهُ.\nوَكَمَالُ الْإِخْلَاصِ لَهُ نَفْيُ الصِّفَاتِ عَنْهُ.\nلِشَهَادَةِ كُلِّ صِفَةٍ أَنَّهَا غَيْرُ الْمَوْصُوفِ.\nوَشَهَادَةِ كُلِّ مَوْصُوفٍ أَنَّهُ غَيْرُ الصِّفَةِ.\nفَمَنْ وَصَفَ اللَّهَ سُبْحَانَهُ فَقَدْ قَرَنَهُ.\nوَمَنْ قَرَنَهُ فَقَدْ ثَنَّاهُ، وَمَنْ ثَنَّاهُ فَقَدْ جَزَّأَهُ.\nوَمَنْ جَزَّأَهُ فَقَدْ جَهِلَهُ.\nوَمَنْ جَهِلَهُ فَقَدْ أَشَارَ إِلَيْهِ.\nوَمَنْ أَشَارَ إِلَيْهِ فَقَدْ حَدَّهُ، وَمَنْ حَدَّهُ فَقَدْ عَدَّهُ.',
-    english:
-      'The foremost in religion is the knowledge of Him, and the perfection of knowing Him is to affirm Him.\nThe perfection of affirming Him is to declare His oneness, and the perfection of declaring His oneness is sincerity toward Him.\nThe perfection of sincerity toward Him is to deny attributes of Him —\nfor every attribute bears witness that it is other than that which it qualifies,\nand every qualified thing bears witness that it is other than the attribute.\nSo whoever ascribes an attribute to God has joined a partner to Him.\nWhoever joins a partner to Him has made Him two; whoever makes Him two has divided Him.\nWhoever divides Him is ignorant of Him.\nWhoever is ignorant of Him points to Him.\nWhoever points to Him has set a limit upon Him, and whoever sets a limit upon Him has numbered Him.',
-    source: 'Nahj al-Balagha, Sermon 1 (the apophatic cascade)',
-    brief: {
-      en: "The opening cascade of Sermon 1: religion's beginning is knowing Him; the height of that knowing is to deny any attribute beside His essence.",
-      ar: 'سلّمُ المعرفةِ من التصديقِ إلى نفيِ الصفاتِ، فكلُّ وصفٍ تحديدٌ.',
-    },
-    theme: 'on tawhid, on apophatic theology, on the divine attributes',
-  },
-  {
-    title: { en: 'No State Precedes Another in Him', ar: 'لَمْ تَسْبِقْ لَهُ حَالٌ حَالًا' },
-    arabic:
-      'الْحَمْدُ لِلَّهِ الَّذِي لَمْ تَسْبِقْ لَهُ حَالٌ حَالًا.\nفَيَكُونَ أَوَّلًا قَبْلَ أَنْ يَكُونَ آخِرًا، وَيَكُونَ ظَاهِرًا قَبْلَ أَنْ يَكُونَ بَاطِنًا.\nكُلُّ مُسَمًّى بِالْوَحْدَةِ غَيْرَهُ قَلِيلٌ، وَكُلُّ عَزِيزٍ غَيْرَهُ ذَلِيلٌ.\nوَكُلُّ قَوِيٍّ غَيْرَهُ ضَعِيفٌ، وَكُلُّ مَالِكٍ غَيْرَهُ مَمْلُوكٌ.\nوَكُلُّ عَالِمٍ غَيْرَهُ مُتَعَلِّمٌ، وَكُلُّ قَادِرٍ غَيْرَهُ يَقْدِرُ وَيَعْجَزُ.\nلَمْ يَخْلُقْ مَا خَلَقَهُ لِتَشْدِيدِ سُلْطَانٍ، وَلَا خَوْفٍ مِنْ زَوَالٍ وَنُقْصَانٍ.\nوَلَا اسْتِعَانَةٍ عَلَى نِدٍّ مُكَاثِرٍ، وَلَا شَرِيكٍ مُكَابِرٍ.',
-    english:
-      'Praise be to God for whom no state precedes another state.\nSo that He should be First before being Last, or Manifest before being Hidden.\nEvery named-as-one besides Him is small; every powerful one besides Him is weak.\nEvery strong one besides Him is feeble; every owner besides Him is owned.\nEvery knower besides Him is a learner; every able one besides Him is by turns able and incapable.\nHe did not create what He created to consolidate a kingdom, nor from fear of decline and diminution,\nnor seeking aid against a rival who outnumbers Him, nor against a partner who would overreach Him.',
-    source: 'Nahj al-Balagha, Sermon 65',
-    brief: {
-      en: 'A litany of contrasts: every attribute creatures share with Him collapses into limitation. He created from neither need nor fear.',
-      ar: 'كلُّ صفةٍ في المخلوقِ محدودةٌ، وفيه سبحانه مطلقةٌ، وخلقَ لا لحاجةٍ.',
-    },
-    theme: 'on tawhid, on the divine attributes, on the contrast between Creator and creature',
-  },
-  {
-    title: { en: 'Imaginations Cannot Reach Him', ar: 'لَا تَنَالُهُ الْأَوْهَامُ' },
-    arabic:
-      'الْحَمْدُ لِلَّهِ الَّذِي لَا تُدْرِكُهُ الْأَوْهَامُ بِالْحَدَسِ.\nوَلَا تَنَالُهُ الْأَفْهَامُ بِالتَّصَوُّرِ.\nوَلَيْسَ بِالَّذِي تَحُلُّهُ الْحَوَادِثُ، وَلَا بِالَّذِي يَخْفَى عَلَيْهِ شَيْءٌ.\nالَّذِي بَطَنَ مِنْ خَفِيَّاتِ الْأُمُورِ، وَظَهَرَ فِي الْعُقُولِ بِمَا يُرَى فِي خَلْقِهِ مِنْ عَلَامَاتِ التَّدْبِيرِ.\nالَّذِي سُئِلَتِ الْأَنْبِيَاءُ عَنْهُ فَلَمْ تَصِفْهُ بِحَدٍّ وَلَا بِنَقْصٍ، بَلْ وَصَفَتْهُ بِأَفْعَالِهِ.\nوَدَلَّتْ عَلَيْهِ بِآيَاتِهِ.\nلَا تَسْتَطِيعُ عُقُولُ الْمُتَفَكِّرِينَ جَحْدَهُ.\nالَّذِي عَجَزَتِ الْأَوْهَامُ أَنْ تَكْتَنِهَ صِفَتَهُ، وَانْحَسَرَتِ الْأَبْصَارُ أَنْ تَنَالَ كُنْهَ عَظَمَتِهِ.',
-    english:
-      'Praise be to God whom imaginations cannot grasp by their guesses.\nWhom understandings cannot reach by their conceiving.\nWho is not one whom events befall, nor one from whom anything is hidden.\nHe whose innermost reality lies behind concealed matters, and who appears to the intellects through what is seen in His creation of the signs of governance.\nHe of whom the prophets were asked, and they did not describe Him by any limit nor by any defect, but described Him by His acts —\nand pointed to Him by His signs.\nThe minds of those who reflect cannot deny Him.\nHe whose attribute imaginations are too weak to fathom, and whose greatness the eyes fall short, exhausted, of ever reaching.',
-    source: 'Nahj al-Balagha, Sermon 49',
-    brief: {
-      en: 'Sermon 49 in full apophatic stride: He is inaccessible to guess and concept, yet His traces in creation make denial impossible for any honest mind.',
-      ar: 'هو سبحانه خفيٌّ عن الأوهامِ، ظاهرٌ بآثارِ التدبيرِ، فلا تنالُه العقولُ ولا تنكرُه.',
-    },
-    theme: 'on tawhid, on apophatic theology, on the limits of reason',
-  },
-  {
-    title: { en: 'He Is with Everything Without Adjacency', ar: 'مَعَ كُلِّ شَيْءٍ لَا بِمُقَارَنَةٍ' },
-    arabic:
-      'مَعَ كُلِّ شَيْءٍ لَا بِمُقَارَنَةٍ، وَغَيْرُ كُلِّ شَيْءٍ لَا بِمُزَايَلَةٍ.\nفَاعِلٌ لَا بِمَعْنَى الْحَرَكَاتِ وَالْآلَةِ.\nبَصِيرٌ إِذْ لَا مَنْظُورَ إِلَيْهِ مِنْ خَلْقِهِ.\nمُتَوَحِّدٌ إِذْ لَا سَكَنَ يَسْتَأْنِسُ بِهِ، وَلَا يَسْتَوْحِشُ لِفَقْدِهِ.\nأَنْشَأَ الْخَلْقَ إِنْشَاءً، وَابْتَدَأَهُ ابْتِدَاءً.\nبِلَا رَوِيَّةٍ أَجَالَهَا، وَلَا تَجْرِبَةٍ اسْتَفَادَهَا.\nوَلَا حَرَكَةٍ أَحْدَثَهَا، وَلَا هَمَامَةِ نَفْسٍ اضْطَرَبَ فِيهَا.\nأَحَالَ الْأَشْيَاءَ لِأَوْقَاتِهَا، وَلَأَمَ بَيْنَ مُخْتَلِفَاتِهَا.\nعَالِمًا بِهَا قَبْلَ ابْتِدَائِهَا، مُحِيطًا بِحُدُودِهَا وَانْتِهَائِهَا.',
-    english:
-      'He is with every thing, but not by adjacency; and other than every thing, but not by separation.\nHe acts, but not in the sense of motions and instruments.\nHe sees, even when there was nothing of His creation to be seen.\nHe is uniquely one, even when there was no companion to grow intimate with, nor any whose loss could leave Him desolate.\nHe brought creation into being and originated it from the start —\nwithout any reflection He turned over, without any experience He drew upon,\nwithout any motion He set going, without any anxious whisper of a soul throbbing in Him.\nHe set things to their times and joined together their differences,\nknowing them before their beginning, encompassing their limits and their end.',
-    source: 'Nahj al-Balagha, Sermon 1 (second tawhid passage)',
-    brief: {
-      en: 'He is with everything without being beside it, and other than everything without being apart from it — His action requires no instrument, His creating no deliberation.',
-      ar: 'معيّتُه سبحانه لا بملاصقةٍ، وفعلُه لا بآلةٍ، وخلقُه لا برويّةٍ.',
-    },
-    theme: 'on tawhid, on the divine attributes, on creation',
-  },
-  {
-    title: { en: 'O World, Deceive Another', ar: 'يَا دُنْيَا غُرِّي غَيْرِي' },
-    arabic:
-      'إِلَيْكِ عَنِّي يَا دُنْيَا، فَحَبْلُكِ عَلَى غَارِبِكِ.\nقَدِ انْسَلَلْتُ مِنْ مَخَالِبِكِ، وَأَفْلَتُّ مِنْ حَبَائِلِكِ.\nأَيْنَ الْقُرُونُ الَّذِينَ غَرَرْتِهِمْ بِمَدَاعِبِكِ؟\nأَيْنَ الْأُمَمُ الَّذِينَ فَتَنْتِهِمْ بِزَخَارِفِكِ؟\nفَهَا هُمْ رَهَائِنُ الْقُبُورِ، وَمَضَامِينُ اللُّحُودِ.\nوَاللَّهِ لَوْ كُنْتِ شَخْصًا مَرْئِيًّا، وَقَالَبًا حِسِّيًّا،\nلَأَقَمْتُ عَلَيْكِ حُدُودَ اللَّهِ فِي عِبَادٍ غَرَرْتِهِمْ بِالْأَمَانِيِّ.\nإِلَيْكِ عَنِّي، فَوَاللَّهِ لَا أَذِلُّ لَكِ فَتَسْتَذِلِّينِي،\nوَلَا أَسْلَسُ لَكِ فَتَقُودِينِي.\nاعْزُبِي عَنِّي. عُمْرُكِ قَصِيرٌ، وَخَطَرُكِ يَسِيرٌ، وَأَمَلُكِ حَقِيرٌ.',
-    english:
-      'Away from me, O world — your reins are upon your own shoulder!\nI have slipped from your claws and escaped your snares.\nWhere are the generations whom you deceived with your trifles?\nWhere are the nations whom you tempted with your ornaments?\nThere they are — hostages of the graves, contents of the tombs.\nBy God, were you a visible person, a body that could be seen,\nI would have inflicted upon you the punishments of God for servants you misled with false hopes.\nAway from me! By God, I will not be humbled before you that you may degrade me,\nnor will I yield to you that you may lead me by the rein.\nBe gone from me. Your life is short, your danger is slight, and your aspiration is contemptible.',
-    source: 'Nahj al-Balagha, Saying 77 (the address to the world)',
-    brief: {
-      en: 'Imam Ali directly addresses the world, refusing to be seduced by its trifles, asking where the generations it deceived have gone.',
-      ar: 'خطابُ الإمامِ للدنيا، رافضاً غرورَها، سائلاً عن أممٍ خدعتهم.',
-    },
-    theme: 'on the world (dunyā), on zuhd, on refusing seduction',
-  },
-  {
-    title: { en: 'The Reality of the World', ar: 'حَقيقَةُ الدُّنْيَا' },
-    arabic:
-      'أَمَّا بَعْدُ، فَإِنِّي أُحَذِّرُكُمُ الدُّنْيَا، فَإِنَّهَا حُلْوَةٌ خَضِرَةٌ،\nحُفَّتْ بِالشَّهَوَاتِ، وَتَحَبَّبَتْ بِالْعَاجِلَةِ،\nوَرَاقَتْ بِالْقَلِيلِ، وَتَحَلَّتْ بِالْآمَالِ، وَتَزَيَّنَتْ بِالْغُرُورِ.\nلَا تَدُومُ حَبْرَتُهَا، وَلَا تُؤْمَنُ فَجْعَتُهَا.\nغَرَّارَةٌ ضَرَّارَةٌ، حَائِلَةٌ زَائِلَةٌ، نَافِدَةٌ بَائِدَةٌ، أَكَّالَةٌ غَوَّالَةٌ.\nلَمْ يَكُنِ امْرُؤٌ مِنْهَا فِي حَبْرَةٍ، إِلَّا أَعْقَبَتْهُ بَعْدَهَا عَبْرَةً.',
-    english:
-      'Now then — I warn you of the world, for it is sweet and verdant,\nsurrounded by lusts, endearing itself by what is immediate,\nappearing pleasing through trifles, adorned with false hopes, decked with deception.\nIts delight does not endure, and one is not safe from its sudden blows.\nDeceitful, harmful — fleeting, transient — perishing, ruinous — devouring, destroying.\nNo person was ever in its joy except that it followed for him a tear thereafter.',
-    source: 'Nahj al-Balagha, Sermon 111',
-    brief: {
-      en: 'A warning that the world is sweet and green on the outside but deceitful, fleeting, and ruinous, ending every joy with a tear.',
-      ar: 'تحذيرٌ من الدنيا: حلوةٌ ظاهراً، غرّارةٌ زائلةٌ، تُعقبُ كلَّ فرحةٍ عبرةً.',
-    },
-    theme: 'on the world (dunyā), on zuhd, on the deception of the world',
-  },
-  {
-    title: { en: 'The Patched Shoe', ar: 'النَّعْلُ المَخْصُوفَةُ' },
-    arabic:
-      'وَاللَّهِ لَهِيَ أَحَبُّ إِلَيَّ مِنْ إِمْرَتِكُمْ،\nإِلَّا أَنْ أُقِيمَ حَقًّا، أَوْ أَدْفَعَ بَاطِلًا.\nوَاللَّهِ لَدُنْيَاكُمْ هَذِهِ أَهْوَنُ فِي عَيْنِي مِنْ عُرَاقِ خِنْزِيرٍ فِي يَدِ مَجْذُومٍ.\nمَا لِعَلِيٍّ وَلِنَعِيمٍ يَفْنَى، وَلَذَّةٍ لَا تَبْقَى!\nأَأَقْنَعُ مِنْ نَفْسِي بِأَنْ يُقَالَ: هَذَا أَمِيرُ الْمُؤْمِنِينَ،\nوَلَا أُشَارِكُهُمْ فِي مَكَارِهِ الدَّهْرِ؟\nأَوْ أَكُونَ أُسْوَةً لَهُمْ فِي جُشُوبَةِ الْعَيْشِ؟\nفَمَا خُلِقْتُ لِيَشْغَلَنِي أَكْلُ الطَّيِّبَاتِ، كَالْبَهِيمَةِ الْمَرْبُوطَةِ هَمُّهَا عَلَفُهَا.',
-    english:
-      '(Of the patched shoe he was mending, he said:) By God, this is dearer to me than your authority over you,\nunless I establish a truth or repel a falsehood.\nBy God, this world of yours is more contemptible in my eye than the bone of a swine in the hand of a leper.\nWhat has Ali to do with delights that perish and a pleasure that does not remain?\nShall I be content with myself that it be said: "This is the Commander of the Faithful,"\nyet I not share with them in the hardships of the age,\nor be a model for them in the roughness of living?\nI was not created that the eating of fine food should occupy me, like the tethered beast whose concern is its fodder.',
-    source: 'Nahj al-Balagha, Sermon 33; cf. Letter 45',
-    brief: {
-      en: "Imam Ali declares his patched shoe dearer than rulership, and the world more contemptible than swine-bone in a leper's hand.",
-      ar: 'نعلُه المخصوفةُ أحبّ إليه من الإمارة، والدنيا أهونُ من عُراقِ خنزيرٍ.',
-    },
-    theme: "on the world (dunyā), on zuhd, on the Imam's own asceticism",
-  },
-  {
-    title: { en: 'Look at the World with the Renunciant\'s Gaze', ar: 'انْظُرُوا إِلَى الدُّنْيَا' },
-    arabic:
-      'أَيُّهَا النَّاسُ، انْظُرُوا إِلَى الدُّنْيَا نَظَرَ الزَّاهِدِينَ فِيهَا، الصَّادِفِينَ عَنْهَا،\nفَإِنَّهَا وَاللَّهِ عَمَّا قَلِيلٍ تُزِيلُ الثَّاوِيَ السَّاكِنَ،\nوَتَفْجَعُ الْمُتْرَفَ الْآمِنَ.\nلَا يَرْجِعُ مَا تَوَلَّى مِنْهَا فَأَدْبَرَ،\nوَلَا يُدْرَى مَا هُوَ آتٍ مِنْهَا فَيُنْتَظَرَ.\nسُرُورُهَا مَشُوبٌ بِالْحُزْنِ، وَجَلَدُ الرِّجَالِ فِيهَا إِلَى الضَّعْفِ وَالْوَهْنِ.\nفَلَا يَغُرَّنَّكُمْ كَثْرَةُ مَا يُعْجِبُكُمْ فِيهَا، لِقِلَّةِ مَا يَصْحَبُكُمْ مِنْهَا.\nرَحِمَ اللَّهُ امْرَأً تَفَكَّرَ فَاعْتَبَرَ، وَاعْتَبَرَ فَأَبْصَرَ.\nفَكَأَنَّ مَا هُوَ كَائِنٌ مِنَ الدُّنْيَا عَنْ قَلِيلٍ لَمْ يَكُنْ،\nوَكَأَنَّ مَا هُوَ كَائِنٌ مِنَ الْآخِرَةِ عَمَّا قَلِيلٍ لَمْ يَزَلْ.',
-    english:
-      "O people, look at the world with the look of the renunciants, those who turn from it.\nFor by God, soon will it remove the dweller who has settled,\nand strike with calamity the affluent who feels secure.\nWhat has turned away from it and gone does not return,\nand what is to come from it is not known so as to be awaited.\nIts joy is mingled with sorrow, and men's vigour in it gives way to weakness and frailty.\nSo let not the abundance of what pleases you in it deceive you, for little of it accompanies you.\nMay God have mercy on a man who reflects and takes heed, takes heed and sees.\nIt is as if what is of the world will soon be as though it never was,\nand what is of the Hereafter will soon be as though it never ceased to be.",
-    source: 'Nahj al-Balagha, Sermon 103',
-    brief: {
-      en: "Look at the world with the renunciant's gaze: it removes settled dwellers and what pleases you accompanies you only a little.",
-      ar: 'انظروا إلى الدنيا نظرَ الزاهدين؛ تُزيل الآمنَ، ولا يصحبكم منها إلا قليل.',
-    },
-    theme: 'on the world (dunyā), on zuhd, on reflection',
-  },
-  {
-    title: { en: 'The World Bids Farewell', ar: 'الدُّنْيَا مُؤْذِنَةٌ بِبَيْنٍ' },
-    arabic:
-      'أَمَّا بَعْدُ، فَإِنِّي أُحَذِّرُكُمُ الدُّنْيَا، فَإِنَّهَا مَنْزِلُ قُلْعَةٍ، وَلَيْسَتْ بِدَارِ نُجْعَةٍ.\nقَدْ تَزَيَّنَتْ بِغُرُورِهَا، وَغَرَّتْ بِزِينَتِهَا.\nدَارٌ هَانَتْ عَلَى رَبِّهَا، فَخَلَطَ حَلَالَهَا بِحَرَامِهَا، وَخَيْرَهَا بِشَرِّهَا،\nوَحَيَاتَهَا بِمَوْتِهَا، وَحُلْوَهَا بِمُرِّهَا.\nلَمْ يُصْفِهَا اللَّهُ تَعَالَى لِأَوْلِيَائِهِ، وَلَمْ يَضِنَّ بِهَا عَلَى أَعْدَائِهِ.\nخَيْرُهَا زَهِيدٌ، وَشَرُّهَا عَتِيدٌ، وَجَمْعُهَا يَنْفَدُ، وَمُلْكُهَا يُسْلَبُ، وَعَامِرُهَا يَخْرَبُ.\nأَلَا وَإِنَّ الدُّنْيَا قَدْ تَصَرَّمَتْ، وَآذَنَتْ بِانْقِضَاءٍ.\nفَهِيَ تَحْفِزُ بِالْفَنَاءِ سُكَّانَهَا، وَتَحْدُو بِالْمَوْتِ جِيرَانَهَا.',
-    english:
-      "Now then — I warn you of the world, for it is a station of departure, not a house of dwelling.\nIt has adorned itself with its deception and beguiled by its ornament.\nA house lowly in the eyes of its Lord — He mingled its lawful with its forbidden, its good with its evil,\nits life with its death, its sweetness with its bitterness.\nGod Most High did not purify it for His friends, nor did He withhold it from His enemies.\nIts good is scant, its evil is ready at hand, its gathering runs out, its dominion is stripped away, its flourishing falls to ruin.\nBehold — the world has cut its ties and announced its passing.\nIt drives its inhabitants toward annihilation and urges its neighbours toward death.",
-    source: 'Nahj al-Balagha, Sermon 113',
-    brief: {
-      en: 'The world is a way-station of departure, not a dwelling. God did not purify it for His friends — it now bids farewell, driving its people to death.',
-      ar: 'الدنيا منزلُ قُلعةٍ لا دارُ إقامةٍ؛ آذنت بانقضاءٍ، وتسوقُ سكّانَها إلى الفناء.',
-    },
-    theme: 'on the world (dunyā), on zuhd, on departure',
-  },
-  {
-    title: { en: 'His Way Was Moderation', ar: 'سِيرَتُهُ الْقَصْدُ' },
-    arabic:
-      'سِيرَتُهُ الْقَصْدُ، وَسُنَّتُهُ الرُّشْدُ، وَكَلَامُهُ الْفَصْلُ، وَحُكْمُهُ الْعَدْلُ.\nأَرْسَلَهُ عَلَى حِينِ فَتْرَةٍ مِنَ الرُّسُلِ، وَطُولِ هَجْعَةٍ مِنَ الْأُمَمِ.\nفَجَاءَهُمْ بِتَصْدِيقِ الَّذِي بَيْنَ يَدَيْهِ، وَالنُّورِ الْمُقْتَدَى بِهِ — ذَلِكَ الْقُرْآنُ.\nفَاسْتَنْطِقُوهُ، وَلَنْ يَنْطِقَ، وَلَكِنْ أُخْبِرُكُمْ عَنْهُ:\nأَلَا إِنَّ فِيهِ عِلْمَ مَا يَأْتِي، وَالْحَدِيثَ عَنِ الْمَاضِي، وَدَوَاءَ دَائِكُمْ، وَنَظْمَ مَا بَيْنَكُمْ.\nثُمَّ اخْتَارَ سُبْحَانَهُ لِمُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ لِقَاءَهُ، وَرَضِيَ لَهُ مَا عِنْدَهُ.\nوَأَكْرَمَهُ عَنْ دَارِ الدُّنْيَا، وَرَغِبَ بِهِ عَنْ مَقَارَنَةِ الْبَلْوَى، فَقَبَضَهُ إِلَيْهِ كَرِيمًا.\nوَخَلَّفَ فِيكُمْ مَا خَلَّفَتِ الْأَنْبِيَاءُ فِي أُمَمِهَا، إِذْ لَمْ يَتْرُكُوهُمْ هَمَلًا، بِغَيْرِ طَرِيقٍ وَاضِحٍ، وَلَا عَلَمٍ قَائِمٍ.',
-    english:
-      "His way was moderation, his practice was right guidance, his speech was the decisive criterion, and his judgment was justice.\nGod sent him after an interval since the previous messengers, after a long slumber of the nations.\nHe came to them confirming what was before him, with the Light to be followed — that is the Qur'an.\nSo make it speak, though it will never speak; but I shall tell you about it:\nIn it is the knowledge of what is to come, the report of what has passed, the cure for your disease, and the order of what is between you.\nThen God, glorified is He, chose for Muhammad — God's blessings upon him and his family — to meet Him, and was pleased with what He had for him.\nHe honoured him above the abode of this world, and preferred for him to be far from being yoked to affliction, and took him to Himself in nobility.\nAnd he left among you what the prophets left in their nations: for they did not leave them neglected, without a clear path or a standing landmark.",
-    source: 'Nahj al-Balagha, Sermon 158',
-    brief: {
-      en: "Imam Ali describes the Prophet's measured life, his mission after a long slumber of nations, his being taken by God in nobility, and the inheritance he left behind.",
-      ar: 'وصفُ الإمامِ لسيرةِ النبيِّ ومبعثِه بعد فترةٍ من الرسلِ، ووفاتِه كريماً، وما خلَّفه في أمَّتِه.',
-    },
-    theme: "on the Prophet's life and mission, on the Prophet",
-  },
-  {
-    title: { en: 'He Sent Him When Tongues Were in Dispute', ar: 'أَرْسَلَهُ وَالنَّاسُ ضُلَّالٌ' },
-    arabic:
-      'أَرْسَلَهُ عَلَى حِينِ فَتْرَةٍ مِنَ الرُّسُلِ، وَتَنَازُعٍ مِنَ الْأَلْسُنِ.\nفَقَفَّى بِهِ الرُّسُلَ، وَخَتَمَ بِهِ الْوَحْيَ.\nفَجَاهَدَ فِي اللَّهِ الْمُدْبِرِينَ عَنْهُ، وَالْعَادِلِينَ بِهِ.\nوَإِنَّمَا الدُّنْيَا مُنْتَهَى بَصَرِ الْأَعْمَى، لَا يُبْصِرُ مِمَّا وَرَاءَهَا شَيْئًا.\nوَالْبَصِيرُ يَنْفُذُهَا بَصَرُهُ، وَيَعْلَمُ أَنَّ الدَّارَ وَرَاءَهَا.\nفَالْبَصِيرُ مِنْهَا شَاخِصٌ، وَالْأَعْمَى إِلَيْهَا شَاخِصٌ.\nوَإِنَّمَا الْحِكْمَةُ كَالْحَيَاةِ لِلْقَلْبِ الْمَيِّتِ، وَبَصَرٌ لِلْعَيْنِ الْعَمْيَاءِ، وَسَمْعٌ لِلْأُذُنِ الصَّمَّاءِ.\nوَفِيهَا الْغِنَى كُلُّهُ وَالسَّلَامَةُ.',
-    english:
-      'He sent him at a time when the messengers had been long absent, when tongues were in dispute.\nSo He sealed the line of messengers with him and ended revelation through him,\nand he strove for God against those who turned from Him and those who set up rivals to Him.\nThis world is the farthest reach of the blind man\'s sight: he sees nothing beyond it.\nThe seeing one pierces it with his vision and knows that the true Abode lies beyond it.\nThe seeing one departs from it; the blind man heads for it.\nWisdom is to the dead heart what life is to it, what sight is to the blind eye, what hearing is to the deaf ear —\nand in it lies all sufficiency and safety.',
-    source: 'Nahj al-Balagha, Sermon 133',
-    brief: {
-      en: 'The Prophet was sent after a long interval and divided tongues; he sealed prophecy and strove against deniers, while the world remains the horizon of the blind.',
-      ar: 'أُرسِلَ النبيُّ بعد فترةٍ من الرسلِ، فختمَ به الوحي، وجاهدَ المُعرضين.',
-    },
-    theme: "on the Prophet's coming, on the state of the world before him",
-  },
-  {
-    title: { en: 'He Used to Eat on the Ground', ar: 'كَانَ يَأْكُلُ عَلَى الْأَرْضِ' },
-    arabic:
-      'وَلَقَدْ كَانَ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ يَأْكُلُ عَلَى الْأَرْضِ،\nوَيَجْلِسُ جِلْسَةَ الْعَبْدِ، وَيَخْصِفُ بِيَدِهِ نَعْلَهُ،\nوَيَرْقَعُ بِيَدِهِ ثَوْبَهُ، وَيَرْكَبُ الْحِمَارَ الْعَارِيَ، وَيُرْدِفُ خَلْفَهُ.\nوَيَكُونُ السِّتْرُ عَلَى بَابِ بَيْتِهِ فَتَكُونُ فِيهِ التَّصَاوِيرُ،\nفَيَقُولُ: يَا فُلَانَةُ — لِإِحْدَى أَزْوَاجِهِ — غَيِّبِيهِ عَنِّي،\nفَإِنِّي إِذَا نَظَرْتُ إِلَيْهِ ذَكَرْتُ الدُّنْيَا وَزَخَارِفَهَا.\nفَأَعْرَضَ عَنِ الدُّنْيَا بِقَلْبِهِ، وَأَمَاتَ ذِكْرَهَا مِنْ نَفْسِهِ،\nوَأَحَبَّ أَنْ تَغِيبَ زِينَتُهَا عَنْ عَيْنِهِ،\nلِكَيْلَا يَتَّخِذَ مِنْهَا رِيَاشًا، وَلَا يَعْتَقِدَهَا قَرَارًا، وَلَا يَرْجُوَ فِيهَا مُقَامًا.',
-    english:
-      "He — God's blessings upon him and his family — used to eat on the ground,\nsit like a servant, mend his sandal with his own hand,\npatch his garment with his own hand, ride the unsaddled donkey and let another ride behind him.\nA curtain on the door of his house once had figures upon it, and he said,\n'O so-and-so' — to one of his wives — 'remove it from my sight,\nfor when I look at it I am reminded of the world and its ornaments.'\nThus he turned from the world with his heart and put its remembrance to death within himself.\nHe loved that its adornment should vanish from his eye,\nso that he would not take finery from it, nor regard it as a fixed abode, nor hope to dwell in it.",
-    source: 'Nahj al-Balagha, Sermon 160',
-    brief: {
-      en: "Imam Ali pictures the Prophet's daily life — eating on the ground, mending his sandal, patching his garment — and his radical detachment from the world.",
-      ar: 'صورةُ النبيِّ في يومياتِه — يأكلُ على الأرض، يخصِفُ نعلَه، يرقعُ ثوبَه.',
-    },
-    theme: "on the Prophet's conduct, on the Prophet's asceticism",
-  },
-  {
-    title: { en: 'Take the Prophet as Your Pattern', ar: 'تَأَسَّ بِنَبِيِّكَ' },
-    arabic:
-      'وَلَقَدْ كَانَ فِي رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ كَافٍ لَكَ فِي الْأُسْوَةِ،\nوَدَلِيلٌ لَكَ عَلَى ذَمِّ الدُّنْيَا وَعَيْبِهَا، وَكَثْرَةِ مَخَازِيهَا وَمَسَاوِيهَا.\nإِذْ قُبِضَتْ عَنْهُ أَطْرَافُهَا، وَوُطِّئَتْ لِغَيْرِهِ أَكْنَافُهَا، وَفُطِمَ عَنْ رَضَاعِهَا، وَزُوِيَ عَنْ زَخَارِفِهَا.\nفَتَأَسَّ بِنَبِيِّكَ الْأَطْيَبِ الْأَطْهَرِ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ،\nفَإِنَّ فِيهِ أُسْوَةً لِمَنْ تَأَسَّى، وَعَزَاءً لِمَنْ تَعَزَّى.\nوَأَحَبُّ الْعِبَادِ إِلَى اللَّهِ الْمُتَأَسِّي بِنَبِيِّهِ، وَالْمُقْتَصُّ لِأَثَرِهِ.\nقَضَمَ الدُّنْيَا قَضْمًا، وَلَمْ يُعِرْهَا طَرْفًا.\nأَهْضَمُ أَهْلِ الدُّنْيَا كَشْحًا، وَأَخْمَصُهُمْ مِنَ الدُّنْيَا بَطْنًا.\nعُرِضَتْ عَلَيْهِ الدُّنْيَا فَأَبَى أَنْ يَقْبَلَهَا.',
-    english:
-      "In the Messenger of God — God's blessings upon him and his family — there was enough for you as a pattern,\nand a proof against this world: its blame, its defects, its many disgraces and evils.\nIts sides were withdrawn from him while its expanses were spread out for others; he was weaned from its suckling and removed from its ornaments.\nSo take as your pattern your Prophet, the most pure, the most pleasing — God's blessings upon him and his family —\nfor in him is a pattern for whoever would pattern themselves, and a consolation for whoever would seek consolation.\nThe most beloved of servants to God is the one who patterns themselves after His Prophet and follows his footsteps.\nHe merely nibbled the world and never gave it a glance —\nthe leanest of the people of the world in waist, the emptiest of them in belly.\nThe world was offered to him and he refused to accept it.",
-    source: 'Nahj al-Balagha, Sermon 160',
-    brief: {
-      en: "Imam Ali insists the Prophet's life is the sufficient pattern: he was withdrawn from the world's ornaments and nibbled at it without ever giving it a glance.",
-      ar: 'يؤكِّدُ الإمامُ أنَّ في رسولِ اللهِ كفايةً في الأُسوة، فقد زُوِيتْ عنه زخارفُ الدنيا فقضَمها قضماً.',
-    },
-    theme: "on the Prophet as exemplar, on the Prophet's asceticism",
-  },
-  {
-    title: { en: 'We Are the Tree of Prophethood', ar: 'نَحْنُ شَجَرَةُ النُّبُوَّةِ' },
-    arabic:
-      'نَحْنُ شَجَرَةُ النُّبُوَّةِ، وَمَحَطُّ الرِّسَالَةِ،\nوَمُخْتَلَفُ الْمَلَائِكَةِ، وَمَعَادِنُ الْعِلْمِ، وَيَنَابِيعُ الْحُكْمِ.\nنَاصِرُنَا وَمُحِبُّنَا يَنْتَظِرُ الرَّحْمَةَ، وَعَدُوُّنَا وَمُبْغِضُنَا يَنْتَظِرُ السَّطْوَةَ.\nوَلَقَدْ رَأَيْتُ أَصْحَابَ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ، فَمَا أَرَى أَحَدًا يُشْبِهُهُمْ مِنْكُمْ.\nلَقَدْ كَانُوا يُصْبِحُونَ شُعْثًا غُبْرًا، وَقَدْ بَاتُوا سُجَّدًا وَقِيَامًا،\nيُرَاوِحُونَ بَيْنَ جِبَاهِهِمْ وَخُدُودِهِمْ، وَيَقِفُونَ عَلَى مِثْلِ الْجَمْرِ مِنْ ذِكْرِ مَعَادِهِمْ.\nكَأَنَّ بَيْنَ أَعْيُنِهِمْ رُكَبَ الْمِعْزَى مِنْ طُولِ سُجُودِهِمْ.\nإِذَا ذُكِرَ اللَّهُ هَمَلَتْ أَعْيُنُهُمْ حَتَّى تَبُلَّ جُيُوبَهُمْ،\nوَمَادُوا كَمَا يَمِيدُ الشَّجَرُ يَوْمَ الرِّيحِ الْعَاصِفِ،\nخَوْفًا مِنَ الْعِقَابِ وَرَجَاءً لِلثَّوَابِ.',
-    english:
-      "We are the Tree of Prophethood, the resting-place of the Message,\nthe place visited by the angels, the mines of knowledge, the springs of wisdom.\nThe one who aids us and loves us awaits mercy; the one who is our enemy and hates us awaits chastisement.\nI have seen the companions of Muhammad — God's blessings upon him and his family — and I see no one among you who resembles them.\nThey would rise in the morning dust-stained and rough, having passed the night in prostration and standing,\nalternating between their foreheads and their cheeks, standing as if upon embers at the remembrance of their return.\nBetween their eyes were calluses like the knees of goats from the length of their prostrations.\nWhen God was mentioned, their eyes would flow until their collars were soaked,\nand they would sway as trees sway on the day of a roaring wind — out of fear of punishment and hope for reward.",
-    source: 'Nahj al-Balagha, Sermon 96',
-    brief: {
-      en: "Imam Ali names the household of the Prophet — Tree of Prophethood, mines of knowledge — and remembers the Prophet's companions whose nights were spent in worship.",
-      ar: 'يُسمّي الإمامُ أهلَ بيتِ النبوة شجرةَ النبوة، ويتذكّرُ أصحابَ النبيِّ وقيامَهم بالليل.',
-    },
-    theme: "on Ahl al-Bayt, on the Prophet's companions",
-  },
-  {
-    title: { en: 'They Are the Place of His Secret', ar: 'هُمْ مَوْضِعُ سِرِّهِ' },
-    arabic:
-      'هُمْ مَوْضِعُ سِرِّهِ، وَلَجَأُ أَمْرِهِ، وَعَيْبَةُ عِلْمِهِ، وَمَوْئِلُ حُكْمِهِ، وَكُهُوفُ كُتُبِهِ، وَجِبَالُ دِينِهِ.\nبِهِمْ أَقَامَ انْحِنَاءَ ظَهْرِهِ، وَأَذْهَبَ ارْتِعَادَ فَرَائِصِهِ.\nلَا يُقَاسُ بِآلِ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ مِنْ هَذِهِ الْأُمَّةِ أَحَدٌ،\nوَلَا يُسَوَّى بِهِمْ مَنْ جَرَتْ نِعْمَتُهُمْ عَلَيْهِ أَبَدًا.\nهُمْ أَسَاسُ الدِّينِ، وَعِمَادُ الْيَقِينِ.\nإِلَيْهِمْ يَفِيءُ الْغَالِي، وَبِهِمْ يُلْحَقُ التَّالِي.\nوَلَهُمْ خَصَائِصُ حَقِّ الْوِلَايَةِ، وَفِيهِمُ الْوَصِيَّةُ وَالْوِرَاثَةُ.',
-    english:
-      "They are the place of his secret, the refuge of his affair, the vessel of his knowledge,\nthe resort of his judgment, the caves of his books, and the mountains of his religion.\nThrough them he straightened the bending of his back and stilled the trembling of his sides.\nNo one of this Umma is to be compared with the family of Muhammad — God's blessings upon him and his family —\nnor is one upon whom their bounty has flowed ever to be set equal with them.\nThey are the foundation of the religion and the pillar of certainty.\nTo them the one who has gone too far must return, and the one who has fallen behind must catch up.\nTo them belong the special rights of guardianship; in them are the testament and the inheritance.",
-    source: 'Nahj al-Balagha, Sermon 2',
-    brief: {
-      en: 'Imam Ali describes the family of the Prophet as the trustees of his secret, the foundation of religion, the place to which the wayward return.',
-      ar: 'يصفُ الإمامُ آلَ محمدٍ بأنهم موضعُ سرِّ النبيِّ وأساسُ الدين، إليهم يفيءُ الغالي وبهم يلحقُ التالي.',
-    },
-    theme: "on Ahl al-Bayt, on the Prophet's family",
-  },
-  {
-    title: { en: 'He Revived His Intellect and Put His Self to Death', ar: 'قَدْ أَحْيَا عَقْلَهُ وَأَمَاتَ نَفْسَهُ' },
-    arabic:
-      'قَدْ أَحْيَا عَقْلَهُ، وَأَمَاتَ نَفْسَهُ،\nحَتَّى دَقَّ جَلِيلُهُ، وَلَطُفَ غَلِيظُهُ.\nوَبَرَقَ لَهُ لَامِعٌ كَثِيرُ الْبَرْقِ،\nفَأَبَانَ لَهُ الطَّرِيقَ، وَسَلَكَ بِهِ السَّبِيلَ.\nوَتَدَافَعَتْهُ الْأَبْوَابُ إِلَى بَابِ السَّلَامَةِ، وَدَارِ الْإِقَامَةِ.\nوَثَبَتَتْ رِجْلَاهُ بِطُمَأْنِينَةِ بَدَنِهِ فِي قَرَارِ الْأَمْنِ وَالرَّاحَةِ،\nبِمَا اسْتَعْمَلَ قَلْبَهُ، وَأَرْضَى رَبَّهُ.',
-    english:
-      'He has revived his intellect and put his lower self to death,\nuntil what was coarse in him became fine, and what was rough became delicate.\nA flash of light, abundant in its flashing, broke before him —\nit made the road plain, and he walked the path.\nGate after gate pressed him onward to the gate of safety, to the abode of permanence.\nHis feet stood firm, his body at rest, in the lodging of security and ease,\nbecause he set his heart to work, and pleased his Lord.',
-    source: 'Nahj al-Balagha, Sermon 220 (Subhi al-Salih) — on the wayfarer to God',
-    brief: {
-      en: 'A portrait of the inner human: revived intellect, mortified ego, and a sudden lightning that shows the road. One of the most cited passages on the inner life across the tradition.',
-      ar: 'صورة الإنسان الباطن: عقلٌ حيٌّ، ونفسٌ ممَاتَةٌ، وبرقٌ يبين الطريق.',
-    },
-    theme: 'on the soul (nafs), on the inner work, on character',
-  },
-  {
-    title: { en: 'On the Heedless — Cattle at a Poisoned Watering-Place', ar: 'في الغافلين' },
-    arabic:
-      'أَيُّهَا النَّاسُ، غَيْرُ الْمَغْفُولِ عَنْهُمْ، وَالتَّارِكُونَ الْمَأْخُوذُ مِنْهُمْ،\nمَا لِي أَرَاكُمْ عَنِ اللَّهِ ذَاهِبِينَ، وَإِلَى غَيْرِهِ رَاغِبِينَ؟\nكَأَنَّكُمْ نَعَمٌ أَرَاحَ بِهَا سَائِمٌ إِلَى مَرْعًى وَبِيٍّ، وَمَشْرَبٍ دَوِيٍّ.\nوَإِنَّمَا هِيَ كَالْمَعْلُوفَةِ لِلْمُدَى،\nلَا تَعْرِفُ مَاذَا يُرَادُ بِهَا.\nإِذَا أُحْسِنَ إِلَيْهَا تَظُنُّ يَوْمَهَا دَهْرَهَا، وَشِبَعَهَا أَمْرَهَا.',
-    english:
-      'O people, you who are not unwatched —\nyou who, while leaving things behind, are themselves being taken hold of —\nwhy do I see you going away from God, desiring what is other than Him?\nIt is as if you were cattle a herdsman has driven\nto a polluted pasture and a sickening watering-place.\nYou are like beasts being fattened for the knife,\nnot knowing what is wanted of you.\nWhen you are treated well, you take your day for the whole age, and your fill for the whole matter.',
-    source: 'Nahj al-Balagha, Sermon 175',
-    brief: {
-      en: 'A piercing rebuke: the pursuit of the world likened to cattle led to a poisoned spring, fattened all the while for slaughter — mistaking a day of plenty for the whole of fate.',
-      ar: 'توبيخٌ نافذ: شُبّه السامعون بالأنعام تُساق إلى مرعىً وبيء، تظنّ يومَ الشبَع كلَّ أمرها.',
-    },
-    theme: 'on the soul (nafs), on heedlessness, on inner awakening',
-  },
-  {
-    title: { en: 'The Qur\'an — Counsellor Who Does Not Cheat', ar: 'القُرْآنُ النَّاصِحُ' },
-    arabic:
-      'وَاعْلَمُوا أَنَّ هَذَا الْقُرْآنَ هُوَ النَّاصِحُ الَّذِي لَا يَغُشُّ،\nوَالْهَادِي الَّذِي لَا يُضِلُّ، وَالْمُحَدِّثُ الَّذِي لَا يَكْذِبُ.\nوَمَا جَالَسَ هَذَا الْقُرْآنَ أَحَدٌ إِلَّا قَامَ عَنْهُ بِزِيَادَةٍ أَوْ نُقْصَانٍ:\nزِيَادَةٍ فِي هُدًى، أَوْ نُقْصَانٍ مِنْ عَمًى.\nوَاعْلَمُوا أَنَّهُ لَيْسَ عَلَى أَحَدٍ بَعْدَ الْقُرْآنِ مِنْ فَاقَةٍ،\nوَلَا لِأَحَدٍ قَبْلَ الْقُرْآنِ مِنْ غِنًى.\nفَاسْتَشْفُوهُ مِنْ أَدْوَائِكُمْ، وَاسْتَعِينُوا بِهِ عَلَى لَأْوَائِكُمْ،\nفَإِنَّ فِيهِ شِفَاءً مِنْ أَكْبَرِ الدَّاءِ:\nالْكُفْرِ وَالنِّفَاقِ، وَالْغَيِّ وَالضَّلَالِ.',
-    english:
-      "Know that this Qur'an is the counsellor who does not cheat,\nthe guide who does not mislead, the teller who does not lie.\nNo one sits with this Qur'an except that he rises with an increase or a loss —\nan increase in guidance, or a loss of some blindness.\nKnow that no one has want once he has the Qur'an,\nand no one had wealth before it.\nSeek cure from it for your ailments, and aid against your hardships,\nfor in it is a cure for the greatest disease:\ndisbelief and hypocrisy, error and going astray.",
-    source: "Nahj al-Balagha, Sermon 176 — the passage on the Qur'an",
-    brief: {
-      en: "From Sermon 176: the Qur'an as an honest counsellor and physician — no one who sits with it leaves unchanged.",
-      ar: 'من الخطبة ١٧٦: القرآن ناصحٌ لا يغشّ، وطبيبٌ يبلغ دواؤه أعمق الأمراض.',
-    },
-    theme: "on the Qur'an, on what heals the soul, on the inner life",
-  },
-  {
-    title: { en: 'From al-Qāṣiʿa — The Lesson of Iblīs', ar: 'مِنَ القَاصِعَةِ — عِبْرَةُ إِبْلِيسَ' },
-    arabic:
-      'فَاعْتَبِرُوا بِمَا كَانَ مِنْ فِعْلِ اللَّهِ بِإِبْلِيسَ\nإِذْ أَحْبَطَ عَمَلَهُ الطَّوِيلَ وَجَهْدَهُ الْجَهِيدَ.\nوَكَانَ قَدْ عَبَدَ اللَّهَ سِتَّةَ آلَافِ سَنَةٍ —\nلَا يُدْرَى أَمِنْ سِنِي الدُّنْيَا أَمْ مِنْ سِنِي الْآخِرَةِ —\nعَنْ كِبْرِ سَاعَةٍ وَاحِدَةٍ.\nفَمَنْ ذَا بَعْدَ إِبْلِيسَ يَسْلَمُ عَلَى اللَّهِ بِمِثْلِ مَعْصِيَتِهِ؟\nكَلَّا — مَا كَانَ اللَّهُ سُبْحَانَهُ لِيُدْخِلَ الْجَنَّةَ بَشَرًا بِأَمْرٍ\nأَخْرَجَ بِهِ مِنْهَا مَلَكًا.\nإِنَّ حُكْمَهُ فِي أَهْلِ السَّمَاءِ وَأَهْلِ الْأَرْضِ لَوَاحِدٌ،\nوَمَا بَيْنَ اللَّهِ وَبَيْنَ أَحَدٍ مِنْ خَلْقِهِ هَوَادَةٌ\nفِي إِبَاحَةِ حِمًى حَرَّمَهُ عَلَى الْعَالَمِينَ.',
-    english:
-      'Take a lesson from what God did with Iblīs: He nullified his long deeds and his exhausting striving —\nfor he had worshipped God six thousand years (none knowing whether of the years of this world or of the Hereafter) —\nover the pride of a single moment.\nWho, then, after Iblīs, can remain safe with God after such a sin?\nNever — God will not admit a human into the Garden by the very thing for which He expelled an angel from it.\nHis ruling upon the people of heaven and the people of earth is one;\nthere is no leniency between God and any of His creatures in permitting a sanctuary He has forbidden to all the worlds.',
-    source: 'Nahj al-Balagha, Sermon 192 (al-Qāṣiʿa)',
-    brief: {
-      en: "Iblīs lost millennia of worship to one moment of pride — God's law is one for angels and men.",
-      ar: 'أحبطَ إبليسُ آلافَ السنينَ بكبرِ ساعةٍ، وحكمُ اللهِ واحدٌ في خلقِه.',
-    },
-    theme: 'on pride and its ruin, on the danger of arrogance',
-  },
-  {
-    title: { en: 'The Lament for the Companions', ar: 'الحَنينُ إِلى الأَصْحابِ' },
-    arabic:
-      'أَيْنَ إِخْوَانِيَ الَّذِينَ رَكِبُوا الطَّرِيقَ وَمَضَوْا عَلَى الْحَقِّ؟\nأَيْنَ عَمَّارٌ؟ وَأَيْنَ ابْنُ التَّيِّهَانِ؟\nوَأَيْنَ ذُو الشَّهَادَتَيْنِ؟\nوَأَيْنَ نُظَرَاؤُهُمْ مِنْ إِخْوَانِهِمُ الَّذِينَ تَعَاقَدُوا عَلَى الْمَنِيَّةِ،\nوَأُبْرِدَ بِرُؤُوسِهِمْ إِلَى الْفَجَرَةِ؟\nثُمَّ ضَرَبَ بِيَدِهِ عَلَى لِحْيَتِهِ الشَّرِيفَةِ الْكَرِيمَةِ، فَأَطَالَ الْبُكَاءَ، ثُمَّ قَالَ:\nأَوِّهِ عَلَى إِخْوَانِيَ الَّذِينَ تَلَوُا الْقُرْآنَ فَأَحْكَمُوهُ،\nوَتَدَبَّرُوا الْفَرْضَ فَأَقَامُوهُ.\nأَحْيَوُا السُّنَّةَ وَأَمَاتُوا الْبِدْعَةَ.\nدُعُوا لِلْجِهَادِ فَأَجَابُوا، وَوَثِقُوا بِالْقَائِدِ فَاتَّبَعُوهُ.',
-    english:
-      'Where are my brothers who rode the road and travelled upon the truth?\nWhere is ʿAmmār? Where is Ibn al-Tayyihān?\nWhere is Dhū al-Shahādatayn?\nWhere are their like among their brethren who pledged themselves to death,\nwhose heads were sent off to the wicked?\nThen he struck his hand upon his noble, honoured beard and wept long, and said:\nAlas for my brothers who recited the Qurʾān and mastered it,\nwho pondered the obligation and upheld it.\nThey revived the Sunna and slew the innovation.\nThey were called to striving and answered; they trusted the leader and followed him.',
-    source: 'Nahj al-Balagha, Sermon 182 (the lament for the companions)',
-    brief: {
-      en: "Imam Ali weeps for his fallen companions who lived the Qur'an, revived the Sunna, and answered the call.",
-      ar: 'يبكي الإمامُ أصحابَه الذين أحكموا القرآن وأحيوا السنة ولبّوا الجهاد.',
-    },
-    theme: "on the loss of companions, on the Imam's grief, on longing for the righteous",
-  },
-  {
-    title: { en: 'To Whom Should I Lie?', ar: 'فَعَلَى مَنْ أَكْذِبُ؟' },
-    arabic:
-      'أَمَّا بَعْدُ، يَا أَهْلَ الْعِرَاقِ،\nفَإِنَّمَا أَنْتُمْ كَالْمَرْأَةِ الْحَامِلِ،\nحَمَلَتْ فَلَمَّا أَتَمَّتْ أَمْلَصَتْ،\nوَمَاتَ قَيِّمُهَا، وَطَالَ تَأَيُّمُهَا، وَوَرِثَهَا أَبْعَدُهَا.\nأَمَا وَاللَّهِ مَا أَتَيْتُكُمُ اخْتِيَارًا، وَلَكِنْ جِئْتُ إِلَيْكُمْ سَوْقًا.\nوَلَقَدْ بَلَغَنِي أَنَّكُمْ تَقُولُونَ: عَلِيٌّ يَكْذِبُ.\nقَاتَلَكُمُ اللَّهُ تَعَالَى، فَعَلَى مَنْ أَكْذِبُ؟\nأَعَلَى اللَّهِ؟ فَأَنَا أَوَّلُ مَنْ آمَنَ بِهِ.\nأَمْ عَلَى نَبِيِّهِ؟ فَأَنَا أَوَّلُ مَنْ صَدَّقَهُ.\nكَلَّا وَاللَّهِ — لَكِنَّهَا لَهْجَةٌ غِبْتُمْ عَنْهَا، وَلَمْ تَكُونُوا مِنْ أَهْلِهَا.',
-    english:
-      "Now then, O people of Iraq —\nyou are like the pregnant woman who, on completing her term, miscarries her child,\nand her guardian dies, her widowhood is prolonged, and her distant relatives inherit her.\nBy God, I did not come to you by my own choice — I was driven to you.\nIt has reached me that you say, 'Ali tells lies.'\nMay God reckon with you — against whom would I lie?\nAgainst God? I am the first to have believed in Him.\nAgainst His Prophet? I am the first to have affirmed him.\nNo, by God — it is rather an eloquence you were absent from, and were not among its people.",
-    source: 'Nahj al-Balagha, Sermon 71',
-    brief: {
-      en: "Imam Ali's piercing rebuke to the fickle people of Iraq who accused him of lying — his answer: against whom would I lie?",
-      ar: 'توبيخ الإمام النافذ لأهل العراق الذين اتّهموه بالكذب — وجوابه: على من أكذب؟',
-    },
-    theme: 'on integrity under accusation, on the loneliness of the truthful',
-  },
-]
-
-// ── Diwan poetry — verses traditionally attributed to Imam Ali ──────
-// Note: attribution of the Diwan is traditional rather than uniformly
-// scholarly-certified. We cite as "from the Diwan attributed to Imam
-// Ali (عليه السلام)" — honest about the tradition.
-export const BASELINE_POETRY: BaselineEntry[] = [
-  {
-    arabic:
-      'إِذَا مَا خَلَوْتَ الدَّهْرَ يَوْمًا فَلَا تَقُلْ\nخَلَوْتُ، وَلَكِنْ قُلْ عَلَيَّ رَقِيبُ',
-    english:
-      "When you find yourself alone one day, do not say 'I am alone' — say 'One watches me.'",
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on solitude, on God-consciousness, on integrity in private',
-  },
-  {
-    arabic:
-      'لَنَا فِي كُلِّ نَائِبَةٍ صَبْرٌ\nوَفِي ثَوَابِ صَبْرِنَا الفَرَجُ',
-    english:
-      'In every affliction we have patience — and in the reward of our patience, relief.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on hardship, on patience, on hope',
-  },
-  {
-    arabic:
-      'وَدَوَاؤُكَ فِيكَ وَمَا تَشْعُرُ\nوَدَاؤُكَ مِنْكَ وَمَا تُبْصِرُ\nأَتَزْعُمُ أَنَّكَ جِرْمٌ صَغِيرٌ\nوَفِيكَ انْطَوَى العَالَمُ الأَكْبَرُ',
-    english:
-      "Your cure is within you, and you do not know — your sickness is from you, and you do not see. Do you imagine you are a small body, when within you the greater world is folded?",
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on self-knowledge, on the human condition, on the inner journey',
-  },
-  {
-    arabic:
-      'النَّاسُ مِنْ جِهَةِ التِّمْثَالِ أَكْفَاءُ\nأَبُوهُمُ آدَمٌ وَالأُمُّ حَوَّاءُ',
-    english:
-      'People in their fashioning are equals — their father is Adam, their mother Eve.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on dignity, on equality, on human kinship',
-  },
-  {
-    arabic:
-      'لَا تَبْذُلِ الوُدَّ لِمَنْ لَا يَسْتَحِقُّهُ\nلَيْسَ التَّوَدُّدُ مِنْ شِيَمِ الْكِرَامْ',
-    english:
-      "Do not give your love to one who does not deserve it — affection ill-placed is not the way of the noble.",
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on what relationships are worth, on dignity, on choosing',
-  },
-  {
-    arabic:
-      'إِذَا ضَاقَ صَدْرُ الْمَرْءِ لَمْ يَصْفُ عَيْشُهُ\nوَأَوْشَكَ أَنْ يَلْقَى مِنَ الْأَمْرِ مَا كَرِهَا',
-    english:
-      "When a person's chest is constricted, their life is not clear — and they will soon meet what they would have hated to meet.",
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the heart, on suffering, on inner expansion',
-  },
-  {
-    arabic:
-      'تَوَكَّلْتُ فِي رِزْقِي عَلَى اللَّهِ خَالِقِي\nوَأَيْقَنْتُ أَنَّ اللَّهَ لَا شَكَّ رَازِقِي',
-    english:
-      'I have entrusted my provision to God my Creator — and I am certain that God, without doubt, will provide.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on trust, on provision, on worry about livelihood',
-  },
-  {
-    arabic:
-      'وَمَنْ يَفْتَقِرْ مِنْكُمْ فَلَيْسَ بِخَامِلٍ\nوَمَنْ يَكُ ذَا مَالٍ فَلَيْسَ بِسَيِّدِ',
-    english:
-      'Whoever among you is poor is not for that humble; whoever has wealth is not for that a master.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on dignity, on wealth and poverty, on real status',
-  },
-  {
-    arabic:
-      'لِسَانُ الْفَتَى نِصْفٌ، وَنِصْفٌ فُؤَادُهُ\nفَلَمْ يَبْقَ إِلَّا صُورَةُ اللَّحْمِ وَالدَّمِ',
-    english:
-      "The young man's tongue is half of him, and his heart the other half — what remains is only the shape of flesh and blood.",
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on what makes a person, on speech, on the heart',
-  },
-  {
-    arabic:
-      'إِذَا الْحَلْمُ لَمْ يَغْلِبْ لَكَ الْجَهْلَ لَمْ يَكُنْ\nلِعِرْضِكَ وَاقٍ مِنْ أَذَى يَوْمِ مَفْخَرِ',
-    english:
-      'If your forbearance does not overcome ignorance directed at you, your honour has no shield on the day of boasting.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on patience, on dignity in the face of insult',
-  },
-  {
-    arabic:
-      'فَلَا تَحْسَبَنَّ الْعِلْمَ يَنْفَعُ وَحْدَهُ\nمَا لَمْ يُتَوَّجْ رَبُّهُ بِخَلَاقِ',
-    english:
-      "Do not think knowledge alone is of benefit — until its owner is crowned with character.",
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on knowledge and character, on what completes learning',
-  },
-  {
-    arabic:
-      'وَإِذَا الصَّدِيقُ أَتَى يَزُورُكَ مَرَّةً\nفَأَتَتْكَ مِنْهُ كَرَامَةٌ مَنْ غَيْرِ سُؤَالْ',
-    english:
-      'When a friend comes to visit you once, a courtesy has come from him without your asking.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on friendship, on what is given freely',
-  },
-  // ── v46.1 corpus expansion · Diwan ────────────────────────────
-  {
-    arabic:
-      'وَمَا الدَّهْرُ إِلَّا تَارَتَانِ فَتَارَةٌ\nأُسَرُّ بِهَا طَوْرًا وَأُخْرَى أَسُوءُهَا',
-    english:
-      'Time is nothing but two turns — one in which I am made glad, and another in which I am made to grieve.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the changes of time, on patience through reversals, on the brevity of life',
-  },
-  {
-    arabic:
-      'لِكُلِّ امْرِئٍ فِي دَهْرِهِ مَا تَعَوَّدَا\nوَعَادَةُ سَيْفِ الْمَرْءِ أَنْ يَتَقَلَّدَا\nفَلَا تَجْزَعَنَّ مِنْ سُنَّةٍ أَنْتَ سِرْتَهَا\nفَأَوَّلُ رَاضٍ سُنَّةً مَنْ يَسِيرُهَا',
-    english:
-      'Every man in his time has what he has accustomed himself to. So do not complain of a path you yourself have walked — for the first to accept a custom is the one who walks it.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: "on responsibility for one's habits, on patience with consequences, on self-accountability",
-  },
-  {
-    arabic:
-      'تَزَوَّدْ مِنَ التَّقْوَى فَإِنَّكَ لَا تَدْرِي\nإِذَا جَنَّ لَيْلٌ هَلْ تَعِيشُ إِلَى الْفَجْرِ\nفَكَمْ مِنْ صَحِيحٍ مَاتَ مِنْ غَيْرِ عِلَّةٍ\nوَكَمْ مِنْ سَقِيمٍ عَاشَ حِينًا مِنَ الدَّهْرِ',
-    english:
-      'Take provision of God-consciousness, for you do not know — when night falls — whether you will live until dawn. How many healthy people have died without illness, and how many sick have lingered on for years.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: "on the brevity of life, on death's nearness, on preparing for the end, on God-consciousness",
-  },
-  {
-    arabic:
-      'إِذَا الْمَرْءُ لَا يَرْعَاكَ إِلَّا تَكَلُّفًا\nفَدَعْهُ وَلَا تُكْثِرْ عَلَيْهِ التَّأَسُّفَا\nفَفِي النَّاسِ أَبْدَالٌ وَفِي التَّرْكِ رَاحَةٌ\nوَفِي الْقَلْبِ صَبْرٌ لِلْحَبِيبِ وَلَوْ جَفَا',
-    english:
-      'When a person regards you only out of forced effort, let him go and do not pour out regret over him. Among people there are replacements, and in letting go there is rest — and in the heart there is patience even for a beloved who turns away.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on dignity, on letting go of those who do not value you, on self-respect in relationships',
-  },
-  {
-    arabic:
-      'إِذَا أَنْتَ لَمْ تَشْرَبْ مِرَارًا عَلَى الْقَذَى\nظَمِئْتَ وَأَيُّ النَّاسِ تَصْفُو مَشَارِبُهْ',
-    english:
-      'If you will not sometimes drink despite the dregs, you will go thirsty — for whose drinking-place among people is ever wholly pure?',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on tolerating imperfection in people, on patience with companions, on realistic expectations',
-  },
-  {
-    arabic:
-      'إِذَا كُنْتَ فِي حَاجَةٍ مُرْسِلًا\nفَأَرْسِلْ حَكِيمًا وَلَا تُوصِهِ\nوَإِنْ نَاصِحٌ مِنْكَ يَوْمًا دَنَا\nفَلَا تَنْأَ عَنْهُ وَلَا تُقْصِهِ',
-    english:
-      'When you send someone on a matter, send a wise person and do not need to instruct him. And if an advisor draws near to you one day, do not push him away or hold him at a distance.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the company of the wise, on listening to counsel, on choosing trustworthy people',
-  },
-  {
-    arabic:
-      'إِذَا جَارَ الْأَمِيرُ وَكَاتِبَاهُ\nوَقَاضِي الْأَرْضِ أَجْحَفَ فِي الْقَضَاءِ\nفَوَيْلٌ ثُمَّ وَيْلٌ ثُمَّ وَيْلٌ\nلِقَاضِي الْأَرْضِ مِنْ قَاضِي السَّمَاءِ',
-    english:
-      'When the ruler is unjust, and his two scribes, and the earthly judge oppresses in his judgement — then woe, then woe, then woe to the judge of the earth from the Judge of the heavens.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on patience under injustice, on trust in divine justice, on God as ultimate judge',
-  },
-  {
-    arabic:
-      'لَا تَطْلُبَنَّ مَعِيشَةً بِمَذَلَّةٍ\nوَاقْنَعْ فَكُلُّ مُقَنَّعٍ مَلِكٌ\nوَالنَّفْسُ حُرَّةٌ مَا قَنِعْتَ بِهَا\nوَإِذَا اسْتَذَلَّتْ نَفْسُهَا هَلَكْتَ',
-    english:
-      "Do not seek a living through humiliation — be content, for every contented person is a king. The soul is free as long as you keep it content; once it lets itself be humbled, you have perished.",
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: "on dignity, on contentment as wealth, on the heart's true wealth, on self-respect",
-  },
-  {
-    arabic:
-      'إِذَا كُنْتَ فِي قَوْمٍ فَصَاحِبْ خِيَارَهُمْ\nوَلَا تَصْحَبِ الْأَرْدَى فَتَرْدَى مَعَ الرَّدِي',
-    english:
-      'When you are among a people, keep company with the best of them. Do not befriend the lowest, lest you fall together with the fallen.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the company of the wise, on avoiding bad companions, on the influence of company',
-  },
-  {
-    arabic:
-      'وَلَا خَيْرَ فِي خِلٍّ يَخُونُ خَلِيلَهُ\nوَيَلْقَاهُ مِنْ بَعْدِ الْمَوَدَّةِ بِالْجَفَا\nوَيُنْكِرُ عَيْشًا قَدْ تَقَادَمَ عَهْدُهُ\nوَيُظْهِرُ سِرًّا كَانَ بِالْأَمْسِ قَدْ خَفَا',
-    english:
-      'There is no good in a friend who betrays his friend and meets him after affection with coldness; who denies a shared life now grown old between them, and discloses a secret that yesterday was kept hidden.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on disappointing love, on betrayal in friendship, on choosing companions, on loyalty',
-  },
-  {
-    arabic:
-      'وَمَنْ يَكُ ذَا فَضْلٍ فَيَبْخَلْ بِفَضْلِهِ\nعَلَى قَوْمِهِ يُسْتَغْنَ عَنْهُ وَيُذْمَمِ',
-    english:
-      'Whoever possesses some virtue and is miserly with it toward his people — they will do without him, and he will be censured.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on generosity with what one has, on serving others, on what to leave behind',
-  },
-  {
-    arabic:
-      'إِذَا كَانَ عَوْنُ اللَّهِ لِلْمَرْءِ شَامِلًا\nتَهَيَّأَ لَهُ مِنْ كُلِّ أَمْرٍ مُرَادُهُ\nوَإِنْ لَمْ يَكُنْ عَوْنٌ مِنَ اللَّهِ لِلْفَتَى\nفَأَكْثَرُ مَا يَجْنِي عَلَيْهِ اجْتِهَادُهُ',
-    english:
-      "When God's help encompasses a person, what he seeks in every matter is made ready for him. And when a young man has no help from God, the very most of his own striving turns against him.",
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on trust in divine timing, on what to seek from God, on reliance over self-striving',
-  },
-  {
-    arabic:
-      'إِذَا الْعِلْمُ لَمْ تَعْمَلْ بِهِ كَانَ حُجَّةً\nعَلَيْكَ وَلَمْ تُعْذَرْ بِمَا أَنْتَ جَاهِلُهْ',
-    english:
-      'When you do not act upon the knowledge you have, it becomes a proof against you — and you are not excused by what remains of your ignorance either.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the difference between knowing and acting, on knowledge as responsibility, on hypocrisy',
-  },
-
-  // ── On the brevity of life and the nearness of death ───────────────
-  {
-    arabic:
-      'النَّاسُ مِنْ جِهَةِ التِّمْثَالِ أَكْفَاءُ\nأَبُوهُمُ آدَمُ وَالأُمُّ حَوَّاءُ',
-    english:
-      'People, in the matter of their making, are equals / Their father is Adam and their mother is Hawwa.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the shared origin and brevity of all human life',
-  },
-  {
-    arabic:
-      'فَإِنْ كَانَ لَهُمْ فِي أَصْلِهِمْ شَرَفٌ\nيُفَاخِرُونَ بِهِ فَالطِّينُ وَالْمَاءُ',
-    english:
-      'If there be in their origin any nobility by which they boast — it is but clay and water.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the lowly origin of the body that death will soon reclaim, on humility',
-  },
-  {
-    arabic:
-      'النَّفْسُ تَبْكِي عَلَى الدُّنْيَا وَقَدْ عَلِمَتْ\nأَنَّ السَّلَامَةَ فِيهَا تَرْكُ مَا فِيهَا',
-    english:
-      'The soul weeps over the world, though it has known / that safety within it lies in leaving what is in it.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the foolishness of clinging to a world we must soon leave',
-  },
-  {
-    arabic:
-      'لَا دَارَ لِلْمَرْءِ بَعْدَ الْمَوْتِ يَسْكُنُهَا\nإِلَّا الَّتِي كَانَ قَبْلَ الْمَوْتِ يَبْنِيهَا',
-    english:
-      'No dwelling has a man to inhabit after death / save the one he was building before death.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on building for the Hereafter while time remains',
-  },
-  {
-    arabic:
-      'فَإِنْ بَنَاهَا بِخَيْرٍ طَابَ مَسْكَنُهُ\nوَإِنْ بَنَاهَا بِشَرٍّ خَابَ بَانِيهَا',
-    english:
-      'If he built it with good, his dwelling shall be sweet / and if he built it with evil, its builder is undone.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the swift accounting that follows the brief day of work',
-  },
-  {
-    arabic:
-      'يَا مَنْ بِدُنْيَاهُ اشْتَغَلْ\nقَدْ غَرَّهُ طُولُ الأَمَلْ',
-    english:
-      'O you whom this world has occupied / long hope has utterly deceived you.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the deception of long hopes when life is short',
-  },
-  {
-    arabic:
-      'الْمَوْتُ يَأْتِي بَغْتَةً\nوَالْقَبْرُ صُنْدُوقُ الْعَمَلْ',
-    english:
-      'Death comes suddenly, without warning / and the grave is the chest that holds the deeds.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on death arriving unannounced and the grave as the ledger of works',
-  },
-  {
-    arabic:
-      'وَمَا الدُّنْيَا بِبَاقِيَةٍ لِحَيٍّ\nوَلَا حَيٌّ عَلَى الدُّنْيَا بِبَاقِي',
-    english:
-      'The world abides for no living soul / nor does any living soul abide upon the world.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the impermanence of both the world and its inhabitants',
-  },
-  {
-    arabic:
-      'وَمَا الْمَالُ وَالْأَهْلُونَ إِلَّا وَدَائِعُ\nوَلَا بُدَّ يَوْمًا أَنْ تُرَدَّ الْوَدَائِعُ',
-    english:
-      'Wealth and family are nothing but entrusted things / and one day, inevitably, what is entrusted must be returned.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the borrowed nature of every blessing in a brief life',
-  },
-  {
-    arabic:
-      'تَزَوَّدْ مِنَ التَّقْوَى فَإِنَّكَ لَا تَدْرِي\nإِذَا جَنَّ لَيْلٌ هَلْ تَعِيشُ إِلَى الْفَجْرِ',
-    english:
-      'Take provision of God-consciousness, for you do not know / when night falls, whether you will live until the dawn.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the nearness of death and the worth of every remaining hour',
-  },
-  {
-    arabic:
-      'فَكَمْ مِنْ صَحِيحٍ مَاتَ مِنْ غَيْرِ عِلَّةٍ\nوَكَمْ مِنْ سَقِيمٍ عَاشَ حِينًا مِنَ الدَّهْرِ',
-    english:
-      'How many a healthy one has died without any illness / and how many a sick one has lived on for an age.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on death striking unpredictably and the folly of postponement',
-  },
-  {
-    arabic:
-      'وَكَمْ مِنْ فَتًى أَمْسَى وَأَصْبَحَ ضَاحِكًا\nوَأَكْفَانُهُ فِي الْغَيْبِ تُنْسَجُ وَلَا يَدْرِي',
-    english:
-      'How many a youth has passed his evening and morning laughing / while his shrouds, in the unseen, are being woven — and he does not know.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the unseen approach of death amid the laughter of the living',
-  },
-
-  // ── On knowledge and the seeker ──────────────────────────────────
-  {
-    arabic:
-      'شِفَاءُ الْعَمَى طُولُ السُّؤَالِ وَإِنَّمَا\nتَمَامُ صَلَاحِ المَرْءِ طُولُ تَدَبُّرِهْ',
-    english:
-      'The cure of blindness is to ask at length / and the perfection of a man is the length of his reflection.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on asking the learned, on reflection',
-  },
-  {
-    arabic:
-      'وَلَيْسَ بِعِلْمٍ مَا حَوَى القَمَطْرُ\nمَا العِلْمُ إِلَّا مَا حَوَاهُ الصَّدْرُ',
-    english:
-      'That which the satchel contains is not knowledge / knowledge is only what the breast contains.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on what knowledge truly is, on the heart as the seat of knowledge',
-  },
-  {
-    arabic:
-      'أَخِي لَنْ تَنَالَ العِلْمَ إِلَّا بِسِتَّةٍ\nسَأُنْبِيكَ عَنْ تَفْصِيلِهَا بِبَيَانِ\nذَكَاءٌ وَحِرْصٌ وَاجْتِهَادٌ وَبُلْغَةٌ\nوَصُحْبَةُ أُسْتَاذٍ وَطُولُ زَمَانِ',
-    english:
-      'My brother, you shall not attain knowledge save by six — I will inform you of their details in plain speech / intelligence, eagerness, striving, and sufficient means, the company of a teacher, and length of time.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the conditions of seeking knowledge, on the student',
-  },
-  {
-    arabic:
-      'تَعَلَّمْ فَلَيْسَ المَرْءُ يُولَدُ عَالِمًا\nوَلَيْسَ أَخُو عِلْمٍ كَمَنْ هُوَ جَاهِلُ',
-    english:
-      'Learn — for no man is born already learned / and no companion of knowledge is like the ignorant.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the worth of the learner, on no one born knowing',
-  },
-  {
-    arabic:
-      'وَإِنَّ كَبِيرَ القَوْمِ لَا عِلْمَ عِنْدَهُ\nصَغِيرٌ إِذَا الْتَفَّتْ عَلَيْهِ الجَحَافِلُ',
-    english:
-      'The elder of a people in whom there is no knowledge / is small when the gathered hosts crowd around him.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the dignity of the scholar, on the worth of the learner',
-  },
-  {
-    arabic:
-      'العِلْمُ زَيْنٌ وَتَقْوَى اللَّهِ زِينَتُهُ\nوَالمُتَّقُونَ لَهُمْ فَضْلٌ عَلَى العُلَمَا',
-    english:
-      'Knowledge is an adornment, and the fear of God is its ornament / and the God-fearing have excellence over the learned.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on knowledge wedded to piety, on the dignity of the scholar',
-  },
-  {
-    arabic:
-      'مَا الفَضْلُ إِلَّا لِأَهْلِ العِلْمِ إِنَّهُمُ\nعَلَى الهُدَى لِمَنِ اسْتَهْدَى أَدِلَّاءُ',
-    english:
-      'There is no excellence except for the people of knowledge / they are guides to the right path for whoever seeks guidance.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the dignity of the scholar, on guidance through the learned',
-  },
-  {
-    arabic:
-      'وَقَدْرُ كُلِّ امْرِئٍ مَا كَانَ يُحْسِنُهُ\nوَالجَاهِلُونَ لِأَهْلِ العِلْمِ أَعْدَاءُ',
-    english:
-      'The worth of each man is what he masters well / and the ignorant are the enemies of the people of knowledge.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the worth of a person, on the enmity of the ignorant',
-  },
-  {
-    arabic:
-      'لَا تَحْسَبِ العِلْمَ يَنْفَعْ وَحْدَهُ أَبَدًا\nمَا لَمْ يُتَوَّجْ بِهِ أَخْلَاقُ صَاحِبِهِ',
-    english:
-      'Do not suppose knowledge alone will ever profit / so long as the conduct of its bearer is not crowned with it.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on knowledge without character, on confusing speech with knowledge',
-  },
-  {
-    arabic:
-      'يَا رُبَّ ذِي مَنْطِقٍ عَذْبٍ بَلَاغَتُهُ\nقَلْبٌ خَلِيٌّ مِنَ التَّقْوَى وَآدَابِهِ',
-    english:
-      'How many a one of sweet speech, his eloquence flowing / has a heart empty of piety and its disciplines.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on confusing speech with knowledge, on hollow eloquence',
-  },
-  {
-    arabic:
-      'وَلَوْ كَانَ هَذَا العِلْمُ يَحْصُلُ بِالمُنَى\nلَمَا كَانَ يَبْقَى فِي البَرِيَّةِ جَاهِلُ\nفَجِدَّ وَلَا تَكْسَلْ وَلَا تَكُ غَافِلًا\nفَنَدَامَةُ العُقْبَى لِمَنْ يَتَكَاسَلُ',
-    english:
-      'Were this knowledge to be attained by mere wishing / there would not remain among creation a single ignorant man. So strive, and be not slothful, and be not heedless / for the regret of the end is for the one who falls into idleness.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: "on the cost of seeking, on the student's effort",
-  },
-  {
-    arabic:
-      'إِذَا جَلَسْتَ إِلَى العُلَمَاءِ فَكُنْ عَلَى\nأَنْ تَسْمَعَ أَحْرَصَ مِنْكَ عَلَى أَنْ تَقُولَا\nوَتَعَلَّمِ الْإِنْصَاتَ حُسْنَ تَعَلُّمٍ\nكَمَا تَعَلَّمْتَ الكَلَامَ الجَمِيلَا',
-    english:
-      'When you sit before the learned, be more eager to listen than to speak / and learn good listening as a fine learning, just as you learned beautiful speech.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the student-teacher relationship, on the etiquette of the seeker',
-  },
-
-  // ── On the virtuous life ────────────────────────────────────────
-  {
-    arabic:
-      'إِذَا المَرْءُ لَمْ يَلْبَسْ لِبَاسًا مِنَ التُّقَى\nتَقَلَّبَ عُرْيَانًا وَإِنْ كَانَ كَاسِيَا',
-    english:
-      'When a man does not clothe himself in the garment of piety / he walks about naked, though he be richly dressed.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on piety as the true garment, on outward finery as nakedness',
-  },
-  {
-    arabic:
-      'وَخَيْرُ خِصَالِ المَرْءِ صِدْقُ لِسَانِهِ\nوَشَرُّ مَسَاعِيهِ السَّعَايَةُ بِالكَذِبِ',
-    english:
-      "The best of a man's traits is the truthfulness of his tongue / and the worst of his pursuits is the slander spread by lies.",
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on truthfulness as the highest trait',
-  },
-  {
-    arabic:
-      'وَلَا خَيْرَ فِي طُولِ الحَيَاةِ وَعَيْشِهَا\nإِذَا أَنْتَ مِنْهَا بِالتُّقَى لَمْ تُزَوَّدِ',
-    english:
-      'There is no good in a long life or its enjoyment / if you have not provisioned yourself from it with piety.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on what makes a life worth living',
-  },
-  {
-    arabic:
-      'وَمَنْ يَكُ ذَا عَقْلٍ وَلَمْ يَكُ ذَا تُقًى\nفَلَيْسَ لَهُ مِنْ عَقْلِهِ وَافِرُ الحَظِّ',
-    english:
-      'Whoever possesses intellect but possesses no piety / has gained no abundant share from his own intellect.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on intellect without piety',
-  },
-  {
-    arabic:
-      'إِذَا اعْتَادَ الفَتَى خَوْضَ المَعَالِي\nفَأَيْسَرُ مَا يَمُرُّ بِهِ الصِّعَابُ',
-    english:
-      'When a young man grows accustomed to wading into noble heights / the easiest of things he encounters is hardship.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the life aimed at the noble',
-  },
-
-  // ── On the pilgrimage of life, on hope and awe ──────────────────
-  {
-    arabic:
-      'إِذَا المَرْءُ لَمْ يَدَّخِرْ تَقْوَىً لِآخِرَتِهْ\nرَأَى الحَسْرَةَ الكُبْرَى غَدَاً عِنْدَ مَصْرَعِهْ',
-    english:
-      'If a man stores up no piety for his Hereafter / he will see the greatest anguish tomorrow at his fall.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on provisioning for the road ahead',
-  },
-  {
-    arabic:
-      'وَخَفْ رَبَّكَ الأَعْلَى وَأَحْسِنْ ظُنُونَكَا\nفَإِنَّ كَرِيمَ العَفْوِ يَقْبَلُ تَائِبَهْ',
-    english:
-      'Fear your Lord Most High, yet keep your hopes fair-thinking / for the Generous in pardon receives the one who turns.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on what to fear and what to hope, between awe and mercy',
-  },
-  {
-    arabic:
-      'أَطِعْ مَنْ يُعَلِّمْكَ وَإِنْ كَانَ ذَا كِبَرٍ\nفَفِي شَيْبَةِ الشَّيْخِ الحَكِيمِ تَجَارِبُهْ',
-    english:
-      "Obey the one who teaches you, though his years be many / for in the white hair of the wise old man lie his trials lived.",
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on heeding the wise old man\'s counsel',
-  },
-  {
-    arabic:
-      'وَسِرْ فِي طَرِيقِ الحَقِّ سَيْرَ مُسَافِرٍ\nيُعِدُّ لِيَوْمِ الرَّحْلِ مَا هُوَ نَافِعُهْ',
-    english:
-      'Walk in the road of truth as a traveller walks / preparing for the day of departure what will profit him.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on life as a journey toward home',
-  },
-  {
-    arabic:
-      'تَخَوَّفْ مِنَ الدُّنْيَا وَلَا تَأْمَنَنْ لَهَا\nفَكَمْ ضَاحِكٍ فِيهَا بَكَتْهُ مَآتِمُهْ',
-    english:
-      'Be wary of this world and feel no safety in her / for many a man who laughed in her was wept over at his wake.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: "on the world's smile, on distrust of safety",
-  },
-  {
-    arabic:
-      'وَشَاوِرْ ذَوِي الأَلْبَابِ مِنْ كُلِّ مَجْلِسٍ\nفَرَأْيُ الفَتَى الغِرِّ يَخُونُ صَوَاحِبَهْ',
-    english:
-      'Take counsel of the people of understanding in every gathering / for the green youth\'s opinion betrays its own companions.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on seeking the seasoned mind',
-  },
-
-  // ── Nasīḥa & character (Diwan ethics) ───────────────────────────
-  {
-    arabic:
-      'أَخَاكَ أَخَاكَ إِنَّ مَنْ لَا أَخَا لَهُ\nكَسَاعٍ إِلَى الهَيْجَا بِغَيْرِ سِلَاحِ',
-    english: 'Your brother, your brother! For he who has no brother / is like one rushing into battle without a weapon.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on brotherhood, on the worth of a sibling, nasīḥa',
-  },
-  {
-    arabic:
-      'وَإِنَّ ابْنَ عَمِّ المَرْءِ فَاعْلَمْ جَنَاحُهُ\nوَهَلْ يَنْهَضُ البَازِي بِغَيْرِ جَنَاحِ',
-    english: "Know that a person's cousin is their very wing / and can the falcon ever rise without a wing?",
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on kinship, on the support of one\'s clan',
-  },
-  {
-    arabic:
-      'إِذَا المَرْءُ لَمْ يُدْنَسْ مِنَ اللُّؤْمِ عِرْضُهُ\nفَكُلُّ رِدَاءٍ يَرْتَدِيهِ جَمِيلُ',
-    english: "If a man's honour is not soiled by baseness / then every cloak he wears is beautiful.",
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on character as the true adornment, on honour',
-  },
-  {
-    arabic:
-      'وَإِنْ هُوَ لَمْ يَحْمِلْ عَلَى النَّفْسِ ضَيْمَهَا\nفَلَيْسَ إِلَى حُسْنِ الثَّنَاءِ سَبِيلُ',
-    english: 'If a man does not make his soul bear hardship / there is no path for him to noble praise.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on character through self-discipline',
-  },
-  {
-    arabic:
-      'وَلَمْ أَرَ فِي عُيُوبِ النَّاسِ عَيْبًا\nكَنَقْصِ القَادِرِينَ عَلَى التَّمَامِ',
-    english: 'Among the faults of people I have seen no fault / like the shortcoming of those who had the power to complete.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on character, on excellence, on not falling short of what you could do',
-  },
-  {
-    arabic:
-      'اِصْبِرْ عَلَى مَضَضِ الحَسُو\nدِ فَإِنَّ صَبْرَكَ قَاتِلُهْ',
-    english: 'Be patient with the bitterness of the envier / for your patience itself is what slays him.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on patience under envy, on adversity',
-  },
-  {
-    arabic:
-      'فَالنَّارُ تَأْكُلُ بَعْضَهَا\nإِنْ لَمْ تَجِدْ مَا تَأْكُلُهْ',
-    english: 'Even fire consumes its own self / if it finds nothing else to consume.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on patience under envy, on the self-defeating nature of malice',
-  },
-  {
-    arabic:
-      'يَا أَيُّهَا النَّاسُ اِجْتَنِبُوا الكَذِبَ\nوَجَانِبُوا الجَاهِلَ وَالمُغْتَابَ',
-    english: 'O people, shun lying altogether / and keep far from the ignorant and the backbiter.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on truthfulness, on avoiding backbiting, nasīḥa',
-  },
-  {
-    arabic:
-      'وَاصْحَبْ مِنَ النَّاسِ ذَوِي رَأْفَةٍ\nيَكُونُ مِنْهُمْ لَكَ أَصْحَابُ',
-    english: 'Keep company among people with those of tender mercy / for from such people you will find true companions.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on companionship, nasīḥa',
-  },
-  {
-    arabic:
-      'وَكُنْ صَبُورًا عَلَى نَوْبِ الزَّمَانِ وَلَا\nتَجْزَعْ لِحَادِثَةٍ يَوْمًا مِنَ الزَّمَنِ',
-    english: "Be enduring in the face of time's misfortunes / and do not despair, even for a day, at any event of this age.",
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on patience, on steadfastness through time',
-  },
-
-  // ── On tawakkul, surrender, contentment with the decree ──────────
-  {
-    arabic:
-      'تَوَكَّلْ عَلَى الرَّحْمَنِ فِي كُلِّ حَاجَةٍ\nوَلَا تَرْجُ مِنْ عَبْدٍ سِوَاهُ قَضَاءَهَا\nفَإِنَّ الَّذِي يَكْفِيكَ مَا فَاتَ فِي الَّذِي\nمَضَى هُوَ يَكْفِيكَ الَّذِي أَنْتَ خَاشِيَهْ',
-    english:
-      'Rely upon the Merciful in every need / and hope for its fulfilment from no servant beside Him. The One who sufficed you in what has already passed / is the One who will suffice you in what you now fear.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on tawakkul, on reliance in every need',
-  },
-  {
-    arabic:
-      'إِذَا اشْتَمَلَتْ عَلَى الْيَأْسِ الْقُلُوبُ\nوَضَاقَ لِمَا بِهِ الصَّدْرُ الرَّحِيبُ\nوَأَوْطَنَتِ الْمَكَارِهُ وَاطْمَأَنَّتْ\nوَأَرْسَتْ فِي أَمَاكِنِهَا الْخُطُوبُ\nأَتَاكَ عَلَى قُنُوطٍ مِنْكَ غَوْثٌ\nيَمُنُّ بِهِ اللَّطِيفُ الْمُسْتَجِيبُ\nوَكُلُّ الْحَادِثَاتِ إِذَا تَنَاهَتْ\nفَمَوْصُولٌ بِهَا الْفَرَجُ الْقَرِيبُ',
-    english:
-      'When hearts are enveloped in despair / and the spacious breast grows narrow with what it bears, / when hardships settle in and take their rest / and calamities anchor firmly in their places — / there comes to you, upon your very despair, a rescue / bestowed by the Gentle, the Answerer of prayer. / And all events, when they reach their utmost limit / are joined to a nearness of relief at hand.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on relief after despair, on the dawn at the darkest hour',
-  },
-  {
-    arabic:
-      'وَمَا الْمَرْءُ إِلَّا حَيْثُ يَجْعَلُ نَفْسَهُ\nفَكُنْ طَالِبًا فِي النَّاسِ أَعْلَى الْمَرَاتِبِ\nوَوَطِّنْ عَلَى مَا نَابَكَ الدَّهْرُ نَفْسَهَا\nفَخَيْرُ خِلَالِ الْمَرْءِ صِدْقُ الرَّغَائِبِ',
-    english:
-      'A man is only what he makes of himself / so seek among people the loftiest of ranks. / Settle your soul to whatever fate has dealt you / for the best of a man\'s qualities is truthful contentment.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on contentment with the decree, on character',
-  },
-  {
-    arabic:
-      'رَضِيتُ بِمَا قَسَمَ اللَّهُ لِي\nوَفَوَّضْتُ أَمْرِي إِلَى خَالِقِي\nكَمَا أَحْسَنَ اللَّهُ فِيمَا مَضَى\nكَذَلِكَ يُحْسِنُ فِيمَا بَقِي',
-    english:
-      'I am content with what God has apportioned me / and I have entrusted my affair to my Creator. / Just as God did beautifully in what has passed / so too will He do beautifully in what remains.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on surrender to the decree, on resting in what He has set',
-  },
-  {
-    arabic:
-      'دَعِ الْحِرْصَ عَلَى الدُّنْيَا\nوَفِي الْعَيْشِ فَلَا تَطْمَعْ\nوَلَا تَجْمَعْ مِنَ الْمَالِ\nفَمَا تَدْرِي لِمَنْ تَجْمَعْ\nفَإِنَّ الرِّزْقَ مَقْسُومٌ\nوَسُوءُ الظَّنِّ لَا يَنْفَعْ',
-    english:
-      'Leave off greed for the world / and do not covet in your living. / Do not heap up wealth / for you know not for whom you heap it. / Provision is already apportioned / and suspicion of God avails you nothing.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on letting go of the world, on tawakkul in provision',
-  },
-  {
-    arabic:
-      'تَوَكَّلْتُ فِي رِزْقِي عَلَى اللَّهِ خَالِقِي\nوَأَيْقَنْتُ أَنَّ اللَّهَ لَا شَكَّ رَازِقِي\nوَمَا يَكُ مِنْ رِزْقِي فَلَيْسَ يَفُوتُنِي\nوَلَوْ كَانَ فِي قَاعِ الْبِحَارِ الْعَوَامِقِ',
-    english:
-      'I have placed my trust for my provision upon God my Creator / and I have known with certainty that God, without doubt, will provide for me. / Whatever is of my provision shall never escape me / though it lay in the depths of the deepest seas.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on certainty in provision, on tawakkul',
-  },
-  {
-    arabic:
-      'إِذَا الْمَقْدُورُ حَلَّ بِكَ الْبَلَاءُ\nفَلَيْسَ يَرُدُّهُ عَنْكَ احْتِيَالُ\nوَمَا لَكَ غَيْرُ تَقْوَى اللَّهِ حِصْنٌ\nإِذَا نَزَلَتْ بِسَاحَتِكَ النَّوَالُ',
-    english:
-      'When affliction descends upon you by decree / no scheming on your part can turn it away. / You have no fortress save the fear of God / when the decrees alight in your courtyard.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the futility of resisting the decree',
-  },
-  {
-    arabic:
-      'إِذَا كُنْتَ ذَا قَلْبٍ قَنُوعٍ بِمَا تَرَى\nفَأَنْتَ وَمَنْ يَمْلِكُ بِلَادَ الْمَشَارِقِ\nوَإِنْ كُنْتَ تَبْغِي مَا تَرَى فَجَمِيعُ مَا\nحَوَتْهُ يَدَاكَ الْيَوْمَ لَيْسَ بِسَائِغِ',
-    english:
-      'If you possess a heart content with what it sees / then you and the one who owns the eastern lands are equal. / But if you crave whatever you behold / then all that your hands hold today will not go down sweetly.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on contentment as wealth',
-  },
-  {
-    arabic:
-      'وَمَنْ وَثِقَ بِاللَّهِ فِي كُلِّ أَمْرِهِ\nيَجِدْ كُلَّ خَيْرٍ عِنْدَهُ حِينَ يَطْلُبُ\nوَمَنْ يَتَوَكَّلْ فِي الْأُمُورِ عَلَى الَّذِي\nإِلَيْهِ مَآلُ الْخَلْقِ تَكْفِهِ النَّوَائِبُ',
-    english:
-      'Whoever places his trust in God in every affair / shall find every good with Him when he seeks. / Whoever entrusts his matters to the One / to whom all creation returns — calamities will be sufficed away from him.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on tawakkul, on the believer\'s tranquility',
-  },
-// Wave 17A — Nahj al-Balagha bilingual sayings
   {
     arabic: 'قَال(عليه السلام): كُنْ فِي الْفِتْنَةِ كَابْنِ اللَّبُونِ ، لاَ ظَهْرٌ فَيُرْكَبَ، وَلاَ ضَرْعٌ فَيُحْلَبَ.',
     english: 'During civil disturbance be like an adolescent camel 1 who has neither a back strong enough for riding nor udders for milking.',
@@ -23032,8 +21421,6 @@ export const BASELINE_POETRY: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Saying 480',
     theme: 'when choosing companions wisely, when fellowship and community matter',
   },
-
-// Wave 17B — Ghurar al-Hikam untouched sections
   {
     arabic: 'عَثْرَةُ الاِسْتِرْسالِ لاتُسْتَقالُ.',
     english: 'The slip up of impudence cannot be pardoned.',
@@ -29358,8 +27745,6 @@ export const BASELINE_POETRY: BaselineEntry[] = [
     source: 'Ghurar al-Hikam, Certitude- §5',
     theme: 'when certainty in God is the anchor, when doubt clouds the way',
   },
-
-// Wave 17C — Nahj al-Balagha sermon excerpts
   {
     arabic: 'ثُمَّ فَتَقَ مَا بَيْنَ السَّمواتِ العُلاَ، فَمَلاَهُنَّ أَطْواراً مِنْ مَلائِكَتِهِ:',
     english: 'They do not think of their Creator through image, do not impute to Him attributes of the created, do not confine Him within abodes and do not point at Him through illustrations.',
@@ -30674,7 +29059,1470 @@ export const BASELINE_POETRY: BaselineEntry[] = [
     source: 'Nahj al-Balagha, Sermon 235',
     theme: 'when this teaching from the sermons of Imam Ali speaks to the moment',
   },
+]
 
+// ── Letters & sermons — long-form excerpts ─────────────────────────
+// These are substantial excerpts from the most famous letters and
+// sermons in Nahj al-Balagha. Longer than wisdom maxims; each carries
+// its own attribution and a brief lead-in.
+export type LongFormEntry = {
+  title: { en: string; ar: string }
+  /** Arabic text — line breaks preserved */
+  arabic: string
+  /** English translation, faithful (not poeticised) */
+  english: string
+  /** Source citation */
+  source: string
+  /** 1-2 sentence brief description, bilingual */
+  brief: { en: string; ar: string }
+  /** Theme tag used by the LLM for matching */
+  theme: string
+}
+
+export const BASELINE_LETTERS: LongFormEntry[] = [
+  {
+    title: {
+      en: 'From the Letter to Malik al-Ashtar — On Governance',
+      ar: 'من رسالة إلى مالك الأشتر — في الحكم',
+    },
+    arabic:
+      'وَأَشْعِرْ قَلْبَكَ الرَّحْمَةَ لِلرَّعِيَّةِ، وَالمَحَبَّةَ لَهُمْ، وَاللُّطْفَ بِهِمْ، وَلَا تَكُونَنَّ عَلَيْهِمْ سَبُعًا ضَارِيًا تَغْتَنِمُ أَكْلَهُمْ، فَإِنَّهُمْ صِنْفَانِ: إِمَّا أَخٌ لَكَ فِي الدِّينِ، أَوْ نَظِيرٌ لَكَ فِي الخَلْقِ، يَفْرُطُ مِنْهُمُ الزَّلَلُ، وَتَعْرِضُ لَهُمُ العِلَلُ، وَيُؤْتَى عَلَى أَيْدِيهِمْ فِي العَمْدِ وَالخَطَأِ، فَأَعْطِهِمْ مِنْ عَفْوِكَ وَصَفْحِكَ مِثْلَ الَّذِي تُحِبُّ أَنْ يُعْطِيَكَ اللَّهُ مِنْ عَفْوِهِ وَصَفْحِهِ.',
+    english:
+      "And clothe your heart with mercy for the people, love for them, and kindness toward them. Do not become to them a beast of prey, seeking to devour them. For they are of two kinds: either your brother in faith, or your equal in creation. Slips will come from them. Illnesses will visit them. They will commit deliberate wrongs and unintentional ones. Give them, from your pardon and forgiveness, the same that you wish God to give you from His.",
+    source: 'Nahj al-Balagha, Letter 53 — to Malik al-Ashtar on appointing him governor of Egypt',
+    brief: {
+      en: "The most-quoted document on Islamic ethics of governance. Written when Imam Ali sent his loyal commander Malik al-Ashtar to govern Egypt.",
+      ar: 'أكثر وثيقة استشهاداً في الأخلاق السياسية الإسلامية. كُتبت حين أرسل الإمام عليّ قائده المخلص مالك الأشتر والياً على مصر.',
+    },
+    theme: 'on governance, on mercy, on power',
+  },
+  {
+    title: {
+      en: 'From the Letter to His Son Hasan',
+      ar: 'من الرسالة إلى ولده الحسن',
+    },
+    arabic:
+      'أَيْ بُنَيَّ، إِنِّي وَإِنْ لَمْ أَكُنْ عُمِّرْتُ عُمْرَ مَنْ كَانَ قَبْلِي، فَقَدْ نَظَرْتُ فِي أَعْمَالِهِمْ، وَفَكَّرْتُ فِي أَخْبَارِهِمْ، وَسِرْتُ فِي آثَارِهِمْ، حَتَّى عُدْتُ كَأَحَدِهِمْ، بَلْ كَأَنِّي بِمَا انْتَهَى إِلَيَّ مِنْ أُمُورِهِمْ قَدْ عُمِّرْتُ مَعَ أَوَّلِهِمْ إِلَى آخِرِهِمْ.',
+    english:
+      'My son — although I have not been given the lifespan of those before me, I have looked into their deeds, reflected on their stories, and walked through their traces — until I have become like one of them. Indeed, from what has reached me of their affairs, it is as though I have lived with the first of them through to the last.',
+    source: 'Nahj al-Balagha, Letter 31 — to his son al-Hasan after returning from Siffin',
+    brief: {
+      en: "Written by Imam Ali to his son after the Battle of Siffin — a father's complete testament. The letter runs many pages and is one of the most cited documents on parenting and the inner life across the tradition.",
+      ar: 'كتبها الإمام عليّ إلى ولده بعد صفّين — وصيّة أبٍ كاملة. تمتدّ الرسالة عبر صفحات كثيرة، وهي من أكثر الوثائق استشهاداً في التربية والحياة الداخلية في التقليد.',
+    },
+    theme: 'on parenting, on what to leave behind, on the inner work',
+  },
+  {
+    title: {
+      en: 'The Final Testament — to Hasan and Husayn',
+      ar: 'الوصيّة الأخيرة — للحسن والحسين',
+    },
+    arabic:
+      'أُوصِيكُمَا بِتَقْوَى اللَّهِ، وَأَلَّا تَبْغِيَا الدُّنْيَا وَإِنْ بَغَتْكُمَا، وَلَا تَأْسَفَا عَلَى شَيْءٍ مِنْهَا زُوِيَ عَنْكُمَا. وَقُولَا الحَقَّ، وَاعْمَلَا لِلْأَجْرِ، وَكُونَا لِلظَّالِمِ خَصْمًا، وَلِلْمَظْلُومِ عَوْنًا.',
+    english:
+      'I counsel you both with mindfulness of God: do not seek the world even when it seeks you, and do not grieve over anything of it withheld from you. Speak the truth. Work for what is rewarded. Be an opponent to the oppressor — and an aid to the oppressed.',
+    source: 'Nahj al-Balagha, Letter 47 — written two days before his death',
+    brief: {
+      en: 'Imam Ali wrote this on his deathbed — to his two sons Hasan and Husayn, and through them to all who would come after. The line "Be an opponent to the oppressor and an aid to the oppressed" has echoed through fourteen centuries.',
+      ar: 'كتبها الإمام عليّ على فراش الموت — إلى ابنَيه الحسن والحسين، وعبرهما إلى كلّ من يأتي بعدُه. وقد ترددت العبارة "كونا للظالم خصماً وللمظلوم عوناً" عبر أربعة عشر قرناً.',
+    },
+    theme: 'on what to leave behind, on justice, on dying well',
+  },
+  {
+    title: {
+      en: 'On Equity in Distribution',
+      ar: 'في إنصاف القسمة',
+    },
+    arabic:
+      'وَاللَّهِ لَوْ وَجَدْتُهُ قَدْ تُزُوِّجَ بِهِ النِّسَاءُ، وَمُلِكَ بِهِ الإِمَاءُ لَرَدَدْتُهُ. فَإِنَّ فِي العَدْلِ سَعَةً، وَمَنْ ضَاقَ عَلَيْهِ العَدْلُ فَالجَوْرُ عَلَيْهِ أَضْيَقُ.',
+    english:
+      'By God, were I to find that something had been given out improperly — even if it had been used to wed women or buy bondmaids — I would take it back. In justice there is room for all. And whoever finds justice constricting, will find injustice more constricting still.',
+    source: 'Nahj al-Balagha, Sermon 15 — on returning property unfairly distributed under Uthman',
+    brief: {
+      en: "Said when Imam Ali, on taking the caliphate, faced calls to leave alone the inequitable land distributions made under the previous administration. His answer was firm — and his caliphate followed it.",
+      ar: 'قاله الإمام عليّ حين تولّى الخلافة وواجه دعواتٍ ليترك تقسيمات الأرض غير العادلة تحت الإدارة السابقة. كان جوابه حازماً — وكانت خلافته تابعة لذلك.',
+    },
+    theme: 'on justice, on power, on what cannot be left alone',
+  },
+  {
+    title: {
+      en: 'To a Companion Doubting Sincerity',
+      ar: 'إلى صاحبٍ شكّ في الإخلاص',
+    },
+    arabic:
+      'فَأَفِقْ مِنْ سَكْرَتِكَ، وَاسْتَيْقِظْ مِنْ غَفْلَتِكَ، وَاخْتَصِرْ مِنْ عَجَلَتِكَ، وَأَنْعِمِ الفِكْرَ فِيمَا جَاءَكَ عَلَى لِسَانِ النَّبِيِّ الْأُمِّيِّ.',
+    english:
+      'Wake from your stupor. Rise from your distraction. Cut short your hurry. And give kindly thought to what has come to you through the tongue of the unlettered Prophet.',
+    source: "Nahj al-Balagha, Letter 10 — to Mu'awiyah",
+    brief: {
+      en: 'A passage from a letter that combined firmness with an offer of return.',
+      ar: 'مقطع من رسالة جمعت بين الحزم وعرض العودة.',
+    },
+    theme: 'on inner alertness, on hearing, on awakening',
+  },
+  {
+    title: {
+      en: 'From Letter 31 — On Teaching the Heart Early',
+      ar: 'من الرسالة ٣١ — في تعليم القلب باكراً',
+    },
+    arabic:
+      'وَإِنَّمَا قَلْبُ الْحَدَثِ كَالْأَرْضِ الْخَالِيَةِ، مَا أُلْقِيَ فِيهَا مِنْ شَيْءٍ قَبِلَتْهُ.\nفَبَادَرْتُكَ بِالْأَدَبِ قَبْلَ أَنْ يَقْسُوَ قَلْبُكَ، وَيَشْتَغِلَ لُبُّكَ،\nلِتَسْتَقْبِلَ بِجِدِّ رَأْيِكَ مِنَ الْأَمْرِ مَا قَدْ كَفَاكَ أَهْلُ التَّجَارِبِ بُغْيَتَهُ وَتَجْرِبَتَهُ،\nفَتَكُونَ قَدْ كُفِيتَ مَؤُونَةَ الطَّلَبِ، وَعُوفِيتَ مِنْ عِلَاجِ التَّجْرِبَةِ،\nفَأَتَاكَ مِنْ ذَلِكَ مَا قَدْ كُنَّا نَأْتِيهِ، وَاسْتَبَانَ لَكَ مَا رُبَّمَا أَظْلَمَ عَلَيْنَا مِنْهُ.\nأَيْ بُنَيَّ، إِنِّي وَإِنْ لَمْ أَكُنْ عُمِّرْتُ عُمْرَ مَنْ كَانَ قَبْلِي، فَإِنِّي قَدْ نَظَرْتُ فِي أَعْمَالِهِمْ،\nوَفَكَّرْتُ فِي أَخْبَارِهِمْ، حَتَّى صِرْتُ كَأَحَدِهِمْ.',
+    english:
+      'The heart of a young person is like empty ground — whatever is cast into it, it accepts. So I hurried to discipline you before your heart hardened and your mind became occupied, so that you would approach matters with the firmness of your own judgment, having been spared the trouble of seeking, since those of experience have already gathered for you what they sought and tested. Thus what we had to come to, has come to you ready — and what was sometimes dark to us has been made clear for you. My son, though I have not lived the span of those before me, I have looked into their deeds and reflected on their reports, until I became like one of them.',
+    source: 'Nahj al-Balagha, Letter 31 — to his son al-Hasan',
+    brief: {
+      en: "Imam Ali's reason for writing his great testament so early: a young heart accepts whatever is planted in it, and he wished to plant before the soil hardened.",
+      ar: 'سبب كتابة الإمام عليّ وصيّته الكبرى مبكّراً: قلب الحدث يقبل ما يُلقى فيه، فأراد أن يَغرس قبل أن تقسو الأرض.',
+    },
+    theme: 'on parenting, on raising sons, on what to invest in early',
+  },
+  {
+    title: {
+      en: 'From Letter 31 — Make Yourself the Scale',
+      ar: 'من الرسالة ٣١ — اجعل نفسك ميزاناً',
+    },
+    arabic:
+      'يَا بُنَيَّ، اجْعَلْ نَفْسَكَ مِيزَانًا فِيمَا بَيْنَكَ وَبَيْنَ غَيْرِكَ،\nفَأَحْبِبْ لِغَيْرِكَ مَا تُحِبُّ لِنَفْسِكَ، وَاكْرَهْ لَهُ مَا تَكْرَهُ لَهَا،\nوَلَا تَظْلِمْ كَمَا لَا تُحِبُّ أَنْ تُظْلَمَ، وَأَحْسِنْ كَمَا تُحِبُّ أَنْ يُحْسَنَ إِلَيْكَ،\nوَاسْتَقْبِحْ مِنْ نَفْسِكَ مَا تَسْتَقْبِحُهُ مِنْ غَيْرِكَ،\nوَارْضَ مِنَ النَّاسِ بِمَا تَرْضَاهُ لَهُمْ مِنْ نَفْسِكَ،\nوَلَا تَقُلْ مَا لَا تَعْلَمُ وَإِنْ قَلَّ مَا تَعْلَمُ،\nوَلَا تَقُلْ مَا لَا تُحِبُّ أَنْ يُقَالَ لَكَ.',
+    english:
+      'My son, make yourself a scale between you and others. Love for others what you love for yourself; hate for them what you hate for yourself. Do not wrong, as you would not wish to be wronged; do good, as you wish good to be done to you. Find ugly in yourself what you would find ugly in others. Be content from people with what you would be content for them to receive from you. Do not speak of what you do not know, even if what you know is little. And do not say of others what you would not wish said of you.',
+    source: 'Nahj al-Balagha, Letter 31 — to his son al-Hasan',
+    brief: {
+      en: 'A practical rule for living among people, given by a father to his son: take yourself as the measure for how you treat everyone else.',
+      ar: 'قاعدة عمليّة للعيش بين الناس، يعطيها أبٌ لولده.',
+    },
+    theme: 'on parenting, on character, on how to treat people',
+  },
+  {
+    title: {
+      en: 'From Letter 47 — Bind to the Rope of the Family',
+      ar: 'من الرسالة ٤٧ — التمسّك بحبل الجماعة',
+    },
+    arabic:
+      'اللَّهَ اللَّهَ فِي الْأَيْتَامِ، فَلَا تُغِبُّوا أَفْوَاهَهُمْ، وَلَا يَضِيعُوا بِحَضْرَتِكُمْ.\nوَاللَّهَ اللَّهَ فِي جِيرَانِكُمْ، فَإِنَّهُمْ وَصِيَّةُ نَبِيِّكُمْ، مَا زَالَ يُوصِي بِهِمْ حَتَّى ظَنَنَّا أَنَّهُ سَيُوَرِّثُهُمْ.\nوَاللَّهَ اللَّهَ فِي الْقُرْآنِ، لَا يَسْبِقْكُمْ بِالْعَمَلِ بِهِ غَيْرُكُمْ.\nوَاللَّهَ اللَّهَ فِي الصَّلَاةِ، فَإِنَّهَا عَمُودُ دِينِكُمْ.\nوَاللَّهَ اللَّهَ فِي بَيْتِ رَبِّكُمْ، لَا تُخَلُّوهُ مَا بَقِيتُمْ، فَإِنَّهُ إِنْ تُرِكَ لَمْ تُنَاظَرُوا.\nوَاللَّهَ اللَّهَ فِي الْجِهَادِ بِأَمْوَالِكُمْ وَأَنْفُسِكُمْ وَأَلْسِنَتِكُمْ فِي سَبِيلِ اللَّهِ.',
+    english:
+      'God, God, regarding the orphans — do not let their mouths go hungry between meals, and do not let them be lost in your presence. God, God, regarding your neighbours — they are the charge of your Prophet, who kept commending them until we thought he would make them heirs. God, God, regarding the Qur\'an — let no one outstrip you in acting by it. God, God, regarding prayer — it is the pillar of your faith. God, God, regarding the House of your Lord — do not leave it empty while you live, for if it is abandoned you will be granted no reprieve. God, God, regarding striving in God\'s way — with your wealth, your selves, and your tongues.',
+    source: 'Nahj al-Balagha, Letter 47 — his final will, two days before his death',
+    brief: {
+      en: "From Imam Ali's dying testament: a list of things 'God, God' is invoked upon — the orphan, the neighbour, the Qur'an, prayer, the House, striving.",
+      ar: 'من وصيّة الإمام عند موته: لائحة بما يُستحلَف عليه باسم الله — اليتيم، الجار، القرآن، الصلاة، البيت، الجهاد.',
+    },
+    theme: 'on what to leave behind, on dying well, on the rights upon us',
+  },
+  {
+    title: {
+      en: 'From Letter 53 — On the Common People',
+      ar: 'من الرسالة ٥٣ — في عامّة الناس',
+    },
+    arabic:
+      'وَلْيَكُنْ أَحَبَّ الْأُمُورِ إِلَيْكَ أَوْسَطُهَا فِي الْحَقِّ، وَأَعَمُّهَا فِي الْعَدْلِ،\nوَأَجْمَعُهَا لِرِضَى الرَّعِيَّةِ، فَإِنَّ سُخْطَ الْعَامَّةِ يُجْحِفُ بِرِضَى الْخَاصَّةِ،\nوَإِنَّ سُخْطَ الْخَاصَّةِ يُغْتَفَرُ مَعَ رِضَى الْعَامَّةِ.\nوَلَيْسَ أَحَدٌ مِنَ الرَّعِيَّةِ أَثْقَلَ عَلَى الْوَالِي مَؤُونَةً فِي الرَّخَاءِ،\nوَأَقَلَّ مَعُونَةً لَهُ فِي الْبَلَاءِ، وَأَكْرَهَ لِلْإِنْصَافِ،\nوَأَسْأَلَ بِالْإِلْحَافِ، وَأَقَلَّ شُكْرًا عِنْدَ الْإِعْطَاءِ،\nوَأَبْطَأَ عُذْرًا عِنْدَ الْمَنْعِ، وَأَضْعَفَ صَبْرًا عِنْدَ مُلِمَّاتِ الدَّهْرِ مِنْ أَهْلِ الْخَاصَّةِ.\nوَإِنَّمَا عِمَادُ الدِّينِ وَجِمَاعُ الْمُسْلِمِينَ، وَالْعُدَّةُ لِلْأَعْدَاءِ، الْعَامَّةُ مِنَ الْأُمَّةِ، فَلْيَكُنْ صِغْوُكَ لَهُمْ، وَمَيْلُكَ مَعَهُمْ.',
+    english:
+      "Let the dearest of affairs to you be the most balanced in truth, the most encompassing in justice, and the most gathering of the people's contentment. For the displeasure of the common people overrides the contentment of the elite, while the displeasure of the elite is excused when the common people are content. There is none of the people heavier in burden upon the governor in times of ease, less helpful to him in times of trial, more averse to fairness, more insistent in their asking, less grateful when given, slower to excuse when refused, and weaker in patience under the blows of time than the elite. For the pillar of the religion, the gathering of the Muslims, and the muster against enemies — these are the common people of the community. So let your leaning be toward them, and your inclination with them.",
+    source: 'Nahj al-Balagha, Letter 53 — to Malik al-Ashtar',
+    brief: {
+      en: 'A passage from the Malik letter: Imam Ali ranks the contentment of the masses above the contentment of the elite, and gives reasons.',
+      ar: 'مقطعٌ من رسالة مالك: يقدّم الإمامُ رضى العامّة على رضى الخاصّة، ويعلّل ذلك.',
+    },
+    theme: 'on governance, on the common people, on power',
+  },
+  {
+    title: {
+      en: 'From Letter 53 — On the Choice of Judges',
+      ar: 'من الرسالة ٥٣ — في اختيار القضاة',
+    },
+    arabic:
+      'ثُمَّ اخْتَرْ لِلْحُكْمِ بَيْنَ النَّاسِ أَفْضَلَ رَعِيَّتِكَ فِي نَفْسِكَ،\nمِمَّنْ لَا تَضِيقُ بِهِ الْأُمُورُ، وَلَا تُمَحِّكُهُ الْخُصُومُ،\nوَلَا يَتَمَادَى فِي الزَّلَّةِ، وَلَا يَحْصَرُ مِنَ الْفَيْءِ إِلَى الْحَقِّ إِذَا عَرَفَهُ،\nوَلَا تُشْرِفُ نَفْسُهُ عَلَى طَمَعٍ، وَلَا يَكْتَفِي بِأَدْنَى فَهْمٍ دُونَ أَقْصَاهُ،\nوَأَوْقَفَهُمْ فِي الشُّبُهَاتِ، وَآخَذَهُمْ بِالْحُجَجِ،\nوَأَقَلَّهُمْ تَبَرُّمًا بِمُرَاجَعَةِ الْخَصْمِ،\nوَأَصْبَرَهُمْ عَلَى تَكَشُّفِ الْأُمُورِ، وَأَصْرَمَهُمْ عِنْدَ اتِّضَاحِ الْحُكْمِ،\nمِمَّنْ لَا يَزْدَهِيهِ إِطْرَاءٌ، وَلَا يَسْتَمِيلُهُ إِغْرَاءٌ، وَأُولَئِكَ قَلِيلٌ.',
+    english:
+      'Then choose, to judge between people, the best of your subjects in your own estimation — one whom affairs do not overwhelm, whom adversaries do not provoke into stubbornness, who does not persist in his slip, who is not held back from returning to the truth once he sees it, whose soul does not lean toward greed, who is not satisfied with the lesser understanding before reaching the furthest, the most cautious of them in cases of doubt, the most binding to evidence, the least wearied by the litigant\'s coming back again, the most patient in waiting for matters to come clear, the most decisive once the ruling becomes plain — one whom praise does not delight and enticement does not sway. Such people are few.',
+    source: 'Nahj al-Balagha, Letter 53 — to Malik al-Ashtar',
+    brief: {
+      en: "Imam Ali's standard for the judge — a portrait so demanding it ends with the admission, 'such people are few.'",
+      ar: 'معيار الإمام للقاضي — صورةٌ مرتفعة في شروطها حتى ينتهي قائلاً: "وأولئك قليل".',
+    },
+    theme: 'on governance, on judgment, on choosing people',
+  },
+  {
+    title: {
+      en: 'From Letter 51 — To the Tax Collectors, on the Peasants',
+      ar: 'من الرسالة ٥١ — إلى عمّال الخراج، في الفلّاحين',
+    },
+    arabic:
+      'أَمَّا بَعْدُ، فَإِنَّ مَنْ لَمْ يَحْذَرْ مَا هُوَ صَائِرٌ إِلَيْهِ لَمْ يُقَدِّمْ لِنَفْسِهِ مَا يُحْرِزُهَا.\nوَاعْلَمُوا أَنَّ مَا كُلِّفْتُمْ بِهِ يَسِيرٌ، وَأَنَّ ثَوَابَهُ كَثِيرٌ.\nفَأَنْصِفُوا النَّاسَ مِنْ أَنْفُسِكُمْ، وَاصْبِرُوا لِحَوَائِجِهِمْ،\nفَإِنَّكُمْ خُزَّانُ الرَّعِيَّةِ، وَوُكَلَاءُ الْأُمَّةِ، وَسُفَرَاءُ الْأَئِمَّةِ.\nوَلَا تُحْشِمُوا أَحَدًا عَنْ حَاجَتِهِ، وَلَا تَحْبِسُوهُ عَنْ طَلِبَتِهِ،\nوَلَا تَبِيعُنَّ لِلنَّاسِ فِي الْخَرَاجِ كِسْوَةَ شِتَاءٍ وَلَا صَيْفٍ،\nوَلَا دَابَّةً يَعْتَمِلُونَ عَلَيْهَا، وَلَا عَبْدًا،\nوَلَا تَضْرِبُنَّ أَحَدًا سَوْطًا لِمَكَانِ دِرْهَمٍ.',
+    english:
+      'Now then — whoever does not take warning of what he is moving toward will not put forward for himself what would save him. Know that what is asked of you is little and its reward is much. So be fair to people from your own selves, and be patient with their needs — for you are the treasurers of the people, the agents of the community, and the envoys of the leaders. Do not deter anyone from his need, nor hold him back from his request. Do not sell off, for taxes, anyone\'s winter garment or summer garment, nor a beast he works with, nor a slave — and do not strike anyone with a single lash for the sake of a dirham.',
+    source: 'Nahj al-Balagha, Letter 51 — to those collecting the land tax',
+    brief: {
+      en: 'A directive to his tax collectors: the limits of state power over the poor, laid down in concrete prohibitions — not the winter cloak, not the working animal, not a single lash for a coin.',
+      ar: 'توجيهٌ لعمّال الخراج: حدود سلطة الدولة على الفقير، في محرّمات ملموسة — لا ثوب الشتاء، ولا دابّة العمل، ولا سوطٌ واحد لأجل درهم.',
+    },
+    theme: 'on governance, on the treatment of subjects, on the limits of state power',
+  },
+  {
+    title: { en: 'Letter 25 — To the Zakāt Collectors', ar: 'الكِتاب ٢٥ — إلى عمّال الصَّدَقات' },
+    arabic:
+      'انْطَلِقْ عَلَى تَقْوَى اللَّهِ وَحْدَهُ لَا شَرِيكَ لَهُ، وَلَا تُرَوِّعَنَّ مُسْلِمًا، وَلَا تَجْتَازَنَّ عَلَيْهِ كَارِهًا،\nوَلَا تَأْخُذَنَّ مِنْهُ أَكْثَرَ مِنْ حَقِّ اللَّهِ فِي مَالِهِ.\nفَإِذَا قَدِمْتَ عَلَى الْحَيِّ فَانْزِلْ بِمَائِهِمْ مِنْ غَيْرِ أَنْ تُخَالِطَ أَبْيَاتَهُمْ،\nثُمَّ امْضِ إِلَيْهِمْ بِالسَّكِينَةِ وَالْوَقَارِ حَتَّى تَقُومَ بَيْنَهُمْ فَتُسَلِّمَ عَلَيْهِمْ، وَلَا تُخْدِجْ بِالتَّحِيَّةِ لَهُمْ.\nثُمَّ تَقُولَ: عِبَادَ اللَّهِ، أَرْسَلَنِي إِلَيْكُمْ وَلِيُّ اللَّهِ وَخَلِيفَتُهُ لِآخُذَ مِنْكُمْ حَقَّ اللَّهِ فِي أَمْوَالِكُمْ،\nفَهَلْ لِلَّهِ فِي أَمْوَالِكُمْ مِنْ حَقٍّ فَتُؤَدُّوهُ إِلَى وَلِيِّهِ؟\nفَإِنْ قَالَ قَائِلٌ: لَا، فَلَا تُرَاجِعْهُ، وَإِنْ أَنْعَمَ لَكَ مُنْعِمٌ فَانْطَلِقْ مَعَهُ مِنْ غَيْرِ أَنْ تُخِيفَهُ أَوْ تُوعِدَهُ أَوْ تَعْسِفَهُ أَوْ تُرْهِقَهُ.\nوَلَا تَأْخُذَنَّ دَابَّةً بِسَوْطٍ وَلَا تَضْرِبَنَّهَا، وَلَا تَأْخُذَنَّ مَرْكُوبَ الرَّجُلِ.\nوَآسِ بَيْنَ الْمُسْلِمِينَ بِوَجْهِكَ وَمَجْلِسِكَ، وَأَنْصِفْ لِلْمَظْلُومِ مِنَ الظَّالِمِ.',
+    english:
+      "Set forth in the fear of God alone, who has no partner. Do not frighten any Muslim, nor pass over his land against his will, nor take from him more than the right of God in his property.\nWhen you arrive at the tribe, alight at their watering-place; do not enter their houses. Then walk towards them with calm and dignity, until you stand in their midst and greet them — and do not be sparing in your salutation.\nThen say: 'Servants of God, the friend of God and his vicegerent has sent me to you, to take from you God's due in your wealth. Is there any due of God in your wealth, that you may render it to His friend?'\nIf anyone says no, do not press him. If anyone answers yes, go with him — without intimidating him, threatening him, treating him harshly, or burdening him.\nDo not strike his animal with a whip, nor beat it, and do not take the mount he rides.\nTreat the Muslims equally in your countenance and your seat, and grant the wronged his right against the wrongdoer.",
+    source: 'Nahj al-Balagha, Letter 25 — to those appointed over the zakāt',
+    brief: {
+      en: "A protocol for tax collectors: arrive with dignity, ask not demand, never frighten, take only God's due, and never strike a man's beast.",
+      ar: 'آدابٌ لجابي الصدقات: وقارٌ في الإقبال، وسؤالٌ لا انتزاع، ولا ترويع ولا عسف.',
+    },
+    theme: 'on governance, on the treatment of subjects, on justice in administration',
+  },
+  {
+    title: { en: 'Letter 41 — To a Kinsman Who Betrayed the Trust', ar: 'الكِتاب ٤١ — إلى بعض عمّاله' },
+    arabic:
+      'أَمَّا بَعْدُ، فَإِنِّي كُنْتُ أَشْرَكْتُكَ فِي أَمَانَتِي، وَجَعَلْتُكَ شِعَارِي وَبِطَانَتِي،\nوَلَمْ يَكُنْ رَجُلٌ مِنْ أَهْلِي أَوْثَقَ مِنْكَ فِي نَفْسِي لِمُوَاسَاتِي وَمُوَازَرَتِي وَأَدَاءِ الْأَمَانَةِ إِلَيَّ.\nفَلَمَّا رَأَيْتَ الزَّمَانَ عَلَى ابْنِ عَمِّكَ قَدْ كَلِبَ، وَالْعَدُوَّ قَدْ حَرِبَ،\nقَلَبْتَ لِابْنِ عَمِّكَ ظَهْرَ الْمِجَنِّ،\nفَفَارَقْتَهُ مَعَ الْمُفَارِقِينَ، وَخَذَلْتَهُ مَعَ الْخَاذِلِينَ، وَخُنْتَهُ مَعَ الْخَائِنِينَ.\nفَلَا ابْنَ عَمِّكَ آسَيْتَ، وَلَا الْأَمَانَةَ أَدَّيْتَ.\nفَلَمَّا أَمْكَنَتْكَ الشِّدَّةُ فِي خِيَانَةِ الْأُمَّةِ أَسْرَعْتَ الْكَرَّةَ، وَعَاجَلْتَ الْوَثْبَةَ،\nوَاخْتَطَفْتَ مَا قَدَرْتَ عَلَيْهِ مِنْ أَمْوَالِهِمُ الْمَصُونَةِ لِأَرَامِلِهِمْ وَأَيْتَامِهِمُ،\nاخْتِطَافَ الذِّئْبِ الْأَزَلِّ دَامِيَةَ الْمِعْزَى الْكَسِيرَةَ.\nفَاتَّقِ اللَّهَ وَارْدُدْ إِلَى هَؤُلَاءِ الْقَوْمِ أَمْوَالَهُمْ، فَإِنَّكَ إِنْ لَمْ تَفْعَلْ ثُمَّ أَمْكَنَنِي اللَّهُ مِنْكَ لَأُعْذِرَنَّ إِلَى اللَّهِ فِيكَ.',
+    english:
+      'To proceed: I had made you a partner in my trust and taken you as my innermost confidant. No man of my own household was more trusted by me than you for sharing my burden, supporting me, and discharging the trust I placed in you.\nBut when you saw that the times had turned cruel against your cousin and that the enemy had grown fierce — you turned the back of your shield upon your cousin. You broke from him with those who broke away, deserted him with the deserters, and betrayed him with the betrayers.\nYou neither stood by your cousin nor delivered up the trust.\nThe moment you found an opening to betray the community, you sprang to it. You hurried the raid, leaped quickly, and snatched whatever you could of their money set aside for their widows and orphans —\nthe snatching of a fierce wolf at a maimed she-goat dripping with blood.\nSo fear God and return to these people their property. For if you do not, and God then gives me power over you, I will discharge my duty before God in your case.',
+    source: 'Nahj al-Balagha, Letter 41 — to a kinsman-governor who stole from the public treasury',
+    brief: {
+      en: "A letter of bitter reproach to a relative who stole from the public treasury — money set aside for widows and orphans — and a warning that God's judgement, and the Imam's, are both coming.",
+      ar: 'عتابٌ مريرٌ لعاملٍ من أهله خانَ بيتَ المال، وأخذَ مالَ الأرامل والأيتام، وتهديدٌ بقضاء الله.',
+    },
+    theme: 'on betrayal of trust, on accountability of those in power',
+  },
+  {
+    title: { en: 'Letter 27 — To Muhammad ibn Abi Bakr, Governor of Egypt', ar: 'الكِتاب ٢٧ — إلى محمد بن أبي بكر' },
+    arabic:
+      'فَاخْفِضْ لَهُمْ جَنَاحَكَ، وَأَلِنْ لَهُمْ جَانِبَكَ، وَابْسُطْ لَهُمْ وَجْهَكَ، وَآسِ بَيْنَهُمْ فِي اللَّحْظَةِ وَالنَّظْرَةِ،\nحَتَّى لَا يَطْمَعَ الْعُظَمَاءُ فِي حَيْفِكَ لَهُمْ، وَلَا يَيْأَسَ الضُّعَفَاءُ مِنْ عَدْلِكَ عَلَيْهِمْ.\nفَإِنَّ اللَّهَ تَعَالَى يُسَائِلُكُمْ مَعْشَرَ عِبَادِهِ عَنِ الصَّغِيرَةِ مِنْ أَعْمَالِكُمْ وَالْكَبِيرَةِ، وَالظَّاهِرَةِ وَالْمَسْتُورَةِ.\nفَإِنْ يُعَذِّبْ فَأَنْتُمْ أَظْلَمُ، وَإِنْ يَعْفُ فَهُوَ أَكْرَمُ.\nوَاعْلَمُوا عِبَادَ اللَّهِ، أَنَّ الْمُتَّقِينَ ذَهَبُوا بِعَاجِلِ الدُّنْيَا وَآجِلِ الْآخِرَةِ،\nفَشَارَكُوا أَهْلَ الدُّنْيَا فِي دُنْيَاهُمْ، وَلَمْ يُشَارِكْهُمْ أَهْلُ الدُّنْيَا فِي آخِرَتِهِمْ.\nسَكَنُوا الدُّنْيَا بِأَفْضَلِ مَا سُكِنَتْ، وَأَكَلُوهَا بِأَفْضَلِ مَا أُكِلَتْ،\nثُمَّ انْقَلَبُوا عَنْهَا بِالزَّادِ الْمُبَلِّغِ وَالْمَتْجَرِ الرَّابِحِ.',
+    english:
+      "Lower your wing to them, soften your side, spread out your face for them, and be equal among them in the glance and the gaze — so that the great may not covet your bias toward them, nor the weak despair of your justice over them.\nFor God will question you — community of His servants — about the smallest of your deeds and the greatest, the open and the hidden. If He punishes, you have been the greater wrongdoers; if He pardons, He is the more generous.\nKnow, servants of God, that the God-fearing have carried off both this world's near reward and the next world's later one. They shared with the people of this world in their world, and the people of this world did not share with them in their hereafter.\nThey inhabited the world in the best of habitations, and ate of it in the best of ways. Then they departed from it with provision enough to reach the end, and a profitable trade.",
+    source: 'Nahj al-Balagha, Letter 27 — to Muhammad ibn Abi Bakr on his appointment to Egypt',
+    brief: {
+      en: 'Instructions to a young governor: be equal among the people in your very glances, fear the audit of small deeds, and remember that the God-fearing won both worlds while the worldly won only one.',
+      ar: 'وصايا لوالٍ شابّ: المساواة بين الناس حتى في اللحظة، وخوف المحاسبة، وأنّ المتّقين فازوا بالدنيا والآخرة.',
+    },
+    theme: 'on governance, on justice toward the people, on the two worlds',
+  },
+  {
+    title: { en: "Letter 12 — To Ma'qil ibn Qays on the March", ar: 'الكِتاب ١٢ — إلى مَعقِل بن قَيس' },
+    arabic:
+      'اتَّقِ اللَّهَ الَّذِي لَا بُدَّ لَكَ مِنْ لِقَائِهِ، وَلَا مُنْتَهَى لَكَ دُونَهُ،\nوَلَا تُقَاتِلَنَّ إِلَّا مَنْ قَاتَلَكَ.\nوَسِرِ الْبَرْدَيْنِ، وَغَوِّرْ بِالنَّاسِ، وَرَفِّهْ فِي السَّيْرِ.\nوَلَا تَسِرْ أَوَّلَ اللَّيْلِ، فَإِنَّ اللَّهَ جَعَلَهُ سَكَنًا، وَقَدَّرَهُ مُقَامًا لَا ظَعْنًا،\nفَأَرِحْ فِيهِ بَدَنَكَ، وَرَوِّحْ ظَهْرَكَ.\nفَإِذَا وَقَفْتَ حِينَ يَنْبَطِحُ السَّحَرُ، أَوْ حِينَ يَنْفَجِرُ الْفَجْرُ، فَسِرْ عَلَى بَرَكَةِ اللَّهِ.\nفَإِذَا لَقِيتَ الْعَدُوَّ فَقِفْ مِنْ أَصْحَابِكَ وَسَطًا،\nوَلَا تَدْنُ مِنَ الْقَوْمِ دُنُوَّ مَنْ يُرِيدُ أَنْ يُنْشِبَ الْحَرْبَ،\nوَلَا تَبَاعَدْ عَنْهُمْ تَبَاعُدَ مَنْ يَهَابُ الْبَأْسَ.',
+    english:
+      'Fear God, whom you must inevitably meet, and beyond whom there is no destination.\nDo not fight any except those who fight you.\nMarch in the two cools of the day, give the people rest at midday, and go gently in the journey.\nDo not travel in the first part of the night, for God has made it a time of rest, ordained for stillness, not for moving —\nso ease your body in it, and give your mounts repose.\nThen when you halt at the stretching of the predawn, or at the breaking of dawn, set out upon the blessing of God.\nWhen you meet the enemy, stand in the middle of your companions:\ndo not draw near the foe like one who wishes to kindle battle,\nand do not stand off from them like one who dreads combat.',
+    source: "Nahj al-Balagha, Letter 12 — to Ma'qil ibn Qays",
+    brief: {
+      en: 'March orders to a commander — fear God, fight only the aggressor, rest the men, stand neither too forward nor too far back.',
+      ar: 'أوامر المسير لقائد: التقوى، وعدم البدء بالقتال، وإراحة الجند، والوقوف في الوسط بين الإقدام والإحجام.',
+    },
+    theme: 'on the ethics of command, on the conduct of war',
+  },
+  {
+    title: { en: 'Letter 23 — His Final Will from the Death-Bed', ar: 'الكِتاب ٢٣ — وصيّتُه من فِراش الشهادة' },
+    arabic:
+      'وَصِيَّتِي لَكُمْ: أَلَّا تُشْرِكُوا بِاللَّهِ شَيْئًا،\nوَمُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ فَلَا تُضَيِّعُوا سُنَّتَهُ.\nأَقِيمُوا هَذَيْنِ الْعَمُودَيْنِ، وَأَوْقِدُوا هَذَيْنِ الْمِصْبَاحَيْنِ،\nوَخَلَاكُمْ ذَمٌّ مَا لَمْ تَشْرُدُوا.\nحُمِّلَ كُلُّ امْرِئٍ مِنْكُمْ مَجْهُودَهُ، وَخُفِّفَ عَنِ الْجَهَلَةِ.\nرَبٌّ رَحِيمٌ، وَدِينٌ قَوِيمٌ، وَإِمَامٌ عَلِيمٌ.\nأَنَا بِالْأَمْسِ صَاحِبُكُمْ، وَالْيَوْمَ عِبْرَةٌ لَكُمْ، وَغَدًا مُفَارِقُكُمْ.\nإِنْ أَبْقَ فَأَنَا وَلِيُّ دَمِي، وَإِنْ أَفْنَ فَالْفَنَاءُ مِيعَادِي،\nوَإِنْ أَعْفُ فَالْعَفْوُ لِي قُرْبَةٌ، وَهُوَ لَكُمْ حَسَنَةٌ، فَاعْفُوا.\nأَلَا تُحِبُّونَ أَنْ يَغْفِرَ اللَّهُ لَكُمْ؟',
+    english:
+      'My will to you: associate nothing with God,\nand as for Muhammad — God\'s blessings upon him and his family — do not let his way be lost.\nHold up these two pillars, light these two lamps,\nand no blame is on you so long as you do not stray.\nEach of you has been charged only with what he can bear, and the ignorant have been given lightening.\nA merciful Lord, an upright religion, a knowing Imam.\nYesterday I was your companion, today I am a lesson for you, and tomorrow I depart from you.\nIf I survive, I am the master of my own blood; if I perish, perishing is my appointed time;\nand if I pardon, pardon is for me a nearness to God and for you a good deed — so pardon.\nWould you not love that God should forgive you?',
+    source: 'Nahj al-Balagha, Letter 23 — spoken from his death-bed after the strike',
+    brief: {
+      en: "Imam Ali's last words to his community: hold the two pillars (Tawhid and the Prophet's way), and pardon — for it is dearer to God.",
+      ar: 'آخر كلمات الإمام لأمّته: تمسّكوا بالعمودين (التوحيد وسنّة النبيّ)، واعفوا — فهو أحبّ إلى الله.',
+    },
+    theme: 'on the final testament, on pardon, on parting',
+  },
+  {
+    title: { en: 'Letter 22 — To Ibn Abbas', ar: 'الكِتاب ٢٢ — إلى ابن عبّاس' },
+    arabic:
+      'أَمَّا بَعْدُ، فَإِنَّ الْمَرْءَ قَدْ يَسُرُّهُ دَرْكُ مَا لَمْ يَكُنْ لِيَفُوتَهُ،\nوَيَسُوؤُهُ فَوْتُ مَا لَمْ يَكُنْ لِيُدْرِكَهُ.\nفَلْيَكُنْ سُرُورُكَ بِمَا نِلْتَ مِنْ آخِرَتِكَ،\nوَلْيَكُنْ أَسَفُكَ عَلَى مَا فَاتَكَ مِنْهَا.\nوَمَا نِلْتَ مِنْ دُنْيَاكَ فَلَا تُكْثِرْ بِهِ فَرَحًا،\nوَمَا فَاتَكَ مِنْهَا فَلَا تَأْسَ عَلَيْهِ جَزَعًا،\nوَلْيَكُنْ هَمُّكَ فِيمَا بَعْدَ الْمَوْتِ.',
+    english:
+      'Now then — a man is sometimes pleased at attaining what was never going to slip from him, and grieved at losing what he was never going to attain.\nSo let your joy be in what you have gained for your hereafter,\nand let your sorrow be over what you have let slip of it.\nAs for what you have gained of this world, do not be excessive in delight at it;\nand what you have lost of it — do not give way to anguish over it.\nLet your concern be with what comes after death.',
+    source: 'Nahj al-Balagha, Letter 22 — to Ibn Abbas',
+    brief: {
+      en: 'Discipline of joy and grief — measure them by the next world, not this one.',
+      ar: 'تهذيب الفرح والحزن بميزان الآخرة لا الدنيا.',
+    },
+    theme: 'on detachment, on measuring joy and grief, on the discipline of the heart',
+  },
+]
+
+export const BASELINE_SERMONS: LongFormEntry[] = [
+  {
+    title: {
+      en: 'On the Pious',
+      ar: 'في صفات المتّقين',
+    },
+    arabic:
+      'فَالمُتَّقُونَ فِيهَا هُمْ أَهْلُ الفَضَائِلِ: مَنْطِقُهُمُ الصَّوَابُ، وَمَلْبَسُهُمُ الِاقْتِصَادُ، وَمَشْيُهُمُ التَّوَاضُعُ. غَضُّوا أَبْصَارَهُمْ عَمَّا حَرَّمَ اللَّهُ عَلَيْهِمْ، وَوَقَفُوا أَسْمَاعَهُمْ عَلَى العِلْمِ النَّافِعِ لَهُمْ. نُزِّلَتْ أَنْفُسُهُمْ مِنْهُمْ فِي البَلَاءِ كَالَّتِي نُزِّلَتْ فِي الرَّخَاءِ.',
+    english:
+      'The mindful are people of virtue: their speech is right, their dress moderate, their walking humble. They have lowered their gaze from what God has forbidden them, and stopped their ears at what is beneficial for them to hear. Their selves in hardship hold the same position they held in ease.',
+    source: 'Nahj al-Balagha, Sermon 193 — "The Sermon of the Pious" (al-Muttaqin), delivered to Hammam',
+    brief: {
+      en: 'A companion named Hammam asked Imam Ali to describe the pious in such a way that he could see them as if before his eyes. The Imam hesitated, then delivered this sermon. It is said that on hearing it Hammam fell into a state from which he did not recover, and died on the spot.',
+      ar: 'سأل صاحبٌ يُدعى همّامٌ الإمامَ عليّاً أن يصف المتّقين وصفاً يراهم به كأنّه ينظر إليهم. تردّد الإمام، ثمّ ألقى هذه الخطبة. ويُقال إنّ همّاماً سقط على إثرها مغشيّاً عليه ولم يُفِق، ومات في موضعه.',
+    },
+    theme: 'on character, on what mindfulness looks like, on integrity',
+  },
+  {
+    title: {
+      en: 'On the Beginning of Creation',
+      ar: 'في بدء الخلق',
+    },
+    arabic:
+      'الحَمْدُ لِلَّهِ الَّذِي لَا يَبْلُغُ مِدْحَتَهُ القَائِلُونَ، وَلَا يُحْصِي نَعْمَاءَهُ العَادُّونَ، وَلَا يُؤَدِّي حَقَّهُ المُجْتَهِدُونَ، الَّذِي لَا يُدْرِكُهُ بُعْدُ الهِمَمِ، وَلَا يَنَالُهُ غَوْصُ الفِطَنِ.',
+    english:
+      'Praise be to God whose praise no speaker reaches, whose blessings no counter exhausts, whose right no striver fulfils — who cannot be grasped by the reach of aspirations, nor caught by the dive of intellects.',
+    source: 'Nahj al-Balagha, Sermon 1 — the opening sermon, on creation',
+    brief: {
+      en: 'The first sermon in Nahj al-Balagha — a sustained meditation on the nature of God, creation, the angels, and the human journey. Considered one of the high points of Arabic prose across all centuries.',
+      ar: 'الخطبة الأولى في نهج البلاغة — تأمّل مستفيض في طبيعة الله، والخلق، والملائكة، ورحلة الإنسان. تُعدّ من قمم النثر العربيّ عبر العصور.',
+    },
+    theme: 'on God, on creation, on the limits of intellect',
+  },
+  {
+    title: {
+      en: 'On Why I Took the Caliphate',
+      ar: 'في علّة قبول الخلافة',
+    },
+    arabic:
+      'أَمَا وَالَّذِي فَلَقَ الحَبَّةَ وَبَرَأَ النَّسَمَةَ، لَوْلَا حُضُورُ الحَاضِرِ، وَقِيَامُ الحُجَّةِ بِوُجُودِ النَّاصِرِ، وَمَا أَخَذَ اللَّهُ عَلَى العُلَمَاءِ أَنْ لَا يُقَارُّوا عَلَى كِظَّةِ ظَالِمٍ، وَلَا سَغَبِ مَظْلُومٍ — لَأَلْقَيْتُ حَبْلَهَا عَلَى غَارِبِهَا.',
+    english:
+      'By the One who split the seed and brought forth the soul — were it not for the presence of those present, the standing of the proof by the availability of supporters, and the pledge God has taken from the learned not to remain content with the gluttony of an oppressor or the hunger of the oppressed — I would have cast its reins upon its withers.',
+    source: 'Nahj al-Balagha, Sermon 3 — the Shaqshaqiyya Sermon',
+    brief: {
+      en: "Imam Ali's most famous sermon on power — explaining why he accepted the caliphate when the people came to him after the death of the third Caliph. The phrase 'gluttony of an oppressor or hunger of the oppressed' became a constant reference in Islamic political ethics.",
+      ar: 'أشهر خطب الإمام عليّ في السلطة — يفسّر فيها لماذا قَبِل الخلافة حين جاءه الناس بعد مقتل الخليفة الثالث. وقد صارت عبارة "كِظّة ظالم وسَغَب مظلوم" مرجعاً ثابتاً في الأخلاق السياسية الإسلامية.',
+    },
+    theme: 'on power, on responsibility, on why one accepts a burden',
+  },
+  {
+    title: {
+      en: 'On the World',
+      ar: 'في الدنيا',
+    },
+    arabic:
+      'فَإِنَّ الدُّنْيَا قَدْ تَوَلَّتْ حَذَّاءَ، فَلَمْ يَبْقَ مِنْهَا إِلَّا صُبَابَةٌ كَصُبَابَةِ الإِنَاءِ اصْطَبَّهَا مُصْطَبُّهَا. أَلَا وَإِنَّ الدُّنْيَا قَدْ آذَنَتْ بِوَدَاعٍ، وَالآخِرَةَ قَدْ أَشْرَفَتْ بِاطِّلَاعٍ.',
+    english:
+      'This world has turned away in haste — nothing remains of it except a dribble like the dribble at the bottom of a vessel that has been emptied. The world has announced its farewell, and the next has overlooked from above.',
+    source: 'Nahj al-Balagha, Sermon 28',
+    brief: {
+      en: 'A short reflection on the brevity of life — frequently read aloud by classical orators across the centuries.',
+      ar: 'تأمّل قصير في قِصَر العمر — كثيراً ما يقرأه الخطباء الكلاسيكيّون عبر القرون.',
+    },
+    theme: 'on the brevity of life, on the long view, on death',
+  },
+  {
+    title: {
+      en: 'A Description of His Own Companions',
+      ar: 'في وصف أصحابه',
+    },
+    arabic:
+      'لَقَدْ رَأَيْتُ أَصْحَابَ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ، فَمَا أَرَى أَحَدًا يُشْبِهُهُمْ. لَقَدْ كَانُوا يُصْبِحُونَ شُعْثًا غُبْرًا، وَقَدْ بَاتُوا سُجَّدًا وَقِيَامًا — يُرَاوِحُونَ بَيْنَ جِبَاهِهِمْ وَخُدُودِهِمْ، وَيَقِفُونَ عَلَى مِثْلِ الجَمْرِ مِنْ ذِكْرِ مَعَادِهِمْ.',
+    english:
+      'I knew the companions of Muhammad (peace be upon him and his family) — and I see none who resemble them. They would rise in the morning dishevelled and dust-covered, having spent the night in prostration and standing — alternating between their foreheads and cheeks — and stood on what felt like burning coals from remembering their return to God.',
+    source: 'Nahj al-Balagha, Sermon 96',
+    brief: {
+      en: 'A witness from Imam Ali about the early companions he knew personally — and a measure of how he saw the generation after them.',
+      ar: 'شهادة من الإمام عليّ في أصحاب النبيّ الذين عرفهم شخصيّاً — ومقياس لما يراه في الجيل الذي بعدهم.',
+    },
+    theme: 'on devotion, on the early generation, on what changed',
+  },
+  // ── v46.1 corpus expansion · sermons ──────────────────────────
+  {
+    title: {
+      en: 'The Sermon of Jihad',
+      ar: 'في الحثّ على الجهاد',
+    },
+    arabic:
+      'أَمَّا بَعْدُ، فَإِنَّ الجِهَادَ بَابٌ مِنْ أَبْوَابِ الجَنَّةِ، فَتَحَهُ اللَّهُ لِخَاصَّةِ أَوْلِيَائِهِ، وَهُوَ لِبَاسُ التَّقْوَى، وَدِرْعُ اللَّهِ الحَصِينَةُ، وَجُنَّتُهُ الوَثِيقَةُ. فَمَنْ تَرَكَهُ رَغْبَةً عَنْهُ أَلْبَسَهُ اللَّهُ ثَوْبَ الذُّلِّ، وَشَمِلَهُ البَلَاءُ.',
+    english:
+      'To proceed: jihad is one of the gates of Paradise, which God has opened for His closest friends. It is the garment of mindfulness, the impenetrable armour of God, and His trustworthy shield. Whoever abandons it out of distaste, God clothes him in the garment of humiliation, and calamity envelops him.',
+    source: 'Nahj al-Balagha, Sermon 27 — "The Sermon of Jihad"',
+    brief: {
+      en: 'Imam Ali delivered this after the Syrian forces of Muawiya raided Anbar and killed civilians; he rebuked the Kufans for their reluctance to mobilise in defence of the wronged.',
+      ar: 'ألقى الإمامُ عليٌّ هذه الخطبةَ بعد إغارةِ جيوشِ الشّامِ على الأنبارِ وقتلِ أهلِها، موبِّخاً أهلَ الكوفةِ على تخاذلِهم عن نُصرةِ المظلومين.',
+    },
+    theme: 'on courage, on the cost of passivity, on standing for the wronged',
+  },
+  {
+    title: {
+      en: 'On the Prophet, Peace Be Upon Him',
+      ar: 'في وصف النبيّ صلّى الله عليه وآله',
+    },
+    arabic:
+      'أَرْسَلَهُ عَلَى حِينِ فَتْرَةٍ مِنَ الرُّسُلِ، وَطُولِ هَجْعَةٍ مِنَ الأُمَمِ، وَانْتِقَاضٍ مِنَ المُبْرَمِ، فَجَاءَهُمْ بِتَصْدِيقِ الَّذِي بَيْنَ يَدَيْهِ، وَالنُّورِ المُقْتَدَى بِهِ. ذَلِكَ القُرْآنُ فَاسْتَنْطِقُوهُ، وَلَنْ يَنْطِقَ، وَلَكِنْ أُخْبِرُكُمْ عَنْهُ: أَلَا إِنَّ فِيهِ عِلْمَ مَا يَأْتِي، وَالحَدِيثَ عَنِ المَاضِي، وَدَوَاءَ دَائِكُمْ، وَنَظْمَ مَا بَيْنَكُمْ.',
+    english:
+      'God sent him during an interval between messengers, during a long slumber of the nations, when firm covenants were unravelling. He came confirming what was before him and bearing a light to be followed. That is the Quran — so make it speak, though it will never speak. But I will tell you about it: in it is the knowledge of what is to come, the account of what is past, the cure for your ailment, and the ordering of all that lies between you.',
+    source: 'Nahj al-Balagha, Sermon 158',
+    brief: {
+      en: "A celebrated passage on the timing of the Prophet's mission and the living function of the Quran as guidance, diagnosis, and remedy for every age.",
+      ar: 'مقطعٌ مشهورٌ يصفُ زمنَ بعثةِ النبيِّ ومهمَّتَه، ووظيفةَ القرآنِ بوصفِه هدايةً ودواءً للأمَّةِ في كلِّ زمان.',
+    },
+    theme: 'on the Prophet, on the Quran, on guidance',
+  },
+  {
+    title: {
+      en: 'On Death and the Grave',
+      ar: 'في ذكر الموت وما بعده',
+    },
+    arabic:
+      'فَلَوْ رَأَيْتَ، عِبَادَ اللَّهِ، حَيْثُ يَتَرَدَّى بَعْدَ الحَيَاةِ ضِيقَ القَبْرِ، فَيَا لَهَا حَفِيرَةً، عَلَى سَاكِنِهَا مَا أَضْيَقَهَا، وَفِي أَيِّ بُقْعَةٍ بَلَدِهَا مَا أَوْحَشَهَا. وَإِنَّ لِلْمَوْتِ لَغَمَرَاتٍ هِيَ أَفْظَعُ مِنْ أَنْ تُسْتَغْرَقَ بِصِفَةٍ. كَأَنَّكَ بِالأَمْرِ قَدْ نَزَلَ بِكَ، فَأَعَدَّ لَهُ جَوَابَهُ، وَأَكْثِرْ زَادَهُ.',
+    english:
+      'O servants of God, if only you could see where, after life, one tumbles into the narrowness of the grave — what a pit it is, how cramped upon its inhabitant, what an isolating place in any land it occupies. Death has agonies too dreadful to be captured in description. It is as if the matter has already descended upon you — so prepare your answer for it, and pack abundant provision.',
+    source: 'Nahj al-Balagha, Sermon 221',
+    brief: {
+      en: "A meditation on the moment of dying and the silence of the grave, delivered to shake hearts numbed by the routine of worldly life.",
+      ar: 'تأمُّلٌ في لحظةِ الموتِ ووحشةِ القبرِ، ألقاه الإمامُ ليُنبِّهَ القلوبَ الَّتي ألهتْها الحياةُ الدّنيا.',
+    },
+    theme: 'on mortality, on preparation, on the grave',
+  },
+  {
+    title: {
+      en: 'The Mutual Right of Ruler and Ruled',
+      ar: 'في حقّ الوالي والرعيّة',
+    },
+    arabic:
+      'أَمَّا بَعْدُ، فَقَدْ جَعَلَ اللَّهُ سُبْحَانَهُ لِي عَلَيْكُمْ حَقًّا بِوِلَايَةِ أَمْرِكُمْ، وَلَكُمْ عَلَيَّ مِنَ الحَقِّ مِثْلُ الَّذِي لِي عَلَيْكُمْ. فَالحَقُّ أَوْسَعُ الأَشْيَاءِ فِي التَّوَاصُفِ، وَأَضْيَقُهَا فِي التَّنَاصُفِ. لَا يَجْرِي لِأَحَدٍ إِلَّا جَرَى عَلَيْهِ، وَلَا يَجْرِي عَلَيْهِ إِلَّا جَرَى لَهُ.',
+    english:
+      'God has placed a right upon you for me through my guardianship of your affair, and you have upon me a right equal to mine upon you. Right is the broadest of things in description and the narrowest in mutual fulfilment. It runs for no one without also running against him, and runs against no one without also running for him.',
+    source: 'Nahj al-Balagha, Sermon 216',
+    brief: {
+      en: "A foundational statement on reciprocal rights: authority creates obligation in both directions, with no one excepted from mutual accountability except God.",
+      ar: 'بيانٌ تأسيسيٌّ في الحقوقِ المتبادلةِ، يُعلِنُ فيه الإمامُ أنَّ الولايةَ تُنشئُ التزاماً في الاتِّجاهين، ولا يستثنى أحدٌ من المساءلةِ المتبادلةِ إلَّا الله.',
+    },
+    theme: 'on justice, on leadership, on mutual obligation',
+  },
+  {
+    title: {
+      en: 'On the Creation of the Peacock',
+      ar: 'في خلق الطاووس',
+    },
+    arabic:
+      'وَمِنْ أَعْجَبِهَا خَلْقًا الطَّاوُوسُ، الَّذِي أَقَامَهُ فِي أَحْكَمِ تَعْدِيلٍ، وَنَضَّدَ أَلْوَانَهُ فِي أَحْسَنِ تَنْضِيدٍ، بِجَنَاحٍ أَشْرَجَ قَصَبَهُ، وَذَنَبٍ أَطَالَ مَسْحَبَهُ. إِذَا دَرَجَ إِلَى الأُنْثَى نَشَرَهُ مِنْ طَيِّهِ، وَسَمَا بِهِ مُطِلًّا عَلَى رَأْسِهِ كَأَنَّهُ قِلْعُ دَارِيٍّ عَنَجَهُ نُوتِيُّهُ. يَخْتَالُ بِأَلْوَانِهِ، وَيَمِيسُ بِزَيَفَانِهِ.',
+    english:
+      "Among the most wondrous of God's creatures in form is the peacock, whom He set up in the most exquisite balance and whose colours He arranged in the finest arrangement, with a wing whose quills He fitted together, and a tail whose train He lengthened. When he struts toward the female, he unfurls it from its folds and raises it overhead like the sail of a Darian ship hauled up by its sailor. He swaggers with his colours and sways with his prancing.",
+    source: 'Nahj al-Balagha, Sermon 165',
+    brief: {
+      en: "A famous passage of natural theology — Imam Ali contemplating the peacock as evidence of the Maker's artistry, dwelling on its colours, display, and design.",
+      ar: 'مقطعٌ مشهورٌ من الخطبةِ يتأمَّلُ فيه الإمامُ خلقَ الطّاووسِ دليلاً على صنعِ الخالقِ، واصفاً ألوانَه ومشيتَه وبديعَ تركيبِه.',
+    },
+    theme: 'on creation, on the signs of God, on wonder',
+  },
+  {
+    title: {
+      en: 'On the Transience of This World',
+      ar: 'في زهرة الدنيا وفنائها',
+    },
+    arabic:
+      'أَيُّهَا النَّاسُ، انْظُرُوا إِلَى الدُّنْيَا نَظَرَ الزَّاهِدِينَ فِيهَا، الصَّادِفِينَ عَنْهَا، فَإِنَّهَا وَاللَّهِ عَمَّا قَلِيلٍ تُزِيلُ السَّاكِنَ الآمِنَ، وَتَفْجَعُ المُتْرَفَ الوَادِعَ. لَا يَرْجِعُ مَا تَوَلَّى مِنْهَا فَأَدْبَرَ. سُرُورُهَا مَشُوبٌ بِالحُزْنِ، وَجَلَدُ الرِّجَالِ فِيهَا إِلَى الضَّعْفِ وَالوَهْنِ. فَلَا يَغُرَّنَّكُمْ كَثْرَةُ مَا يُعْجِبُكُمْ فِيهَا، لِقِلَّةِ مَا يَصْحَبُكُمْ مِنْهَا.',
+    english:
+      'O people, look upon the world with the gaze of those who turn from it in detachment. For by God, before long it dislodges the settled and the secure, and strikes the comfortable with grief. What has gone from it and turned its back does not return. Its delight is mingled with sorrow, and the strength of men within it ends in feebleness. So do not let the multitude of things that please you in it deceive you, for little of it will accompany you.',
+    source: 'Nahj al-Balagha, Sermon 103',
+    brief: {
+      en: 'A sober address urging the listener to look at the world with the detached eye of one who knows its impermanence — neither seduced by its pleasures nor surprised by its losses.',
+      ar: 'خطابٌ رزينٌ يدعو السَّامعَ إلى النّظرِ إلى الدّنيا بعينِ الزّاهدِ العارفِ بفنائِها، فلا تخدعه ملذَّاتُها ولا تفجؤه مصائبُها.',
+    },
+    theme: 'on detachment, on impermanence, on inner clarity',
+  },
+  {
+    title: {
+      en: 'I Was Like a Mountain — Why I Held My Hand',
+      ar: 'في الصبر على المظلمة',
+    },
+    arabic:
+      'فَنَظَرْتُ فَإِذَا لَيْسَ لِي مُعِينٌ إِلَّا أَهْلُ بَيْتِي، فَضَنِنْتُ بِهِمْ عَنِ المَوْتِ، وَأَغْضَيْتُ عَلَى القَذَى، وَشَرِبْتُ عَلَى الشَّجَا، وَصَبَرْتُ عَلَى أَخْذِ الكَظَمِ، وَعَلَى أَمَرَّ مِنْ طَعْمِ العَلْقَمِ.',
+    english:
+      'I looked and found I had no helper but the people of my house — and I was unwilling to expose them to death. So I closed my eyes despite the dust in them, swallowed despite the lump in my throat, and bore patiently the choking grip and what was bitterer than the taste of colocynth.',
+    source: 'Nahj al-Balagha, Sermon 26',
+    brief: {
+      en: "A wrenching account of why Imam Ali withheld his hand after the Prophet's death: lacking helpers beyond his immediate family, he chose patience over conflict.",
+      ar: 'وصفٌ مؤثِّرٌ يبيِّن فيه الإمامُ سببَ صبرِه بعد وفاةِ النبيِّ، إذ لم يجدْ ناصراً سوى أهلِ بيتِه، فاختار الصّبرَ على القتالِ حفاظاً عليهم.',
+    },
+    theme: 'on patience, on principled restraint, on bearing injustice',
+  },
+  {
+    title: { en: 'The Graveyard Address', ar: 'خِطابُ أَهْلِ القُبور' },
+    arabic:
+      'يَا أَهْلَ الدِّيَارِ الْمُوحِشَةِ، وَالمَحَالِّ المُقْفِرَةِ، وَالقُبُورِ المُظْلِمَةِ.\nيَا أَهْلَ التُّرْبَةِ، يَا أَهْلَ الغُرْبَةِ، يَا أَهْلَ الوَحْدَةِ، يَا أَهْلَ الوَحْشَةِ.\nأَنْتُمْ لَنَا فَرَطٌ سَابِقٌ، وَنَحْنُ لَكُمْ تَبَعٌ لَاحِقٌ.\nأَمَّا الدُّورُ فَقَدْ سُكِنَتْ، وَأَمَّا الأَزْوَاجُ فَقَدْ نُكِحَتْ، وَأَمَّا الأَمْوَالُ فَقَدْ قُسِّمَتْ.\nهَذَا خَبَرُ مَا عِنْدَنَا، فَمَا خَبَرُ مَا عِنْدَكُمْ؟\nثُمَّ الْتَفَتَ إِلَى أَصْحَابِهِ فَقَالَ: أَمَا لَوْ أُذِنَ لَهُمْ فِي الكَلَامِ لَأَخْبَرُوكُمْ أَنَّ خَيْرَ الزَّادِ التَّقْوَى.',
+    english:
+      'O people of the desolate dwellings, the empty quarters, the dark graves.\nO people of the dust, O people of estrangement, O people of solitude, O people of dread.\nYou have gone ahead of us, and we are following behind.\nAs for the houses — they have been inhabited. As for the spouses — they have been remarried. As for the wealth — it has been divided.\nThis is the news from our side; so what is the news from yours?\nThen he turned to his companions and said: If they were permitted to speak, they would tell you that the best provision is fear of God.',
+    source: 'Nahj al-Balagha, Saying 130 (the graveyard address near Kufa)',
+    brief: {
+      en: 'Imam Ali stopped at the graves on his return from Siffin and addressed the dead — one of the most piercing passages on mortality in the tradition.',
+      ar: 'وقف الإمامُ على المقابرِ عند رجوعِه من صفّين فخاطبَ الموتى، وهو من أبلغِ ما قيلَ في الموتِ.',
+    },
+    theme: 'on the grave, on visiting the dead, when sensing mortality',
+  },
+  {
+    title: { en: 'What Death Truly Is', ar: 'حَقيقَةُ المَوْتِ' },
+    arabic:
+      'فَلَوْ رَأَيْتَ، عِبَادَ اللَّهِ، مَا قَدْ نَزَلُوا حَيْثُ نَزَلُوا.\nقَدِ ارْتَهَنَتْهُمْ هُنَاكَ الأَعْمَالُ، وَغَلَبَتْهُمُ الأَهْوَالُ.\nأَكَلَتِ الأَرْضُ مِنْ لُحُومِهِمْ، فَأَصْبَحُوا فِي حُفَرِ الأَجْدَاثِ جِيرَانًا لَا يَتَزَاوَرُونَ، وَنُدَمَاءَ لَا يَتَعَاشَرُونَ.\nبَلِيَتْ بَيْنَهُمْ عُرَى التَّعَارُفِ، وَانْقَطَعَتْ مِنْهُمْ أَسْبَابُ الإِخَاءِ.\nفَكُلُّهُمْ وَحِيدٌ وَهُمْ جَمِيعٌ، وَبِجَانِبِ الهَجْرِ وَهُمْ أَخِلَّاءُ.\nلَا يَتَعَارَفُونَ لِلَيْلٍ صَبَاحًا، وَلَا لِنَهَارٍ مَسَاءً.',
+    english:
+      'If you could only see, O servants of God, where they have descended and where they have come to rest.\nThere their deeds have taken them hostage, and the terrors have overwhelmed them.\nThe earth has eaten from their flesh, and they have become in the pits of the graves neighbours who do not visit one another, companions who do not converse.\nThe bonds of mutual acquaintance among them have worn away, and the ties of brotherhood have been severed.\nEach of them is alone though they are together, on the side of estrangement though they are intimates.\nThey do not know morning from a night, nor evening from a day.',
+    source: "Nahj al-Balagha, Sermon 221 (after recitation of 'Vying for more distracts you')",
+    brief: {
+      en: 'From the sermon delivered after reciting Surat al-Takathur — a vivid description of the state of the dead in their graves.',
+      ar: 'من الخطبةِ التي ألقاها بعد تلاوةِ سورةِ التكاثرِ، يصفُ فيها حالَ الموتى في قبورِهم.',
+    },
+    theme: 'on death, on the grave, on what waits in the earth',
+  },
+  {
+    title: { en: 'What Did He Send Ahead?', ar: 'مَاذَا قَدَّمَ؟' },
+    arabic:
+      'أَيُّهَا النَّاسُ، إِنَّمَا الدُّنْيَا دَارُ مَجَازٍ، وَالآخِرَةُ دَارُ قَرَارٍ.\nفَخُذُوا مِنْ مَمَرِّكُمْ لِمَقَرِّكُمْ.\nوَلَا تَهْتِكُوا أَسْتَارَكُمْ عِنْدَ مَنْ يَعْلَمُ أَسْرَارَكُمْ.\nوَأَخْرِجُوا مِنَ الدُّنْيَا قُلُوبَكُمْ مِنْ قَبْلِ أَنْ تَخْرُجَ مِنْهَا أَبْدَانُكُمْ.\nفَفِي الدُّنْيَا حُيِّيتُمْ، وَلِغَيْرِهَا خُلِقْتُمْ.\nإِنَّ المَرْءَ إِذَا هَلَكَ قَالَ النَّاسُ: مَا تَرَكَ؟ وَقَالَتِ المَلَائِكَةُ: مَا قَدَّمَ؟\nفَلِلَّهِ آبَاؤُكُمْ، فَقَدِّمُوا بَعْضًا يَكُنْ لَكُمْ قَرْضًا، وَلَا تُخَلِّفُوا كُلًّا فَيَكُونَ عَلَيْكُمْ كَلًّا.',
+    english:
+      'O people, this world is only a place of passage, and the Hereafter is the abode of permanence.\nSo take from your thoroughfare for your dwelling.\nDo not tear away your veils before the One who knows your secrets.\nTake your hearts out of this world before your bodies leave it.\nFor in this world you have been kept alive, but for another you were created.\nWhen a man perishes, the people say: "What did he leave behind?" but the angels say: "What did he send ahead?"\nMay God bless your fathers — send something ahead so it may be a loan in your favour, and do not leave everything behind, lest it become a burden against you.',
+    source: 'Nahj al-Balagha, Saying 203',
+    brief: {
+      en: 'A short address contrasting the two questions asked at death — the one the world asks, and the one the angels ask.',
+      ar: 'خطابٌ قصيرٌ يقابلُ بين سؤالِ الناسِ وسؤالِ الملائكةِ عند موتِ الإنسانِ.',
+    },
+    theme: 'on death, on what we send ahead, when preparing for the journey',
+  },
+  {
+    title: { en: 'The Pangs of Death', ar: 'سَكَرَاتُ المَوْتِ' },
+    arabic:
+      'اجْتَمَعَتْ عَلَيْهِمْ سَكْرَةُ المَوْتِ وَحَسْرَةُ الفَوْتِ.\nفَفَتَرَتْ لَهَا أَطْرَافُهُمْ، وَتَغَيَّرَتْ لَهَا أَلْوَانُهُمْ.\nثُمَّ ازْدَادَ المَوْتُ فِيهِمْ وُلُوجًا، فَحِيلَ بَيْنَ أَحَدِهِمْ وَبَيْنَ مَنْطِقِهِ.\nوَإِنَّهُ لَبَيْنَ أَهْلِهِ يَنْظُرُ بِبَصَرِهِ، وَيَسْمَعُ بِأُذُنِهِ، عَلَى صِحَّةٍ مِنْ عَقْلِهِ وَبَقَاءٍ مِنْ لُبِّهِ.\nيُفَكِّرُ فِيمَ أَفْنَى عُمُرَهُ، وَفِيمَ أَذْهَبَ دَهْرَهُ.\nوَيَتَذَكَّرُ أَمْوَالًا جَمَعَهَا، أَغْمَضَ فِي مَطَالِبِهَا، وَأَخَذَهَا مِنْ مُصَرَّحَاتِهَا وَمُشْتَبِهَاتِهَا.\nقَدْ لَزِمَتْهُ تَبِعَاتُ جَمْعِهَا، وَأَشْرَفَ عَلَى فِرَاقِهَا.\nتَبْقَى لِمَنْ وَرَاءَهُ يَنْعَمُونَ فِيهَا، وَيَتَمَتَّعُونَ بِهَا.\nفَيَكُونُ المَهْنَأُ لِغَيْرِهِ، وَالعِبْءُ عَلَى ظَهْرِهِ.',
+    english:
+      'The agony of death and the regret of loss come upon them together.\nTheir limbs grow slack at it, and their complexions change.\nThen death drives deeper into them, and a man is cut off from his own speech.\nYet he is among his family, still seeing with his eye, hearing with his ear, his mind sound, his intellect intact.\nHe ponders: in what did I waste my life? In what did I let my time pass?\nHe remembers wealth he gathered, closing his eyes to how he sought it, taking it from the lawful and the doubtful alike.\nThe consequences of gathering it now cling to him, and he is on the verge of departing from it.\nIt will remain for those after him to enjoy and take pleasure in.\nThe ease is for another, but the load is on his back.',
+    source: 'Nahj al-Balagha, Sermon 109',
+    brief: {
+      en: 'Imam Ali describes the moment of death from the inside — the dying man still aware, watching what he built slip into other hands.',
+      ar: 'يصفُ الإمامُ لحظةَ الموتِ من داخلِها، والمحتضرُ يرى مالَه ينتقلُ إلى غيرِه.',
+    },
+    theme: 'on death, on the deathbed, on what we leave behind',
+  },
+  {
+    title: { en: 'The Bridge and the Day of Resurrection', ar: 'الصِّرَاطُ وَيَوْمُ القِيَامَةِ' },
+    arabic:
+      'وَاعْلَمُوا أَنَّ مَجَازَكُمْ عَلَى الصِّرَاطِ وَمَزَالِقِ دَحْضِهِ، وَأَهَاوِيلِ زَلَلِهِ، وَتَارَاتِ أَهْوَالِهِ.\nفَاتَّقُوا اللَّهَ عِبَادَ اللَّهِ تَقِيَّةَ ذِي لُبٍّ شَغَلَ التَّفَكُّرُ قَلْبَهُ.\nوَأَنْصَبَ الخَوْفُ بَدَنَهُ، وَأَسْهَرَ التَّهَجُّدُ غِرَارَ نَوْمِهِ.\nوَأَظْمَأَ الرَّجَاءُ هَوَاجِرَ يَوْمِهِ.\nوَظَلَفَ الزُّهْدُ شَهَوَاتِهِ، وَأَوْجَفَ الذِّكْرُ بِلِسَانِهِ.\nوَقَدَّمَ الخَوْفَ لِأَمَانِهِ، وَتَنَكَّبَ المَخَالِجَ عَنْ وَضَحِ السَّبِيلِ.\nوَسَلَكَ أَقْصَدَ المَسَالِكِ إِلَى النَّهْجِ المَطْلُوبِ.',
+    english:
+      'Know that your crossing is upon the Bridge — its slippery footing, the terrors of its stumbling, the waves of its horrors.\nSo fear God, O servants of God, with the fear of a man of reason whose heart is preoccupied with reflection.\nFear has wearied his body, and the night vigil has banished the snatches of his sleep.\nHope has parched his hot midday with thirst.\nAsceticism has restrained his desires, and remembrance has set his tongue in motion.\nHe has put fear forward for the sake of his security, turned aside from the deviations off the clear road,\nand traveled the straightest path toward the sought-after way.',
+    source: "Nahj al-Balagha, Sermon 83 (al-Gharra')",
+    brief: {
+      en: "From the famed Gharra' sermon — the crossing of the Bridge on the Day of Resurrection and the portrait of the soul prepared for that day.",
+      ar: 'من خطبةِ الغرّاءِ المشهورةِ، يصفُ المجازَ على الصراطِ وحالَ من استعدَّ لذلك اليومِ.',
+    },
+    theme: 'on the reckoning, on the Day of Judgment, on the Bridge',
+  },
+  {
+    title: { en: 'The Gathering and the Reckoning', ar: 'المَحْشَرُ وَالحِسَابُ' },
+    arabic:
+      'اعْلَمُوا عِبَادَ اللَّهِ أَنَّ عَلَيْكُمْ رَصَدًا مِنْ أَنْفُسِكُمْ، وَعُيُونًا مِنْ جَوَارِحِكُمْ.\nوَحُفَّاظَ صِدْقٍ يَحْفَظُونَ أَعْمَالَكُمْ، وَعَدَدَ أَنْفَاسِكُمْ.\nلَا تَسْتُرُكُمْ مِنْهُمْ ظُلْمَةُ لَيْلٍ دَاجٍ، وَلَا يُكِنُّكُمْ مِنْهُمْ بَابٌ ذُو رِتَاجٍ.\nوَإِنَّ غَدًا مِنَ اليَوْمِ قَرِيبٌ.\nيَذْهَبُ اليَوْمُ بِمَا فِيهِ، وَيَجِيءُ الغَدُ لَاحِقًا بِهِ.\nفَكَأَنَّ كُلَّ امْرِئٍ مِنْكُمْ قَدْ بَلَغَ مِنَ الأَرْضِ مَنْزِلَ وَحْدَتِهِ، وَمَخَطَّ حُفْرَتِهِ.\nفَيَا لَهُ مِنْ بَيْتِ وَحْدَةٍ، وَمَنْزِلِ وَحْشَةٍ، وَمُفْرَدِ غُرْبَةٍ!\nوَكَأَنَّ الصَّيْحَةَ قَدْ أَتَتْكُمْ، وَالسَّاعَةَ قَدْ غَشِيَتْكُمْ.\nوَبَرَزْتُمْ لِفَصْلِ القَضَاءِ، قَدْ زَاحَتْ عَنْكُمُ الأَبَاطِيلُ، وَاضْمَحَلَّتْ عَنْكُمُ العِلَلُ.',
+    english:
+      'Know, O servants of God, that watchers from your own selves are upon you, and spies from your own limbs,\nand truthful keepers who record your deeds and the number of your breaths.\nNo darkness of a deep night conceals you from them, no bolted door shuts you off from them.\nTomorrow is near to today.\nToday goes with what is in it, and tomorrow follows it.\nIt is as if each of you has already reached his solitary station in the earth, the pit dug for him.\nO what a house of loneliness, what a dwelling of dread, what an abode of estrangement alone!\nIt is as if the Cry has reached you, the Hour has overtaken you,\nand you have emerged for the final judgment — falsehoods have departed from you, excuses have fallen away.',
+    source: 'Nahj al-Balagha, Sermon 157',
+    brief: {
+      en: 'Imam Ali brings the Day of Gathering close — collapsing the distance between today and the moment of standing for judgment.',
+      ar: 'يقرّبُ الإمامُ يومَ المحشرِ، فيلغي المسافةَ بين اليومِ ولحظةِ الوقوفِ للحسابِ.',
+    },
+    theme: 'on the reckoning, on the Day of Judgment, on the gathering',
+  },
+  {
+    title: { en: 'He Is Not Known by Likeness', ar: 'لَا يُعْرَفُ بِالْمُمَاثَلَةِ' },
+    arabic:
+      'الْحَمْدُ لِلَّهِ الَّذِي لَا تُدْرِكُهُ الشَّوَاهِدُ، وَلَا تَحْوِيهِ الْمَشَاهِدُ.\nوَلَا تَرَاهُ النَّوَاظِرُ، وَلَا تَحْجُبُهُ السَّوَاتِرُ.\nالدَّالِّ عَلَى قِدَمِهِ بِحُدُوثِ خَلْقِهِ، وَبِحُدُوثِ خَلْقِهِ عَلَى وُجُودِهِ.\nوَبِاشْتِبَاهِهِمْ عَلَى أَنْ لَا شَبَهَ لَهُ.\nالَّذِي صَدَقَ فِي مِيعَادِهِ، وَارْتَفَعَ عَنْ ظُلْمِ عِبَادِهِ.\nوَقَامَ بِالْقِسْطِ فِي خَلْقِهِ، وَعَدَلَ عَلَيْهِمْ فِي حُكْمِهِ.\nوَاحِدٌ لَا بِعَدَدٍ، وَدَائِمٌ لَا بِأَمَدٍ، وَقَائِمٌ لَا بِعَمَدٍ.',
+    english:
+      'Praise be to God whom the senses cannot perceive, and whom no place can contain.\nWhom no eye can see, and whom no veil can hide.\nHe who proves His eternity by the origination of His creation, and by the origination of His creation upon His own existence,\nand by their resemblance to one another that He has no likeness.\nHe is the true keeper of His promise, far above wronging His servants.\nHe stands by equity among His creation and rules over them with justice.\nOne, not by number; everlasting, not by duration; standing, not by props.',
+    source: 'Nahj al-Balagha, Sermon 152',
+    brief: {
+      en: 'Created things testify to their Creator precisely by their poverty: their origination proves His pre-eternity, their resemblance proves His unlikeness.',
+      ar: 'المخلوقاتُ تدلُّ على خالقِها بفقرِها، وحدوثُها شاهدٌ على أزليّتِه.',
+    },
+    theme: 'on tawhid, on knowing God through creation',
+  },
+  {
+    title: { en: 'The Foremost in Religion Is to Know Him', ar: 'أَوَّلُ الدِّينِ مَعْرِفَتُهُ' },
+    arabic:
+      'أَوَّلُ الدِّينِ مَعْرِفَتُهُ، وَكَمَالُ مَعْرِفَتِهِ التَّصْدِيقُ بِهِ.\nوَكَمَالُ التَّصْدِيقِ بِهِ تَوْحِيدُهُ، وَكَمَالُ تَوْحِيدِهِ الْإِخْلَاصُ لَهُ.\nوَكَمَالُ الْإِخْلَاصِ لَهُ نَفْيُ الصِّفَاتِ عَنْهُ.\nلِشَهَادَةِ كُلِّ صِفَةٍ أَنَّهَا غَيْرُ الْمَوْصُوفِ.\nوَشَهَادَةِ كُلِّ مَوْصُوفٍ أَنَّهُ غَيْرُ الصِّفَةِ.\nفَمَنْ وَصَفَ اللَّهَ سُبْحَانَهُ فَقَدْ قَرَنَهُ.\nوَمَنْ قَرَنَهُ فَقَدْ ثَنَّاهُ، وَمَنْ ثَنَّاهُ فَقَدْ جَزَّأَهُ.\nوَمَنْ جَزَّأَهُ فَقَدْ جَهِلَهُ.\nوَمَنْ جَهِلَهُ فَقَدْ أَشَارَ إِلَيْهِ.\nوَمَنْ أَشَارَ إِلَيْهِ فَقَدْ حَدَّهُ، وَمَنْ حَدَّهُ فَقَدْ عَدَّهُ.',
+    english:
+      'The foremost in religion is the knowledge of Him, and the perfection of knowing Him is to affirm Him.\nThe perfection of affirming Him is to declare His oneness, and the perfection of declaring His oneness is sincerity toward Him.\nThe perfection of sincerity toward Him is to deny attributes of Him —\nfor every attribute bears witness that it is other than that which it qualifies,\nand every qualified thing bears witness that it is other than the attribute.\nSo whoever ascribes an attribute to God has joined a partner to Him.\nWhoever joins a partner to Him has made Him two; whoever makes Him two has divided Him.\nWhoever divides Him is ignorant of Him.\nWhoever is ignorant of Him points to Him.\nWhoever points to Him has set a limit upon Him, and whoever sets a limit upon Him has numbered Him.',
+    source: 'Nahj al-Balagha, Sermon 1 (the apophatic cascade)',
+    brief: {
+      en: "The opening cascade of Sermon 1: religion's beginning is knowing Him; the height of that knowing is to deny any attribute beside His essence.",
+      ar: 'سلّمُ المعرفةِ من التصديقِ إلى نفيِ الصفاتِ، فكلُّ وصفٍ تحديدٌ.',
+    },
+    theme: 'on tawhid, on apophatic theology, on the divine attributes',
+  },
+  {
+    title: { en: 'No State Precedes Another in Him', ar: 'لَمْ تَسْبِقْ لَهُ حَالٌ حَالًا' },
+    arabic:
+      'الْحَمْدُ لِلَّهِ الَّذِي لَمْ تَسْبِقْ لَهُ حَالٌ حَالًا.\nفَيَكُونَ أَوَّلًا قَبْلَ أَنْ يَكُونَ آخِرًا، وَيَكُونَ ظَاهِرًا قَبْلَ أَنْ يَكُونَ بَاطِنًا.\nكُلُّ مُسَمًّى بِالْوَحْدَةِ غَيْرَهُ قَلِيلٌ، وَكُلُّ عَزِيزٍ غَيْرَهُ ذَلِيلٌ.\nوَكُلُّ قَوِيٍّ غَيْرَهُ ضَعِيفٌ، وَكُلُّ مَالِكٍ غَيْرَهُ مَمْلُوكٌ.\nوَكُلُّ عَالِمٍ غَيْرَهُ مُتَعَلِّمٌ، وَكُلُّ قَادِرٍ غَيْرَهُ يَقْدِرُ وَيَعْجَزُ.\nلَمْ يَخْلُقْ مَا خَلَقَهُ لِتَشْدِيدِ سُلْطَانٍ، وَلَا خَوْفٍ مِنْ زَوَالٍ وَنُقْصَانٍ.\nوَلَا اسْتِعَانَةٍ عَلَى نِدٍّ مُكَاثِرٍ، وَلَا شَرِيكٍ مُكَابِرٍ.',
+    english:
+      'Praise be to God for whom no state precedes another state.\nSo that He should be First before being Last, or Manifest before being Hidden.\nEvery named-as-one besides Him is small; every powerful one besides Him is weak.\nEvery strong one besides Him is feeble; every owner besides Him is owned.\nEvery knower besides Him is a learner; every able one besides Him is by turns able and incapable.\nHe did not create what He created to consolidate a kingdom, nor from fear of decline and diminution,\nnor seeking aid against a rival who outnumbers Him, nor against a partner who would overreach Him.',
+    source: 'Nahj al-Balagha, Sermon 65',
+    brief: {
+      en: 'A litany of contrasts: every attribute creatures share with Him collapses into limitation. He created from neither need nor fear.',
+      ar: 'كلُّ صفةٍ في المخلوقِ محدودةٌ، وفيه سبحانه مطلقةٌ، وخلقَ لا لحاجةٍ.',
+    },
+    theme: 'on tawhid, on the divine attributes, on the contrast between Creator and creature',
+  },
+  {
+    title: { en: 'Imaginations Cannot Reach Him', ar: 'لَا تَنَالُهُ الْأَوْهَامُ' },
+    arabic:
+      'الْحَمْدُ لِلَّهِ الَّذِي لَا تُدْرِكُهُ الْأَوْهَامُ بِالْحَدَسِ.\nوَلَا تَنَالُهُ الْأَفْهَامُ بِالتَّصَوُّرِ.\nوَلَيْسَ بِالَّذِي تَحُلُّهُ الْحَوَادِثُ، وَلَا بِالَّذِي يَخْفَى عَلَيْهِ شَيْءٌ.\nالَّذِي بَطَنَ مِنْ خَفِيَّاتِ الْأُمُورِ، وَظَهَرَ فِي الْعُقُولِ بِمَا يُرَى فِي خَلْقِهِ مِنْ عَلَامَاتِ التَّدْبِيرِ.\nالَّذِي سُئِلَتِ الْأَنْبِيَاءُ عَنْهُ فَلَمْ تَصِفْهُ بِحَدٍّ وَلَا بِنَقْصٍ، بَلْ وَصَفَتْهُ بِأَفْعَالِهِ.\nوَدَلَّتْ عَلَيْهِ بِآيَاتِهِ.\nلَا تَسْتَطِيعُ عُقُولُ الْمُتَفَكِّرِينَ جَحْدَهُ.\nالَّذِي عَجَزَتِ الْأَوْهَامُ أَنْ تَكْتَنِهَ صِفَتَهُ، وَانْحَسَرَتِ الْأَبْصَارُ أَنْ تَنَالَ كُنْهَ عَظَمَتِهِ.',
+    english:
+      'Praise be to God whom imaginations cannot grasp by their guesses.\nWhom understandings cannot reach by their conceiving.\nWho is not one whom events befall, nor one from whom anything is hidden.\nHe whose innermost reality lies behind concealed matters, and who appears to the intellects through what is seen in His creation of the signs of governance.\nHe of whom the prophets were asked, and they did not describe Him by any limit nor by any defect, but described Him by His acts —\nand pointed to Him by His signs.\nThe minds of those who reflect cannot deny Him.\nHe whose attribute imaginations are too weak to fathom, and whose greatness the eyes fall short, exhausted, of ever reaching.',
+    source: 'Nahj al-Balagha, Sermon 49',
+    brief: {
+      en: 'Sermon 49 in full apophatic stride: He is inaccessible to guess and concept, yet His traces in creation make denial impossible for any honest mind.',
+      ar: 'هو سبحانه خفيٌّ عن الأوهامِ، ظاهرٌ بآثارِ التدبيرِ، فلا تنالُه العقولُ ولا تنكرُه.',
+    },
+    theme: 'on tawhid, on apophatic theology, on the limits of reason',
+  },
+  {
+    title: { en: 'He Is with Everything Without Adjacency', ar: 'مَعَ كُلِّ شَيْءٍ لَا بِمُقَارَنَةٍ' },
+    arabic:
+      'مَعَ كُلِّ شَيْءٍ لَا بِمُقَارَنَةٍ، وَغَيْرُ كُلِّ شَيْءٍ لَا بِمُزَايَلَةٍ.\nفَاعِلٌ لَا بِمَعْنَى الْحَرَكَاتِ وَالْآلَةِ.\nبَصِيرٌ إِذْ لَا مَنْظُورَ إِلَيْهِ مِنْ خَلْقِهِ.\nمُتَوَحِّدٌ إِذْ لَا سَكَنَ يَسْتَأْنِسُ بِهِ، وَلَا يَسْتَوْحِشُ لِفَقْدِهِ.\nأَنْشَأَ الْخَلْقَ إِنْشَاءً، وَابْتَدَأَهُ ابْتِدَاءً.\nبِلَا رَوِيَّةٍ أَجَالَهَا، وَلَا تَجْرِبَةٍ اسْتَفَادَهَا.\nوَلَا حَرَكَةٍ أَحْدَثَهَا، وَلَا هَمَامَةِ نَفْسٍ اضْطَرَبَ فِيهَا.\nأَحَالَ الْأَشْيَاءَ لِأَوْقَاتِهَا، وَلَأَمَ بَيْنَ مُخْتَلِفَاتِهَا.\nعَالِمًا بِهَا قَبْلَ ابْتِدَائِهَا، مُحِيطًا بِحُدُودِهَا وَانْتِهَائِهَا.',
+    english:
+      'He is with every thing, but not by adjacency; and other than every thing, but not by separation.\nHe acts, but not in the sense of motions and instruments.\nHe sees, even when there was nothing of His creation to be seen.\nHe is uniquely one, even when there was no companion to grow intimate with, nor any whose loss could leave Him desolate.\nHe brought creation into being and originated it from the start —\nwithout any reflection He turned over, without any experience He drew upon,\nwithout any motion He set going, without any anxious whisper of a soul throbbing in Him.\nHe set things to their times and joined together their differences,\nknowing them before their beginning, encompassing their limits and their end.',
+    source: 'Nahj al-Balagha, Sermon 1 (second tawhid passage)',
+    brief: {
+      en: 'He is with everything without being beside it, and other than everything without being apart from it — His action requires no instrument, His creating no deliberation.',
+      ar: 'معيّتُه سبحانه لا بملاصقةٍ، وفعلُه لا بآلةٍ، وخلقُه لا برويّةٍ.',
+    },
+    theme: 'on tawhid, on the divine attributes, on creation',
+  },
+  {
+    title: { en: 'O World, Deceive Another', ar: 'يَا دُنْيَا غُرِّي غَيْرِي' },
+    arabic:
+      'إِلَيْكِ عَنِّي يَا دُنْيَا، فَحَبْلُكِ عَلَى غَارِبِكِ.\nقَدِ انْسَلَلْتُ مِنْ مَخَالِبِكِ، وَأَفْلَتُّ مِنْ حَبَائِلِكِ.\nأَيْنَ الْقُرُونُ الَّذِينَ غَرَرْتِهِمْ بِمَدَاعِبِكِ؟\nأَيْنَ الْأُمَمُ الَّذِينَ فَتَنْتِهِمْ بِزَخَارِفِكِ؟\nفَهَا هُمْ رَهَائِنُ الْقُبُورِ، وَمَضَامِينُ اللُّحُودِ.\nوَاللَّهِ لَوْ كُنْتِ شَخْصًا مَرْئِيًّا، وَقَالَبًا حِسِّيًّا،\nلَأَقَمْتُ عَلَيْكِ حُدُودَ اللَّهِ فِي عِبَادٍ غَرَرْتِهِمْ بِالْأَمَانِيِّ.\nإِلَيْكِ عَنِّي، فَوَاللَّهِ لَا أَذِلُّ لَكِ فَتَسْتَذِلِّينِي،\nوَلَا أَسْلَسُ لَكِ فَتَقُودِينِي.\nاعْزُبِي عَنِّي. عُمْرُكِ قَصِيرٌ، وَخَطَرُكِ يَسِيرٌ، وَأَمَلُكِ حَقِيرٌ.',
+    english:
+      'Away from me, O world — your reins are upon your own shoulder!\nI have slipped from your claws and escaped your snares.\nWhere are the generations whom you deceived with your trifles?\nWhere are the nations whom you tempted with your ornaments?\nThere they are — hostages of the graves, contents of the tombs.\nBy God, were you a visible person, a body that could be seen,\nI would have inflicted upon you the punishments of God for servants you misled with false hopes.\nAway from me! By God, I will not be humbled before you that you may degrade me,\nnor will I yield to you that you may lead me by the rein.\nBe gone from me. Your life is short, your danger is slight, and your aspiration is contemptible.',
+    source: 'Nahj al-Balagha, Saying 77 (the address to the world)',
+    brief: {
+      en: 'Imam Ali directly addresses the world, refusing to be seduced by its trifles, asking where the generations it deceived have gone.',
+      ar: 'خطابُ الإمامِ للدنيا، رافضاً غرورَها، سائلاً عن أممٍ خدعتهم.',
+    },
+    theme: 'on the world (dunyā), on zuhd, on refusing seduction',
+  },
+  {
+    title: { en: 'The Reality of the World', ar: 'حَقيقَةُ الدُّنْيَا' },
+    arabic:
+      'أَمَّا بَعْدُ، فَإِنِّي أُحَذِّرُكُمُ الدُّنْيَا، فَإِنَّهَا حُلْوَةٌ خَضِرَةٌ،\nحُفَّتْ بِالشَّهَوَاتِ، وَتَحَبَّبَتْ بِالْعَاجِلَةِ،\nوَرَاقَتْ بِالْقَلِيلِ، وَتَحَلَّتْ بِالْآمَالِ، وَتَزَيَّنَتْ بِالْغُرُورِ.\nلَا تَدُومُ حَبْرَتُهَا، وَلَا تُؤْمَنُ فَجْعَتُهَا.\nغَرَّارَةٌ ضَرَّارَةٌ، حَائِلَةٌ زَائِلَةٌ، نَافِدَةٌ بَائِدَةٌ، أَكَّالَةٌ غَوَّالَةٌ.\nلَمْ يَكُنِ امْرُؤٌ مِنْهَا فِي حَبْرَةٍ، إِلَّا أَعْقَبَتْهُ بَعْدَهَا عَبْرَةً.',
+    english:
+      'Now then — I warn you of the world, for it is sweet and verdant,\nsurrounded by lusts, endearing itself by what is immediate,\nappearing pleasing through trifles, adorned with false hopes, decked with deception.\nIts delight does not endure, and one is not safe from its sudden blows.\nDeceitful, harmful — fleeting, transient — perishing, ruinous — devouring, destroying.\nNo person was ever in its joy except that it followed for him a tear thereafter.',
+    source: 'Nahj al-Balagha, Sermon 111',
+    brief: {
+      en: 'A warning that the world is sweet and green on the outside but deceitful, fleeting, and ruinous, ending every joy with a tear.',
+      ar: 'تحذيرٌ من الدنيا: حلوةٌ ظاهراً، غرّارةٌ زائلةٌ، تُعقبُ كلَّ فرحةٍ عبرةً.',
+    },
+    theme: 'on the world (dunyā), on zuhd, on the deception of the world',
+  },
+  {
+    title: { en: 'The Patched Shoe', ar: 'النَّعْلُ المَخْصُوفَةُ' },
+    arabic:
+      'وَاللَّهِ لَهِيَ أَحَبُّ إِلَيَّ مِنْ إِمْرَتِكُمْ،\nإِلَّا أَنْ أُقِيمَ حَقًّا، أَوْ أَدْفَعَ بَاطِلًا.\nوَاللَّهِ لَدُنْيَاكُمْ هَذِهِ أَهْوَنُ فِي عَيْنِي مِنْ عُرَاقِ خِنْزِيرٍ فِي يَدِ مَجْذُومٍ.\nمَا لِعَلِيٍّ وَلِنَعِيمٍ يَفْنَى، وَلَذَّةٍ لَا تَبْقَى!\nأَأَقْنَعُ مِنْ نَفْسِي بِأَنْ يُقَالَ: هَذَا أَمِيرُ الْمُؤْمِنِينَ،\nوَلَا أُشَارِكُهُمْ فِي مَكَارِهِ الدَّهْرِ؟\nأَوْ أَكُونَ أُسْوَةً لَهُمْ فِي جُشُوبَةِ الْعَيْشِ؟\nفَمَا خُلِقْتُ لِيَشْغَلَنِي أَكْلُ الطَّيِّبَاتِ، كَالْبَهِيمَةِ الْمَرْبُوطَةِ هَمُّهَا عَلَفُهَا.',
+    english:
+      '(Of the patched shoe he was mending, he said:) By God, this is dearer to me than your authority over you,\nunless I establish a truth or repel a falsehood.\nBy God, this world of yours is more contemptible in my eye than the bone of a swine in the hand of a leper.\nWhat has Ali to do with delights that perish and a pleasure that does not remain?\nShall I be content with myself that it be said: "This is the Commander of the Faithful,"\nyet I not share with them in the hardships of the age,\nor be a model for them in the roughness of living?\nI was not created that the eating of fine food should occupy me, like the tethered beast whose concern is its fodder.',
+    source: 'Nahj al-Balagha, Sermon 33; cf. Letter 45',
+    brief: {
+      en: "Imam Ali declares his patched shoe dearer than rulership, and the world more contemptible than swine-bone in a leper's hand.",
+      ar: 'نعلُه المخصوفةُ أحبّ إليه من الإمارة، والدنيا أهونُ من عُراقِ خنزيرٍ.',
+    },
+    theme: "on the world (dunyā), on zuhd, on the Imam's own asceticism",
+  },
+  {
+    title: { en: 'Look at the World with the Renunciant\'s Gaze', ar: 'انْظُرُوا إِلَى الدُّنْيَا' },
+    arabic:
+      'أَيُّهَا النَّاسُ، انْظُرُوا إِلَى الدُّنْيَا نَظَرَ الزَّاهِدِينَ فِيهَا، الصَّادِفِينَ عَنْهَا،\nفَإِنَّهَا وَاللَّهِ عَمَّا قَلِيلٍ تُزِيلُ الثَّاوِيَ السَّاكِنَ،\nوَتَفْجَعُ الْمُتْرَفَ الْآمِنَ.\nلَا يَرْجِعُ مَا تَوَلَّى مِنْهَا فَأَدْبَرَ،\nوَلَا يُدْرَى مَا هُوَ آتٍ مِنْهَا فَيُنْتَظَرَ.\nسُرُورُهَا مَشُوبٌ بِالْحُزْنِ، وَجَلَدُ الرِّجَالِ فِيهَا إِلَى الضَّعْفِ وَالْوَهْنِ.\nفَلَا يَغُرَّنَّكُمْ كَثْرَةُ مَا يُعْجِبُكُمْ فِيهَا، لِقِلَّةِ مَا يَصْحَبُكُمْ مِنْهَا.\nرَحِمَ اللَّهُ امْرَأً تَفَكَّرَ فَاعْتَبَرَ، وَاعْتَبَرَ فَأَبْصَرَ.\nفَكَأَنَّ مَا هُوَ كَائِنٌ مِنَ الدُّنْيَا عَنْ قَلِيلٍ لَمْ يَكُنْ،\nوَكَأَنَّ مَا هُوَ كَائِنٌ مِنَ الْآخِرَةِ عَمَّا قَلِيلٍ لَمْ يَزَلْ.',
+    english:
+      "O people, look at the world with the look of the renunciants, those who turn from it.\nFor by God, soon will it remove the dweller who has settled,\nand strike with calamity the affluent who feels secure.\nWhat has turned away from it and gone does not return,\nand what is to come from it is not known so as to be awaited.\nIts joy is mingled with sorrow, and men's vigour in it gives way to weakness and frailty.\nSo let not the abundance of what pleases you in it deceive you, for little of it accompanies you.\nMay God have mercy on a man who reflects and takes heed, takes heed and sees.\nIt is as if what is of the world will soon be as though it never was,\nand what is of the Hereafter will soon be as though it never ceased to be.",
+    source: 'Nahj al-Balagha, Sermon 103',
+    brief: {
+      en: "Look at the world with the renunciant's gaze: it removes settled dwellers and what pleases you accompanies you only a little.",
+      ar: 'انظروا إلى الدنيا نظرَ الزاهدين؛ تُزيل الآمنَ، ولا يصحبكم منها إلا قليل.',
+    },
+    theme: 'on the world (dunyā), on zuhd, on reflection',
+  },
+  {
+    title: { en: 'The World Bids Farewell', ar: 'الدُّنْيَا مُؤْذِنَةٌ بِبَيْنٍ' },
+    arabic:
+      'أَمَّا بَعْدُ، فَإِنِّي أُحَذِّرُكُمُ الدُّنْيَا، فَإِنَّهَا مَنْزِلُ قُلْعَةٍ، وَلَيْسَتْ بِدَارِ نُجْعَةٍ.\nقَدْ تَزَيَّنَتْ بِغُرُورِهَا، وَغَرَّتْ بِزِينَتِهَا.\nدَارٌ هَانَتْ عَلَى رَبِّهَا، فَخَلَطَ حَلَالَهَا بِحَرَامِهَا، وَخَيْرَهَا بِشَرِّهَا،\nوَحَيَاتَهَا بِمَوْتِهَا، وَحُلْوَهَا بِمُرِّهَا.\nلَمْ يُصْفِهَا اللَّهُ تَعَالَى لِأَوْلِيَائِهِ، وَلَمْ يَضِنَّ بِهَا عَلَى أَعْدَائِهِ.\nخَيْرُهَا زَهِيدٌ، وَشَرُّهَا عَتِيدٌ، وَجَمْعُهَا يَنْفَدُ، وَمُلْكُهَا يُسْلَبُ، وَعَامِرُهَا يَخْرَبُ.\nأَلَا وَإِنَّ الدُّنْيَا قَدْ تَصَرَّمَتْ، وَآذَنَتْ بِانْقِضَاءٍ.\nفَهِيَ تَحْفِزُ بِالْفَنَاءِ سُكَّانَهَا، وَتَحْدُو بِالْمَوْتِ جِيرَانَهَا.',
+    english:
+      "Now then — I warn you of the world, for it is a station of departure, not a house of dwelling.\nIt has adorned itself with its deception and beguiled by its ornament.\nA house lowly in the eyes of its Lord — He mingled its lawful with its forbidden, its good with its evil,\nits life with its death, its sweetness with its bitterness.\nGod Most High did not purify it for His friends, nor did He withhold it from His enemies.\nIts good is scant, its evil is ready at hand, its gathering runs out, its dominion is stripped away, its flourishing falls to ruin.\nBehold — the world has cut its ties and announced its passing.\nIt drives its inhabitants toward annihilation and urges its neighbours toward death.",
+    source: 'Nahj al-Balagha, Sermon 113',
+    brief: {
+      en: 'The world is a way-station of departure, not a dwelling. God did not purify it for His friends — it now bids farewell, driving its people to death.',
+      ar: 'الدنيا منزلُ قُلعةٍ لا دارُ إقامةٍ؛ آذنت بانقضاءٍ، وتسوقُ سكّانَها إلى الفناء.',
+    },
+    theme: 'on the world (dunyā), on zuhd, on departure',
+  },
+  {
+    title: { en: 'His Way Was Moderation', ar: 'سِيرَتُهُ الْقَصْدُ' },
+    arabic:
+      'سِيرَتُهُ الْقَصْدُ، وَسُنَّتُهُ الرُّشْدُ، وَكَلَامُهُ الْفَصْلُ، وَحُكْمُهُ الْعَدْلُ.\nأَرْسَلَهُ عَلَى حِينِ فَتْرَةٍ مِنَ الرُّسُلِ، وَطُولِ هَجْعَةٍ مِنَ الْأُمَمِ.\nفَجَاءَهُمْ بِتَصْدِيقِ الَّذِي بَيْنَ يَدَيْهِ، وَالنُّورِ الْمُقْتَدَى بِهِ — ذَلِكَ الْقُرْآنُ.\nفَاسْتَنْطِقُوهُ، وَلَنْ يَنْطِقَ، وَلَكِنْ أُخْبِرُكُمْ عَنْهُ:\nأَلَا إِنَّ فِيهِ عِلْمَ مَا يَأْتِي، وَالْحَدِيثَ عَنِ الْمَاضِي، وَدَوَاءَ دَائِكُمْ، وَنَظْمَ مَا بَيْنَكُمْ.\nثُمَّ اخْتَارَ سُبْحَانَهُ لِمُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ لِقَاءَهُ، وَرَضِيَ لَهُ مَا عِنْدَهُ.\nوَأَكْرَمَهُ عَنْ دَارِ الدُّنْيَا، وَرَغِبَ بِهِ عَنْ مَقَارَنَةِ الْبَلْوَى، فَقَبَضَهُ إِلَيْهِ كَرِيمًا.\nوَخَلَّفَ فِيكُمْ مَا خَلَّفَتِ الْأَنْبِيَاءُ فِي أُمَمِهَا، إِذْ لَمْ يَتْرُكُوهُمْ هَمَلًا، بِغَيْرِ طَرِيقٍ وَاضِحٍ، وَلَا عَلَمٍ قَائِمٍ.',
+    english:
+      "His way was moderation, his practice was right guidance, his speech was the decisive criterion, and his judgment was justice.\nGod sent him after an interval since the previous messengers, after a long slumber of the nations.\nHe came to them confirming what was before him, with the Light to be followed — that is the Qur'an.\nSo make it speak, though it will never speak; but I shall tell you about it:\nIn it is the knowledge of what is to come, the report of what has passed, the cure for your disease, and the order of what is between you.\nThen God, glorified is He, chose for Muhammad — God's blessings upon him and his family — to meet Him, and was pleased with what He had for him.\nHe honoured him above the abode of this world, and preferred for him to be far from being yoked to affliction, and took him to Himself in nobility.\nAnd he left among you what the prophets left in their nations: for they did not leave them neglected, without a clear path or a standing landmark.",
+    source: 'Nahj al-Balagha, Sermon 158',
+    brief: {
+      en: "Imam Ali describes the Prophet's measured life, his mission after a long slumber of nations, his being taken by God in nobility, and the inheritance he left behind.",
+      ar: 'وصفُ الإمامِ لسيرةِ النبيِّ ومبعثِه بعد فترةٍ من الرسلِ، ووفاتِه كريماً، وما خلَّفه في أمَّتِه.',
+    },
+    theme: "on the Prophet's life and mission, on the Prophet",
+  },
+  {
+    title: { en: 'He Sent Him When Tongues Were in Dispute', ar: 'أَرْسَلَهُ وَالنَّاسُ ضُلَّالٌ' },
+    arabic:
+      'أَرْسَلَهُ عَلَى حِينِ فَتْرَةٍ مِنَ الرُّسُلِ، وَتَنَازُعٍ مِنَ الْأَلْسُنِ.\nفَقَفَّى بِهِ الرُّسُلَ، وَخَتَمَ بِهِ الْوَحْيَ.\nفَجَاهَدَ فِي اللَّهِ الْمُدْبِرِينَ عَنْهُ، وَالْعَادِلِينَ بِهِ.\nوَإِنَّمَا الدُّنْيَا مُنْتَهَى بَصَرِ الْأَعْمَى، لَا يُبْصِرُ مِمَّا وَرَاءَهَا شَيْئًا.\nوَالْبَصِيرُ يَنْفُذُهَا بَصَرُهُ، وَيَعْلَمُ أَنَّ الدَّارَ وَرَاءَهَا.\nفَالْبَصِيرُ مِنْهَا شَاخِصٌ، وَالْأَعْمَى إِلَيْهَا شَاخِصٌ.\nوَإِنَّمَا الْحِكْمَةُ كَالْحَيَاةِ لِلْقَلْبِ الْمَيِّتِ، وَبَصَرٌ لِلْعَيْنِ الْعَمْيَاءِ، وَسَمْعٌ لِلْأُذُنِ الصَّمَّاءِ.\nوَفِيهَا الْغِنَى كُلُّهُ وَالسَّلَامَةُ.',
+    english:
+      'He sent him at a time when the messengers had been long absent, when tongues were in dispute.\nSo He sealed the line of messengers with him and ended revelation through him,\nand he strove for God against those who turned from Him and those who set up rivals to Him.\nThis world is the farthest reach of the blind man\'s sight: he sees nothing beyond it.\nThe seeing one pierces it with his vision and knows that the true Abode lies beyond it.\nThe seeing one departs from it; the blind man heads for it.\nWisdom is to the dead heart what life is to it, what sight is to the blind eye, what hearing is to the deaf ear —\nand in it lies all sufficiency and safety.',
+    source: 'Nahj al-Balagha, Sermon 133',
+    brief: {
+      en: 'The Prophet was sent after a long interval and divided tongues; he sealed prophecy and strove against deniers, while the world remains the horizon of the blind.',
+      ar: 'أُرسِلَ النبيُّ بعد فترةٍ من الرسلِ، فختمَ به الوحي، وجاهدَ المُعرضين.',
+    },
+    theme: "on the Prophet's coming, on the state of the world before him",
+  },
+  {
+    title: { en: 'He Used to Eat on the Ground', ar: 'كَانَ يَأْكُلُ عَلَى الْأَرْضِ' },
+    arabic:
+      'وَلَقَدْ كَانَ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ يَأْكُلُ عَلَى الْأَرْضِ،\nوَيَجْلِسُ جِلْسَةَ الْعَبْدِ، وَيَخْصِفُ بِيَدِهِ نَعْلَهُ،\nوَيَرْقَعُ بِيَدِهِ ثَوْبَهُ، وَيَرْكَبُ الْحِمَارَ الْعَارِيَ، وَيُرْدِفُ خَلْفَهُ.\nوَيَكُونُ السِّتْرُ عَلَى بَابِ بَيْتِهِ فَتَكُونُ فِيهِ التَّصَاوِيرُ،\nفَيَقُولُ: يَا فُلَانَةُ — لِإِحْدَى أَزْوَاجِهِ — غَيِّبِيهِ عَنِّي،\nفَإِنِّي إِذَا نَظَرْتُ إِلَيْهِ ذَكَرْتُ الدُّنْيَا وَزَخَارِفَهَا.\nفَأَعْرَضَ عَنِ الدُّنْيَا بِقَلْبِهِ، وَأَمَاتَ ذِكْرَهَا مِنْ نَفْسِهِ،\nوَأَحَبَّ أَنْ تَغِيبَ زِينَتُهَا عَنْ عَيْنِهِ،\nلِكَيْلَا يَتَّخِذَ مِنْهَا رِيَاشًا، وَلَا يَعْتَقِدَهَا قَرَارًا، وَلَا يَرْجُوَ فِيهَا مُقَامًا.',
+    english:
+      "He — God's blessings upon him and his family — used to eat on the ground,\nsit like a servant, mend his sandal with his own hand,\npatch his garment with his own hand, ride the unsaddled donkey and let another ride behind him.\nA curtain on the door of his house once had figures upon it, and he said,\n'O so-and-so' — to one of his wives — 'remove it from my sight,\nfor when I look at it I am reminded of the world and its ornaments.'\nThus he turned from the world with his heart and put its remembrance to death within himself.\nHe loved that its adornment should vanish from his eye,\nso that he would not take finery from it, nor regard it as a fixed abode, nor hope to dwell in it.",
+    source: 'Nahj al-Balagha, Sermon 160',
+    brief: {
+      en: "Imam Ali pictures the Prophet's daily life — eating on the ground, mending his sandal, patching his garment — and his radical detachment from the world.",
+      ar: 'صورةُ النبيِّ في يومياتِه — يأكلُ على الأرض، يخصِفُ نعلَه، يرقعُ ثوبَه.',
+    },
+    theme: "on the Prophet's conduct, on the Prophet's asceticism",
+  },
+  {
+    title: { en: 'Take the Prophet as Your Pattern', ar: 'تَأَسَّ بِنَبِيِّكَ' },
+    arabic:
+      'وَلَقَدْ كَانَ فِي رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ كَافٍ لَكَ فِي الْأُسْوَةِ،\nوَدَلِيلٌ لَكَ عَلَى ذَمِّ الدُّنْيَا وَعَيْبِهَا، وَكَثْرَةِ مَخَازِيهَا وَمَسَاوِيهَا.\nإِذْ قُبِضَتْ عَنْهُ أَطْرَافُهَا، وَوُطِّئَتْ لِغَيْرِهِ أَكْنَافُهَا، وَفُطِمَ عَنْ رَضَاعِهَا، وَزُوِيَ عَنْ زَخَارِفِهَا.\nفَتَأَسَّ بِنَبِيِّكَ الْأَطْيَبِ الْأَطْهَرِ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ،\nفَإِنَّ فِيهِ أُسْوَةً لِمَنْ تَأَسَّى، وَعَزَاءً لِمَنْ تَعَزَّى.\nوَأَحَبُّ الْعِبَادِ إِلَى اللَّهِ الْمُتَأَسِّي بِنَبِيِّهِ، وَالْمُقْتَصُّ لِأَثَرِهِ.\nقَضَمَ الدُّنْيَا قَضْمًا، وَلَمْ يُعِرْهَا طَرْفًا.\nأَهْضَمُ أَهْلِ الدُّنْيَا كَشْحًا، وَأَخْمَصُهُمْ مِنَ الدُّنْيَا بَطْنًا.\nعُرِضَتْ عَلَيْهِ الدُّنْيَا فَأَبَى أَنْ يَقْبَلَهَا.',
+    english:
+      "In the Messenger of God — God's blessings upon him and his family — there was enough for you as a pattern,\nand a proof against this world: its blame, its defects, its many disgraces and evils.\nIts sides were withdrawn from him while its expanses were spread out for others; he was weaned from its suckling and removed from its ornaments.\nSo take as your pattern your Prophet, the most pure, the most pleasing — God's blessings upon him and his family —\nfor in him is a pattern for whoever would pattern themselves, and a consolation for whoever would seek consolation.\nThe most beloved of servants to God is the one who patterns themselves after His Prophet and follows his footsteps.\nHe merely nibbled the world and never gave it a glance —\nthe leanest of the people of the world in waist, the emptiest of them in belly.\nThe world was offered to him and he refused to accept it.",
+    source: 'Nahj al-Balagha, Sermon 160',
+    brief: {
+      en: "Imam Ali insists the Prophet's life is the sufficient pattern: he was withdrawn from the world's ornaments and nibbled at it without ever giving it a glance.",
+      ar: 'يؤكِّدُ الإمامُ أنَّ في رسولِ اللهِ كفايةً في الأُسوة، فقد زُوِيتْ عنه زخارفُ الدنيا فقضَمها قضماً.',
+    },
+    theme: "on the Prophet as exemplar, on the Prophet's asceticism",
+  },
+  {
+    title: { en: 'We Are the Tree of Prophethood', ar: 'نَحْنُ شَجَرَةُ النُّبُوَّةِ' },
+    arabic:
+      'نَحْنُ شَجَرَةُ النُّبُوَّةِ، وَمَحَطُّ الرِّسَالَةِ،\nوَمُخْتَلَفُ الْمَلَائِكَةِ، وَمَعَادِنُ الْعِلْمِ، وَيَنَابِيعُ الْحُكْمِ.\nنَاصِرُنَا وَمُحِبُّنَا يَنْتَظِرُ الرَّحْمَةَ، وَعَدُوُّنَا وَمُبْغِضُنَا يَنْتَظِرُ السَّطْوَةَ.\nوَلَقَدْ رَأَيْتُ أَصْحَابَ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ، فَمَا أَرَى أَحَدًا يُشْبِهُهُمْ مِنْكُمْ.\nلَقَدْ كَانُوا يُصْبِحُونَ شُعْثًا غُبْرًا، وَقَدْ بَاتُوا سُجَّدًا وَقِيَامًا،\nيُرَاوِحُونَ بَيْنَ جِبَاهِهِمْ وَخُدُودِهِمْ، وَيَقِفُونَ عَلَى مِثْلِ الْجَمْرِ مِنْ ذِكْرِ مَعَادِهِمْ.\nكَأَنَّ بَيْنَ أَعْيُنِهِمْ رُكَبَ الْمِعْزَى مِنْ طُولِ سُجُودِهِمْ.\nإِذَا ذُكِرَ اللَّهُ هَمَلَتْ أَعْيُنُهُمْ حَتَّى تَبُلَّ جُيُوبَهُمْ،\nوَمَادُوا كَمَا يَمِيدُ الشَّجَرُ يَوْمَ الرِّيحِ الْعَاصِفِ،\nخَوْفًا مِنَ الْعِقَابِ وَرَجَاءً لِلثَّوَابِ.',
+    english:
+      "We are the Tree of Prophethood, the resting-place of the Message,\nthe place visited by the angels, the mines of knowledge, the springs of wisdom.\nThe one who aids us and loves us awaits mercy; the one who is our enemy and hates us awaits chastisement.\nI have seen the companions of Muhammad — God's blessings upon him and his family — and I see no one among you who resembles them.\nThey would rise in the morning dust-stained and rough, having passed the night in prostration and standing,\nalternating between their foreheads and their cheeks, standing as if upon embers at the remembrance of their return.\nBetween their eyes were calluses like the knees of goats from the length of their prostrations.\nWhen God was mentioned, their eyes would flow until their collars were soaked,\nand they would sway as trees sway on the day of a roaring wind — out of fear of punishment and hope for reward.",
+    source: 'Nahj al-Balagha, Sermon 96',
+    brief: {
+      en: "Imam Ali names the household of the Prophet — Tree of Prophethood, mines of knowledge — and remembers the Prophet's companions whose nights were spent in worship.",
+      ar: 'يُسمّي الإمامُ أهلَ بيتِ النبوة شجرةَ النبوة، ويتذكّرُ أصحابَ النبيِّ وقيامَهم بالليل.',
+    },
+    theme: "on Ahl al-Bayt, on the Prophet's companions",
+  },
+  {
+    title: { en: 'They Are the Place of His Secret', ar: 'هُمْ مَوْضِعُ سِرِّهِ' },
+    arabic:
+      'هُمْ مَوْضِعُ سِرِّهِ، وَلَجَأُ أَمْرِهِ، وَعَيْبَةُ عِلْمِهِ، وَمَوْئِلُ حُكْمِهِ، وَكُهُوفُ كُتُبِهِ، وَجِبَالُ دِينِهِ.\nبِهِمْ أَقَامَ انْحِنَاءَ ظَهْرِهِ، وَأَذْهَبَ ارْتِعَادَ فَرَائِصِهِ.\nلَا يُقَاسُ بِآلِ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ مِنْ هَذِهِ الْأُمَّةِ أَحَدٌ،\nوَلَا يُسَوَّى بِهِمْ مَنْ جَرَتْ نِعْمَتُهُمْ عَلَيْهِ أَبَدًا.\nهُمْ أَسَاسُ الدِّينِ، وَعِمَادُ الْيَقِينِ.\nإِلَيْهِمْ يَفِيءُ الْغَالِي، وَبِهِمْ يُلْحَقُ التَّالِي.\nوَلَهُمْ خَصَائِصُ حَقِّ الْوِلَايَةِ، وَفِيهِمُ الْوَصِيَّةُ وَالْوِرَاثَةُ.',
+    english:
+      "They are the place of his secret, the refuge of his affair, the vessel of his knowledge,\nthe resort of his judgment, the caves of his books, and the mountains of his religion.\nThrough them he straightened the bending of his back and stilled the trembling of his sides.\nNo one of this Umma is to be compared with the family of Muhammad — God's blessings upon him and his family —\nnor is one upon whom their bounty has flowed ever to be set equal with them.\nThey are the foundation of the religion and the pillar of certainty.\nTo them the one who has gone too far must return, and the one who has fallen behind must catch up.\nTo them belong the special rights of guardianship; in them are the testament and the inheritance.",
+    source: 'Nahj al-Balagha, Sermon 2',
+    brief: {
+      en: 'Imam Ali describes the family of the Prophet as the trustees of his secret, the foundation of religion, the place to which the wayward return.',
+      ar: 'يصفُ الإمامُ آلَ محمدٍ بأنهم موضعُ سرِّ النبيِّ وأساسُ الدين، إليهم يفيءُ الغالي وبهم يلحقُ التالي.',
+    },
+    theme: "on Ahl al-Bayt, on the Prophet's family",
+  },
+  {
+    title: { en: 'He Revived His Intellect and Put His Self to Death', ar: 'قَدْ أَحْيَا عَقْلَهُ وَأَمَاتَ نَفْسَهُ' },
+    arabic:
+      'قَدْ أَحْيَا عَقْلَهُ، وَأَمَاتَ نَفْسَهُ،\nحَتَّى دَقَّ جَلِيلُهُ، وَلَطُفَ غَلِيظُهُ.\nوَبَرَقَ لَهُ لَامِعٌ كَثِيرُ الْبَرْقِ،\nفَأَبَانَ لَهُ الطَّرِيقَ، وَسَلَكَ بِهِ السَّبِيلَ.\nوَتَدَافَعَتْهُ الْأَبْوَابُ إِلَى بَابِ السَّلَامَةِ، وَدَارِ الْإِقَامَةِ.\nوَثَبَتَتْ رِجْلَاهُ بِطُمَأْنِينَةِ بَدَنِهِ فِي قَرَارِ الْأَمْنِ وَالرَّاحَةِ،\nبِمَا اسْتَعْمَلَ قَلْبَهُ، وَأَرْضَى رَبَّهُ.',
+    english:
+      'He has revived his intellect and put his lower self to death,\nuntil what was coarse in him became fine, and what was rough became delicate.\nA flash of light, abundant in its flashing, broke before him —\nit made the road plain, and he walked the path.\nGate after gate pressed him onward to the gate of safety, to the abode of permanence.\nHis feet stood firm, his body at rest, in the lodging of security and ease,\nbecause he set his heart to work, and pleased his Lord.',
+    source: 'Nahj al-Balagha, Sermon 220 (Subhi al-Salih) — on the wayfarer to God',
+    brief: {
+      en: 'A portrait of the inner human: revived intellect, mortified ego, and a sudden lightning that shows the road. One of the most cited passages on the inner life across the tradition.',
+      ar: 'صورة الإنسان الباطن: عقلٌ حيٌّ، ونفسٌ ممَاتَةٌ، وبرقٌ يبين الطريق.',
+    },
+    theme: 'on the soul (nafs), on the inner work, on character',
+  },
+  {
+    title: { en: 'On the Heedless — Cattle at a Poisoned Watering-Place', ar: 'في الغافلين' },
+    arabic:
+      'أَيُّهَا النَّاسُ، غَيْرُ الْمَغْفُولِ عَنْهُمْ، وَالتَّارِكُونَ الْمَأْخُوذُ مِنْهُمْ،\nمَا لِي أَرَاكُمْ عَنِ اللَّهِ ذَاهِبِينَ، وَإِلَى غَيْرِهِ رَاغِبِينَ؟\nكَأَنَّكُمْ نَعَمٌ أَرَاحَ بِهَا سَائِمٌ إِلَى مَرْعًى وَبِيٍّ، وَمَشْرَبٍ دَوِيٍّ.\nوَإِنَّمَا هِيَ كَالْمَعْلُوفَةِ لِلْمُدَى،\nلَا تَعْرِفُ مَاذَا يُرَادُ بِهَا.\nإِذَا أُحْسِنَ إِلَيْهَا تَظُنُّ يَوْمَهَا دَهْرَهَا، وَشِبَعَهَا أَمْرَهَا.',
+    english:
+      'O people, you who are not unwatched —\nyou who, while leaving things behind, are themselves being taken hold of —\nwhy do I see you going away from God, desiring what is other than Him?\nIt is as if you were cattle a herdsman has driven\nto a polluted pasture and a sickening watering-place.\nYou are like beasts being fattened for the knife,\nnot knowing what is wanted of you.\nWhen you are treated well, you take your day for the whole age, and your fill for the whole matter.',
+    source: 'Nahj al-Balagha, Sermon 175',
+    brief: {
+      en: 'A piercing rebuke: the pursuit of the world likened to cattle led to a poisoned spring, fattened all the while for slaughter — mistaking a day of plenty for the whole of fate.',
+      ar: 'توبيخٌ نافذ: شُبّه السامعون بالأنعام تُساق إلى مرعىً وبيء، تظنّ يومَ الشبَع كلَّ أمرها.',
+    },
+    theme: 'on the soul (nafs), on heedlessness, on inner awakening',
+  },
+  {
+    title: { en: 'The Qur\'an — Counsellor Who Does Not Cheat', ar: 'القُرْآنُ النَّاصِحُ' },
+    arabic:
+      'وَاعْلَمُوا أَنَّ هَذَا الْقُرْآنَ هُوَ النَّاصِحُ الَّذِي لَا يَغُشُّ،\nوَالْهَادِي الَّذِي لَا يُضِلُّ، وَالْمُحَدِّثُ الَّذِي لَا يَكْذِبُ.\nوَمَا جَالَسَ هَذَا الْقُرْآنَ أَحَدٌ إِلَّا قَامَ عَنْهُ بِزِيَادَةٍ أَوْ نُقْصَانٍ:\nزِيَادَةٍ فِي هُدًى، أَوْ نُقْصَانٍ مِنْ عَمًى.\nوَاعْلَمُوا أَنَّهُ لَيْسَ عَلَى أَحَدٍ بَعْدَ الْقُرْآنِ مِنْ فَاقَةٍ،\nوَلَا لِأَحَدٍ قَبْلَ الْقُرْآنِ مِنْ غِنًى.\nفَاسْتَشْفُوهُ مِنْ أَدْوَائِكُمْ، وَاسْتَعِينُوا بِهِ عَلَى لَأْوَائِكُمْ،\nفَإِنَّ فِيهِ شِفَاءً مِنْ أَكْبَرِ الدَّاءِ:\nالْكُفْرِ وَالنِّفَاقِ، وَالْغَيِّ وَالضَّلَالِ.',
+    english:
+      "Know that this Qur'an is the counsellor who does not cheat,\nthe guide who does not mislead, the teller who does not lie.\nNo one sits with this Qur'an except that he rises with an increase or a loss —\nan increase in guidance, or a loss of some blindness.\nKnow that no one has want once he has the Qur'an,\nand no one had wealth before it.\nSeek cure from it for your ailments, and aid against your hardships,\nfor in it is a cure for the greatest disease:\ndisbelief and hypocrisy, error and going astray.",
+    source: "Nahj al-Balagha, Sermon 176 — the passage on the Qur'an",
+    brief: {
+      en: "From Sermon 176: the Qur'an as an honest counsellor and physician — no one who sits with it leaves unchanged.",
+      ar: 'من الخطبة ١٧٦: القرآن ناصحٌ لا يغشّ، وطبيبٌ يبلغ دواؤه أعمق الأمراض.',
+    },
+    theme: "on the Qur'an, on what heals the soul, on the inner life",
+  },
+  {
+    title: { en: 'From al-Qāṣiʿa — The Lesson of Iblīs', ar: 'مِنَ القَاصِعَةِ — عِبْرَةُ إِبْلِيسَ' },
+    arabic:
+      'فَاعْتَبِرُوا بِمَا كَانَ مِنْ فِعْلِ اللَّهِ بِإِبْلِيسَ\nإِذْ أَحْبَطَ عَمَلَهُ الطَّوِيلَ وَجَهْدَهُ الْجَهِيدَ.\nوَكَانَ قَدْ عَبَدَ اللَّهَ سِتَّةَ آلَافِ سَنَةٍ —\nلَا يُدْرَى أَمِنْ سِنِي الدُّنْيَا أَمْ مِنْ سِنِي الْآخِرَةِ —\nعَنْ كِبْرِ سَاعَةٍ وَاحِدَةٍ.\nفَمَنْ ذَا بَعْدَ إِبْلِيسَ يَسْلَمُ عَلَى اللَّهِ بِمِثْلِ مَعْصِيَتِهِ؟\nكَلَّا — مَا كَانَ اللَّهُ سُبْحَانَهُ لِيُدْخِلَ الْجَنَّةَ بَشَرًا بِأَمْرٍ\nأَخْرَجَ بِهِ مِنْهَا مَلَكًا.\nإِنَّ حُكْمَهُ فِي أَهْلِ السَّمَاءِ وَأَهْلِ الْأَرْضِ لَوَاحِدٌ،\nوَمَا بَيْنَ اللَّهِ وَبَيْنَ أَحَدٍ مِنْ خَلْقِهِ هَوَادَةٌ\nفِي إِبَاحَةِ حِمًى حَرَّمَهُ عَلَى الْعَالَمِينَ.',
+    english:
+      'Take a lesson from what God did with Iblīs: He nullified his long deeds and his exhausting striving —\nfor he had worshipped God six thousand years (none knowing whether of the years of this world or of the Hereafter) —\nover the pride of a single moment.\nWho, then, after Iblīs, can remain safe with God after such a sin?\nNever — God will not admit a human into the Garden by the very thing for which He expelled an angel from it.\nHis ruling upon the people of heaven and the people of earth is one;\nthere is no leniency between God and any of His creatures in permitting a sanctuary He has forbidden to all the worlds.',
+    source: 'Nahj al-Balagha, Sermon 192 (al-Qāṣiʿa)',
+    brief: {
+      en: "Iblīs lost millennia of worship to one moment of pride — God's law is one for angels and men.",
+      ar: 'أحبطَ إبليسُ آلافَ السنينَ بكبرِ ساعةٍ، وحكمُ اللهِ واحدٌ في خلقِه.',
+    },
+    theme: 'on pride and its ruin, on the danger of arrogance',
+  },
+  {
+    title: { en: 'The Lament for the Companions', ar: 'الحَنينُ إِلى الأَصْحابِ' },
+    arabic:
+      'أَيْنَ إِخْوَانِيَ الَّذِينَ رَكِبُوا الطَّرِيقَ وَمَضَوْا عَلَى الْحَقِّ؟\nأَيْنَ عَمَّارٌ؟ وَأَيْنَ ابْنُ التَّيِّهَانِ؟\nوَأَيْنَ ذُو الشَّهَادَتَيْنِ؟\nوَأَيْنَ نُظَرَاؤُهُمْ مِنْ إِخْوَانِهِمُ الَّذِينَ تَعَاقَدُوا عَلَى الْمَنِيَّةِ،\nوَأُبْرِدَ بِرُؤُوسِهِمْ إِلَى الْفَجَرَةِ؟\nثُمَّ ضَرَبَ بِيَدِهِ عَلَى لِحْيَتِهِ الشَّرِيفَةِ الْكَرِيمَةِ، فَأَطَالَ الْبُكَاءَ، ثُمَّ قَالَ:\nأَوِّهِ عَلَى إِخْوَانِيَ الَّذِينَ تَلَوُا الْقُرْآنَ فَأَحْكَمُوهُ،\nوَتَدَبَّرُوا الْفَرْضَ فَأَقَامُوهُ.\nأَحْيَوُا السُّنَّةَ وَأَمَاتُوا الْبِدْعَةَ.\nدُعُوا لِلْجِهَادِ فَأَجَابُوا، وَوَثِقُوا بِالْقَائِدِ فَاتَّبَعُوهُ.',
+    english:
+      'Where are my brothers who rode the road and travelled upon the truth?\nWhere is ʿAmmār? Where is Ibn al-Tayyihān?\nWhere is Dhū al-Shahādatayn?\nWhere are their like among their brethren who pledged themselves to death,\nwhose heads were sent off to the wicked?\nThen he struck his hand upon his noble, honoured beard and wept long, and said:\nAlas for my brothers who recited the Qurʾān and mastered it,\nwho pondered the obligation and upheld it.\nThey revived the Sunna and slew the innovation.\nThey were called to striving and answered; they trusted the leader and followed him.',
+    source: 'Nahj al-Balagha, Sermon 182 (the lament for the companions)',
+    brief: {
+      en: "Imam Ali weeps for his fallen companions who lived the Qur'an, revived the Sunna, and answered the call.",
+      ar: 'يبكي الإمامُ أصحابَه الذين أحكموا القرآن وأحيوا السنة ولبّوا الجهاد.',
+    },
+    theme: "on the loss of companions, on the Imam's grief, on longing for the righteous",
+  },
+  {
+    title: { en: 'To Whom Should I Lie?', ar: 'فَعَلَى مَنْ أَكْذِبُ؟' },
+    arabic:
+      'أَمَّا بَعْدُ، يَا أَهْلَ الْعِرَاقِ،\nفَإِنَّمَا أَنْتُمْ كَالْمَرْأَةِ الْحَامِلِ،\nحَمَلَتْ فَلَمَّا أَتَمَّتْ أَمْلَصَتْ،\nوَمَاتَ قَيِّمُهَا، وَطَالَ تَأَيُّمُهَا، وَوَرِثَهَا أَبْعَدُهَا.\nأَمَا وَاللَّهِ مَا أَتَيْتُكُمُ اخْتِيَارًا، وَلَكِنْ جِئْتُ إِلَيْكُمْ سَوْقًا.\nوَلَقَدْ بَلَغَنِي أَنَّكُمْ تَقُولُونَ: عَلِيٌّ يَكْذِبُ.\nقَاتَلَكُمُ اللَّهُ تَعَالَى، فَعَلَى مَنْ أَكْذِبُ؟\nأَعَلَى اللَّهِ؟ فَأَنَا أَوَّلُ مَنْ آمَنَ بِهِ.\nأَمْ عَلَى نَبِيِّهِ؟ فَأَنَا أَوَّلُ مَنْ صَدَّقَهُ.\nكَلَّا وَاللَّهِ — لَكِنَّهَا لَهْجَةٌ غِبْتُمْ عَنْهَا، وَلَمْ تَكُونُوا مِنْ أَهْلِهَا.',
+    english:
+      "Now then, O people of Iraq —\nyou are like the pregnant woman who, on completing her term, miscarries her child,\nand her guardian dies, her widowhood is prolonged, and her distant relatives inherit her.\nBy God, I did not come to you by my own choice — I was driven to you.\nIt has reached me that you say, 'Ali tells lies.'\nMay God reckon with you — against whom would I lie?\nAgainst God? I am the first to have believed in Him.\nAgainst His Prophet? I am the first to have affirmed him.\nNo, by God — it is rather an eloquence you were absent from, and were not among its people.",
+    source: 'Nahj al-Balagha, Sermon 71',
+    brief: {
+      en: "Imam Ali's piercing rebuke to the fickle people of Iraq who accused him of lying — his answer: against whom would I lie?",
+      ar: 'توبيخ الإمام النافذ لأهل العراق الذين اتّهموه بالكذب — وجوابه: على من أكذب؟',
+    },
+    theme: 'on integrity under accusation, on the loneliness of the truthful',
+  },
+]
+
+// ── Diwan poetry — verses traditionally attributed to Imam Ali ──────
+// Note: attribution of the Diwan is traditional rather than uniformly
+// scholarly-certified. We cite as "from the Diwan attributed to Imam
+// Ali (عليه السلام)" — honest about the tradition.
+export const BASELINE_POETRY: BaselineEntry[] = [
+  {
+    arabic:
+      'إِذَا مَا خَلَوْتَ الدَّهْرَ يَوْمًا فَلَا تَقُلْ\nخَلَوْتُ، وَلَكِنْ قُلْ عَلَيَّ رَقِيبُ',
+    english:
+      "When you find yourself alone one day, do not say 'I am alone' — say 'One watches me.'",
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on solitude, on God-consciousness, on integrity in private',
+  },
+  {
+    arabic:
+      'لَنَا فِي كُلِّ نَائِبَةٍ صَبْرٌ\nوَفِي ثَوَابِ صَبْرِنَا الفَرَجُ',
+    english:
+      'In every affliction we have patience — and in the reward of our patience, relief.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on hardship, on patience, on hope',
+  },
+  {
+    arabic:
+      'وَدَوَاؤُكَ فِيكَ وَمَا تَشْعُرُ\nوَدَاؤُكَ مِنْكَ وَمَا تُبْصِرُ\nأَتَزْعُمُ أَنَّكَ جِرْمٌ صَغِيرٌ\nوَفِيكَ انْطَوَى العَالَمُ الأَكْبَرُ',
+    english:
+      "Your cure is within you, and you do not know — your sickness is from you, and you do not see. Do you imagine you are a small body, when within you the greater world is folded?",
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on self-knowledge, on the human condition, on the inner journey',
+  },
+  {
+    arabic:
+      'النَّاسُ مِنْ جِهَةِ التِّمْثَالِ أَكْفَاءُ\nأَبُوهُمُ آدَمٌ وَالأُمُّ حَوَّاءُ',
+    english:
+      'People in their fashioning are equals — their father is Adam, their mother Eve.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on dignity, on equality, on human kinship',
+  },
+  {
+    arabic:
+      'لَا تَبْذُلِ الوُدَّ لِمَنْ لَا يَسْتَحِقُّهُ\nلَيْسَ التَّوَدُّدُ مِنْ شِيَمِ الْكِرَامْ',
+    english:
+      "Do not give your love to one who does not deserve it — affection ill-placed is not the way of the noble.",
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on what relationships are worth, on dignity, on choosing',
+  },
+  {
+    arabic:
+      'إِذَا ضَاقَ صَدْرُ الْمَرْءِ لَمْ يَصْفُ عَيْشُهُ\nوَأَوْشَكَ أَنْ يَلْقَى مِنَ الْأَمْرِ مَا كَرِهَا',
+    english:
+      "When a person's chest is constricted, their life is not clear — and they will soon meet what they would have hated to meet.",
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the heart, on suffering, on inner expansion',
+  },
+  {
+    arabic:
+      'تَوَكَّلْتُ فِي رِزْقِي عَلَى اللَّهِ خَالِقِي\nوَأَيْقَنْتُ أَنَّ اللَّهَ لَا شَكَّ رَازِقِي',
+    english:
+      'I have entrusted my provision to God my Creator — and I am certain that God, without doubt, will provide.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on trust, on provision, on worry about livelihood',
+  },
+  {
+    arabic:
+      'وَمَنْ يَفْتَقِرْ مِنْكُمْ فَلَيْسَ بِخَامِلٍ\nوَمَنْ يَكُ ذَا مَالٍ فَلَيْسَ بِسَيِّدِ',
+    english:
+      'Whoever among you is poor is not for that humble; whoever has wealth is not for that a master.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on dignity, on wealth and poverty, on real status',
+  },
+  {
+    arabic:
+      'لِسَانُ الْفَتَى نِصْفٌ، وَنِصْفٌ فُؤَادُهُ\nفَلَمْ يَبْقَ إِلَّا صُورَةُ اللَّحْمِ وَالدَّمِ',
+    english:
+      "The young man's tongue is half of him, and his heart the other half — what remains is only the shape of flesh and blood.",
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on what makes a person, on speech, on the heart',
+  },
+  {
+    arabic:
+      'إِذَا الْحَلْمُ لَمْ يَغْلِبْ لَكَ الْجَهْلَ لَمْ يَكُنْ\nلِعِرْضِكَ وَاقٍ مِنْ أَذَى يَوْمِ مَفْخَرِ',
+    english:
+      'If your forbearance does not overcome ignorance directed at you, your honour has no shield on the day of boasting.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on patience, on dignity in the face of insult',
+  },
+  {
+    arabic:
+      'فَلَا تَحْسَبَنَّ الْعِلْمَ يَنْفَعُ وَحْدَهُ\nمَا لَمْ يُتَوَّجْ رَبُّهُ بِخَلَاقِ',
+    english:
+      "Do not think knowledge alone is of benefit — until its owner is crowned with character.",
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on knowledge and character, on what completes learning',
+  },
+  {
+    arabic:
+      'وَإِذَا الصَّدِيقُ أَتَى يَزُورُكَ مَرَّةً\nفَأَتَتْكَ مِنْهُ كَرَامَةٌ مَنْ غَيْرِ سُؤَالْ',
+    english:
+      'When a friend comes to visit you once, a courtesy has come from him without your asking.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on friendship, on what is given freely',
+  },
+  {
+    arabic:
+      'وَمَا الدَّهْرُ إِلَّا تَارَتَانِ فَتَارَةٌ\nأُسَرُّ بِهَا طَوْرًا وَأُخْرَى أَسُوءُهَا',
+    english:
+      'Time is nothing but two turns — one in which I am made glad, and another in which I am made to grieve.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the changes of time, on patience through reversals, on the brevity of life',
+  },
+  {
+    arabic:
+      'لِكُلِّ امْرِئٍ فِي دَهْرِهِ مَا تَعَوَّدَا\nوَعَادَةُ سَيْفِ الْمَرْءِ أَنْ يَتَقَلَّدَا\nفَلَا تَجْزَعَنَّ مِنْ سُنَّةٍ أَنْتَ سِرْتَهَا\nفَأَوَّلُ رَاضٍ سُنَّةً مَنْ يَسِيرُهَا',
+    english:
+      'Every man in his time has what he has accustomed himself to. So do not complain of a path you yourself have walked — for the first to accept a custom is the one who walks it.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: "on responsibility for one's habits, on patience with consequences, on self-accountability",
+  },
+  {
+    arabic:
+      'تَزَوَّدْ مِنَ التَّقْوَى فَإِنَّكَ لَا تَدْرِي\nإِذَا جَنَّ لَيْلٌ هَلْ تَعِيشُ إِلَى الْفَجْرِ\nفَكَمْ مِنْ صَحِيحٍ مَاتَ مِنْ غَيْرِ عِلَّةٍ\nوَكَمْ مِنْ سَقِيمٍ عَاشَ حِينًا مِنَ الدَّهْرِ',
+    english:
+      'Take provision of God-consciousness, for you do not know — when night falls — whether you will live until dawn. How many healthy people have died without illness, and how many sick have lingered on for years.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: "on the brevity of life, on death's nearness, on preparing for the end, on God-consciousness",
+  },
+  {
+    arabic:
+      'إِذَا الْمَرْءُ لَا يَرْعَاكَ إِلَّا تَكَلُّفًا\nفَدَعْهُ وَلَا تُكْثِرْ عَلَيْهِ التَّأَسُّفَا\nفَفِي النَّاسِ أَبْدَالٌ وَفِي التَّرْكِ رَاحَةٌ\nوَفِي الْقَلْبِ صَبْرٌ لِلْحَبِيبِ وَلَوْ جَفَا',
+    english:
+      'When a person regards you only out of forced effort, let him go and do not pour out regret over him. Among people there are replacements, and in letting go there is rest — and in the heart there is patience even for a beloved who turns away.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on dignity, on letting go of those who do not value you, on self-respect in relationships',
+  },
+  {
+    arabic:
+      'إِذَا أَنْتَ لَمْ تَشْرَبْ مِرَارًا عَلَى الْقَذَى\nظَمِئْتَ وَأَيُّ النَّاسِ تَصْفُو مَشَارِبُهْ',
+    english:
+      'If you will not sometimes drink despite the dregs, you will go thirsty — for whose drinking-place among people is ever wholly pure?',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on tolerating imperfection in people, on patience with companions, on realistic expectations',
+  },
+  {
+    arabic:
+      'إِذَا كُنْتَ فِي حَاجَةٍ مُرْسِلًا\nفَأَرْسِلْ حَكِيمًا وَلَا تُوصِهِ\nوَإِنْ نَاصِحٌ مِنْكَ يَوْمًا دَنَا\nفَلَا تَنْأَ عَنْهُ وَلَا تُقْصِهِ',
+    english:
+      'When you send someone on a matter, send a wise person and do not need to instruct him. And if an advisor draws near to you one day, do not push him away or hold him at a distance.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the company of the wise, on listening to counsel, on choosing trustworthy people',
+  },
+  {
+    arabic:
+      'إِذَا جَارَ الْأَمِيرُ وَكَاتِبَاهُ\nوَقَاضِي الْأَرْضِ أَجْحَفَ فِي الْقَضَاءِ\nفَوَيْلٌ ثُمَّ وَيْلٌ ثُمَّ وَيْلٌ\nلِقَاضِي الْأَرْضِ مِنْ قَاضِي السَّمَاءِ',
+    english:
+      'When the ruler is unjust, and his two scribes, and the earthly judge oppresses in his judgement — then woe, then woe, then woe to the judge of the earth from the Judge of the heavens.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on patience under injustice, on trust in divine justice, on God as ultimate judge',
+  },
+  {
+    arabic:
+      'لَا تَطْلُبَنَّ مَعِيشَةً بِمَذَلَّةٍ\nوَاقْنَعْ فَكُلُّ مُقَنَّعٍ مَلِكٌ\nوَالنَّفْسُ حُرَّةٌ مَا قَنِعْتَ بِهَا\nوَإِذَا اسْتَذَلَّتْ نَفْسُهَا هَلَكْتَ',
+    english:
+      "Do not seek a living through humiliation — be content, for every contented person is a king. The soul is free as long as you keep it content; once it lets itself be humbled, you have perished.",
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: "on dignity, on contentment as wealth, on the heart's true wealth, on self-respect",
+  },
+  {
+    arabic:
+      'إِذَا كُنْتَ فِي قَوْمٍ فَصَاحِبْ خِيَارَهُمْ\nوَلَا تَصْحَبِ الْأَرْدَى فَتَرْدَى مَعَ الرَّدِي',
+    english:
+      'When you are among a people, keep company with the best of them. Do not befriend the lowest, lest you fall together with the fallen.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the company of the wise, on avoiding bad companions, on the influence of company',
+  },
+  {
+    arabic:
+      'وَلَا خَيْرَ فِي خِلٍّ يَخُونُ خَلِيلَهُ\nوَيَلْقَاهُ مِنْ بَعْدِ الْمَوَدَّةِ بِالْجَفَا\nوَيُنْكِرُ عَيْشًا قَدْ تَقَادَمَ عَهْدُهُ\nوَيُظْهِرُ سِرًّا كَانَ بِالْأَمْسِ قَدْ خَفَا',
+    english:
+      'There is no good in a friend who betrays his friend and meets him after affection with coldness; who denies a shared life now grown old between them, and discloses a secret that yesterday was kept hidden.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on disappointing love, on betrayal in friendship, on choosing companions, on loyalty',
+  },
+  {
+    arabic:
+      'وَمَنْ يَكُ ذَا فَضْلٍ فَيَبْخَلْ بِفَضْلِهِ\nعَلَى قَوْمِهِ يُسْتَغْنَ عَنْهُ وَيُذْمَمِ',
+    english:
+      'Whoever possesses some virtue and is miserly with it toward his people — they will do without him, and he will be censured.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on generosity with what one has, on serving others, on what to leave behind',
+  },
+  {
+    arabic:
+      'إِذَا كَانَ عَوْنُ اللَّهِ لِلْمَرْءِ شَامِلًا\nتَهَيَّأَ لَهُ مِنْ كُلِّ أَمْرٍ مُرَادُهُ\nوَإِنْ لَمْ يَكُنْ عَوْنٌ مِنَ اللَّهِ لِلْفَتَى\nفَأَكْثَرُ مَا يَجْنِي عَلَيْهِ اجْتِهَادُهُ',
+    english:
+      "When God's help encompasses a person, what he seeks in every matter is made ready for him. And when a young man has no help from God, the very most of his own striving turns against him.",
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on trust in divine timing, on what to seek from God, on reliance over self-striving',
+  },
+  {
+    arabic:
+      'إِذَا الْعِلْمُ لَمْ تَعْمَلْ بِهِ كَانَ حُجَّةً\nعَلَيْكَ وَلَمْ تُعْذَرْ بِمَا أَنْتَ جَاهِلُهْ',
+    english:
+      'When you do not act upon the knowledge you have, it becomes a proof against you — and you are not excused by what remains of your ignorance either.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the difference between knowing and acting, on knowledge as responsibility, on hypocrisy',
+  },
+  {
+    arabic:
+      'النَّاسُ مِنْ جِهَةِ التِّمْثَالِ أَكْفَاءُ\nأَبُوهُمُ آدَمُ وَالأُمُّ حَوَّاءُ',
+    english:
+      'People, in the matter of their making, are equals / Their father is Adam and their mother is Hawwa.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the shared origin and brevity of all human life',
+  },
+  {
+    arabic:
+      'فَإِنْ كَانَ لَهُمْ فِي أَصْلِهِمْ شَرَفٌ\nيُفَاخِرُونَ بِهِ فَالطِّينُ وَالْمَاءُ',
+    english:
+      'If there be in their origin any nobility by which they boast — it is but clay and water.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the lowly origin of the body that death will soon reclaim, on humility',
+  },
+  {
+    arabic:
+      'النَّفْسُ تَبْكِي عَلَى الدُّنْيَا وَقَدْ عَلِمَتْ\nأَنَّ السَّلَامَةَ فِيهَا تَرْكُ مَا فِيهَا',
+    english:
+      'The soul weeps over the world, though it has known / that safety within it lies in leaving what is in it.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the foolishness of clinging to a world we must soon leave',
+  },
+  {
+    arabic:
+      'لَا دَارَ لِلْمَرْءِ بَعْدَ الْمَوْتِ يَسْكُنُهَا\nإِلَّا الَّتِي كَانَ قَبْلَ الْمَوْتِ يَبْنِيهَا',
+    english:
+      'No dwelling has a man to inhabit after death / save the one he was building before death.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on building for the Hereafter while time remains',
+  },
+  {
+    arabic:
+      'فَإِنْ بَنَاهَا بِخَيْرٍ طَابَ مَسْكَنُهُ\nوَإِنْ بَنَاهَا بِشَرٍّ خَابَ بَانِيهَا',
+    english:
+      'If he built it with good, his dwelling shall be sweet / and if he built it with evil, its builder is undone.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the swift accounting that follows the brief day of work',
+  },
+  {
+    arabic:
+      'يَا مَنْ بِدُنْيَاهُ اشْتَغَلْ\nقَدْ غَرَّهُ طُولُ الأَمَلْ',
+    english:
+      'O you whom this world has occupied / long hope has utterly deceived you.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the deception of long hopes when life is short',
+  },
+  {
+    arabic:
+      'الْمَوْتُ يَأْتِي بَغْتَةً\nوَالْقَبْرُ صُنْدُوقُ الْعَمَلْ',
+    english:
+      'Death comes suddenly, without warning / and the grave is the chest that holds the deeds.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on death arriving unannounced and the grave as the ledger of works',
+  },
+  {
+    arabic:
+      'وَمَا الدُّنْيَا بِبَاقِيَةٍ لِحَيٍّ\nوَلَا حَيٌّ عَلَى الدُّنْيَا بِبَاقِي',
+    english:
+      'The world abides for no living soul / nor does any living soul abide upon the world.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the impermanence of both the world and its inhabitants',
+  },
+  {
+    arabic:
+      'وَمَا الْمَالُ وَالْأَهْلُونَ إِلَّا وَدَائِعُ\nوَلَا بُدَّ يَوْمًا أَنْ تُرَدَّ الْوَدَائِعُ',
+    english:
+      'Wealth and family are nothing but entrusted things / and one day, inevitably, what is entrusted must be returned.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the borrowed nature of every blessing in a brief life',
+  },
+  {
+    arabic:
+      'تَزَوَّدْ مِنَ التَّقْوَى فَإِنَّكَ لَا تَدْرِي\nإِذَا جَنَّ لَيْلٌ هَلْ تَعِيشُ إِلَى الْفَجْرِ',
+    english:
+      'Take provision of God-consciousness, for you do not know / when night falls, whether you will live until the dawn.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the nearness of death and the worth of every remaining hour',
+  },
+  {
+    arabic:
+      'فَكَمْ مِنْ صَحِيحٍ مَاتَ مِنْ غَيْرِ عِلَّةٍ\nوَكَمْ مِنْ سَقِيمٍ عَاشَ حِينًا مِنَ الدَّهْرِ',
+    english:
+      'How many a healthy one has died without any illness / and how many a sick one has lived on for an age.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on death striking unpredictably and the folly of postponement',
+  },
+  {
+    arabic:
+      'وَكَمْ مِنْ فَتًى أَمْسَى وَأَصْبَحَ ضَاحِكًا\nوَأَكْفَانُهُ فِي الْغَيْبِ تُنْسَجُ وَلَا يَدْرِي',
+    english:
+      'How many a youth has passed his evening and morning laughing / while his shrouds, in the unseen, are being woven — and he does not know.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the unseen approach of death amid the laughter of the living',
+  },
+  {
+    arabic:
+      'شِفَاءُ الْعَمَى طُولُ السُّؤَالِ وَإِنَّمَا\nتَمَامُ صَلَاحِ المَرْءِ طُولُ تَدَبُّرِهْ',
+    english:
+      'The cure of blindness is to ask at length / and the perfection of a man is the length of his reflection.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on asking the learned, on reflection',
+  },
+  {
+    arabic:
+      'وَلَيْسَ بِعِلْمٍ مَا حَوَى القَمَطْرُ\nمَا العِلْمُ إِلَّا مَا حَوَاهُ الصَّدْرُ',
+    english:
+      'That which the satchel contains is not knowledge / knowledge is only what the breast contains.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on what knowledge truly is, on the heart as the seat of knowledge',
+  },
+  {
+    arabic:
+      'أَخِي لَنْ تَنَالَ العِلْمَ إِلَّا بِسِتَّةٍ\nسَأُنْبِيكَ عَنْ تَفْصِيلِهَا بِبَيَانِ\nذَكَاءٌ وَحِرْصٌ وَاجْتِهَادٌ وَبُلْغَةٌ\nوَصُحْبَةُ أُسْتَاذٍ وَطُولُ زَمَانِ',
+    english:
+      'My brother, you shall not attain knowledge save by six — I will inform you of their details in plain speech / intelligence, eagerness, striving, and sufficient means, the company of a teacher, and length of time.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the conditions of seeking knowledge, on the student',
+  },
+  {
+    arabic:
+      'تَعَلَّمْ فَلَيْسَ المَرْءُ يُولَدُ عَالِمًا\nوَلَيْسَ أَخُو عِلْمٍ كَمَنْ هُوَ جَاهِلُ',
+    english:
+      'Learn — for no man is born already learned / and no companion of knowledge is like the ignorant.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the worth of the learner, on no one born knowing',
+  },
+  {
+    arabic:
+      'وَإِنَّ كَبِيرَ القَوْمِ لَا عِلْمَ عِنْدَهُ\nصَغِيرٌ إِذَا الْتَفَّتْ عَلَيْهِ الجَحَافِلُ',
+    english:
+      'The elder of a people in whom there is no knowledge / is small when the gathered hosts crowd around him.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the dignity of the scholar, on the worth of the learner',
+  },
+  {
+    arabic:
+      'العِلْمُ زَيْنٌ وَتَقْوَى اللَّهِ زِينَتُهُ\nوَالمُتَّقُونَ لَهُمْ فَضْلٌ عَلَى العُلَمَا',
+    english:
+      'Knowledge is an adornment, and the fear of God is its ornament / and the God-fearing have excellence over the learned.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on knowledge wedded to piety, on the dignity of the scholar',
+  },
+  {
+    arabic:
+      'مَا الفَضْلُ إِلَّا لِأَهْلِ العِلْمِ إِنَّهُمُ\nعَلَى الهُدَى لِمَنِ اسْتَهْدَى أَدِلَّاءُ',
+    english:
+      'There is no excellence except for the people of knowledge / they are guides to the right path for whoever seeks guidance.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the dignity of the scholar, on guidance through the learned',
+  },
+  {
+    arabic:
+      'وَقَدْرُ كُلِّ امْرِئٍ مَا كَانَ يُحْسِنُهُ\nوَالجَاهِلُونَ لِأَهْلِ العِلْمِ أَعْدَاءُ',
+    english:
+      'The worth of each man is what he masters well / and the ignorant are the enemies of the people of knowledge.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the worth of a person, on the enmity of the ignorant',
+  },
+  {
+    arabic:
+      'لَا تَحْسَبِ العِلْمَ يَنْفَعْ وَحْدَهُ أَبَدًا\nمَا لَمْ يُتَوَّجْ بِهِ أَخْلَاقُ صَاحِبِهِ',
+    english:
+      'Do not suppose knowledge alone will ever profit / so long as the conduct of its bearer is not crowned with it.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on knowledge without character, on confusing speech with knowledge',
+  },
+  {
+    arabic:
+      'يَا رُبَّ ذِي مَنْطِقٍ عَذْبٍ بَلَاغَتُهُ\nقَلْبٌ خَلِيٌّ مِنَ التَّقْوَى وَآدَابِهِ',
+    english:
+      'How many a one of sweet speech, his eloquence flowing / has a heart empty of piety and its disciplines.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on confusing speech with knowledge, on hollow eloquence',
+  },
+  {
+    arabic:
+      'وَلَوْ كَانَ هَذَا العِلْمُ يَحْصُلُ بِالمُنَى\nلَمَا كَانَ يَبْقَى فِي البَرِيَّةِ جَاهِلُ\nفَجِدَّ وَلَا تَكْسَلْ وَلَا تَكُ غَافِلًا\nفَنَدَامَةُ العُقْبَى لِمَنْ يَتَكَاسَلُ',
+    english:
+      'Were this knowledge to be attained by mere wishing / there would not remain among creation a single ignorant man. So strive, and be not slothful, and be not heedless / for the regret of the end is for the one who falls into idleness.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: "on the cost of seeking, on the student's effort",
+  },
+  {
+    arabic:
+      'إِذَا جَلَسْتَ إِلَى العُلَمَاءِ فَكُنْ عَلَى\nأَنْ تَسْمَعَ أَحْرَصَ مِنْكَ عَلَى أَنْ تَقُولَا\nوَتَعَلَّمِ الْإِنْصَاتَ حُسْنَ تَعَلُّمٍ\nكَمَا تَعَلَّمْتَ الكَلَامَ الجَمِيلَا',
+    english:
+      'When you sit before the learned, be more eager to listen than to speak / and learn good listening as a fine learning, just as you learned beautiful speech.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the student-teacher relationship, on the etiquette of the seeker',
+  },
+  {
+    arabic:
+      'إِذَا المَرْءُ لَمْ يَلْبَسْ لِبَاسًا مِنَ التُّقَى\nتَقَلَّبَ عُرْيَانًا وَإِنْ كَانَ كَاسِيَا',
+    english:
+      'When a man does not clothe himself in the garment of piety / he walks about naked, though he be richly dressed.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on piety as the true garment, on outward finery as nakedness',
+  },
+  {
+    arabic:
+      'وَخَيْرُ خِصَالِ المَرْءِ صِدْقُ لِسَانِهِ\nوَشَرُّ مَسَاعِيهِ السَّعَايَةُ بِالكَذِبِ',
+    english:
+      "The best of a man's traits is the truthfulness of his tongue / and the worst of his pursuits is the slander spread by lies.",
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on truthfulness as the highest trait',
+  },
+  {
+    arabic:
+      'وَلَا خَيْرَ فِي طُولِ الحَيَاةِ وَعَيْشِهَا\nإِذَا أَنْتَ مِنْهَا بِالتُّقَى لَمْ تُزَوَّدِ',
+    english:
+      'There is no good in a long life or its enjoyment / if you have not provisioned yourself from it with piety.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on what makes a life worth living',
+  },
+  {
+    arabic:
+      'وَمَنْ يَكُ ذَا عَقْلٍ وَلَمْ يَكُ ذَا تُقًى\nفَلَيْسَ لَهُ مِنْ عَقْلِهِ وَافِرُ الحَظِّ',
+    english:
+      'Whoever possesses intellect but possesses no piety / has gained no abundant share from his own intellect.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on intellect without piety',
+  },
+  {
+    arabic:
+      'إِذَا اعْتَادَ الفَتَى خَوْضَ المَعَالِي\nفَأَيْسَرُ مَا يَمُرُّ بِهِ الصِّعَابُ',
+    english:
+      'When a young man grows accustomed to wading into noble heights / the easiest of things he encounters is hardship.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the life aimed at the noble',
+  },
+  {
+    arabic:
+      'إِذَا المَرْءُ لَمْ يَدَّخِرْ تَقْوَىً لِآخِرَتِهْ\nرَأَى الحَسْرَةَ الكُبْرَى غَدَاً عِنْدَ مَصْرَعِهْ',
+    english:
+      'If a man stores up no piety for his Hereafter / he will see the greatest anguish tomorrow at his fall.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on provisioning for the road ahead',
+  },
+  {
+    arabic:
+      'وَخَفْ رَبَّكَ الأَعْلَى وَأَحْسِنْ ظُنُونَكَا\nفَإِنَّ كَرِيمَ العَفْوِ يَقْبَلُ تَائِبَهْ',
+    english:
+      'Fear your Lord Most High, yet keep your hopes fair-thinking / for the Generous in pardon receives the one who turns.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on what to fear and what to hope, between awe and mercy',
+  },
+  {
+    arabic:
+      'أَطِعْ مَنْ يُعَلِّمْكَ وَإِنْ كَانَ ذَا كِبَرٍ\nفَفِي شَيْبَةِ الشَّيْخِ الحَكِيمِ تَجَارِبُهْ',
+    english:
+      "Obey the one who teaches you, though his years be many / for in the white hair of the wise old man lie his trials lived.",
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on heeding the wise old man\'s counsel',
+  },
+  {
+    arabic:
+      'وَسِرْ فِي طَرِيقِ الحَقِّ سَيْرَ مُسَافِرٍ\nيُعِدُّ لِيَوْمِ الرَّحْلِ مَا هُوَ نَافِعُهْ',
+    english:
+      'Walk in the road of truth as a traveller walks / preparing for the day of departure what will profit him.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on life as a journey toward home',
+  },
+  {
+    arabic:
+      'تَخَوَّفْ مِنَ الدُّنْيَا وَلَا تَأْمَنَنْ لَهَا\nفَكَمْ ضَاحِكٍ فِيهَا بَكَتْهُ مَآتِمُهْ',
+    english:
+      'Be wary of this world and feel no safety in her / for many a man who laughed in her was wept over at his wake.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: "on the world's smile, on distrust of safety",
+  },
+  {
+    arabic:
+      'وَشَاوِرْ ذَوِي الأَلْبَابِ مِنْ كُلِّ مَجْلِسٍ\nفَرَأْيُ الفَتَى الغِرِّ يَخُونُ صَوَاحِبَهْ',
+    english:
+      'Take counsel of the people of understanding in every gathering / for the green youth\'s opinion betrays its own companions.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on seeking the seasoned mind',
+  },
+  {
+    arabic:
+      'أَخَاكَ أَخَاكَ إِنَّ مَنْ لَا أَخَا لَهُ\nكَسَاعٍ إِلَى الهَيْجَا بِغَيْرِ سِلَاحِ',
+    english: 'Your brother, your brother! For he who has no brother / is like one rushing into battle without a weapon.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on brotherhood, on the worth of a sibling, nasīḥa',
+  },
+  {
+    arabic:
+      'وَإِنَّ ابْنَ عَمِّ المَرْءِ فَاعْلَمْ جَنَاحُهُ\nوَهَلْ يَنْهَضُ البَازِي بِغَيْرِ جَنَاحِ',
+    english: "Know that a person's cousin is their very wing / and can the falcon ever rise without a wing?",
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on kinship, on the support of one\'s clan',
+  },
+  {
+    arabic:
+      'إِذَا المَرْءُ لَمْ يُدْنَسْ مِنَ اللُّؤْمِ عِرْضُهُ\nفَكُلُّ رِدَاءٍ يَرْتَدِيهِ جَمِيلُ',
+    english: "If a man's honour is not soiled by baseness / then every cloak he wears is beautiful.",
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on character as the true adornment, on honour',
+  },
+  {
+    arabic:
+      'وَإِنْ هُوَ لَمْ يَحْمِلْ عَلَى النَّفْسِ ضَيْمَهَا\nفَلَيْسَ إِلَى حُسْنِ الثَّنَاءِ سَبِيلُ',
+    english: 'If a man does not make his soul bear hardship / there is no path for him to noble praise.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on character through self-discipline',
+  },
+  {
+    arabic:
+      'وَلَمْ أَرَ فِي عُيُوبِ النَّاسِ عَيْبًا\nكَنَقْصِ القَادِرِينَ عَلَى التَّمَامِ',
+    english: 'Among the faults of people I have seen no fault / like the shortcoming of those who had the power to complete.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on character, on excellence, on not falling short of what you could do',
+  },
+  {
+    arabic:
+      'اِصْبِرْ عَلَى مَضَضِ الحَسُو\nدِ فَإِنَّ صَبْرَكَ قَاتِلُهْ',
+    english: 'Be patient with the bitterness of the envier / for your patience itself is what slays him.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on patience under envy, on adversity',
+  },
+  {
+    arabic:
+      'فَالنَّارُ تَأْكُلُ بَعْضَهَا\nإِنْ لَمْ تَجِدْ مَا تَأْكُلُهْ',
+    english: 'Even fire consumes its own self / if it finds nothing else to consume.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on patience under envy, on the self-defeating nature of malice',
+  },
+  {
+    arabic:
+      'يَا أَيُّهَا النَّاسُ اِجْتَنِبُوا الكَذِبَ\nوَجَانِبُوا الجَاهِلَ وَالمُغْتَابَ',
+    english: 'O people, shun lying altogether / and keep far from the ignorant and the backbiter.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on truthfulness, on avoiding backbiting, nasīḥa',
+  },
+  {
+    arabic:
+      'وَاصْحَبْ مِنَ النَّاسِ ذَوِي رَأْفَةٍ\nيَكُونُ مِنْهُمْ لَكَ أَصْحَابُ',
+    english: 'Keep company among people with those of tender mercy / for from such people you will find true companions.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on companionship, nasīḥa',
+  },
+  {
+    arabic:
+      'وَكُنْ صَبُورًا عَلَى نَوْبِ الزَّمَانِ وَلَا\nتَجْزَعْ لِحَادِثَةٍ يَوْمًا مِنَ الزَّمَنِ',
+    english: "Be enduring in the face of time's misfortunes / and do not despair, even for a day, at any event of this age.",
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on patience, on steadfastness through time',
+  },
+  {
+    arabic:
+      'تَوَكَّلْ عَلَى الرَّحْمَنِ فِي كُلِّ حَاجَةٍ\nوَلَا تَرْجُ مِنْ عَبْدٍ سِوَاهُ قَضَاءَهَا\nفَإِنَّ الَّذِي يَكْفِيكَ مَا فَاتَ فِي الَّذِي\nمَضَى هُوَ يَكْفِيكَ الَّذِي أَنْتَ خَاشِيَهْ',
+    english:
+      'Rely upon the Merciful in every need / and hope for its fulfilment from no servant beside Him. The One who sufficed you in what has already passed / is the One who will suffice you in what you now fear.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on tawakkul, on reliance in every need',
+  },
+  {
+    arabic:
+      'إِذَا اشْتَمَلَتْ عَلَى الْيَأْسِ الْقُلُوبُ\nوَضَاقَ لِمَا بِهِ الصَّدْرُ الرَّحِيبُ\nوَأَوْطَنَتِ الْمَكَارِهُ وَاطْمَأَنَّتْ\nوَأَرْسَتْ فِي أَمَاكِنِهَا الْخُطُوبُ\nأَتَاكَ عَلَى قُنُوطٍ مِنْكَ غَوْثٌ\nيَمُنُّ بِهِ اللَّطِيفُ الْمُسْتَجِيبُ\nوَكُلُّ الْحَادِثَاتِ إِذَا تَنَاهَتْ\nفَمَوْصُولٌ بِهَا الْفَرَجُ الْقَرِيبُ',
+    english:
+      'When hearts are enveloped in despair / and the spacious breast grows narrow with what it bears, / when hardships settle in and take their rest / and calamities anchor firmly in their places — / there comes to you, upon your very despair, a rescue / bestowed by the Gentle, the Answerer of prayer. / And all events, when they reach their utmost limit / are joined to a nearness of relief at hand.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on relief after despair, on the dawn at the darkest hour',
+  },
+  {
+    arabic:
+      'وَمَا الْمَرْءُ إِلَّا حَيْثُ يَجْعَلُ نَفْسَهُ\nفَكُنْ طَالِبًا فِي النَّاسِ أَعْلَى الْمَرَاتِبِ\nوَوَطِّنْ عَلَى مَا نَابَكَ الدَّهْرُ نَفْسَهَا\nفَخَيْرُ خِلَالِ الْمَرْءِ صِدْقُ الرَّغَائِبِ',
+    english:
+      'A man is only what he makes of himself / so seek among people the loftiest of ranks. / Settle your soul to whatever fate has dealt you / for the best of a man\'s qualities is truthful contentment.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on contentment with the decree, on character',
+  },
+  {
+    arabic:
+      'رَضِيتُ بِمَا قَسَمَ اللَّهُ لِي\nوَفَوَّضْتُ أَمْرِي إِلَى خَالِقِي\nكَمَا أَحْسَنَ اللَّهُ فِيمَا مَضَى\nكَذَلِكَ يُحْسِنُ فِيمَا بَقِي',
+    english:
+      'I am content with what God has apportioned me / and I have entrusted my affair to my Creator. / Just as God did beautifully in what has passed / so too will He do beautifully in what remains.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on surrender to the decree, on resting in what He has set',
+  },
+  {
+    arabic:
+      'دَعِ الْحِرْصَ عَلَى الدُّنْيَا\nوَفِي الْعَيْشِ فَلَا تَطْمَعْ\nوَلَا تَجْمَعْ مِنَ الْمَالِ\nفَمَا تَدْرِي لِمَنْ تَجْمَعْ\nفَإِنَّ الرِّزْقَ مَقْسُومٌ\nوَسُوءُ الظَّنِّ لَا يَنْفَعْ',
+    english:
+      'Leave off greed for the world / and do not covet in your living. / Do not heap up wealth / for you know not for whom you heap it. / Provision is already apportioned / and suspicion of God avails you nothing.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on letting go of the world, on tawakkul in provision',
+  },
+  {
+    arabic:
+      'تَوَكَّلْتُ فِي رِزْقِي عَلَى اللَّهِ خَالِقِي\nوَأَيْقَنْتُ أَنَّ اللَّهَ لَا شَكَّ رَازِقِي\nوَمَا يَكُ مِنْ رِزْقِي فَلَيْسَ يَفُوتُنِي\nوَلَوْ كَانَ فِي قَاعِ الْبِحَارِ الْعَوَامِقِ',
+    english:
+      'I have placed my trust for my provision upon God my Creator / and I have known with certainty that God, without doubt, will provide for me. / Whatever is of my provision shall never escape me / though it lay in the depths of the deepest seas.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on certainty in provision, on tawakkul',
+  },
+  {
+    arabic:
+      'إِذَا الْمَقْدُورُ حَلَّ بِكَ الْبَلَاءُ\nفَلَيْسَ يَرُدُّهُ عَنْكَ احْتِيَالُ\nوَمَا لَكَ غَيْرُ تَقْوَى اللَّهِ حِصْنٌ\nإِذَا نَزَلَتْ بِسَاحَتِكَ النَّوَالُ',
+    english:
+      'When affliction descends upon you by decree / no scheming on your part can turn it away. / You have no fortress save the fear of God / when the decrees alight in your courtyard.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on the futility of resisting the decree',
+  },
+  {
+    arabic:
+      'إِذَا كُنْتَ ذَا قَلْبٍ قَنُوعٍ بِمَا تَرَى\nفَأَنْتَ وَمَنْ يَمْلِكُ بِلَادَ الْمَشَارِقِ\nوَإِنْ كُنْتَ تَبْغِي مَا تَرَى فَجَمِيعُ مَا\nحَوَتْهُ يَدَاكَ الْيَوْمَ لَيْسَ بِسَائِغِ',
+    english:
+      'If you possess a heart content with what it sees / then you and the one who owns the eastern lands are equal. / But if you crave whatever you behold / then all that your hands hold today will not go down sweetly.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on contentment as wealth',
+  },
+  {
+    arabic:
+      'وَمَنْ وَثِقَ بِاللَّهِ فِي كُلِّ أَمْرِهِ\nيَجِدْ كُلَّ خَيْرٍ عِنْدَهُ حِينَ يَطْلُبُ\nوَمَنْ يَتَوَكَّلْ فِي الْأُمُورِ عَلَى الَّذِي\nإِلَيْهِ مَآلُ الْخَلْقِ تَكْفِهِ النَّوَائِبُ',
+    english:
+      'Whoever places his trust in God in every affair / shall find every good with Him when he seeks. / Whoever entrusts his matters to the One / to whom all creation returns — calamities will be sufficed away from him.',
+    source: 'Diwan attributed to Imam Ali (عليه السلام)',
+    theme: 'on tawakkul, on the believer\'s tranquility',
+  },
 ]
 
 /**
