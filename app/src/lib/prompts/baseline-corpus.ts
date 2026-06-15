@@ -210,12 +210,6 @@ export const BASELINE_DUAS: BaselineEntry[] = [
     theme: 'upon waking from sleep, first words of the morning, gratitude for a new day',
   },
   {
-    arabic: 'بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا',
-    english: 'In Your name, O God, I die and I live.',
-    source: 'Sahih al-Bukhari, 6324',
-    theme: 'before sleeping, lying down at night, surrendering the day',
-  },
-  {
     arabic: 'اللَّهُمَّ بِاسْمِكَ أَحْيَا وَبِاسْمِكَ أَمُوتُ',
     english: 'O God, in Your name I live and in Your name I die.',
     source: 'Sahih al-Bukhari, 6325',
@@ -1450,14 +1444,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'on hawā, on long hopes, on procrastination, on the inner struggle',
   },
   {
-    arabic:
-      'مَنْ نَصَبَ نَفْسَهُ لِلنَّاسِ إِمَامًا فَلْيَبْدَأْ بِتَعْلِيمِ نَفْسِهِ قَبْلَ تَعْلِيمِ غَيْرِهِ',
-    english:
-      'Whoever sets himself up as a leader of people, let him begin with teaching himself before teaching others.',
-    source: 'Nahj al-Balagha, Saying 73',
-    theme: 'on disciplining oneself first, on the inner struggle',
-  },
-  {
     arabic: 'الْهَوَى شَرِيكُ الْعَمَى',
     english: 'Desire is the partner of blindness.',
     source: 'Ghurar al-Hikam',
@@ -1748,14 +1734,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'on provision, on reliance on God, when anxious about tomorrow',
   },
   {
-    arabic:
-      'الرِّزْقُ رِزْقَانِ: رِزْقٌ تَطْلُبُهُ، وَرِزْقٌ يَطْلُبُكَ، فَإِنْ لَمْ تَأْتِهِ أَتَاكَ',
-    english:
-      'Provision is of two kinds: provision you seek, and provision that seeks you — so if you do not go to it, it will come to you.',
-    source: 'Nahj al-Balagha, Saying 379',
-    theme: 'on provision, on rizq arriving by its own path, when worried about provision',
-  },
-  {
     arabic: 'قَدْ يُرْزَقُ الْعَبْدُ مِنْ حَيْثُ لَا يَحْتَسِبُ',
     english: 'The servant may be provided for from where he does not reckon.',
     source: 'Ghurar al-Hikam',
@@ -2020,12 +1998,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'on divine adversary of the oppressor, on accountability before God, on defense of the wronged',
   },
   {
-    arabic: 'لَا تَرَى الْجَاهِلَ إِلَّا مُفْرِطًا أَوْ مُفَرِّطًا',
-    english: 'You will not find the ignorant except in excess or in neglect.',
-    source: 'Nahj al-Balagha, Saying 70',
-    theme: 'on ignorance breeds injustice, on moderation, on the middle way',
-  },
-  {
     arabic: 'كُونَا لِلظَّالِمِ خَصْمًا، وَلِلْمَظْلُومِ عَوْنًا',
     english: 'Be both of you an adversary to the oppressor and a helper to the oppressed.',
     source: 'Nahj al-Balagha, Letter 47 (to al-Hasan and al-Husayn)',
@@ -2079,19 +2051,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
   },
   {
     arabic:
-      'الْكَلَامُ فِي وَثَاقِكَ مَا لَمْ تَتَكَلَّمْ بِهِ، فَإِذَا تَكَلَّمْتَ بِهِ صِرْتَ فِي وَثَاقِهِ',
-    english: 'Speech is in your bond so long as you have not uttered it; once you have uttered it, you are in its bond.',
-    source: 'Nahj al-Balagha (saying)',
-    theme: 'on weighing words, on the irrevocability of speech',
-  },
-  {
-    arabic: 'لِسَانُ الْعَاقِلِ وَرَاءَ قَلْبِهِ، وَقَلْبُ الْأَحْمَقِ وَرَاءَ لِسَانِهِ',
-    english: 'The tongue of the wise lies behind his heart; the heart of the fool lies behind his tongue.',
-    source: 'Nahj al-Balagha, Saying 40',
-    theme: 'on weighing words, on speech reveals character',
-  },
-  {
-    arabic:
       'مَا الْإِنْسَانُ لَوْلَا اللِّسَانُ إِلَّا صُورَةٌ مُمَثَّلَةٌ، أَوْ بَهِيمَةٌ مُهْمَلَةٌ',
     english:
       'Were it not for the tongue, the human being would be no more than a fashioned image, or an idle beast.',
@@ -2139,14 +2098,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'The keeping of a secret is among the noblest of traits; the divulging of it among the basest of deeds.',
     source: 'Ghurar al-Hikam',
     theme: 'on secret-keeping, on kitmān al-sirr',
-  },
-  {
-    arabic:
-      'مَا أَضْمَرَ أَحَدٌ شَيْئًا إِلَّا ظَهَرَ فِي فَلَتَاتِ لِسَانِهِ وَصَفَحَاتِ وَجْهِهِ',
-    english:
-      'No one conceals anything within but that it shows in the slips of his tongue and the pages of his face.',
-    source: 'Nahj al-Balagha, Saying 26',
-    theme: 'on the tongue reveals the heart',
   },
   {
     arabic: 'يَنَامُ الرَّجُلُ عَلَى الثُّكْلِ، وَلَا يَنَامُ عَلَى الْحَرَبِ',
@@ -2198,12 +2149,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
   },
 
   // ── Specific hardships & sabr ───────────────────────────────────
-  {
-    arabic: 'الصَّبْرُ صَبْرَانِ: صَبْرٌ عَلَى مَا تَكْرَهُ، وَصَبْرٌ عَمَّا تُحِبُّ',
-    english: 'Patience is of two kinds: patience over what you dislike, and patience away from what you love.',
-    source: 'Nahj al-Balagha, Saying 55',
-    theme: 'on the two faces of sabr',
-  },
   {
     arabic:
       'إِنَّ عَظِيمَ الْأَجْرِ مَعَ عَظِيمِ الْبَلَاءِ، وَمَا أَحَبَّ اللَّهُ قَوْمًا إِلَّا ابْتَلَاهُمْ',
@@ -2283,14 +2228,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'When matters grow tangled, their end is to be judged by their beginning.',
     source: 'Nahj al-Balagha, Saying 168',
     theme: 'on long-stretched trial, on reading by the start',
-  },
-  {
-    arabic:
-      'الدَّهْرُ يَوْمَانِ: يَوْمٌ لَكَ وَيَوْمٌ عَلَيْكَ، فَإِذَا كَانَ لَكَ فَلَا تَبْطَرْ، وَإِذَا كَانَ عَلَيْكَ فَاصْبِرْ',
-    english:
-      'Time is two days: a day for you and a day against you. When it is for you, do not exult; when it is against you, be patient.',
-    source: 'Nahj al-Balagha, Saying 396',
-    theme: 'on the turning of days',
   },
   {
     arabic: 'مَنْ ضَاقَ بِهِ أَمْرٌ فَلْيَنْتَظِرْ فَرَجًا، فَإِنَّ مَعَ الْعُسْرِ يُسْرًا',
@@ -5016,12 +4953,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'on sabr and faith',
   },
   {
-    arabic: 'الصَّبْرُ مَطِيَّةٌ لَا تَكْبُو',
-    english: 'Patience is a mount that never stumbles.',
-    source: 'Ghurar al-Hikam',
-    theme: 'on sabr as the believer\'s mount',
-  },
-  {
     arabic: 'الصَّبْرُ مُرٌّ مَذَاقُهُ، حُلْوَةٌ ثَمَرَتُهُ',
     english: 'Patience is bitter in taste, but sweet in its fruit.',
     source: 'Ghurar al-Hikam',
@@ -5566,12 +5497,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'on refusing apology, on being blameworthy',
   },
   {
-    arabic: 'أَوْلَى النَّاسِ بِالْعَفْوِ أَقْدَرُهُمْ عَلَى الْعُقُوبَةِ',
-    english: 'The most deserving of people to pardon is the one most able to punish.',
-    source: 'Nahj al-Balagha, Saying 52',
-    theme: 'on the magnanimity of the powerful',
-  },
-  {
     arabic:
       'عَوِّدْ نَفْسَكَ السَّمَاحَ، وَتَخَيَّرْ لَهَا مِنْ كُلِّ خُلُقٍ أَحْسَنَهُ، فَإِنَّ الْخَيْرَ عَادَةٌ',
     english: 'Habituate yourself to forbearance, and choose for yourself the finest of every character trait — for goodness is a habit.',
@@ -5700,12 +5625,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
   },
 
   // ── Muḥāsaba (self-reckoning, knowing one's own faults) ────────
-  {
-    arabic: 'مَنْ حَاسَبَ نَفْسَهُ رَبِحَ، وَمَنْ غَفَلَ عَنْهَا خَسِرَ',
-    english: 'Whoever calls his soul to account profits; whoever is heedless of it loses.',
-    source: 'Nahj al-Balagha, Saying 208',
-    theme: 'on muḥāsaba, on profit and loss of the soul',
-  },
   {
     arabic: 'ثَمَرَةُ الْمُحَاسَبَةِ إِصْلَاحُ النَّفْسِ',
     english: 'The fruit of self-reckoning is the reform of the soul.',
@@ -6146,40 +6065,10 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when holding power over someone who wronged you, when revenge tempts',
   },
   {
-    arabic: 'أَعْجَزُ النَّاسِ مَنْ عَجَزَ عَنِ اكْتِسَابِ الْإِخْوَانِ، وَأَعْجَزُ مِنْهُ مَنْ ضَيَّعَ مَنْ ظَفِرَ بِهِ مِنْهُمْ',
-    english: 'The most helpless of all people is he who cannot find a few friends in his life, but still more helpless is he who finds such a friend and then loses him.',
-    source: 'Nahj al-Balagha, Saying 12',
-    theme: 'when neglecting friendships, when realising you have drifted from a real friend',
-  },
-  {
     arabic: 'قُرِنَتِ الْهَيْبَةُ بِالْخَيْبَةِ، وَالْحَيَاءُ بِالْحِرْمَانِ، وَالْفُرْصَةُ تَمُرُّ مَرَّ السَّحَابِ، فَانْتَهِزُوا فُرَصَ الْخَيْرِ',
     english: 'The consequence of fear is disappointment, and of bashfulness is frustration. Opportunity passes away like the cloud — so seize the opportunities for good.',
     source: 'Nahj al-Balagha, Saying 21',
     theme: 'when hesitating, when a chance is in front of you and you are paralyzed',
-  },
-  {
-    arabic: 'مَنْ أَطَالَ الْأَمَلَ أَسَاءَ الْعَمَلَ',
-    english: 'Whoever prolongs his desires ruins his actions.',
-    source: 'Nahj al-Balagha, Saying 36',
-    theme: 'when chasing endless wants, when distraction undermines the work',
-  },
-  {
-    arabic: 'إِذَا تَمَّ الْعَقْلُ نَقَصَ الْكَلَامُ',
-    english: 'When the intellect is perfected, speech grows less.',
-    source: 'Nahj al-Balagha, Saying 71',
-    theme: 'when tempted to over-explain, when wisdom calls for fewer words',
-  },
-  {
-    arabic: 'عَجِبْتُ لِمَنْ يَقْنَطُ وَمَعَهُ الِاسْتِغْفَارُ',
-    english: 'I wonder at the one who despairs while he still has the means of seeking forgiveness.',
-    source: 'Nahj al-Balagha, Saying 87',
-    theme: 'when despair closes in, when forgetting that repentance is always open',
-  },
-  {
-    arabic: 'إِضَاعَةُ الْفُرْصَةِ غُصَّةٌ',
-    english: 'To miss an opportunity is a source of grief.',
-    source: 'Nahj al-Balagha, Saying 118',
-    theme: 'when grieving a missed chance, when learning to act sooner next time',
   },
   {
     arabic: 'الدُّنْيَا دَارُ مَمَرٍّ لَا دَارُ مَقَرٍّ',
@@ -6194,12 +6083,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when testing who a real friend is, when judging loyalty',
   },
   {
-    arabic: 'الْمَرْءُ مَخْبُوءٌ تَحْتَ لِسَانِهِ',
-    english: 'A person lies hidden beneath his tongue.',
-    source: 'Nahj al-Balagha, Saying 148',
-    theme: 'when judging someone by appearance, when reading character through speech',
-  },
-  {
     arabic: 'هَلَكَ امْرُؤٌ لَمْ يَعْرِفْ قَدْرَهُ',
     english: 'Ruined is the one who does not know his own worth.',
     source: 'Nahj al-Balagha, Saying 149',
@@ -6212,28 +6095,10 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when temptation says you can fix it later, when prevention is the easier path',
   },
   {
-    arabic: 'النَّاسُ أَعْدَاءُ مَا جَهِلُوا',
-    english: 'People are enemies of what they do not know.',
-    source: 'Nahj al-Balagha, Saying 172',
-    theme: 'when facing prejudice, when explaining the unfamiliar',
-  },
-  {
-    arabic: 'الطَّمَعُ رِقٌّ مُؤَبَّدٌ',
-    english: 'Greed is a perpetual slavery.',
-    source: 'Nahj al-Balagha, Saying 180',
-    theme: 'when wanting more eats your peace, when chasing the next thing',
-  },
-  {
     arabic: 'كُلُّ وِعَاءٍ يَضِيقُ بِمَا جُعِلَ فِيهِ إِلَّا وِعَاءَ الْعِلْمِ، فَإِنَّهُ يَتَّسِعُ',
     english: 'Every vessel grows narrower with what is placed inside it — except the vessel of knowledge, which only expands.',
     source: 'Nahj al-Balagha, Saying 205',
     theme: 'when feeling mentally full, when worried that learning more will overwhelm you',
-  },
-  {
-    arabic: 'مَنْ كَسَاهُ الْحَيَاءُ ثَوْبَهُ، لَمْ يَرَ النَّاسُ عَيْبَهُ',
-    english: 'Whomever modesty clothes in its garment, people will not see his faults.',
-    source: 'Nahj al-Balagha, Saying 223',
-    theme: 'when self-conscious about flaws, when modesty becomes protection',
   },
   {
     arabic: 'يَا ابْنَ آدَمَ، لَا تَحْمِلْ هَمَّ يَوْمِكَ الَّذِي لَمْ يَأْتِكَ عَلَى يَوْمِكَ الَّذِي قَدْ أَتَاكَ، فَإِنَّهُ إِنْ يَكُ مِنْ عُمُرِكَ يَأْتِ اللهُ فِيهِ بِرِزْقِكَ',
