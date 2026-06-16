@@ -45,6 +45,11 @@ export default function RecitationModal({
   const startsRef = useRef<number[]>([])
   const transcriptRef = useRef('')
   const recitingRef = useRef(false)
+  // Bumped every time playback is (re)started or torn down. A play whose
+  // token is stale by the time its audio finishes loading is discarded —
+  // this prevents two overlapping recitations (e.g. React StrictMode
+  // double-invoking the auto-play effect, or a second tap mid-load).
+  const playTokenRef = useRef(0)
 
   // Estimate each word's start time from the audio duration, weighting by
   // the (normalized) letter count so longer words occupy more time.
@@ -64,6 +69,8 @@ export default function RecitationModal({
   )
 
   const cleanupAudio = useCallback(() => {
+    // Invalidate any play whose audio is still loading.
+    playTokenRef.current++
     const a = audioRef.current
     if (a) {
       a.pause()
@@ -81,11 +88,18 @@ export default function RecitationModal({
   const playFollowAlong = useCallback(async () => {
     cleanupAudio()
     if (speech.listening) speech.stop()
+    const token = playTokenRef.current
     setLiveScore(null)
     setMode('playing')
     setHighlight(-1)
     try {
       const url = await speak(phrase, 'verse')
+      // A newer play/cleanup happened while the audio was fetching — drop
+      // this one so two recitations can never overlap.
+      if (token !== playTokenRef.current) {
+        URL.revokeObjectURL(url)
+        return
+      }
       urlRef.current = url
       const audio = new Audio(url)
       audioRef.current = audio
