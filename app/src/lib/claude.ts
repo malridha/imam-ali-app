@@ -165,3 +165,105 @@ export async function callClaude({
     tsp: data.tsp,
   }
 }
+
+export type StreamResult = {
+  /** The complete reply text once the stream finishes. */
+  full: string
+  crisis?: CrisisInfo
+  tsp?: TSP
+  /** false when the server short-circuited (crisis) with a one-shot JSON body. */
+  streamed: boolean
+}
+
+/**
+ * Streaming variant of callClaude. Proxies the chat function's token stream
+ * and invokes `onDelta(fullSoFar, delta)` as text arrives, so the UI can show
+ * the reply forming in real time. The server returns plain JSON (not a stream)
+ * for the crisis short-circuit; that case is handled transparently here.
+ *
+ * Throws on transport/HTTP errors (e.g. out-of-credits) — callers may catch
+ * and fall back to the non-streaming callClaude().
+ */
+export async function streamClaude(
+  {
+    system,
+    messages,
+    lang,
+    userId,
+    retrievalQuery,
+    maxTokens = 350,
+    temperature = 0.5,
+  }: CallArgs,
+  onDelta: (fullSoFar: string, delta: string) => void,
+): Promise<StreamResult> {
+  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string
+  const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string
+
+  const res = await fetch(`${supabaseUrl}/functions/v1/chat`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${anonKey}`,
+    },
+    body: JSON.stringify({
+      system,
+      messages,
+      lang,
+      user_id: userId,
+      retrieval_query: retrievalQuery,
+      max_tokens: maxTokens,
+      temperature,
+      stream: true,
+    }),
+  })
+
+  const contentType = res.headers.get('content-type') || ''
+
+  // Crisis short-circuit (and any error) comes back as JSON, not a stream.
+  if (contentType.includes('application/json')) {
+    const data = await res.json().catch(() => null)
+    if (!res.ok || !data || data.error) {
+      throw new Error(data?.error || `Chat failed (${res.status})`)
+    }
+    const text = typeof data.text === 'string' ? data.text : ''
+    if (text) onDelta(text, text)
+    return { full: text, crisis: data.crisis, tsp: data.tsp, streamed: false }
+  }
+
+  if (!res.ok || !res.body) {
+    const data = await res.json().catch(() => null)
+    throw new Error(data?.error || `Chat stream failed (${res.status})`)
+  }
+
+  const reader = res.body.getReader()
+  const decoder = new TextDecoder()
+  let full = ''
+  let buffer = ''
+  for (;;) {
+    const { done, value } = await reader.read()
+    if (done) break
+    buffer += decoder.decode(value, { stream: true })
+    const lines = buffer.split('\n')
+    buffer = lines.pop() ?? '' // keep any partial trailing line
+    for (const line of lines) {
+      const l = line.trim()
+      if (!l.startsWith('data:')) continue
+      const payload = l.slice(5).trim()
+      if (!payload || payload === '[DONE]') continue
+      try {
+        const evt = JSON.parse(payload)
+        if (
+          evt.type === 'content_block_delta' &&
+          evt.delta?.type === 'text_delta' &&
+          typeof evt.delta.text === 'string'
+        ) {
+          full += evt.delta.text
+          onDelta(full, evt.delta.text)
+        }
+      } catch {
+        // ignore keep-alive / non-JSON lines
+      }
+    }
+  }
+  return { full, streamed: true }
+}

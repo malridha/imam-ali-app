@@ -17,7 +17,15 @@ import { updateTSP, type TSP } from './tsp.ts'
 
 const ANTHROPIC_ENDPOINT = 'https://api.anthropic.com/v1/messages'
 const ANTHROPIC_VERSION = '2023-06-01'
-const DEFAULT_MODEL = 'claude-sonnet-4-6'
+// v49 — chat uses a faster model (Haiku) for lower latency. Override the id
+// at runtime with the CHAT_MODEL secret if it needs adjusting without a
+// redeploy. Falls back to the previous Sonnet id if Haiku is ever unset.
+const CHAT_MODEL =
+  // @ts-expect-error Deno global in Edge Functions
+  (typeof Deno !== 'undefined' && Deno.env.get('CHAT_MODEL')) ||
+  'claude-haiku-4-5'
+const FALLBACK_MODEL = 'claude-sonnet-4-6'
+void FALLBACK_MODEL
 
 const RETRIEVAL_THRESHOLD = 0.5
 const RETRIEVAL_LIMIT = 5
@@ -41,6 +49,8 @@ type RequestBody = {
   retrieval_query?: string
   max_tokens?: number
   temperature?: number
+  /** v49 — when true, proxy Anthropic's token stream straight to the client. */
+  stream?: boolean
 }
 
 type Match = {
@@ -468,6 +478,44 @@ Deno.serve(async (req: Request) => {
     system = buildAugmentedSystem(system, matches)
   }
 
+  // ── Streaming path (v49): proxy Anthropic's SSE straight to the client so
+  // the first words appear in well under a second. Verse-card verification
+  // runs client-side at stream end (verifyAndStrip mostly no-ops given the
+  // sparse RAG table, and the baseline corpus already grounds the verses).
+  if (body.stream) {
+    const upstreamStream = await fetch(ANTHROPIC_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': ANTHROPIC_VERSION,
+      },
+      body: JSON.stringify({
+        model: CHAT_MODEL,
+        max_tokens: body.max_tokens ?? 350,
+        temperature: body.temperature ?? 0.5,
+        system,
+        messages: body.messages,
+        stream: true,
+      }),
+    })
+    if (!upstreamStream.ok || !upstreamStream.body) {
+      const errData: any = await upstreamStream.json().catch(() => null)
+      return jsonResponse(
+        { error: errData?.error?.message || `Upstream ${upstreamStream.status}` },
+        upstreamStream.status,
+      )
+    }
+    return new Response(upstreamStream.body, {
+      status: 200,
+      headers: {
+        ...CORS_HEADERS,
+        'Content-Type': 'text/event-stream',
+        'Cache-Control': 'no-cache',
+      },
+    })
+  }
+
   const upstream = await fetch(ANTHROPIC_ENDPOINT, {
     method: 'POST',
     headers: {
@@ -476,7 +524,7 @@ Deno.serve(async (req: Request) => {
       'anthropic-version': ANTHROPIC_VERSION,
     },
     body: JSON.stringify({
-      model: DEFAULT_MODEL,
+      model: CHAT_MODEL,
       max_tokens: body.max_tokens ?? 500,
       temperature: body.temperature ?? 0.5,
       system,

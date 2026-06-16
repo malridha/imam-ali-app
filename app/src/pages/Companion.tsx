@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import Avatar from '../components/Avatar'
 import MessageBubble, { type MessageRole } from '../components/MessageBubble'
@@ -11,10 +11,13 @@ import { useTSP } from '../contexts/TSPContext'
 import { type EmotionalState } from '../types/paths'
 import {
   callClaude,
+  streamClaude,
   isOutOfCreditsError,
   type ClaudeMessage,
   type CrisisResource,
+  type CrisisInfo,
 } from '../lib/claude'
+import type { TSP } from '../types/tsp'
 import { parseReply, type ParsedVerse } from '../lib/parseReply'
 import { getPrompt } from '../lib/prompts'
 import { getOrCreateUserId } from '../lib/userId'
@@ -43,6 +46,20 @@ function buildSpeakable(text: string, verse?: ParsedVerse): string {
   if (!verse) return text
   const tail = `${verse.arabic}. ${verse.english}`
   return text ? `${text.replace(/\s+$/, '')} … ${tail}` : tail
+}
+
+/**
+ * What to SHOW while a reply is still streaming in: the prose only. Hide the
+ * trailing STATE:::/AVATAR::: metadata and any (in-progress) VERSE::: block —
+ * the verse renders as its own card once the full reply has arrived.
+ */
+function cleanStreaming(raw: string): string {
+  let t = raw
+  const metaIdx = t.search(/STATE:::|AVATAR:::/)
+  if (metaIdx >= 0) t = t.slice(0, metaIdx)
+  const verseIdx = t.indexOf('VERSE:::')
+  if (verseIdx >= 0) t = t.slice(0, verseIdx)
+  return t.replace(/\s+$/, '')
 }
 
 export default function Companion() {
@@ -115,6 +132,110 @@ export default function Companion() {
     }
   }, [])
 
+  // One streaming turn, shared by the opener, the seeded message, and every
+  // handleSend. Streams tokens into a live "ali" bubble, then finalizes
+  // (verse card + state + voice). Falls back to non-streaming once on error.
+  const streamTurn = useCallback(
+    async (opts: {
+      send: ClaudeMessage[]
+      retrievalQuery?: string
+      historyOnDone: (raw: string) => ClaudeMessage[]
+      onAfter?: () => void
+    }) => {
+      if (!prompt) return
+      setError('')
+      setState('anxiety')
+      setBusy(true)
+
+      let aliId: number | null = null
+      const showDelta = (full: string) => {
+        const display = cleanStreaming(full)
+        if (!display) return
+        if (aliId === null) {
+          const id = (aliId = nextId.current++)
+          setMessages((prev) => [...prev, { id, role: 'ali', text: display }])
+        } else {
+          const id = aliId
+          setMessages((prev) =>
+            prev.map((m) => (m.id === id ? { ...m, text: display } : m)),
+          )
+        }
+      }
+
+      const finalize = (raw: string, crisis?: CrisisInfo, tsp?: TSP) => {
+        if (tsp) setTSP(tsp)
+        if (aliId === null) {
+          const id = (aliId = nextId.current++)
+          setMessages((prev) => [...prev, { id, role: 'ali', text: '' }])
+        }
+        const id = aliId
+        if (crisis?.detected) {
+          setState('grief')
+          setMessages((prev) =>
+            prev.map((m) =>
+              m.id === id ? { ...m, text: raw, crisisResources: crisis.resources } : m,
+            ),
+          )
+          if (raw) void playAudio(cleanForTTS(raw, lang), lang)
+          return
+        }
+        const parsed = parseReply(raw)
+        setState(parsed.state ?? 'peace')
+        if (parsed.avatarVerse) setAvatarVerse(parsed.avatarVerse)
+        setMessages((prev) =>
+          prev.map((m) =>
+            m.id === id ? { ...m, text: parsed.text, verse: parsed.verse } : m,
+          ),
+        )
+        setHistory(opts.historyOnDone(raw))
+        if (parsed.text)
+          void playAudio(cleanForTTS(buildSpeakable(parsed.text, parsed.verse), lang), lang)
+      }
+
+      try {
+        const r = await streamClaude(
+          {
+            system: prompt.system,
+            messages: opts.send,
+            lang,
+            userId,
+            retrievalQuery: opts.retrievalQuery,
+          },
+          (full) => showDelta(full),
+        )
+        finalize(r.full, r.crisis, r.tsp)
+      } catch {
+        // Streaming failed (network blip / unsupported) — fall back once.
+        try {
+          const r = await callClaude({
+            system: prompt.system,
+            messages: opts.send,
+            lang,
+            userId,
+            retrievalQuery: opts.retrievalQuery,
+          })
+          finalize(r.text, r.crisis, r.tsp)
+        } catch (e) {
+          const raw = (e as Error).message || String(e)
+          if (isOutOfCreditsError(raw))
+            console.error('[chat] Anthropic API credits exhausted:', raw)
+          if (aliId !== null) {
+            const id = aliId
+            setMessages((prev) =>
+              prev.filter((m) => !(m.id === id && !(m.text && m.text.length))),
+            )
+          }
+          setError(raw)
+          setState('peace')
+        }
+      } finally {
+        setBusy(false)
+        opts.onAfter?.()
+      }
+    },
+    [prompt, lang, userId, playAudio, setTSP],
+  )
+
   // First load: either greet (no seeded message) or respond directly to the
   // message the user typed on the welcome screen (seeded via ?q=).
   useEffect(() => {
@@ -127,90 +248,30 @@ export default function Companion() {
       setMessages([
         { id: nextId.current++, role: 'user', text: seededMessage },
       ])
-      setState('anxiety')
-      setBusy(true)
-
-      callClaude({
-        system: prompt.system,
-        messages: [{ role: 'user', content: seededMessage }],
-        lang,
-        userId,
+      // Drop ?q= once the turn finishes so a refresh doesn't replay the seed.
+      void streamTurn({
+        send: [{ role: 'user', content: seededMessage }],
         retrievalQuery: seededMessage,
+        historyOnDone: (raw) => [
+          { role: 'user', content: seededMessage },
+          { role: 'assistant', content: raw },
+        ],
+        onAfter: () => setSearchParams({}, { replace: true }),
       })
-        .then(({ text: raw, crisis, tsp }) => {
-          if (tsp) setTSP(tsp)
-          if (crisis?.detected) {
-            setState('grief')
-            setMessages((prev) => [
-              ...prev,
-              {
-                id: nextId.current++,
-                role: 'ali',
-                text: raw,
-                crisisResources: crisis.resources,
-              },
-            ])
-            return
-          }
-          const parsed = parseReply(raw)
-          if (parsed.state) setState(parsed.state)
-          else setState('peace')
-          if (parsed.avatarVerse) setAvatarVerse(parsed.avatarVerse)
-          setMessages((prev) => [
-            ...prev,
-            {
-              id: nextId.current++,
-              role: 'ali',
-              text: parsed.text,
-              verse: parsed.verse,
-            },
-          ])
-          setHistory([
-            { role: 'user', content: seededMessage },
-            { role: 'assistant', content: raw },
-          ])
-          if (parsed.text) void playAudio(cleanForTTS(buildSpeakable(parsed.text, parsed.verse), lang), lang)
-        })
-        .catch((e: Error) => setError(e.message || String(e)))
-        .finally(() => {
-          setBusy(false)
-          // Drop ?q= from the URL so a refresh doesn't replay the seed
-          setSearchParams({}, { replace: true })
-        })
       return
     }
 
-    // ── Branch B: classic flow — ask Claude for the path-specific opener
-    setBusy(true)
-    callClaude({
-      system: prompt.system,
-      messages: [{ role: 'user', content: prompt.opener }],
-      lang,
-      userId,
+    // ── Branch B: classic flow — stream the path-specific opener.
+    void streamTurn({
+      send: [{ role: 'user', content: prompt.opener }],
       // No retrievalQuery for the opener — it's a meta-prompt, not a user
       // message worth grounding against the corpus.
+      historyOnDone: (raw) => [
+        { role: 'user', content: prompt.opener },
+        { role: 'assistant', content: raw },
+      ],
     })
-      .then(({ text: raw, tsp }) => {
-        if (tsp) setTSP(tsp)
-        const parsed = parseReply(raw)
-        if (parsed.state) setState(parsed.state)
-        if (parsed.avatarVerse) setAvatarVerse(parsed.avatarVerse)
-        setMessages([
-          {
-            id: nextId.current++,
-            role: 'ali',
-            text: parsed.text,
-            verse: parsed.verse,
-          },
-        ])
-        setHistory([
-          { role: 'user', content: prompt.opener },
-          { role: 'assistant', content: raw },
-        ])
-        if (parsed.text) void playAudio(cleanForTTS(buildSpeakable(parsed.text, parsed.verse), lang), lang)
-      })
-      .catch((e: Error) => setError(e.message || String(e)))
-      .finally(() => setBusy(false))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [prompt])
 
   // Auto-scroll on new content
@@ -233,76 +294,19 @@ export default function Companion() {
 
   function handleSend(text: string) {
     if (!prompt) return
-    setError('')
     setMessages((prev) => [
       ...prev,
       { id: nextId.current++, role: 'user', text },
     ])
-    setState('anxiety')
-    setBusy(true)
-
     const nextHistory: ClaudeMessage[] = [
       ...history,
       { role: 'user', content: text },
     ]
-
-    callClaude({
-      system: prompt.system,
-      messages: nextHistory,
-      lang,
-      userId,
+    void streamTurn({
+      send: nextHistory,
       retrievalQuery: text,
+      historyOnDone: (raw) => [...nextHistory, { role: 'assistant', content: raw }],
     })
-      .then(({ text: raw, crisis, tsp }) => {
-        if (tsp) setTSP(tsp)
-        // Crisis short-circuit: the server bypassed Claude and returned
-        // hardcoded copy + resources. Render the crisis card alongside the
-        // compassionate text and don't continue chat history with Claude's
-        // (absent) reply.
-        if (crisis?.detected) {
-          setState('grief')
-          setMessages((prev) => [
-            ...prev,
-            {
-              id: nextId.current++,
-              role: 'ali',
-              text: raw,
-              crisisResources: crisis.resources,
-            },
-          ])
-          // Crisis copy is short and gentle — speak it too so the user hears
-          // a kind voice in the moment.
-          if (raw) void playAudio(cleanForTTS(raw, lang), lang)
-          return
-        }
-
-        const parsed = parseReply(raw)
-        if (parsed.state) setState(parsed.state)
-        else setState('peace')
-        if (parsed.avatarVerse) setAvatarVerse(parsed.avatarVerse)
-        setMessages((prev) => [
-          ...prev,
-          {
-            id: nextId.current++,
-            role: 'ali',
-            text: parsed.text,
-            verse: parsed.verse,
-          },
-        ])
-        setHistory([...nextHistory, { role: 'assistant', content: raw }])
-        if (parsed.text) void playAudio(cleanForTTS(buildSpeakable(parsed.text, parsed.verse), lang), lang)
-      })
-      .catch((e: Error) => {
-        const raw = e.message || String(e)
-        // Log the precise reason (e.g. the Anthropic billing string) for
-        // the operator; the UI shows calmer copy below.
-        if (isOutOfCreditsError(raw)) {
-          console.error('[chat] Anthropic API credits exhausted:', raw)
-        }
-        setError(raw)
-        setState('peace')
-      })
-      .finally(() => setBusy(false))
   }
 
   return (
@@ -474,7 +478,12 @@ export default function Companion() {
             )}
           </MessageBubble>
         ))}
-        {busy && <TypingIndicator />}
+        {busy &&
+          !(
+            messages.length > 0 &&
+            messages[messages.length - 1].role === 'ali' &&
+            (messages[messages.length - 1].text ?? '').length > 0
+          ) && <TypingIndicator />}
         {error && (
           <div
             style={{
