@@ -201,14 +201,6 @@ export const BASELINE_DUAS: BaselineEntry[] = [
     theme: 'when overwhelmed, when fearful, in times of hardship',
   },
   {
-    arabic:
-      'اَلْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ',
-    english:
-      'Praise belongs to God who gave us life after having caused us to die, and to Him is the resurrection.',
-    source: 'Sahih al-Bukhari, 6312',
-    theme: 'upon waking from sleep, first words of the morning, gratitude for a new day',
-  },
-  {
     arabic: 'اللَّهُمَّ بِاسْمِكَ أَحْيَا وَبِاسْمِكَ أَمُوتُ',
     english: 'O God, in Your name I live and in Your name I die.',
     source: 'Sahih al-Bukhari, 6325',
@@ -491,14 +483,6 @@ export const BASELINE_DUAS: BaselineEntry[] = [
       'My Lord, I seek refuge in You from the whisperings of the devils, and I seek refuge in You, my Lord, lest they be present with me.',
     source: "Qur'an, 23:97-98",
     theme: 'seeking refuge from satanic whispers, against waswasa',
-  },
-  {
-    arabic:
-      'اَللَّهُمَّ رَبَّ النَّاسِ، أَذْهِبِ الْبَأْسَ، اشْفِ أَنْتَ الشَّافِي، لَا شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لَا يُغَادِرُ سَقَمًا',
-    english:
-      'O God, Lord of mankind, remove the harm and heal — You are the Healer; there is no healing but Your healing — a healing that leaves no illness behind.',
-    source: 'Sahih al-Bukhari, 5743; Sahih Muslim, 2191',
-    theme: "du'a for family during illness, asking for cure",
   },
   {
     arabic:
@@ -1715,14 +1699,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'on muḥāsaba, on reckoning with oneself, on the inner struggle',
   },
   {
-    arabic:
-      'إِنَّ هَذِهِ الْقُلُوبَ تَمَلُّ كَمَا تَمَلُّ الْأَبْدَانُ، فَابْتَغُوا لَهَا طَرَائِفَ الْحِكْمَةِ',
-    english:
-      'Truly these hearts grow weary as bodies grow weary; so seek for them rare gems of wisdom.',
-    source: 'Nahj al-Balagha, Saying 91',
-    theme: 'on caring for the heart, on the inner struggle',
-  },
-  {
     arabic: 'ثَمَرَةُ الْمُحَاسَبَةِ صَلَاحُ النَّفْسِ',
     english: 'The fruit of self-reckoning is the rectification of the soul.',
     source: 'Ghurar al-Hikam',
@@ -2148,12 +2124,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'on flatterer versus true friend, on deception of counsel, on hidden sincerity',
   },
   {
-    arabic: 'مَنْ لَانَ عُودُهُ كَثُفَتْ أَغْصَانُهُ',
-    english: "Whoever's stem is supple, his branches grow thick — friends gather to the gentle.",
-    source: 'Nahj al-Balagha, Saying 214',
-    theme: 'on gentleness attracts friends, on character draws companions, on ease in company',
-  },
-  {
     arabic: 'الْعَدْلُ أَسَاسٌ بِهِ قِوَامُ الْعَالَمِ',
     english: 'Justice is the foundation upon which the world stands.',
     source: 'Ghurar al-Hikam',
@@ -2195,14 +2165,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
       'The greatest betrayal is the betrayal of the community; the most heinous deception is the deception by leaders of their people.',
     source: 'Nahj al-Balagha, Letter 26',
     theme: 'on betrayal of the people, on accountability of rulers, on public trust',
-  },
-  {
-    arabic:
-      'وَلَا تَقُولَنَّ: إِنِّي مُؤَمَّرٌ آمُرُ فَأُطَاعُ، فَإِنَّ ذَلِكَ إِدْغَالٌ فِي الْقَلْبِ، وَمَنْهَكَةٌ لِلدِّينِ، وَتَقَرُّبٌ مِنَ الْغِيَرِ',
-    english:
-      "Never say, 'I am vested with command; I order and am obeyed' — for that is corruption in the heart, a weakening of the religion, and a drawing near to disaster.",
-    source: 'Nahj al-Balagha, Letter 53',
-    theme: 'on arrogance of power, on abuse of authority, on corruption of the heart',
   },
   {
     arabic:
@@ -2283,12 +2245,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'The tongue is a beast of prey — if it is let loose, it wounds.',
     source: 'Nahj al-Balagha, Saying 60',
     theme: 'on the tongue as danger, on the power of the tongue',
-  },
-  {
-    arabic: 'إِذَا تَمَّ الْعَقْلُ نَقَصَ الْكَلَامُ',
-    english: 'When the intellect is complete, speech grows scarce.',
-    source: 'Nahj al-Balagha, Saying 71',
-    theme: 'on silence as wisdom, on the wise being brief',
   },
   {
     arabic:
@@ -2712,12 +2668,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'on rifq with the weak, on gentleness in power',
   },
   {
-    arabic: 'مَنْ تَرَكَ قَوْلَ «لَا أَدْرِي» أُصِيبَتْ مَقَاتِلُهُ',
-    english: "Whoever abandons the saying 'I do not know' is struck in his vital places.",
-    source: 'Nahj al-Balagha, Saying 85',
-    theme: 'on gentleness in speech, on the humility of "I do not know"',
-  },
-  {
     arabic: 'الرِّفْقُ يُؤَدِّي إِلَى السَّلْمِ',
     english: 'Gentleness leads to peace.',
     source: 'Ghurar al-Hikam',
@@ -3117,12 +3067,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'on accepting people for what they are, on patience with the near',
   },
   {
-    arabic: 'مَا أَكْثَرَ الْعِبَرَ وَأَقَلَّ الِاعْتِبَارَ',
-    english: 'How many are the lessons, and how few are those who take heed.',
-    source: 'Nahj al-Balagha, Saying 297',
-    theme: 'when your own people will not listen',
-  },
-  {
     arabic:
       'اللَّهُمَّ إِنِّي أَسْتَعْدِيكَ عَلَى قُرَيْشٍ وَمَنْ أَعَانَهُمْ، فَإِنَّهُمْ قَطَعُوا رَحِمِي، وَصَغَّرُوا عَظِيمَ مَنْزِلَتِي',
     english: 'O God, I seek Your help against Quraysh and those who aided them — they have severed my kinship and belittled my great station.',
@@ -3183,12 +3127,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'The believer is one who befriends and is befriended; there is no good in one who neither befriends others nor is befriended by them.',
     source: 'al-Kafi, Kitab al-Iman wa al-Kufr',
     theme: 'on the believer\'s warmth, on the social posture',
-  },
-  {
-    arabic: 'لَا يُعْدَمُ الصَّبُورُ الظَّفَرَ وَإِنْ طَالَ بِهِ الزَّمَانُ',
-    english: 'The patient one is not deprived of victory, even though it take a long time to reach him.',
-    source: 'Nahj al-Balagha, Saying 153',
-    theme: 'on long patience, on long-stretched waiting',
   },
   {
     arabic:
@@ -3957,12 +3895,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Hasten to good works and fear the sudden arrival of the appointed end.',
     source: 'Nahj al-Balagha, Sermon 188',
     theme: 'on the sudden arrival of death',
-  },
-  {
-    arabic: 'مَنْ أَيْقَنَ بِالْخَلَفِ جَادَ بِالْعَطِيَّةِ',
-    english: 'Whoever is certain of the recompense is generous with giving.',
-    source: 'Nahj al-Balagha, Saying 138',
-    theme: 'on sending ahead, on certainty as a spur to giving',
   },
   {
     arabic:
@@ -4779,12 +4711,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'on the gradation of trials',
   },
   {
-    arabic: 'مَنْ أَطَالَ الْأَمَلَ أَسَاءَ الْعَمَلَ',
-    english: 'Whoever prolongs his hopes corrupts his deeds.',
-    source: 'Nahj al-Balagha, Saying 36',
-    theme: 'on long hopes corrupting deeds',
-  },
-  {
     arabic:
       'إِذَا أَرَادَ اللَّهُ بِعَبْدٍ خَيْرًا إِذَا أَذْنَبَ ذَنْبًا أَتْبَعَهُ بِنِقْمَةٍ وَيُذَكِّرُهُ الِاسْتِغْفَارَ',
     english: 'When God wills good for a servant, He follows his sin with a punishment and reminds him to seek forgiveness.',
@@ -4975,12 +4901,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Wealth and poverty will only be made manifest after the presentation before God.',
     source: 'Nahj al-Balagha, Saying 452',
     theme: 'on true wealth, on true poverty',
-  },
-  {
-    arabic: 'الْفَقْرُ الْمَوْتُ الْأَكْبَرُ',
-    english: 'Poverty is the greater death.',
-    source: 'Nahj al-Balagha, Saying 163',
-    theme: 'on poverty',
   },
   {
     arabic: 'كَفَى بِالْقَنَاعَةِ مُلْكًا، وَبِحُسْنِ الْخُلُقِ نَعِيمًا',
@@ -5870,12 +5790,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when choosing whom to keep close, when valuing lasting friendship',
   },
   {
-    arabic: 'صَديقُكَ مَنْ نهاكَ، وعدُوُّكَ مَنْ أغراكَ.',
-    english: 'Your friend is one who forbids you from evil and your enemy is one who entices you to it.',
-    source: 'Ghurar al-Hikam, The Brother and The Friend §33',
-    theme: 'when judging who truly cares for you, when flattered into wrong',
-  },
-  {
     arabic: 'خَليلُ المَرءِ دَليلٌ على عَقْلِهِ، وكَلامُهُ بُرهانُ فَضْلِهِ.',
     english: "A man's friend is a sign of his intelligence and his speech is evidence of his merit.",
     source: 'Ghurar al-Hikam, The Brother and The Friend §65',
@@ -5936,22 +5850,10 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when life shifts between hardship and comfort, when seeking balance',
   },
   {
-    arabic: 'اَلتَّوْبَةُ تُطَهِّرُ القُلُوبَ، وتَغْسِلُ الذُّنُوبَ.',
-    english: 'Repentance purifies the hearts and washes away sins.',
-    source: 'Ghurar al-Hikam, Repentance §8',
-    theme: 'when weighed down by past wrongs, when seeking a fresh start',
-  },
-  {
     arabic: 'قَدْ سَعِدَ مَنْ جَدَّ.',
     english: 'One who is diligent becomes fortunate.',
     source: 'Ghurar al-Hikam, Diligence and Striving §3',
     theme: 'when effort feels unrewarded, when tempted to give up',
-  },
-  {
-    arabic: 'اَلجَزَعُ أتْعَبُ مِنَ الصَّبْرِ.',
-    english: 'Anxiety is more exhausting than patience.',
-    source: 'Ghurar al-Hikam, Anxiety §11',
-    theme: 'when worry becomes the burden itself, when calm seems harder than panic',
   },
   {
     arabic: 'اَلْجُوعُ خَيْرٌ مِنَ الخُضُوعِ.',
@@ -5970,12 +5872,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'The best struggle is the struggle of a man against his own soul.',
     source: 'Ghurar al-Hikam, Struggling Against the Self §2',
     theme: 'when blaming external enemies, when avoiding inner work',
-  },
-  {
-    arabic: 'أقْوىَ النّاسِ مَنْ قَوِيَ على نَفْسِهِ.',
-    english: 'The strongest person is the one who subdues his self.',
-    source: 'Ghurar al-Hikam, Struggling Against the Self §17',
-    theme: 'when impressed by outward strength, when measuring real power',
   },
   {
     arabic: 'بِحُسْنِ الأخْلاقِ يَطيبُ العَيْشُ.',
@@ -6224,12 +6120,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when too attached to a possession or status, when needing perspective',
   },
   {
-    arabic: 'لَا يَكُونُ الصَّدِيقُ صَدِيقاً حَتَّى يَحْفَظَ أَخَاهُ فِي ثَلَاثٍ: فِي نَكْبَتِهِ، وَغَيْبَتِهِ، وَوَفَاتِهِ',
-    english: 'A friend is not truly a friend until he safeguards his brother in three things: in his misfortune, in his absence, and after his death.',
-    source: 'Nahj al-Balagha, Saying 134',
-    theme: 'when testing who a real friend is, when judging loyalty',
-  },
-  {
     arabic: 'هَلَكَ امْرُؤٌ لَمْ يَعْرِفْ قَدْرَهُ',
     english: 'Ruined is the one who does not know his own worth.',
     source: 'Nahj al-Balagha, Saying 149',
@@ -6260,12 +6150,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when over-investing in a single bond, when nursing resentment that may pass',
   },
   {
-    arabic: 'مَا أَكْثَرَ الْعِبَرَ، وَأَقَلَّ الِاعْتِبَارَ',
-    english: 'How many are the lessons, and how few those who take heed.',
-    source: 'Nahj al-Balagha, Saying 297',
-    theme: 'when watching others repeat mistakes, when life keeps offering the same lesson',
-  },
-  {
     arabic: 'الْحِلْمُ غِطَاءٌ سَاتِرٌ، وَالْعَقْلُ حُسَامٌ قَاطِعٌ، فَاسْتُرْ خَلَلَ خُلُقِكَ بِحِلْمِكَ، وَقَاتِلْ هَوَاكَ بِعَقْلِكَ',
     english: 'Forbearance is a concealing veil, and intellect is a cutting sword — so cover the flaws of your character with your forbearance, and fight your desires with your intellect.',
     source: 'Nahj al-Balagha, Saying 424',
@@ -6290,12 +6174,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when belief is tested, when God feels distant',
   },
   {
-    arabic: 'بِرُّ الوالِدَيْنِ أكْبَرُ فَريضَة.',
-    english: 'Being good to parents is the greatest [and most important] duty.',
-    source: 'Ghurar al-Hikam, Parents §1',
-    theme: 'when navigating family duty, when kin relationships need attention',
-  },
-  {
     arabic: 'باكِرُوا فَالبَرَكَةُ فيِ المُباكَرَةِ، وشاوِرُوا فَالنُّجْحُ فيِ المُشاوَرَةِ.',
     english: 'Wake up early [in the morning] for there is blessing in early rising; and consult each other, for success is in consultation.',
     source: 'Ghurar al-Hikam, Early Rising §1',
@@ -6318,12 +6196,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Many [of those] who hope get disappointed, and many a traveller fails to return.',
     source: 'Ghurar al-Hikam, Hopes And Aspirations §1',
     theme: 'when hope becomes wishful thinking, when aspiration drives action',
-  },
-  {
-    arabic: 'اَلأمانَةُ تُؤَدّي إلى الصِّدْقِ.',
-    english: 'Trustworthiness leads to truthfulness.',
-    source: 'Ghurar al-Hikam, Trustworthiness §1',
-    theme: 'when fairness is tested, when authority must serve',
   },
   {
     arabic: 'اَلإمامَةُ نِظامُ الاُمَّةِ.',
@@ -6518,18 +6390,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when hope becomes wishful thinking, when aspiration drives action',
   },
   {
-    arabic: 'أدِّ الأمانَةَ إلى مَنِ ائْتَمَنَكَ، ولا تَخُنْ مَنْ خانَكَ.',
-    english: 'Return the trust to the one who has entrusted it to you, and do not act treacherously with the one who betrayed your trust.',
-    source: 'Ghurar al-Hikam, Trustworthiness §3',
-    theme: 'when fairness is tested, when authority must serve',
-  },
-  {
-    arabic: 'مَنْ نَصَبَ نَفْسَهُ لِلنَّاسِ إِمَاماً فَلْيَبْدَأْ بِتَعْلِيمِ نَفْسِهِ قَبْلَ تَعْلِيمِ غَيْرِهِ',
-    english: 'One who sets himself up as a leader of people should teach himself before teaching others.',
-    source: 'Nahj al-Balagha, Saying 57',
-    theme: 'when authority must serve, when power is stewardship',
-  },
-  {
     arabic: 'الرَّجاءُ لِرَحْمَةِ اللّهِ أنْجَحُ.',
     english: 'Hope in the mercy of Allah brings more success.',
     source: 'Ghurar al-Hikam, Hope In [The Mercy Of] Allah And [In] Others §3',
@@ -6558,12 +6418,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Be peaceful with people and you will be safe; work for the Hereafter and you will be successful.',
     source: 'Ghurar al-Hikam, Peace and Reconciliation §3',
     theme: 'when choosing companions, when loyalty is tested',
-  },
-  {
-    arabic: 'أفْضَلُ الجِهادِ جِهادُ النَّفْسِ عَنِ الهَوى، وفِطامُها عَنْ لَذّاتِ الدُّنيا.',
-    english: 'The best Jih ā d is the struggle of the self against lustful desires, and its weaning away from the pleasures of this world.',
-    source: 'Ghurar al-Hikam, Struggling Against The Self (Jihad An-Nafs) §3',
-    theme: 'when inner struggle is the real work, when desire fights wisdom',
   },
   {
     arabic: 'اَلمُعينُ عَلَى الطَّاعَةِ خَيرُ الأصحابِ.',
@@ -6860,12 +6714,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when the world feels too heavy, when enough is enough',
   },
   {
-    arabic: 'اَلإيمانُ والعَمَلُ أخَوانِ تَوْأمانِ، ورَفيقانِ لايَفْترِقانِ، لا يَقْبَلُ اللّهُ أحَدَهُما إلاّ بِصاحِبِهِ.',
-    english: 'Faith and action are twin brothers and companions who do not part ways; Allah does not accept one without its counterpart.',
-    source: 'Ghurar al-Hikam, Faith §7',
-    theme: 'when belief is tested, when God feels distant',
-  },
-  {
     arabic: 'بِصِلَةِ الرَّحِمِ تَسْتَدِرُّ النِّعَمُ.',
     english: 'By keeping ties with near relatives, blessings flow forth [abundantly].',
     source: 'Ghurar al-Hikam, Near Relatives And Keeping Or Cutting Off Ties With Them §1',
@@ -7130,12 +6978,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when inner struggle is the real work, when desire fights wisdom',
   },
   {
-    arabic: 'إخْوانُ الدّين أبْقى مَوَدَّةً.',
-    english: 'Brothers in faith have lasting affection [for each other].',
-    source: 'Ghurar al-Hikam, The Brother, The Friend, The Associate And The Companion §8',
-    theme: 'when seeking clarity, when reflection is the need',
-  },
-  {
     arabic: 'إنَّ النَّاس إلى صالحِ الأدبِ أحْوَجُ مِنْهُمْ إلى الفِضَّةِ والذَّهبِ.',
     english: 'People are more in need of good etiquette than of silver and gold.',
     source: 'Ghurar al-Hikam, Good Etiquette §10',
@@ -7352,12 +7194,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when navigating family duty, when kin relationships need attention',
   },
   {
-    arabic: 'اَلتَّوْبَةُ تُطَهِّرُ القُلُوبَ، وتَغْسِلُ الذُّنُوبَ.',
-    english: 'Repentance purifies the hearts and washes away sins.',
-    source: 'Ghurar al-Hikam, Repentance And Returning (To Allah) §8',
-    theme: 'when guilt accumulates, when mercy is the harder path',
-  },
-  {
     arabic: 'اَلجُودُ مِنْ غَيْرِ خَوْف ولارَجاءِ مُكافاة، حَقيقَةُ الجُودِ.',
     english: 'Generosity without fear or hope of recompense is true generosity.',
     source: 'Ghurar al-Hikam, Generosity §2',
@@ -7374,12 +7210,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Truth is the best way.',
     source: 'Ghurar al-Hikam, The Truth §2',
     theme: 'when fairness is tested, when authority must serve',
-  },
-  {
-    arabic: 'رَحْمَةُ الضُّعَفاءِ تَسْتَنْزِلُ الرَّحْمَةَ.',
-    english: 'Being compassionate to the weak brings down [divine] mercy.',
-    source: 'Ghurar al-Hikam, Mercy And Compassion §2',
-    theme: 'when harshness tempts, when power allows cruelty',
   },
   {
     arabic: 'مَنْ دَنى مِنْهُ أجَلُهُ لَمْ تُعِنْهُ (لم تُغْنِهِ) حِيَلُهُ.',
@@ -7482,12 +7312,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Patience is one of the two triumphs.',
     source: 'Ghurar al-Hikam, Patience and the patient- §3',
     theme: 'when enduring difficulty, when tempted to give up too soon',
-  },
-  {
-    arabic: 'قَدْ سَعِدَ مَنْ جَدَّ.',
-    english: 'One who is diligent becomes fortunate.',
-    source: 'Ghurar al-Hikam, Diligence And Striving §3',
-    theme: 'when direction is needed, when action calls over waiting',
   },
   {
     arabic: 'إذا ثَبَتَ الوُدُّ وَجَبَ التَّرافُدُ والتَّعاضُدُ.',
@@ -7614,12 +7438,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Indeed the codes of religion are one and its ways are straight, so the one who follows it arrives [at the destination] and gains [success], and the one who stands away from it strays and regrets.',
     source: 'Ghurar al-Hikam, Religion And Sharia Law §5',
     theme: 'when belief is tested, when God feels distant',
-  },
-  {
-    arabic: 'صِلَةُ الرَّحِمِ تُدِرُّ النِّعَمَ وتَدْفَعُ النِّقَمَ.',
-    english: 'Keeping ties with near relatives makes blessings flow forth and repels calamities.',
-    source: 'Ghurar al-Hikam, Near Relatives And Keeping Or Cutting Off Ties With Them §9',
-    theme: 'when navigating family duty, when kin relationships need attention',
   },
   {
     arabic: 'إحْتَجْ إلى مَنْ شِئْتَ وَكُنْ (تَـكُنْ) أسِيْـرَهُ.',
@@ -8000,12 +7818,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when time is short, when the finite needs remembering',
   },
   {
-    arabic: 'اَلصَّبْرُ صبْرانِ: صَبْرٌ عَلى ما تَكْرَهُ، وصَبْرٌ عَمّا تُحِبُّ.',
-    english: 'Patience is of two types: enduring what you hate and abstaining from what you love.',
-    source: 'Ghurar al-Hikam, Patience and the patient- §9',
-    theme: 'when enduring difficulty, when tempted to give up too soon',
-  },
-  {
     arabic: 'لايَنْفَعُ اِجْتِهادٌ بِغَيرِ تَحْقيق.',
     english: 'Striving is useless without accomplishment.',
     source: 'Ghurar al-Hikam, Diligence And Striving §9',
@@ -8258,12 +8070,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when allah and his attributes is the teaching',
   },
   {
-    arabic: 'اَلاُُمُورُ بالتَّقديرِ لابِالتَّدبيرِ.',
-    english: 'Matters come to pass by divine decree, not by [the] planning [of human beings].',
-    source: 'Ghurar al-Hikam, Matters §1',
-    theme: 'when matters is the teaching',
-  },
-  {
     arabic: 'اِستَدِلَّ على ما لَمْ يَكنْ بِما كانَ فإنَّ الاُمُورَ أشباهٌ.',
     english: 'Deduce that which has not happened from that which has transpired, for matters are similar.',
     source: 'Ghurar al-Hikam, Matters §2',
@@ -8444,12 +8250,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when the believer is the teaching',
   },
   {
-    arabic: 'اَلمُؤْمِنُ بَيْنَ نِعْمَة وخَطيئَة لا يُصلِحُهُما إلاّ الشُّكرُ وَالإسْتِغْفارُ.',
-    english: 'A believer is [always] between blessing and wrongdoing, [and] nothing reforms these two except thankfulness and repentance.',
-    source: 'Ghurar al-Hikam, The Believer §7',
-    theme: 'when the believer is the teaching',
-  },
-  {
     arabic: 'اَلمُؤْمِِنُ عِزٌّ كَريمٌ، مَأمُونٌ على نَفْسِهِ، حَذِرٌ مَحْزُونٌ.',
     english: 'A believer is dignified, honourable, self-reliant, cautious and sorrowful.',
     source: 'Ghurar al-Hikam, The Believer §8',
@@ -8483,12 +8283,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     arabic: 'كَيفَ يَأنَسُ بِاللّهِ مَنْ لا يَسْتَوْحِشُ مِنَ الخَلْقِ؟',
     english: 'How can one become intimate with Allah when he has not separated himself from the creation?',
     source: 'Ghurar al-Hikam, Intimacy With Allah §2',
-    theme: 'when intimacy with allah is the teaching',
-  },
-  {
-    arabic: 'مَنْ اَنِسَ باللّهِ اِسْتَوحَشَ مِنَ النَّاسِ.',
-    english: 'One who is intimate with Allah keeps aloof from the people.',
-    source: 'Ghurar al-Hikam, Intimacy With Allah §3',
     theme: 'when intimacy with allah is the teaching',
   },
   {
@@ -9308,12 +9102,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when requital and reward is the teaching',
   },
   {
-    arabic: 'على قَدْرِ النِّيَّةِ تَـكُونُ مِنَ اللّهِ العَطِيَّةُ.',
-    english: 'The grant [of reward] from Allah is proportionate to the [sincerity of] intention.',
-    source: 'Ghurar al-Hikam, Requital And Reward §4',
-    theme: 'when requital and reward is the teaching',
-  },
-  {
     arabic: 'مَنْ لَمْ يُوقِنْ بِالجَزاءِ أفْسَدَ الشَّكُّ يَقينَهُ.',
     english: 'One who is not certain of the recompense [for actions], doubt has corrupted his certitude.',
     source: 'Ghurar al-Hikam, Requital And Reward §5',
@@ -9878,12 +9666,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when love and affection are the subject, when care for others is the call',
   },
   {
-    arabic: 'قُوَّةُ سُلْطانِ الحُجَّةِ أعْظَمُ مِنْ قَوَّةِ سُلْطانِ القُدْرَةِ.',
-    english: 'The strength of the authority of evidence is stronger than the strength of the authority of force.',
-    source: 'Ghurar al-Hikam, Evidence §1',
-    theme: 'when evidence is the teaching',
-  },
-  {
     arabic: 'لَمْ يُخْلِ اللّهُ سُبْحانَهُ عِبادَهُ مِنْ حُجَّة لازِمَة أوْ مَحَجَّة قائِمَة.',
     english: 'Allah, the Glorified, never leaves His servants without a necessary proof or an established, clear path.',
     source: 'Ghurar al-Hikam, The Proof (Of Allah) §1',
@@ -10352,12 +10134,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when jealousy is the teaching',
   },
   {
-    arabic: 'اَلْحَسَدُ يَأكُلُ الحَسَناتِ كَما تَأكُلُ النّارَ الحَطَبَ.',
-    english: 'Jealousy eats away good deeds just like fire consumes firewood.',
-    source: 'Ghurar al-Hikam, Jealousy §4',
-    theme: 'when jealousy is the teaching',
-  },
-  {
     arabic: 'اَلْحَسَدُ عَيْبٌ فاضِحٌ، وشُحٌّ (شَجىٌّ)فادِحٌ، لايَشْفي صاحِبَهُ إلاّ بُلُوغُ آمالِهِ فيمَنْ يَحْسُدُهُ.',
     english: 'Jealousy is a shameful flaw and a gross deficiency; one who possesses it is not cured except by realizing his hopes about the one whom he envies.',
     source: 'Ghurar al-Hikam, Jealousy §5',
@@ -10391,12 +10167,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     arabic: 'اَلْحَسُودُ أبَداً عَليلٌ، والبَخيلُ أبَداً ذَلِيلٌ.',
     english: 'The jealous one is always ill and the miser is always abased.',
     source: 'Ghurar al-Hikam, The Jealous §2',
-    theme: 'when the jealous is the teaching',
-  },
-  {
-    arabic: 'اَلْحَسُودُ دائِمُ السُّقْمِ وإنْ كانَ صَحِيحَ الجِسْمِ.',
-    english: 'The jealous one is always sick, even when his body is healthy.',
-    source: 'Ghurar al-Hikam, The Jealous §3',
     theme: 'when the jealous is the teaching',
   },
   {
@@ -10835,12 +10605,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     arabic: 'اَلْحِكْمَةُ ضالَّةُ كُلِّ مُؤْمِن، فَخُذُوها ولَوْ مِنْ أفْواهِ المُنافِقينَ.',
     english: 'Wisdom is the lost property of every believer, so take it even if it be from the mouths of hypocrites.',
     source: 'Ghurar al-Hikam, Wisdom §3',
-    theme: 'when wisdom is the teaching',
-  },
-  {
-    arabic: 'اَلْحِكْمَةُ شَجَرَةٌ تَنْبُتُ فِي الْقَلْبِ، وتُثْمِرُ عَلَى اللِّسانِ.',
-    english: 'Wisdom is a tree that grows in the heart and bears [its] fruit on the tongue.',
-    source: 'Ghurar al-Hikam, Wisdom §4',
     theme: 'when wisdom is the teaching',
   },
   {
@@ -11750,12 +11514,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when faith is the teaching',
   },
   {
-    arabic: 'المُؤْمِنُ دائِمُ الذِّكرِ، كَثيرُ الفِكرِ، عَلَى النَّعماءِ شاكِرٌ، وَفِي البَلاءِ صابِرٌ.',
-    english: 'A believer constantly remembers [Allah], frequently contemplates, is thankful for blessings and patient in the face of tribulation.',
-    source: 'Ghurar al-Hikam, The Believer §9',
-    theme: 'when the believer is the teaching',
-  },
-  {
     arabic: 'اَلمُؤْمِنُ حَييٌّ، غَنيٌّ، مُوقِنٌ، تَقِيٌّ.',
     english: 'A believer is modest, independent, certain and pious.',
     source: 'Ghurar al-Hikam, The Believer §10',
@@ -12086,12 +11844,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when experience is the teaching',
   },
   {
-    arabic: 'اَلجَزَعُ أتْعَبُ مِنَ الصَّبْرِ.',
-    english: 'Anxiety is more exhausting than patience.',
-    source: 'Ghurar al-Hikam, Anxiety §11',
-    theme: 'when anxiety is the teaching',
-  },
-  {
     arabic: 'إنْ كُنْتَ جازِعاً على كُلِّ ما يَفْلِتُ مِنْ يَدَيْكَ فَاجْزَعْ على مالَمْ يَصِلْ إلَيكَ.',
     english: 'If you are [one who gets] anxious about all that has escaped from your hands, then be anxious about what has not reached you.',
     source: 'Ghurar al-Hikam, Anxiety §12',
@@ -12218,12 +11970,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when hunger is the teaching',
   },
   {
-    arabic: 'اَلجُوعُ خَيْرٌ مِنَ الخُضُوعِ.',
-    english: 'Hunger is better than subjugation.',
-    source: 'Ghurar al-Hikam, Hunger §3',
-    theme: 'when hunger is the teaching',
-  },
-  {
     arabic: 'تَأَدَّمْ بِالجُوعِ وتَأَدَّبْ بِالقُنُوعِ.',
     english: 'Complement your food with hunger and discipline yourself with contentment.',
     source: 'Ghurar al-Hikam, Hunger §4',
@@ -12275,12 +12021,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     arabic: 'اَلجَهْلُ مَوتٌ.',
     english: 'Ignorance is [a form of] death.',
     source: 'Ghurar al-Hikam, Ignorance §10',
-    theme: 'when ignorance is the teaching',
-  },
-  {
-    arabic: 'اَلنَّاسُ أعْداءُ ما جَهِلُوا.',
-    english: 'People are enemies of that which they are ignorant of.',
-    source: 'Ghurar al-Hikam, Ignorance §11',
     theme: 'when ignorance is the teaching',
   },
   {
@@ -12512,12 +12252,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when the judicious is the teaching',
   },
   {
-    arabic: 'اَلْحَسَدُ شَـرُّ الأمْراضِ.',
-    english: 'Jealousy is the worst of diseases.',
-    source: 'Ghurar al-Hikam, Jealousy §9',
-    theme: 'when jealousy is the teaching',
-  },
-  {
     arabic: 'اَلْحَسَدُ حَبْسُ الرُّوحِ.',
     english: 'Jealousy is imprisonment of the soul.',
     source: 'Ghurar al-Hikam, Jealousy §10',
@@ -12701,12 +12435,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     arabic: 'إذا ضَلَلْتَ عَنْ حِكْمَةِ اللّهِ فَقِفْ عِنْدَ قُدْرَتِهِ، فَإنَّكَ إنْ فاتَكَ مِنْ حِكْمَتِهِ ما يَشْفِيكَ فَلَنْ يَفُوتَكَ مِنْ قُدْرَتِهِ ما يَكْفِيكَ.',
     english: 'When you get lost from the wisdom of Allah then stand with His power, for indeed [even] if you do not get of His wisdom that which can heal you, you will not lose of His power that which will suffice you.',
     source: 'Ghurar al-Hikam, Wisdom §11',
-    theme: 'when wisdom is the teaching',
-  },
-  {
-    arabic: 'بِالحِكْمَةِ يُكْشَفُ غِطاءُ العِلْمِ.',
-    english: 'Through wisdom, the veil of knowledge is removed.',
-    source: 'Ghurar al-Hikam, Wisdom §12',
     theme: 'when wisdom is the teaching',
   },
   {
@@ -14144,12 +13872,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when remembrance [of allah] and the reminder is the teaching',
   },
   {
-    arabic: 'اَلذِّكْرُ يُؤْنِسُ اللُبَّ، ويُنيرُ القَلْبَ، ويَسْتَنْزِلُ الرَّحمَةَ.',
-    english: 'Remembering [Allah] comforts the soul, illuminates the heart and brings down the mercy [of Allah].',
-    source: 'Ghurar al-Hikam, Remembrance [Of Allah] And The Reminder §2',
-    theme: 'when remembrance [of allah] and the reminder is the teaching',
-  },
-  {
     arabic: 'اَلذِّكْرُ نُورُ العَقْلِ، وحَياةُ النُّفُوسِ، وجَلاءُ الصُّدُورِ.',
     english: 'Remembering [Allah] is the light of intellect, the life of the souls and the polishing of the hearts.',
     source: 'Ghurar al-Hikam, Remembrance [Of Allah] And The Reminder §3',
@@ -14166,12 +13888,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'A beautiful remembrance is one of the two lives.',
     source: 'Ghurar al-Hikam, Remembrance [Of Allah] And The Reminder §5',
     theme: 'when remembrance [of allah] and the reminder is the teaching',
-  },
-  {
-    arabic: 'الذُّنوبُ الدّاءُ، والدَّواءُ الاِسْتِغفارُ،وَ الشِّفاءُ أنْ لا تَعُودَ.',
-    english: 'Vices are a disease, and its remedy is seeking forgiveness, and its cure is not repeating [the vices].',
-    source: 'Ghurar al-Hikam, Vices And Those Who Commit Them §1',
-    theme: 'when vices and those who commit them is the teaching',
   },
   {
     arabic: 'تَهْوينُ الذَّنبِ أعْظَمُ مِنْ رُكُوبِ الذَّنْبِ.',
@@ -14255,12 +13971,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     arabic: 'اَلرِّياءُ إشْراكٌ.',
     english: 'Showing off is [a form of] ascribing partners [to Allah].',
     source: 'Ghurar al-Hikam, Showing Off §3',
-    theme: 'when showing off is the teaching',
-  },
-  {
-    arabic: 'آفَةُ العِبادَةِ الرِّياءُ.',
-    english: 'The bane of worship is showing off.',
-    source: 'Ghurar al-Hikam, Showing Off §4',
     theme: 'when showing off is the teaching',
   },
   {
@@ -14964,12 +14674,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'The judicious one is alert, the negligent one is sleepy.',
     source: 'Ghurar al-Hikam, The Judicious §16',
     theme: 'when the judicious is the teaching needed',
-  },
-  {
-    arabic: 'اَلْحَسَدُ يُذيبُ الجَسَدَ.',
-    english: 'Jealousy melts away the body.',
-    source: 'Ghurar al-Hikam, Jealousy §14',
-    theme: 'when jealousy is the teaching needed',
   },
   {
     arabic: 'اَلْحَسَدُ يُنْشِيُ الْكَمَدَ.',
@@ -15686,12 +15390,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when depravities is the teaching needed',
   },
   {
-    arabic: 'اِسْتَنْزِلُوا الرِّزقَ بِالصَّدَقَةِ.',
-    english: 'Make sustenance come down by [giving] charity.',
-    source: 'Ghurar al-Hikam, Sustenance And One Who Seeks It §1',
-    theme: 'when sustenance and one who seeks it is the teaching needed',
-  },
-  {
     arabic: 'إنَّ اللّهَ سُبْحانَهُ أبى أنْ يَجْعَلَ أرزاقَ عِبادِهِ المُؤْمِنينَ إلاّ مِنْ حَيثُ لايَحتَسِبُونَ.',
     english: 'Verily Allah, the Glorified, dislikes to put the sustenance of his believing servants except [in places] from where they least expect it.',
     source: 'Ghurar al-Hikam, Sustenance And One Who Seeks It §2',
@@ -15797,12 +15495,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     arabic: 'اَلرِّفْقُ مِفْتاحُ الصَّوابِ، وشيمَةُ ذَوي الألباب.',
     english: 'Leniency is the key to rightness and the trait of the people of understanding.',
     source: 'Ghurar al-Hikam, Leniency And Gentleness §1',
-    theme: 'when leniency and gentleness is the teaching needed',
-  },
-  {
-    arabic: 'اَلرِّفْقُ يُيَسِّرُ الصِّعابَ، ويُسَهِّلُ شَديدَ الأسبابِ.',
-    english: 'Leniency makes difficulties bearable and eases the harshness of situations.',
-    source: 'Ghurar al-Hikam, Leniency And Gentleness §2',
     theme: 'when leniency and gentleness is the teaching needed',
   },
   {
@@ -16238,12 +15930,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when striving and seeking is the teaching needed',
   },
   {
-    arabic: 'عَلَيْكَ بِالسَّعِي ولَيْسَ عَلَيْكَ بِالنُّجْحِ.',
-    english: 'It is upon you to strive but it is not upon you to succeed.',
-    source: 'Ghurar al-Hikam, Striving And Seeking §3',
-    theme: 'when striving and seeking is the teaching needed',
-  },
-  {
     arabic: 'لَنْ يَضيعَ مِنْ سَعْيِكَ ما أصْلَحَكَ وأكْسَبَكَ الأجْرَ.',
     english: 'Never will your striving for that which improves you and earns divine reward be wasted.',
     source: 'Ghurar al-Hikam, Striving And Seeking §4',
@@ -16524,12 +16210,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Counter the wrongs [of others] by doing good [to them].',
     source: 'Ghurar al-Hikam, Doing Wrong to Others- §3',
     theme: 'when doing wrong to others- is the teaching needed',
-  },
-  {
-    arabic: 'مُسَوِّفُ نَفْسِهِ بِالتَّوْبَةِ مِنْ هُجُومِ الأجَلِ عَلى أعْظَمِ الخَطَرِ.',
-    english: 'The one who delays seeking repentance is in the greatest danger of the onslaught of death.',
-    source: 'Ghurar al-Hikam, Procrastination §2',
-    theme: 'when procrastination is the teaching needed',
   },
   {
     arabic: 'لا دِينَ لِمُسَوِّف بِتَوْبَتِهِ.',
@@ -16826,12 +16506,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when being occupied- is the teaching needed',
   },
   {
-    arabic: 'الشَّفيعُ جَناحُ الطّالِبِ.',
-    english: 'The intercessor is the wing of the seeker [which helps him attain what he seeks].',
-    source: 'Ghurar al-Hikam, The Intercessor and the Interceder- §1',
-    theme: 'when the intercessor and the interceder- is the teaching needed',
-  },
-  {
     arabic: 'شافِعُ الْمُجْرِمِ خُضُوعُهُ بِالْمَعْذِرَةِ.',
     english: 'The interceder of a criminal is his humility in seeking pardon.',
     source: 'Ghurar al-Hikam, The Intercessor and the Interceder- §2',
@@ -17096,18 +16770,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when good health and the healthy- is the teaching needed',
   },
   {
-    arabic: 'اَلصِّحَّةُ أفْضَلُ النِّـعَمِ.',
-    english: 'Good health is the best blessing.',
-    source: 'Ghurar al-Hikam, Good Health and the Healthy- §2',
-    theme: 'when good health and the healthy- is the teaching needed',
-  },
-  {
-    arabic: 'بِالصِّحَّةِ تُسْتَكْمَلُ اللَّذَّةُ.',
-    english: 'With good health, enjoyment becomes complete.',
-    source: 'Ghurar al-Hikam, Good Health and the Healthy- §3',
-    theme: 'when good health and the healthy- is the teaching needed',
-  },
-  {
     arabic: 'اَلصَّدْرُ رَقيبُ البَدَنِ.',
     english: 'he chest is the guard of the body.',
     source: 'Ghurar al-Hikam, The Chest- §1',
@@ -17234,22 +16896,10 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when prayer and one who stands for prayer- is the teaching needed',
   },
   {
-    arabic: 'اَلصَّلاةُ حِصْنٌ مِنْ سَطَواتِ الشَّيْطانِ.',
-    english: 'Prayer is a fortress [that protects] from the influences of Satan.',
-    source: 'Ghurar al-Hikam, Prayer and one who stands for Prayer- §2',
-    theme: 'when prayer and one who stands for prayer- is the teaching needed',
-  },
-  {
     arabic: 'اَلصَّلاةُ حِصْنُ الرَّحْمنِ، ومِدْحَرَةُ الشَّيْطانِ.',
     english: 'Prayer is the fortress of the all-Merciful and the instrument for expelling Satan.',
     source: 'Ghurar al-Hikam, Prayer and one who stands for Prayer- §3',
     theme: 'when prayer and one who stands for prayer- is the teaching needed',
-  },
-  {
-    arabic: 'الصَّمْتُ يُكْسِيكَ الوَقارَ، ويَكْفِيكَ مَؤُنَةَ الاِعتِذارِ.',
-    english: 'Silence covers you with dignity and suffices as your provision for seeking pardon.',
-    source: 'Ghurar al-Hikam, Silence- §1',
-    theme: 'when restraint in speech is wise',
   },
   {
     arabic: 'أُصْمُتْ تَسْلَمْ.',
@@ -17262,12 +16912,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Espouse silence and your thoughts will remain hidden (or will become illuminated).',
     source: 'Ghurar al-Hikam, Silence- §3',
     theme: 'when restraint in speech is wise',
-  },
-  {
-    arabic: 'أشَدُّ المَصائِبِ سُوءُ الخَلَفِ.',
-    english: 'The severest of hardships is [having] evil offspring.',
-    source: 'Ghurar al-Hikam, Hardships- §1',
-    theme: 'when hardships- is the teaching needed',
   },
   {
     arabic: 'اَلمَصائِبُ مِفْتاحُ الأجْرِ.',
@@ -17466,12 +17110,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'When sincerity is achieved the consciences are illuminated.',
     source: 'Ghurar al-Hikam, Inner Consciences- §3',
     theme: 'when inner consciences- is the teaching needed',
-  },
-  {
-    arabic: 'أكْرِمْ ضَيْفَكَ وإنْ كانَ حَقيراً، وقُمْ عَنْ مَجْلِسِكَ لاِبيكَ ومُعَلِّمِكَ وَإنْ كُنْتَ أميراً.',
-    english: 'onor your guest even if he is ignoble; and stand up from your sitting place for your father and your teacher, even if you are a ruler.',
-    source: 'Ghurar al-Hikam, Hospitality- §1',
-    theme: 'when hospitality- is the teaching needed',
   },
   {
     arabic: 'اَلضِّيافَةُ رَأسُ المُرُوَّةِ.',
@@ -17864,12 +17502,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when the mind is the gift being squandered, when reason is the anchor',
   },
   {
-    arabic: 'مَنْ كَفَّ أذاهُ لَمْ يُعانِدْهُ أحدٌ.',
-    english: 'One who prevents himself from harming [others] will not be opposed [or hated] by anyone.',
-    source: 'Ghurar al-Hikam, Harm And Preventing Harm §2',
-    theme: 'when you feel surrounded by resistance, when everyone seems against you, when you wonder why you attract opposition',
-  },
-  {
     arabic: 'قِلَّةُ الأكلِ مِنَ العَفافِ، وكَثْرَتُهُ مِنَ الإسْرافِ.',
     english: 'Eating less is from self-restraint and overeating is from indulgence.',
     source: 'Ghurar al-Hikam, Eating §1',
@@ -17900,18 +17532,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when you are searching for the source of your mental and physical ailments, when simplicity in living is the prescription',
   },
   {
-    arabic: 'كُلُّ سِرّ عندَ اللّهِ عَلانِيَةٌ.',
-    english: 'Every secret is manifest for Allah.',
-    source: 'Ghurar al-Hikam, Allah And His Attributes §4',
-    theme: 'when you hide behind pretense, when the private self diverges from the public self, when you forget that concealment is impossible',
-  },
-  {
-    arabic: 'لا تُدْرِكُ اللّهُ جلَّ جَلالُهُ العُيُونُ بِمُشاهَدَةِ الأعيانِ، لكن تُدْرِكُهُ القُلُوبُ بِحَقائقِ الإيمانِ.',
-    english: 'Allah, Great is His Majesty, is not perceived by the eyes through the sense of sight, rather He is perceived by the hearts through the realities of faith.',
-    source: 'Ghurar al-Hikam, Allah And His Attributes §11',
-    theme: 'when faith seeks proof the eyes cannot provide, when the intellect demands what only the heart can know, when certainty comes from within',
-  },
-  {
     arabic: 'اَلتَّوحيدُ حَيوةُ النَّفْسِ.',
     english: 'Belief in the oneness of Allah enlivens the soul.',
     source: 'Ghurar al-Hikam, Allah And His Attributes §22',
@@ -17930,18 +17550,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when existence feels purposeless, when you feel abandoned by the divine, when the question of meaning haunts you',
   },
   {
-    arabic: 'اَلاُُمُورُ بالتَّقديرِ لابِالتَّدبيرِ.',
-    english: 'Matters come to pass by divine decree, not by [the] planning [of human beings].',
-    source: 'Ghurar al-Hikam, Matters §1',
-    theme: 'when plans collapse despite perfect preparation, when the gap between effort and outcome becomes clear, when control is revealed as illusion',
-  },
-  {
-    arabic: 'خَيْرُ الأُمُورِ ما عَرى عَنِ الطَّمَعِ.',
-    english: 'The best matters are those that are free from cupidity.',
-    source: 'Ghurar al-Hikam, Matters §11',
-    theme: 'when greed has tainted what began as pure, when desire obscures right action, when you question your own motives',
-  },
-  {
     arabic: 'مِلاكُ الأُمورِ حُسنُ الخَواتِمِ.',
     english: 'The gauge of [successful] matters is [in] their good endings.',
     source: 'Ghurar al-Hikam, Matters §23',
@@ -17952,30 +17560,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Be wary of every matter that degrades the one who performs it when it becomes apparent.',
     source: 'Ghurar al-Hikam, Matters §30',
     theme: 'when the hidden act will eventually come to light, when private shame will become public, when what you do in secret defines who you are',
-  },
-  {
-    arabic: 'اَلإمامَةُ نِظامُ الاُمَّةِ.',
-    english: 'Leadership is a social order.',
-    source: 'Ghurar al-Hikam, Leadership §1',
-    theme: 'when the community fractures, when collective life needs an organizing principle, when authority is the foundation of belonging',
-  },
-  {
-    arabic: 'رِفاهِيَّةُ العَيْشِ فيِ الأمْنِ.',
-    english: 'The comfort of life is in security.',
-    source: 'Ghurar al-Hikam, Security §9',
-    theme: 'when luxury is pursued but peace is absent, when the true ingredient of a good life is overlooked, when safety is the foundation everything else rests on',
-  },
-  {
-    arabic: 'اَلبُخْلُ أحَدُ الفَقْرَينِ.',
-    english: 'Stinginess is one of the two forms of poverty.',
-    source: 'Ghurar al-Hikam, Stinginess And Avarice §1',
-    theme: 'when wealth hoards itself and grows hollow, when the miser is the truest pauper, when holding back is the real loss',
-  },
-  {
-    arabic: 'إيّاك والشُّحَّ فَإنَّهُ جِلبابُ المَسْكَنَةِ، وزِمامٌ يُقادُ بِهِ إلى كُلِّ دِناءَة.',
-    english: 'I bid you to refrain from avarice, for it is the garment of indigence and the bridle that is used to drive one towards every [type of] vileness.',
-    source: 'Ghurar al-Hikam, Stinginess And Avarice §8',
-    theme: 'when avarice masquerades as prudence, when stinginess is the first step toward every other vice, when you are being led somewhere low',
   },
   {
     arabic: 'اَلبُخْلُ يُذِلُّ مُصاحِبَهُ ويُعِزُّ مُجانِبَهُ.',
@@ -17990,84 +17574,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when the inner ugliness of miserliness needs to be made visible, when a vice has a face, when moral imagination reveals what character truly looks like',
   },
   {
-    arabic: 'اَلبَخيلُ يَبْخَلُ على نَفْسِهِ بِاليَسيرِ مِنْ دُنياهُ، ويَسْمَحُ لِوُرَّاثهِ بِكُلِّها.',
-    english: 'A miser is stingy towards himself with little of his worldly possessions and leaves all the rest for his heirs.',
-    source: 'Ghurar al-Hikam, The Miser And The Avaricious §1',
-    theme: 'when you deprive yourself in life to enrich others in death, when the irony of hoarding is laid bare, when the miser serves his heirs better than himself',
-  },
-  {
-    arabic: 'اَلبَخيلُ مُتَعَجِّلُ الفَقْرِ.',
-    english: 'A miser hastens poverty.',
-    source: 'Ghurar al-Hikam, The Miser And The Avaricious §8',
-    theme: 'when the fear of poverty produces the very thing feared, when tightfistedness backfires, when withholding is the shortest road to scarcity',
-  },
-  {
-    arabic: 'بادِرِ البِرَّ فَإنَّ أعْمالَ البِرِّ فُرْصَةٌ.',
-    english: 'Hasten towards virtue, for verily virtuous deeds are an opportunity [to secure your Hereafter].',
-    source: 'Ghurar al-Hikam, Taking The Initiative §5',
-    theme: 'when an opportunity for good will not return, when virtue has a season, when good deeds must be seized rather than scheduled',
-  },
-  {
-    arabic: 'صِحَّةُ الأجْسامِ مِنْ أهْنَاِ الأقسامِ.',
-    english: 'Physical health is one of the most wholesome bounties.',
-    source: 'Ghurar al-Hikam, The Body §2',
-    theme: 'when the body is taken for granted, when illness arrives to remind you of what was never earned, when gratitude for health is long overdue',
-  },
-  {
-    arabic: 'كَيفَ يُغْتَرُّ بِسَلامَةِ جِسْم مُعَرَّض للآفاتِ.',
-    english: 'How can one be deceived by the health of a body that is prone to malady?',
-    source: 'Ghurar al-Hikam, The Body §3',
-    theme: 'when health breeds complacency, when the body',
-  },
-  {
-    arabic: 'اَلجَمالُ الظّاهِرُ حُسْنُ الصُّورَةِ.',
-    english: 'External beauty is [in possessing] good looks.',
-    source: 'Ghurar al-Hikam, Beauty §1',
-    theme: 'when external appearance is being discussed, when the surface and the depth are being distinguished, when beauty needs definition',
-  },
-  {
-    arabic: 'اَلجَمالُ الباطِنُ حُسْنُ السَّريرَةِ.',
-    english: 'Internal beauty is [in possessing] a good heart.',
-    source: 'Ghurar al-Hikam, Beauty §2',
-    theme: 'when outer appearance fades or dazzles, when the true measure of beauty is sought within, when character is the face the heart wears',
-  },
-  {
-    arabic: 'جَمالُ الرَّجُلِ حِلْمُهُ.',
-    english: 'The beauty of a man is his clemency.',
-    source: 'Ghurar al-Hikam, Beauty §3',
-    theme: 'when a man is evaluated by his response to provocation, when the most attractive quality is self-restraint, when forbearance is the true ornament',
-  },
-  {
-    arabic: 'جَمالُ الرَّجُلِ الوَقارُ.',
-    english: 'The beauty of a man is dignity.',
-    source: 'Ghurar al-Hikam, Beauty §4',
-    theme: 'when composure sets someone apart from the crowd, when dignity is more attractive than appearance, when the way a man carries himself reveals his character',
-  },
-  {
-    arabic: 'الجَنَّةُ خَيْرُ مَآل، والنّارُ شَرُّ مَقيل.',
-    english: 'Paradise is the best place of return and hellfire is the worst place of residence.',
-    source: 'Ghurar al-Hikam, Paradise And The People Of Paradise §1',
-    theme: 'when the two destinations are being weighed, when the urgency of the afterlife must be felt, when the ultimate return demands preparation now',
-  },
-  {
-    arabic: 'ألا وإنّي لَمْ أرَ كَالجَنَّةِ نامَ طالِبُها، ولا كالنَّارِ نامَ هارِبُها.',
-    english: 'Indeed, I have not seen any place whose seeker is in slumber like Paradise and any place whose fleer is in slumber like hellfire.',
-    source: 'Ghurar al-Hikam, Paradise And The People Of Paradise §2',
-    theme: 'when the spiritual urgency of the hour is dulled by comfort, when seekers and fleers both sleep through what demands wakefulness, when indifference is the great sin',
-  },
-  {
-    arabic: 'اَلجَنَّةُ دارُ الأمانِ.',
-    english: 'Paradise is the abode of peace.',
-    source: 'Ghurar al-Hikam, Paradise And The People Of Paradise §5',
-    theme: 'when this world provides no lasting safety, when the soul longs for a peace that cannot be disrupted, when the final home is remembered',
-  },
-  {
-    arabic: 'ثَمَنُ الجَنَّةِ العَمَلُ الصَّالِحُ.',
-    english: 'The price of Paradise is good deeds.',
-    source: 'Ghurar al-Hikam, Paradise And The People Of Paradise §16',
-    theme: 'when longing for the hereafter needs a practical translation, when wishing alone is not enough, when the currency of eternity is action',
-  },
-  {
     arabic: 'ثَمَنُ الجَنَّةِ الزُّهدُ في الدُّنيا.',
     english: 'The price of Paradise is renunciation of the [pleasures of this] world.',
     source: 'Ghurar al-Hikam, Paradise And The People Of Paradise §17',
@@ -18080,40 +17586,10 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when the hereafter is desired but nothing is done toward it, when wishful spirituality replaces action, when desire and effort are confused',
   },
   {
-    arabic: 'مَنِ اشْتاقَ إلَى الْجَـنَّةِ سَلا عَنِ الشَّهواتِ.',
-    english: 'One who yearns for Paradise forgets his [worldly] desires.',
-    source: 'Ghurar al-Hikam, Paradise And The People Of Paradise §28',
-    theme: 'when worldly cravings compete with spiritual longing, when desire for the eternal crowds out desire for the temporary, when the heart has a higher appetite',
-  },
-  {
     arabic: 'هَيْهاتَ لايُخْدَعُ اللّهُ عَنْ جَنَّتِهِ، وَلا يُنالُ ما عِنْدَهُ إلاّ بِمَرضاتِهِ.',
     english: 'How impossible! Allah cannot be cheated of His Paradise, and none can attain what is with Him except by His pleasure.',
     source: 'Ghurar al-Hikam, Paradise And The People Of Paradise §31',
     theme: 'when shortcuts to salvation are imagined, when the conditions for divine acceptance are being minimized, when God cannot be fooled',
-  },
-  {
-    arabic: 'اَلجَهْلُ فِي الإنْسانِ أضَرُّ مِنَ الآكِلَةِ فِي البَدَنِ.',
-    english: 'Ignorance in a human being is more harmful than gangrene [is] to the body.',
-    source: 'Ghurar al-Hikam, Ignorance §2',
-    theme: 'when a spiritual ailment is more serious than a physical one, when ignorance quietly destroys what no one is treating, when the urgent and the important are confused',
-  },
-  {
-    arabic: 'اَلنَّاسُ أعْداءُ ما جَهِلُوا.',
-    english: 'People are enemies of that which they are ignorant of.',
-    source: 'Ghurar al-Hikam, Ignorance §11',
-    theme: 'when hostility toward something unfamiliar is misread as truth, when rejection is a symptom of ignorance, when opposition needs to be traced to its source',
-  },
-  {
-    arabic: 'اَلجَهْلُ مَعْدِنُ الشَّـرِّ.',
-    english: 'Ignorance is the [primary] source of evil.',
-    source: 'Ghurar al-Hikam, Ignorance §15',
-    theme: 'when evil is being traced to its roots, when wickedness is understood rather than merely condemned, when ignorance and sin travel together',
-  },
-  {
-    arabic: 'اَلجَهْلُ أصْلُ كُلِّ شَـرّ.',
-    english: 'Ignorance is the root of all evil.',
-    source: 'Ghurar al-Hikam, Ignorance §18',
-    theme: 'when the cause behind destructive behavior is sought, when moral failure is traced upstream, when knowledge is the only remedy',
   },
   {
     arabic: 'كَفى بِالمَرْءِ جَهْلاً أنْ يَجْهَلَ نَفْسَهُ.',
@@ -18134,30 +17610,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when your flaw is visible to everyone but you, when the blind spot is where the problem lives, when the last thing you see is your own deficiency',
   },
   {
-    arabic: 'رَأسُ الجَهْلِ مُعاداةُ النّاسِ.',
-    english: 'The cornerstone of ignorance is animosity towards people.',
-    source: 'Ghurar al-Hikam, Ignorance §50',
-    theme: 'when hostility toward others signals a problem within, when enmity with humanity is traced to its origin, when misanthropy is a form of ignorance',
-  },
-  {
-    arabic: 'اَلجاهِلُ لَنْ يُلْقى أبَداً إلا مُفَرِّطاً، أو مُفْرِطاً.',
-    english: 'An ignorant person is never found to be anything but falling short or excessive.',
-    source: 'Ghurar al-Hikam, The Ignorant And The Foolish §1',
-    theme: 'when moderation eludes someone, when extremes betray lack of wisdom, when every response is either too little or too much',
-  },
-  {
-    arabic: 'اَلحِرْصُ رَأسُ الفَقْرِ، وأُسُّ الشَّـرِّ.',
-    english: 'Greed is the cornerstone of poverty and the foundation of evil.',
-    source: 'Ghurar al-Hikam, Greed §2',
-    theme: 'when greed is identified as the source of spiritual and material poverty, when the root of evil is traced back to wanting more, when desire becomes destructive',
-  },
-  {
-    arabic: 'اَلحِرْصُ لايَزيدُ فِي الرِّزْقِ، ولكِنْ يُذِلُّ القَدْرَ.',
-    english: 'Greed does not increase sustenance, rather it debases one\\\'s status.',
-    source: 'Ghurar al-Hikam, Greed §5',
-    theme: 'when grasping for more diminishes you, when the pursuit of gain costs your dignity, when acquisition and abasement arrive together',
-  },
-  {
     arabic: 'شِدَّةُ الحِرْصِ مِنْ قُوَّةِ الشِـرَّهِ وضَعْفِ الدّينِ.',
     english: 'Intense greed comes from strong gluttony and weakness of faith.',
     source: 'Ghurar al-Hikam, Greed §28',
@@ -18168,30 +17620,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'The slave of greed is eternally wretched.',
     source: 'Ghurar al-Hikam, Greed §32',
     theme: 'when desire is the master and you are the servant, when no amount of having is ever enough, when the greedy person inherits perpetual misery',
-  },
-  {
-    arabic: 'اَلْحَريصُ فَقِيْرٌ، ولَوْ مَلَكَ الدُّنيا بِحَذافيرِها.',
-    english: 'The one who is greedy is poor, even if he owns the whole world in its entirety.',
-    source: 'Ghurar al-Hikam, The Greedy §1',
-    theme: 'when wealth does not produce contentment, when ownership and poverty coexist in the same heart, when the rich can be the most impoverished',
-  },
-  {
-    arabic: 'كُلُّ حَريص فَقيرٌ.',
-    english: 'Every greedy person is needy.',
-    source: 'Ghurar al-Hikam, The Greedy §11',
-    theme: 'when need is defined by desire rather than by circumstance, when the greedy person is always in lack, when the wealthiest can be the most destitute',
-  },
-  {
-    arabic: 'أحْسِنْ تَسْتَرِقَّ.',
-    english: 'Do good and you shall enthral.',
-    source: 'Ghurar al-Hikam, Good Turns And Benevolent Actions §6',
-    theme: 'when the power of kindness to win hearts is underestimated, when goodness creates loyalty money cannot buy, when the master of hearts gives not takes',
-  },
-  {
-    arabic: 'أحْسِنْ إلى المُسيءِِ تَمْلِكْهُ.',
-    english: 'Be good to the evildoer and you will dominate him.',
-    source: 'Ghurar al-Hikam, Good Turns And Benevolent Actions §15',
-    theme: 'when responding to hostility with kindness disarms it, when goodness is the most effective form of power, when the enemy becomes subject through grace',
   },
   {
     arabic: 'أفْضِلْ عَلَى النّاسِ يَعْظُمْ قَدْرُكَ.',
@@ -18210,24 +17638,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Indeed your goodness towards the ones who plot against you from your opponents and enviers is more irritating for them than your trying to do them harm.',
     source: 'Ghurar al-Hikam, Good Turns And Benevolent Actions §50',
     theme: 'when kindness to an enemy is the most powerful response available, when grace defeats malice, when goodness is the sharpest weapon against those who hate you',
-  },
-  {
-    arabic: 'اَلحَقُّ أفْضَلُ سَبِيل.',
-    english: 'Truth is the best way.',
-    source: 'Ghurar al-Hikam, The Truth §2',
-    theme: 'when all paths seem equally valid, when the question is which road to take, when truth is recognized as the surest route',
-  },
-  {
-    arabic: 'اَلحَقُّ أقْوى ظَهِير.',
-    english: 'Truth is the strongest supporter.',
-    source: 'Ghurar al-Hikam, The Truth §3',
-    theme: 'when you stand alone and need to know what stands with you, when every ally seems insufficient, when truth is the only ally that never abandons',
-  },
-  {
-    arabic: 'حَقٌّ يَضُـرُّخَيْرٌ مِنْ باطِل يَسُـرُّ.',
-    english: 'Truth that harms is better than falsehood that brings joy.',
-    source: 'Ghurar al-Hikam, The Truth §13',
-    theme: 'when comfortable lies compete with painful truths, when the pleasure of falsehood is tempting, when honesty costs something',
   },
   {
     arabic: 'عَوْدُكَ إلَى الحَقِّ خَيْرٌ مِنْ تَماديكَ فيِ الباطِلِ.',
@@ -18260,18 +17670,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when ease and discomfort need to be recalibrated, when the heart is made comfortable by the wrong things, when truth should be the home you return to',
   },
   {
-    arabic: 'اَلْحِكْمَةُ ضالَّةُ كُلِّ مُؤْمِن، فَخُذُوها ولَوْ مِنْ أفْواهِ المُنافِقينَ.',
-    english: 'Wisdom is the lost property of every believer, so take it even if it be from the mouths of hypocrites.',
-    source: 'Ghurar al-Hikam, Wisdom §3',
-    theme: 'when the source of wisdom makes you hesitate, when truth can come from unexpected places, when pride about who teaches you is the obstacle to learning',
-  },
-  {
-    arabic: 'أوَّلُ الْحِكْمَةِ تَرْكُ اللَّذّاتِ، وآخِرُها مَقْتُ الفانِياتِ.',
-    english: 'The beginning of wisdom is abandoning [worldly] pleasures and its end is loathing the transitory.',
-    source: 'Ghurar al-Hikam, Wisdom §6',
-    theme: 'when pleasure is the obstacle to wisdom, when detachment from the world is both the starting point and the destination, when loathing the temporary is the sign of arrival',
-  },
-  {
     arabic: 'حِكْمَةُ الدَّنِّي تَرْفَعُهُ، وجَهْلُ الشَّـريفِ يَضَعُهُ.',
     english: 'The wisdom of a lowly person elevates him and the ignorance of a respectable person degrades him.',
     source: 'Ghurar al-Hikam, Wisdom §17',
@@ -18288,30 +17686,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Lustful desire and wisdom do not go together.',
     source: 'Ghurar al-Hikam, Wisdom §39',
     theme: 'when the two cannot share the heart, when the choice between them is implicit in every desire, when clarity of mind requires restraint of the body',
-  },
-  {
-    arabic: 'اَلطّاعَةُ جُنَّـةُ الرَعِيَّةِ، والعَدْلُ جُنَّـةُ الدُّوَلِ.',
-    english: 'Obedience is the shield of the people and justice is the shield of governments.',
-    source: 'Ghurar al-Hikam, Government And Sovereignty §1',
-    theme: 'when the protection of communities is discussed, when governance must be shielded by what it owes the people, when the two shields that preserve order are named',
-  },
-  {
-    arabic: 'شَـرُّ الوُلاةِ مَنْ يَخافُهُ البَرِيءُ.',
-    english: 'The worst of rulers is one who is feared by the innocent.',
-    source: 'Ghurar al-Hikam, The Ruler And Governer §3',
-    theme: 'when authority terrorizes the innocent, when fear has chosen the wrong objects, when power has become a threat to those it should protect',
-  },
-  {
-    arabic: 'مِنْ حَقِّ الرّاعِي أنْ يَخْتارَ لِرَعِيَتِّهِ ما يَخْتارُهُ لِنَفْسِهِ.',
-    english: 'It is from the right of the shepherd to choose for his flock that which he chooses for himself.',
-    source: 'Ghurar al-Hikam, The Ruler And Governer §7',
-    theme: 'when leadership standards are being defined, when what is good enough for the ruler must be good enough for the people, when hypocrisy in governance is exposed',
-  },
-  {
-    arabic: 'أفْضَلُ الحِلْمِ كَظْمُ الغَيْظِ، ومِلْكُ النَّفْسِ مَعَ القُدْرَةِ.',
-    english: 'The best forbearance is suppressing anger and exercising self-restraint despite having power [to exact revenge].',
-    source: 'Ghurar al-Hikam, Forbearance §9',
-    theme: 'when the ability to retaliate exists but restraint is chosen, when power untaken is the highest virtue, when the best response is to absorb rather than strike',
   },
   {
     arabic: 'أشْجَعُ النّاسِ مَنْ غَلَبَ الجَهْلَ بِالحِلْمِ.',
@@ -18386,22 +17760,10 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when ailments are compared and the most devastating found, when bodily sickness pales before mental and spiritual folly, when the incurable disease of the self is named',
   },
   {
-    arabic: 'أحْمَقُ النّاسِ مَنْ ظَنَّ أنَّهُ أعْقَلُ النّاسِ.',
-    english: 'The most foolish of all people is the one who thinks that he is the most intelligent of all people.',
-    source: 'Ghurar al-Hikam, The Fool §4',
-    theme: 'when self-assessed intelligence is the sign of its absence, when arrogance about the mind is its greatest failing, when thinking you are the wisest is the surest proof that you are not',
-  },
-  {
     arabic: 'إيّاكَ ومَوَّدَةَ الأحْمَقِ، فَإنَّهُ يَضُرُّكَ مِنْ حَيْثُ يَرى أنَّهُ يَنْفَعُكَ.',
     english: 'Be careful not to love the fool, for he will surely harm you while he thinks that he is benefitting you.',
     source: 'Ghurar al-Hikam, The Fool §14',
     theme: 'when good intentions become harmful actions, when the fool causes damage through sincere effort, when misplaced love from the wrong person costs you',
-  },
-  {
-    arabic: 'اَلاِحْتِمالُ زَيْنُ الرِّفاقِ.',
-    english: 'Tolerance is the ornament of companionship.',
-    source: 'Ghurar al-Hikam, Tolerance §2',
-    theme: 'when relationships are strained by intolerance, when enduring others is what makes community beautiful, when patience with people is the jewelry of friendship',
   },
   {
     arabic: 'مَنْ كَثُرَ حَمْلُهُ نَبُلَ.',
@@ -18422,18 +17784,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when difficult moments reveal your flaws rather than theirs, when patience hides your weakness better than reaction would, when tolerance is the veil that protects your honor',
   },
   {
-    arabic: 'أحْسَنُ مَلابِسِ الدِّينِ اَلحَياءُ.',
-    english: 'The best of religious attires is modesty.',
-    source: 'Ghurar al-Hikam, Modesty And Shame §3',
-    theme: 'when religious display is compared to religious character, when the garment that truly adorns the believer is named, when modesty is the highest form of piety worn',
-  },
-  {
-    arabic: 'إنَّ الْحَياءَ والْعِفَّةَ مِنْ خَلائِقِ الإيمانِ، وإنَّهُما لَسَجِيَّةُ الأحْرارِ، وَشيمَةُ الأبـْرارِ.',
-    english: 'Verily modesty and chastity are from the characteristics of faith, and they are the traits of the free and the qualities of the virtuous.',
-    source: 'Ghurar al-Hikam, Modesty And Shame §6',
-    theme: 'when freedom and virtue are connected to purity, when the marks of the truly free person are identified, when faith is expressed in how the body is guarded',
-  },
-  {
     arabic: 'اَلْحَياءُ مِفْتاحُ (كُلِّ) الْخَيْـرِ.',
     english: 'Modesty is the key to (every) good.',
     source: 'Ghurar al-Hikam, Modesty And Shame §10',
@@ -18444,18 +17794,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Modesty is the perfection of honour.',
     source: 'Ghurar al-Hikam, Modesty And Shame §13',
     theme: 'when generosity and nobility are incomplete without modesty, when honour is unfinished without shame, when the last quality that makes character whole is identified',
-  },
-  {
-    arabic: 'إيّاكَ والحَسَدَ، فَإنَّهُ شَـرُّ شيمَة، وأقْبَحُ سَجِيَّة، وخَليقَةُ إبْلِيسَ.',
-    english: 'Be wary of jealousy for it is the worst quality, the ugliest attribute and the trait of the Devil.',
-    source: 'Ghurar al-Hikam, Jealousy §7',
-    theme: 'when envy is present and its true nature must be named, when the origin of jealousy in Satan makes it more alarming, when the identity of this vice shames its carrier',
-  },
-  {
-    arabic: 'اَلْحَسَدُ حَبْسُ الرُّوحِ.',
-    english: 'Jealousy is imprisonment of the soul.',
-    source: 'Ghurar al-Hikam, Jealousy §10',
-    theme: 'when the soul is trapped inside its own resentment, when envy is the prison with no visible bars, when the jealous person is serving a sentence they imposed on themselves',
   },
   {
     arabic: 'ثَمَرَةُ الحَسَدِ شَقاءُ الدُّنيا والآخِرَةِ.',
@@ -18476,34 +17814,10 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when envy spreads through a community, when the faith of the ummah is consumed from within, when the silent destruction of belief begins with comparison and resentment',
   },
   {
-    arabic: 'اَلْحَسُودُ دائِمُ السُّقْمِ وإنْ كانَ صَحِيحَ الجِسْمِ.',
-    english: 'The jealous one is always sick, even when his body is healthy.',
-    source: 'Ghurar al-Hikam, The Jealous §3',
-    theme: 'when the disease is invisible to the doctor, when health of body masks sickness of soul, when envy is the chronic illness that no physician can treat',
-  },
-  {
     arabic: 'اَلحاسِدُ يُظْهِرُ وُدَّهُ في أقْوالِهِ، ويُخْفي بُغْضَهُ في أفْعالِهِ.',
     english: 'The jealous person displays his affection in his words and hides his hatred in his actions; he has the title of a friend and the attribute of an enemy.',
     source: 'Ghurar al-Hikam, The Jealous §25',
     theme: 'when the friendly enemy is present, when words and actions tell different stories, when the person who claims to be a friend behaves like a foe',
-  },
-  {
-    arabic: 'اَلْحَزْمُ تَجَرُّعُ الغُصَّةِ، حَتّى تُمَكِّنَ الفُرْصَةُ.',
-    english: 'Judiciousness means enduring agony until the opportunity [to react] avails itself.',
-    source: 'Ghurar al-Hikam, Judiciousness §1',
-    theme: 'when immediate response would be unwise, when the time to act has not yet arrived, when swallowing difficulty is itself a form of wisdom',
-  },
-  {
-    arabic: 'اَلحَزْمُ اَلنَّظَرُ فِي العَواقِبِ، ومُشاوَرَةُ ذَوِي العُقُولِ.',
-    english: 'Judiciousness is considering the consequences [of actions] and consulting the wise.',
-    source: 'Ghurar al-Hikam, Judiciousness §3',
-    theme: 'when a decision is being rushed, when foresight and counsel are the missing ingredients, when acting without looking ahead is the definition of recklessness',
-  },
-  {
-    arabic: 'اَلْحَزْمُ حِفْظُ التَجْرِبَةِ.',
-    english: 'Judiciousness is preserving the [lessons learned through] experience.',
-    source: 'Ghurar al-Hikam, Judiciousness §9',
-    theme: 'when lessons from the past are ignored, when experience is wasted because it is not remembered, when wisdom means holding onto what difficulty taught you',
   },
   {
     arabic: 'مِنَ الحَزْمِ الوُقُوفُ عِنْدَ الشُّبْهَةِ.',
@@ -18518,34 +17832,10 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when recklessness is costing everything, when the outcome of opposing careful judgment is ruin, when prudence was the thing that could have saved you',
   },
   {
-    arabic: 'اَلحازِمُ مَنْ لا يَشْغَلُهُ النِّعْمَةُ عَنِ العَمَلِ لِلْعاقِبَةِ.',
-    english: 'The judicious person is one who is not too preoccupied with the blessing [he has been given] to work for his afterlife.',
-    source: 'Ghurar al-Hikam, The Judicious §1',
-    theme: 'when comfort obscures the urgency of the hereafter, when blessings distract from what they should motivate, when the gift of ease is wasted on forgetting',
-  },
-  {
-    arabic: 'اَلحازِمُ مَنْ حَنَّكَتْهُ التَّجارِبُ، وهَذَّبَتْهُ النَّوائِبُ.',
-    english: 'The judicious person is one who has been made worldly-wise by experience and refined by calamities.',
-    source: 'Ghurar al-Hikam, The Judicious §5',
-    theme: 'when hardship reveals its purpose in retrospect, when adversity is the school of judgment, when the person who has suffered has been sharpened not broken',
-  },
-  {
     arabic: 'إنَّما الحازِمُ مَنْ كانَ بِنَفْسِهِ كُلُّ شُغْلِهِ، ولِدينِهِ كُلُّ هَمِّهِ، وَلآخِرَتِهِ كُلُّ جِدِّهِ.',
     english: 'Only he is judicious whose preoccupation is entirely with himself, whose concern is entirely for his religion, and whose struggle is entirely for his Hereafter.',
     source: 'Ghurar al-Hikam, The Judicious §21',
     theme: 'when the truly prudent person is being defined, when all energy and worry is rightly directed, when the judicious person has eliminated distraction at the deepest level',
-  },
-  {
-    arabic: 'اَلحِرْصُ ذُلٌّ ومَهانَةٌ لِمَنْ يَسْتَشْعِرُهُ.',
-    english: 'Greed is a disgrace and a humiliation for the one who espouses it.',
-    source: 'Ghurar al-Hikam, Greed §1',
-    theme: 'when greed is seen for what it does to dignity, when the person who has been brought low by wanting is identified, when ambition crosses into humiliation',
-  },
-  {
-    arabic: 'إتَّقُوا الحِرْصَ، فَإنَّ صاحِبَهُ رَهينُ ذُلّ وعَناء.',
-    english: 'Be cautious of greed, for its possessor is subject to humiliation and suffering.',
-    source: 'Ghurar al-Hikam, Greed §7',
-    theme: 'when ambition becomes its own punishment, when the price of greed is dignity and peace, when you are held hostage by what you want',
   },
   {
     arabic: 'ضادُّوا الحِرصَ بِالقُنُوعِ.',
@@ -18566,34 +17856,10 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when wealth accumulation is traced to its motive, when the accumulator is identified as both miserable and condemned, when the drive to hoard is itself the disease',
   },
   {
-    arabic: 'مَنْ أطاعَ إمامَهُ فَقَدْ أطاعَ رَبَّهُ.',
-    english: 'One who obeys his Imām has obeyed his Lord.',
-    source: 'Ghurar al-Hikam, The Leader §2',
-    theme: 'when the link between earthly and divine authority is clarified, when following rightful leadership is understood as worship, when obedience to the guide is obedience to God',
-  },
-  {
-    arabic: 'بِالجُودِ تَـكُوُنُ السِّيادَةُ.',
-    english: 'Through generosity, authority is acquired.',
-    source: 'Ghurar al-Hikam, Generosity §15',
-    theme: 'when social standing is being sought, when the path to authority runs through open hands, when giving creates the influence that claiming never could',
-  },
-  {
-    arabic: 'اَلجُودُ فِي اللّهِ عِبادَةُ المُقَرَّبينَ.',
-    english: 'Generosity for the sake of Allah is the worship of those who are close [to Allah].',
-    source: 'Ghurar al-Hikam, Generosity §1',
-    theme: 'when generosity is understood as a form of worship, when giving without motive is the act of the spiritually advanced, when closeness to Allah is expressed through open hands',
-  },
-  {
     arabic: 'مَنِ اسْتَأذَنَ علَى اللّهِ أذِنَ لَهُ.',
     english: 'Whoever seeks permission from Allah, He grants it [to him].',
     source: 'Ghurar al-Hikam, Allah And His Attributes §33',
     theme: 'when the door you knock is the one that matters most, when turning to Allah with need is itself an act of devotion, when permission from the divine is never withheld from the sincere seeker',
-  },
-  {
-    arabic: 'اَلاُُمُورُ أشباهٌ.',
-    english: 'Matters are similar [to one another].',
-    source: 'Ghurar al-Hikam, Matters §6',
-    theme: 'when patterns repeat across different circumstances, when the past is the guide for the present, when recognizing similarity is the beginning of wisdom',
   },
   {
     arabic: 'يَسِّرُُوا وَلا تُعَسِّرُوا، وخَفِّفُوا ولا تُثَقِّلُوا.',
@@ -18606,12 +17872,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Let the most beloved matters to you be the most universal in justice and the most equitable with [regards to the] rights [of others].',
     source: 'Ghurar al-Hikam, Matters §29',
     theme: 'when preferences need to be recalibrated around justice, when what you love most should be what is most fair, when the hierarchy of values puts equity at the top',
-  },
-  {
-    arabic: 'اِستَدِلَّ على ما لَمْ يَكنْ بِما كانَ فإنَّ الاُمُورَ أشباهٌ.',
-    english: 'Deduce that which has not happened from that which has transpired, for matters are similar.',
-    source: 'Ghurar al-Hikam, Matters §2',
-    theme: 'when reading the signs of what is coming, when history is a guide to the future, when pattern recognition is the practical form of wisdom',
   },
   {
     arabic: 'مَنِ اسْتَغانَ بِاللّهِ أفادَهُ اللّهُ.',
@@ -18636,12 +17896,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Kindness is [a cause of] love.',
     source: 'Ghurar al-Hikam, Good Turns And Benevolent Actions §55',
     theme: 'when love seems difficult to earn, when the path to the heart of another is through good action, when kindness creates what time alone cannot',
-  },
-  {
-    arabic: 'اَلْحِكْمَةُ لاتَحِلُّ قَلْبَ المُنافِقِ إلاّ وهِيَ عَلَى ارْتِحال.',
-    english: 'Wisdom does not settle in the heart of a hypocrite except that it departs from it [soon after].',
-    source: 'Ghurar al-Hikam, Wisdom §2',
-    theme: 'when sincerity is the prerequisite for wisdom to take root, when the hypocrite cannot hold wisdom, when authentic moral character is what makes insight permanent',
   },
   {
     arabic: 'خُذِ الحِكْمَةَ مِمَّنْ أتاكَ بِها، وانْظُرْ إلى ما قالَ، ولاتَنْظُرْهُ إلى مَنْ قالَ.',
@@ -18698,30 +17952,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when brothers and friends fall short and you are called to bear it, when endurance of others\\\' imperfection is the mark of the truly forbearing, when relationships are held together by tolerance',
   },
   {
-    arabic: 'إنَّما الحَلِيمُ مَنْ إذا أُوذِيَ صَبَرَ، وإذا ظُلِمَ غَفَرَ.',
-    english: 'Indeed only he is forbearing who is patient when he is offended and forgives when he is wronged.',
-    source: 'Ghurar al-Hikam, The Forebearing §7',
-    theme: 'when the definition of true forbearance is given its test, when patience under injury and forgiveness under injustice are the proof, when the claim to forbearance needs to be verified in difficulty',
-  },
-  {
-    arabic: 'إنَّ أفْضَلَ النّاسِ مَنْ حَلُمَ عَنْ قُدْرَة، وزَهَدَ عَنْ غُنْيَة، وأنْصَفَ عَنْ قُوَّة.',
-    english: 'Indeed the best of people is one who is forbearing even when he is strong [enough to exact revenge], is not attached to the pleasures of this world even though he is well-off and is just even though he has power.',
-    source: 'Ghurar al-Hikam, The Forebearing §3',
-    theme: 'when greatness is defined by restraint rather than exercise of power, when the wealthy detached and the powerful just represent the highest human ideal, when strength is most beautiful when it holds itself back',
-  },
-  {
-    arabic: 'مَنْ تَحَلَّمَ حَلُمَ.',
-    english: 'One who endeavours to act with forbearance becomes forbearing.',
-    source: 'Ghurar al-Hikam, The Forebearing §13',
-    theme: 'when forbearance must be practiced before it is natural, when character is forged by choosing to act as if you already have it, when practice precedes being',
-  },
-  {
-    arabic: 'مَنْ غاظَكَ بِقُبْحِ السَّفَهِ عَلَيْكَ، فَغِظْهُ بِحُسْنِ الْحِلْمِ عَنْهُ.',
-    english: 'Whoever infuriates you by the ugliness of his foolish behaviour towards you, then infuriate him by the beauty of your forbearance towards him.',
-    source: 'Ghurar al-Hikam, The Forebearing §17',
-    theme: 'when responding to the provocateur with patience defeats them at their own game, when forbearance is the reversal of the fool\\\'s power over you, when beauty of response meets ugliness of act',
-  },
-  {
     arabic: 'إذا حَلُمْتَ عَنِ الجاهِلِ فَقَدْ أوْسَعْتَهُ جَواباً.',
     english: 'When you are forbearing with an ignorant person, you have given him the best reply.',
     source: 'Ghurar al-Hikam, Forbearance §28',
@@ -18750,12 +17980,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'If in anger there is revenge, then in forbearance there is the reward of the virtuous.',
     source: 'Ghurar al-Hikam, Forbearance §24',
     theme: 'when revenge satisfies and forbearance costs, when the reward of restraint is greater than the relief of retaliation, when the choice between the two is the choice between worldly and divine return',
-  },
-  {
-    arabic: 'اَلْحِلْمُ عِنْدَ شِدَّةِ الْغَضَبِ يُؤْمِنُ غَضَبَ الْجَبّارِ.',
-    english: 'Forbearance during intense rage protects [one] from the wrath of the Almighty.',
-    source: 'Ghurar al-Hikam, Forbearance §2',
-    theme: 'when your anger threatens to consume you, when the divine is watching how you respond to provocation, when restraining your rage is the act that protects you from the greater anger',
   },
   {
     arabic: 'قُوَّةُ الحِلْمِ عِنْدَ الغَضَبِ أفْضَلُ مِنَ القُوَّةِ عَلَى الإنْتِقامِ.',
@@ -18794,22 +18018,10 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when the inversion of natural human feeling in the envious is exposed, when joy at another\\\'s pain and pain at another\\\'s joy describe a diseased soul, when jealousy has reversed the heart entirely',
   },
   {
-    arabic: 'لاتُؤَخِّرْ إنالَةَ الْمُحْتاجِ إلى غَد، فَإنَّكَ لاتَدْرِي ما يَعْرِضُ لَكَ ولَهُ في غَد.',
-    english: 'Do not delay granting the needy to tomorrow, for you do not know what will happen to you and to him tomorrow.',
-    source: 'Ghurar al-Hikam, Fulfilling Needs §2',
-    theme: 'when generosity is being postponed, when tomorrow is uncertain for both giver and receiver, when the urgency of the present moment is the only guarantee for doing good',
-  },
-  {
     arabic: 'سَبَبُ زَوالِ الْيَسارِ مَنْعُ الْمُحْتاجِ.',
     english: 'Turning away the needy is the cause of diminishment of affluence.',
     source: 'Ghurar al-Hikam, Fulfilling Needs §11',
     theme: 'when wealth shrinks by being withheld from the needy, when the cause of financial decline is traced to stinginess toward the poor, when what you refuse to share returns to take what you kept',
-  },
-  {
-    arabic: 'ثَمَرَةُ طُولِ الْحَياةِ السُّقْمُ والْهَرَمُ.',
-    english: 'The fruit of long life is illness and senility.',
-    source: 'Ghurar al-Hikam, Life And Being Alive §2',
-    theme: 'when long life is longed for without counting the cost, when aging is the natural yield of surviving, when the desire for more years must reckon with what more years produce',
   },
   {
     arabic: 'اَلْحَياءُ قَرِينُ الْعَفافِ.',
@@ -18830,70 +18042,10 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when serving others feels like a burden, when the ability to help is reframed as a gift rather than an obligation, when those who need you are bringing you something',
   },
   {
-    arabic: 'لِيَكُنْ أحَبُّ النَّاسِ إلَيْكَ وأخْظاهُمْ لَدَيْكَ أكْثَرُهُمْ سَعْياً في مَنافِعِ النّاسِ.',
-    english: 'Let the most beloved person to you and the one who has the greatest status in your eyes be the one who strives hardest in benefiting people.',
-    source: 'Ghurar al-Hikam, The Beloved §5',
-    theme: 'when the standard for love and esteem is being set, when the person most worth loving is the one most useful to humanity, when who you value reflects what you value',
-  },
-  {
-    arabic: 'مَنْ أحَبَّكَ نَهاكَ.',
-    english: 'One who loves you forbids you [from evil].',
-    source: 'Ghurar al-Hikam, The Beloved §2',
-    theme: 'when true love shows itself through correction, when the one who never disagrees with you does not truly love you, when love and warning belong in the same relationship',
-  },
-  {
-    arabic: 'مَنْ أحَبَّ شَيْئاً لَهِجَ بِذِكْرِهِ.',
-    english: 'One who loves something speaks about it constantly.',
-    source: 'Ghurar al-Hikam, The Beloved §3',
-    theme: 'when the tongue reveals what the heart holds, when what you love is what you return to in conversation, when frequency of mention is the measure of the love within',
-  },
-  {
-    arabic: 'فَقْدُ الأحِبَّةِ غُرْبَةٌ.',
-    english: 'Losing a loved one leads to forlornness.',
-    source: 'Ghurar al-Hikam, The Beloved §1',
-    theme: 'when grief is the loneliness of those who remain, when loss turns familiar places foreign, when the absent beloved makes the present world feel like exile',
-  },
-  {
-    arabic: 'قُوَّةُ سُلْطانِ الحُجَّةِ أعْظَمُ مِنْ قَوَّةِ سُلْطانِ القُدْرَةِ.',
-    english: 'The strength of the authority of evidence is stronger than the strength of the authority of force.',
-    source: 'Ghurar al-Hikam, Evidence §1',
-    theme: 'when arguments outweigh armies, when the power of proof exceeds the power of compulsion, when evidence conquers what force cannot',
-  },
-  {
-    arabic: 'اَلحِدَّةُ ضَرْبٌ مِنَ الجُنُونِ، لأنَّ صاحِبَها يَنْدَمُ، فَإنْ لَمْ يَنْدَمْ فَجُنُونُهُ مُسْتَحْكَمٌ.',
-    english: 'Rage is a bout of insanity because its possessor regrets [afterwards], but if he does not feel regret, then his insanity is firmly established.',
-    source: 'Ghurar al-Hikam, Rage §1',
-    theme: 'when anger leads to regret, when the person who never regrets their rage has gone further from reason, when fury is understood as a form of temporary madness',
-  },
-  {
-    arabic: 'دَعِ الحِدَّةَ، وتَفَكَّرْ فِي الحُجَّةِ، وتَحَفَّظْ مِنَ الخَطَلِ تَأمَنِ الزَّلَلَ.',
-    english: 'Repel [your] rage, think about the proof and protect yourself from nonsense - you will be safe from slip-ups.',
-    source: 'Ghurar al-Hikam, Rage §2',
-    theme: 'when anger is about to cause a mistake, when slipping in speech or action is imminent, when the antidote to error is putting down rage and picking up reflection',
-  },
-  {
-    arabic: 'لاتَغْتَرَّنَّ بِالأمْنِ، فَإنَّكَ مَأخُوذٌ مِنْ مَأمَنِكَ.',
-    english: 'Do not be deceived by [a false sense of] security, for you will surely be taken from your sanctuary.',
-    source: 'Ghurar al-Hikam, Security §3',
-    theme: 'when comfort breeds dangerous complacency, when the place of safety becomes the place of ambush, when security is the trap for the overconfident',
-  },
-  {
     arabic: 'مَنِ اسْتَعانَ بِالْحِلْمِ عَلَيْكَ غَلَبَكَ وتَفَضَّلَ عَلَيْكَ.',
     english: 'One who seeks the support of forbearance against you defeats you and acts graciously towards you.',
     source: 'Ghurar al-Hikam, The Forebearing §18',
     theme: 'when patience is the other person\\\'s weapon over you, when being responded to with forbearance leaves you disarmed, when grace in the face of your aggression is the most powerful position',
-  },
-  {
-    arabic: 'إنَّ الحازِمَ مَنْ لا يَغْتَـرَّ بِالخُدَعِ.',
-    english: 'Indeed the judicious person is one who does not get beguiled by deceptions.',
-    source: 'Ghurar al-Hikam, The Judicious §13',
-    theme: 'when the world is full of illusions and only the prudent can see through them, when being deceived is the failure of judgment, when guarding against manipulation is the mark of wisdom',
-  },
-  {
-    arabic: 'أحْزَمُ النّاسِ مَنْ كانَ الصَّبْرُ والنَّظَرُ فيِ العَواقِبِ شِعارَهُ وَدِثارَهُ.',
-    english: 'The most judicious of people is the one whose inner and outer garments are patience and consideration of the consequences [of his actions].',
-    source: 'Ghurar al-Hikam, The Judicious §11',
-    theme: 'when patience and foresight clothe the person completely, when the judicious person is defined by what they wear in and out, when the inside and outside of a character are both made of the same material',
   },
   {
     arabic: 'سِلاحُ الحازِمِ الاِسْتِظْهارُ.',
@@ -18908,58 +18060,10 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when crisis reveals who has judgment and who does not, when the prudent person\\\'s calm in disaster is the reward of long preparation, when adversity tests the quality of foresight',
   },
   {
-    arabic: 'إنَّ كَلامَ الحَكِيمِ إذا كانَ صَواباً كانَ دَواءً، وإذا كانَ خَطاءً كانَ داءً.',
-    english: 'Indeed the speech of a wise person, when it is correct, is a cure and when it is wrong, is a malady.',
-    source: 'Ghurar al-Hikam, The Wise §9',
-    theme: 'when the stakes of the wise person\\\'s speech are especially high, when the same mouth can heal or harm, when the responsibility of speaking wisely is proportional to the trust placed in you',
-  },
-  {
-    arabic: 'لَيْسَ بِحَكِيم مَنْ شَكى ضُـرَّهُ إلى غَيْرِ رَحيم.',
-    english: 'He who complains of his troubles to one who is not compassionate is not a wise person.',
-    source: 'Ghurar al-Hikam, The Wise §5',
-    theme: 'when complaints are being directed to the wrong person, when the choice of confidant is itself a form of wisdom, when sharing your pain with the unmerciful only adds to it',
-  },
-  {
-    arabic: 'اَلذُّلُّ بَعْدَ العَزْلِ يُوازي عِزَّ الوِلايـَةِ.',
-    english: 'The disgrace after being deposed is equal to the glory of sovereignty.',
-    source: 'Ghurar al-Hikam, Government And Sovereignty §2',
-    theme: 'when the heights of power are equaled by the depths of its fall, when the glory of authority is balanced by the humiliation of losing it, when position should never be mistaken for permanence',
-  },
-  {
-    arabic: 'إعْدِلْ فِيما وُلِّيتَ، أُشْكُرْ لِلّهِ فِيما أُولِيتَ.',
-    english: 'Be just in that which you have been given authority and thank Allah for that which has been granted to you.',
-    source: 'Ghurar al-Hikam, Government And Sovereignty §4',
-    theme: 'when power is a trust requiring justice, when authority comes with dual obligations of fairness and gratitude, when leadership must be accompanied by thankfulness to the One who granted it',
-  },
-  {
-    arabic: 'مِنَ النُّبْلِ أنْ تَتَـيَقَّظَ لإيجابِ حَقِّ الرَّعِيَّةِ إلَيْكَ، وتَتَغابى عَنِ الجِنايَةِ عَلَيْكَ.',
-    english: 'It is part of nobility that you [should] be attentive in fulfilling the rights of your subjects upon you and that you disregard any [of their] offences towards you.',
-    source: 'Ghurar al-Hikam, The Ruler And Governer §8',
-    theme: 'when leadership means being alert to what you owe and blind to what is owed you, when nobility overlooks personal offense while fulfilling public duty, when the ruler\\\'s greatness is measured in what he absorbs not what he demands',
-  },
-  {
-    arabic: 'وَقُودُ النّارِ يَوْمَ القِيمَةِ كُلُّ غَنِيّ بَخِلَ بِمالِهِ عَلَى الفُقَراءِ، وَكُلُّ عالِم باعَ الدّينَ بِالدُّنيا.',
-    english: 'The fuel of hellfire on the Day of Judgment will comprise of every rich person who was miserly towards the poor with his wealth and every learned scholar who sold his Hereafter for the world.',
-    source: 'Ghurar al-Hikam, Hell Fire §11',
-    theme: 'when wealth and knowledge carry the greatest accountability, when the rich miser and the corrupted scholar share a destination, when the blessings of wealth and learning become their owners\\\' condemnation',
-  },
-  {
     arabic: 'اَلأمرُ بِالمَعْرُوفِ والنَّهيَ عنِ المُنْكَرِ لا يُقَرِّبانِ مِنْ أجَل، وَلا يَنْقُصانِ مِنْ رِزق.',
     english: 'Enjoining good and forbidding evil neither brings death near nor decreases sustenance.',
     source: 'Ghurar al-Hikam, Enjoining Good And Forbidding Evil §4',
     theme: 'when fear of consequence silences moral courage, when the cost of speaking up is assumed to be great, when the act of standing for good carries no earthly penalty',
-  },
-  {
-    arabic: 'لِيَكُنْ أحَبُّ النّاسِ إلَيْكَ المُشْفِقُ النّاصِحُ.',
-    english: 'Let the most beloved person to you be the compassionate adviser.',
-    source: 'Ghurar al-Hikam, The Beloved §6',
-    theme: 'when who to love is being determined, when the advisor who cares for you is more precious than the flatterer who pleases you, when compassionate honesty earns the deepest affection',
-  },
-  {
-    arabic: 'اَلتَّعاوُنُ عَلى إقامَةِ الحَقِّ أمانَةٌ ودِيانَةٌ.',
-    english: 'Assisting one another to establish the truth is [a sign of] trustworthiness and faith.',
-    source: 'Ghurar al-Hikam, The Truth §6',
-    theme: 'when cooperation in upholding truth is itself a measure of faith, when working together for what is right is the highest form of trustworthiness, when collective moral action is the definition of religious sincerity',
   },
   {
     arabic: 'لِلْحَقِّ دَوْلَةٌ.',
@@ -18972,12 +18076,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Whoever makes the truth his goal, difficult things are made easy for him and distant things are brought nearer to him.',
     source: 'Ghurar al-Hikam, The Truth §50',
     theme: 'when the goal of truth reshapes all obstacles, when pursuing the right end changes the landscape of difficulty, when what seemed impossible becomes possible when aligned with truth',
-  },
-  {
-    arabic: 'حَقٌّ وَباطِلٌ، ولِكُلّ أهْلٌ.',
-    english: 'There is truth and falsehood, and each has its followers.',
-    source: 'Ghurar al-Hikam, The Truth §12',
-    theme: 'when the world is divided not by nationality but by what people serve, when truth and falsehood both have communities, when where you stand is ultimately who you belong to',
   },
   {
     arabic: 'مَنْ يَتَوَلَّ اللّهَ يَكُنْ مَعَهُ وَلا يَبالِ مَنْ عَداهُ.',
@@ -18996,12 +18094,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Verily giving away this wealth is an acquisition [for the Hereafter] and withholding it is an affliction.',
     source: 'Ghurar al-Hikam, Good Turns And Benevolent Actions §43',
     theme: 'when money is being evaluated by what it does in the giving and the keeping, when giving acquires and holding afflicts, when the paradox of wealth is that release is gain and retention is loss',
-  },
-  {
-    arabic: 'اَلصَّنِيعَةُ إذا لَمْ تُرَبَّ أخْلَقَتْ، كَالثَّوْبِ البالي والأبْنِيَةِ المُتَداعِيَةِ.',
-    english: 'If a righteous act is not nurtured, it wears away, just like worn out garments and dilapidated buildings.',
-    source: 'Ghurar al-Hikam, Good Turns And Benevolent Actions §5',
-    theme: 'when relationships built on kindness need maintenance, when a good deed done once and forgotten fades, when the investment of goodness requires ongoing care',
   },
   {
     arabic: 'أوْلَى النّاسِ بِالإنْعامِ مَنْ كَثُرَتْ نِعَمُ اللّهِ عَلَيْهِ.',
@@ -19034,22 +18126,10 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when striving for what is right brings divine support, when the effort to uphold truth is met with divine assistance, when working for justice carries the guarantee of success',
   },
   {
-    arabic: 'رَأْسُ الحِكْمَةِ لُزُومُ الحَقِّ، وطاعَةُ المُحِقِّ.',
-    english: 'The peak of wisdom is clinging to the truth and obeying the one who stands for the truth.',
-    source: 'Ghurar al-Hikam, The Truth §17',
-    theme: 'when all of wisdom is distilled to its summit, when the apex of understanding is fidelity to what is right, when the wisest thing you can do is hold fast to truth and follow who embodies it',
-  },
-  {
     arabic: 'اَلحازِمُ مَنْ تَرَكَ الدُّنيا لِلآخِرَةِ.',
     english: 'The judicious person is one who abandons this world for the sake of the Hereafter.',
     source: 'Ghurar al-Hikam, The Judicious §19',
     theme: 'when the most prudent calculation prioritizes the permanent over the temporary, when detachment from the world is the most rational decision, when trading the lesser for the greater is called wisdom',
-  },
-  {
-    arabic: 'مَنْ تَـكَبَّرَ في وِلايـَتِهِ كَثُرَ عِنْدَ عَزْلِهِ ذِلَّتُهُ.',
-    english: 'One who is haughty in his rule, his disgrace is greater when he is deposed.',
-    source: 'Ghurar al-Hikam, The Ruler And Governer §5',
-    theme: 'when arrogance in power multiplies the shame of losing it, when the proud ruler falls harder than the humble one, when the height of the rise is the measure of the fall',
   },
   {
     arabic: 'لايَكُونُ حازِماً مَنْ لايَجُودُ بِما في يَدِهِ، ولايُؤَخِّرُ عَمَلَ يَوْمِهِ إلى غَدِهِ.',
@@ -19062,12 +18142,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'The judicious person never dispenses with a pertinent and superior opinion.',
     source: 'Ghurar al-Hikam, The Judicious §28',
     theme: 'when the wisest people are the ones who keep seeking counsel, when the judicious person never becomes self-sufficient in their thinking, when good judgment includes recognizing that better judgment exists',
-  },
-  {
-    arabic: 'أوَّلُ عِوَضِ الحَلِيمِ عَنْ حِلْمِهِ أنَّ النّاسُ كُلَّهُمْ أنْصارُهُ عَلى خَصْمِهِ.',
-    english: 'The first compensation for the forbearing person from his forbearance is that all the people are [ready to be] his helpers against his enemy.',
-    source: 'Ghurar al-Hikam, The Forebearing §1',
-    theme: 'when patience earns allies before you even know you need them, when the first dividend of forbearance is collective support, when restraint wins the sympathy of all who witness it',
   },
   {
     arabic: 'إنْ لَمْ تَـكُنْ حَلِيماً فَتَحَلَّمْ.',
@@ -19110,12 +18184,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'The cornerstone of faith is trustworthiness.',
     source: 'Ghurar al-Hikam, Trustworthiness §14',
     theme: 'when the foundation of belief is sought in character rather than ritual, when trust is the pillar holding faith upright, when what you keep for others is what keeps your faith intact',
-  },
-  {
-    arabic: 'فازَ مَنْ تَجَلْبَبَ الوَفاءَ، وادَّرَعَ الأمانَةَ.',
-    english: 'Successful is the one who clothes himself with loyalty and arms himself with trustworthiness.',
-    source: 'Ghurar al-Hikam, Trustworthiness §18',
-    theme: 'when the attire and armor that wins are invisible, when loyalty and trust are the garments of the truly victorious, when success is dressed not in wealth but in character',
   },
   {
     arabic: 'لا إيمانَ لِمَنْ لا أمانَةَ لَهُ.',
@@ -20816,12 +19884,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when justice must be upheld, when fairness is the call',
   },
   {
-    arabic: 'الْغِنَى الاْكْبَرُ الْيَأْسُ عَمَّا فِي أَيْدِى النَّاسِ.',
-    english: 'The biggest wealth is that one should not have an eye on what others possess.',
-    source: 'Nahj al-Balagha, Saying 342',
-    theme: 'when attachment to the temporary clouds judgment, when detachment is the practice',
-  },
-  {
     arabic: 'عليه السلام : مِنَ الْعِصْمَةِ تَعَذُّرُ الْمَعَاصِي.',
     english: 'Lack of access to sins is also a kind of chastity.',
     source: 'Nahj al-Balagha, Saying 345',
@@ -21554,12 +20616,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when readiness and preparation- is the teaching needed',
   },
   {
-    arabic: 'تَخَفَّفُوا تَلْحَقُوا، فَإنَّما يُنْتَظَرُ بِأوَّلِكُمْ آخِرُكُمْ.',
-    english: 'Lighten your burden so as to catch up [with those who are ahead you], for indeed the last among you are only being awaited by the first among you [who have preceded them].',
-    source: 'Ghurar al-Hikam, Readiness and Preparation- §3',
-    theme: 'when readiness and preparation- is the teaching needed',
-  },
-  {
     arabic: 'تَيَسَّرْ لِسَفَرِكَ، وشِمْ بَرْقَ النَّجاةِ، وارْحَلْ مَطاياَ التَّشْمير.',
     english: 'Prepare for your journey, keep your gaze on the flash of salvation and travel on swift [and girded] mounts [of good deeds].',
     source: 'Ghurar al-Hikam, Readiness and Preparation- §4',
@@ -21704,12 +20760,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when cognizance- is the teaching needed',
   },
   {
-    arabic: 'أفْضَلُ المَعْرِفَةِ، مَعْرِفَةُ الإنْسانِ نَفْسَهُ.',
-    english: 'The most excellent cognizance is the human being’s cognizance of himself.',
-    source: 'Ghurar al-Hikam, Cognizance- §2',
-    theme: 'when cognizance- is the teaching needed',
-  },
-  {
     arabic: 'أكْثَرُ النّاسِ مَعْرِفَةً لِنَفْسِهِ أخْوَفُهُمْ لِرَبِّهِ.',
     english: 'Of all the people, the most cognizant of himself is the most fearful of his Lord.',
     source: 'Ghurar al-Hikam, Cognizance- §3',
@@ -21749,12 +20799,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     arabic: 'اَلعارِفُ مَنْ عَرَفَ نَفْسَهُ فَأَعْتَقَها، ونَزَّهَها عَنْ كُلِّ ما يُبَعِّدُها وَيُوبِقُها.',
     english: 'The cognizant one is he who knows his soul and thus frees it and purifies it from all that distances it [from the Truth] and destroys it.',
     source: 'Ghurar al-Hikam, The Cognizant- §4',
-    theme: 'when the cognizant- is the teaching needed',
-  },
-  {
-    arabic: 'اَلعارِفُ وَجْهُهُ مُسْتَبْشِرٌ مُتَبَسِّمٌ، وقَلْبُهُ وَجِلٌ مَحْزُونٌ.',
-    english: 'The face of the cognizant one is cheerful and smiling while his heart is fearful and sad.',
-    source: 'Ghurar al-Hikam, The Cognizant- §5',
     theme: 'when the cognizant- is the teaching needed',
   },
   {
@@ -22136,21 +21180,9 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when the intellect- is the teaching needed',
   },
   {
-    arabic: 'اَلعاقِلُ مَنْ عَقَلَ لِسانَهُ.',
-    english: 'The intelligent person is one who fetters his tongue.',
-    source: 'Ghurar al-Hikam, The Intelligent- §1',
-    theme: 'when the intelligent- is the teaching needed',
-  },
-  {
     arabic: 'اَلعاقِلُ مَنْ تَغَمَّدَ الذُّنُوبَ بِالغُفْرانِ.',
     english: 'The intelligent person is one who covers up sins with forgiveness.',
     source: 'Ghurar al-Hikam, The Intelligent- §2',
-    theme: 'when the intelligent- is the teaching needed',
-  },
-  {
-    arabic: 'اَلعاقِلُ مَنْ هَجَرَ شَهْوَتَهُ، وَباعَ دُنْياهُ بِ آخِرَتِهِ.',
-    english: 'The intelligent person is one who forsakes his lust and sells his world for his Hereafter.',
-    source: 'Ghurar al-Hikam, The Intelligent- §3',
     theme: 'when the intelligent- is the teaching needed',
   },
   {
@@ -22271,12 +21303,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     arabic: 'عَلَى المُتَعَلِّمِ أنْ يَدْأبَ نَفْسَهُ في طَلَبِ العِلْمِ، وَلايَمَلَّ مِنْ تَعَلُّمِهِ وَلايَسْتَكْثِرُ ما عَلِمَ.',
     english: 'The student must discipline himself in his quest for knowledge and must neither become bored of his studies nor overestimate what he already knows.',
     source: 'Ghurar al-Hikam, The student- §2',
-    theme: 'when the student- is the teaching needed',
-  },
-  {
-    arabic: 'مَنْ تَعَلَّمَ عَلِمَ.',
-    english: 'One who learns becomes knowledgeable.',
-    source: 'Ghurar al-Hikam, The student- §3',
     theme: 'when the student- is the teaching needed',
   },
   {
@@ -22505,12 +21531,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     arabic: 'طُوبى لِمَنْ ذَكَرَ المَعادَ فَاسْتَكْثَرَ مِنَ الزَّادِ.',
     english: 'Blessed is the one who remembers the [Day of] Resurrection and thus increases his provisions.',
     source: 'Ghurar al-Hikam, Ressurection and the hour- §1',
-    theme: 'when ressurection and the hour- is the teaching needed',
-  },
-  {
-    arabic: 'طُوبى لِمَنْ ذَكَرَ المَعادَ فَأحْسَنَ.',
-    english: 'Blessed is the one who remembers the Resurrection and thus does good [deeds].',
-    source: 'Ghurar al-Hikam, Ressurection and the hour- §2',
     theme: 'when ressurection and the hour- is the teaching needed',
   },
   {
@@ -23114,12 +22134,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when being independent of others- is the teaching needed',
   },
   {
-    arabic: 'مَنِ اسْتَغْنى كَرُمَ عَلى أهْلِهِ ومَنِ افْتَقَرَ هانَ عَلَيْهِمْ.',
-    english: 'One who becomes independent becomes an honour for his people and one who is needy becomes contemptible to them.',
-    source: 'Ghurar al-Hikam, Being independent of others- §3',
-    theme: 'when being independent of others- is the teaching needed',
-  },
-  {
     arabic: 'مَا اسْتَغْنَيْتَ عَنْهُ خَيْرٌ مِمَّا اسْتَغْنَيْتَ بِهِ.',
     english: 'That which you have no need for is better than that through which you gain independence.',
     source: 'Ghurar al-Hikam, Being independent of others- §4',
@@ -23178,12 +22192,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     english: 'Nothing beings reward like aiding the aggrieved.',
     source: 'Ghurar al-Hikam, Coming to the aid of the aggrieved- §4',
     theme: 'when coming to the aid of the aggrieved- is the teaching needed',
-  },
-  {
-    arabic: 'اَلسّامِعُ لِلْغِيْبَةِ أحَدُ المُغتابَيْنِ.',
-    english: 'The one who listens to gossip is one of the two backbiters.',
-    source: 'Ghurar al-Hikam, Backbiting- §1',
-    theme: 'when speaking about the absent, when silence about others is wisdom',
   },
   {
     arabic: 'إيّاكَ والغيبَةَ، فَإنَّها تُمَقِّتُكَ إلَى اللّهِ والنّاسِ، وتُحْبِطُ أجْرَكَ.',
@@ -24740,12 +23748,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when nobleness and munificence- is the teaching needed',
   },
   {
-    arabic: 'أحْسَنُ الكَرَمِ اَلإيثارُ.',
-    english: 'The best munificence is altruism.',
-    source: 'Ghurar al-Hikam, Nobleness and munificence- §4',
-    theme: 'when nobleness and munificence- is the teaching needed',
-  },
-  {
     arabic: 'أعْلى مَراتِبِ الكَرَمِ الإيثارُ.',
     english: 'The highest level of munificence is self-sacrifice.',
     source: 'Ghurar al-Hikam, Nobleness and munificence- §5',
@@ -25526,12 +24528,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when night and day- is the teaching needed',
   },
   {
-    arabic: 'إنَّ اللَّيْلَ والنَّهارَ يَعْمَلانِ فيكَ، فَاعْمَلْ فيهما، ويَأْخُذانِ مِنْكَ فَخُذْ مِنْهُما.',
-    english: 'Verily the night and day are working in you [by making you older] so work in them, and they are taking from you so take from them.',
-    source: 'Ghurar al-Hikam, Night and day- §3',
-    theme: 'when night and day- is the teaching needed',
-  },
-  {
     arabic: 'كُرُورُ اللَّيلِ والنَّهارِ مَكْمَنُ الآفاتِ وداعِى الشَّتاتِ.',
     english: 'The succession of the night and day is the hiding place of calamities and the herald of separation [from loved ones].',
     source: 'Ghurar al-Hikam, Night and day- §4',
@@ -25559,12 +24555,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     arabic: 'مَنْ لانَتْ عَريكَتُهُ وَجَبَتْ مَحَبَّتُهُ.',
     english: 'One whose nature is gentle, loving him is unavoidable.',
     source: 'Ghurar al-Hikam, Gentleness and softness- §3',
-    theme: 'when gentleness and softness- is the teaching needed',
-  },
-  {
-    arabic: 'مَنْ لانَ عُودُهُ كَثُفَتْ أغْصانُهُ.',
-    english: 'One whose wood is soft, his branches become thick.',
-    source: 'Ghurar al-Hikam, Gentleness and softness- §4',
     theme: 'when gentleness and softness- is the teaching needed',
   },
   {
@@ -26144,12 +25134,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when attentiveness- is the teaching needed',
   },
   {
-    arabic: 'إنْتِباهُ الْعُيُونِ لايَنْفَعُ مَعَ غَفْلَةِ القُلُوبِ.',
-    english: 'Alertness of the eyes does not benefit while the hearts are negligent.',
-    source: 'Ghurar al-Hikam, Attentiveness- §2',
-    theme: 'when attentiveness- is the teaching needed',
-  },
-  {
     arabic: 'ألا مُتَنَبِّهٌ مِنْ رَقْدَتِهِ قَبْلَ حِينِ مَنِيَّتِهِ.',
     english: 'Is there no one who will wake from his slumber before the time of his death?!',
     source: 'Ghurar al-Hikam, Attentiveness- §3',
@@ -26702,12 +25686,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when giving and withholding charity- is the teaching needed',
   },
   {
-    arabic: 'إيّاكَ والنِّفاقَ فَإنَّ ذَا الوَجْهَيْنِ لايَكُونُ وَجيهاً عِنْدَ اللّهِ.',
-    english: 'Beware of hypocrisy, for indeed the two-faced person is not eminent in the sight of Allah.',
-    source: 'Ghurar al-Hikam, Hypocrisy- §1',
-    theme: 'when inside and outside must align',
-  },
-  {
     arabic: 'اَلنِّفاقُ أخُوالشِّرْكِ.',
     english: 'Hypocrisy is the brother of polytheism.',
     source: 'Ghurar al-Hikam, Hypocrisy- §2',
@@ -26726,21 +25704,9 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when inside and outside must align',
   },
   {
-    arabic: 'اَلنِّفاقُ يُفْسِدُ الإيمانَ.',
-    english: 'Hypocrisy corrupts [one’s] faith.',
-    source: 'Ghurar al-Hikam, Hypocrisy- §5',
-    theme: 'when inside and outside must align',
-  },
-  {
     arabic: 'اَلمُنافِقُ لِسانُهُ يَسُرُّ وقَلْبُهُ يَضُرُّ.',
     english: 'A hypocrite’s tongue pleases but his heart causes harm.',
     source: 'Ghurar al-Hikam, The Hypocrite- §1',
-    theme: 'when the hypocrite- is the teaching needed',
-  },
-  {
-    arabic: 'اَلمُنافِقُ قَوْلُهُ جَمِيلٌ وفِعْلُهُ الدّاءُ الدّخِيلُ.',
-    english: 'A hypocrite’s words are beautiful but his actions are a painful malady.',
-    source: 'Ghurar al-Hikam, The Hypocrite- §2',
     theme: 'when the hypocrite- is the teaching needed',
   },
   {
@@ -26948,12 +25914,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when intention- is the teaching needed',
   },
   {
-    arabic: 'أبْلَغُ ما تُسْتَدَرُّ بِهِ الرَّحْمَةُ أنْ تُضْمَرَ لِجَميعِ النّاسِ الرَّحْمَةُ.',
-    english: 'The most effective thing in making mercy flow forth [and surround you] is having mercy in your heart for all the people.',
-    source: 'Ghurar al-Hikam, Intention- §4',
-    theme: 'when intention- is the teaching needed',
-  },
-  {
     arabic: 'إنَّ اللّهَ سُبْحانَهُ عِنْدَ إضْمارِ كُلِّ مُضْمِر، وقَوْلِ كُلِّ قائِل، وعَمَلِ كُلِّ عامِل.',
     english: 'Verily Allah, the Glorified, knows the hidden intention of every concealer, the speech of every speaker and the action of every doer.',
     source: 'Ghurar al-Hikam, Intention- §5',
@@ -27113,12 +26073,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     arabic: 'اَلتَّواضُعُ رَأْسُ العَقْلِ، والتَّكَبُّرُ رَأسُ الجَهْلِ.',
     english: 'Humility is the cornerstone of intelligence and pride is the cornerstone of ignorance.',
     source: 'Ghurar al-Hikam, Humility- §3',
-    theme: 'when elevation comes through lowering oneself',
-  },
-  {
-    arabic: 'اِتَّضِعْ تَرْتَفِعْ.',
-    english: 'Be humble and you with be elevated.',
-    source: 'Ghurar al-Hikam, Humility- §4',
     theme: 'when elevation comes through lowering oneself',
   },
   {
@@ -27842,12 +26796,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when this teaching from the sermons of Imam Ali speaks to the moment',
   },
   {
-    arabic: 'وَإِنَّ القُرآنَ ظَاهِرُهُ أَنِيقٌ وَبَاطِنُهُ عَمِيقٌ، لاَ تَفْنَى عَجَائِبُهُ، وَلاَتَنْقَضِي غَرَائِبُهُ، وَلاَ تُكْشَفُ الظُّلُمَاتُ إلاَّ بِهِ.',
-    english: 'Certainly the outside of the Qur’an is wonderful and its inside is deep (in meaning). Its wonders will never disappear, its amazements will never pass away and its intricacies cannot be cleared except through itself.',
-    source: 'Nahj al-Balagha, Sermon 18',
-    theme: 'when this teaching from the sermons of Imam Ali speaks to the moment',
-  },
-  {
     arabic: 'فإِنَّ الغَايَةَ أَمَامَكُمْ، وَإِنَّ وَرَاءَكُمُ السَّاعَةَ تَحْدُوكُمْ تَخَفَّفُواتَلْحَقوا، فَإنَّمَا يُنْتَظَرُ بِأوَّلِكُمْ آخِرُكُمْ .',
     english: 'Your ultimate goal (reward or punishment) is before you. Behind your back is the hour (of resurrection) which is driving you on. Keep (yourself) light and overtake (the forward ones). Your last ones are being awaited by the first ones (who have preceded).',
     source: 'Nahj al-Balagha, Sermon 21',
@@ -28097,12 +27045,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     arabic: 'يعني(عليه السلام) بالاود: الاعوجاج، وباللدد: الخصام. وهذا من أفصح الكلام.',
     english: 'as-Sayyid ar-Radi says: "al-awad" means crookedness and "al-ladad" means enmity, and this is the most eloquent expression.',
     source: 'Nahj al-Balagha, Sermon 70',
-    theme: 'when this teaching from the sermons of Imam Ali speaks to the moment',
-  },
-  {
-    arabic: 'أَمَّا بَعْدُ يَا أَهْلَ الْعِرَاقِ، فَإِنَّمَا أَنْتُمْ كَالْمَرْأَةِ الْحَامِلِ، حَمَلَتْ فَلَمَّا أَتَمَّتْ أَمْلَصَتْ، وَمَاتَ قَيِّمُهَا، وَطَالَ تَأَيُّمُهَا، وَوَرِثَهَا أَبْعَدُهَا.',
-    english: 'Certainly, you will understand it after some time . (Qur\'an, 38:88 )',
-    source: 'Nahj al-Balagha, Sermon 71',
     theme: 'when this teaching from the sermons of Imam Ali speaks to the moment',
   },
   {
@@ -28502,12 +27444,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when authority must serve not rule, when power is stewardship',
   },
   {
-    arabic: 'ومن خطبه له (عليه السلام)',
-    english: 'About negligent persons and the characteristics of beasts, carnivores and women',
-    source: 'Nahj al-Balagha, Sermon 153',
-    theme: 'when this teaching from the sermons of Imam Ali speaks to the moment',
-  },
-  {
     arabic: 'وَهُوَ فِي مُهْلَة مِنَ اللهِ يَهْوِي مَعَ الْغَافِلِينَ، وَيَغْدُومَعَ الْمُذْنِبِينَ، بلاَ سَبِيل قَاصِد، وَلاَ إِمَام قَائِد.',
     english: 'He has been allowed time by Allah. He is falling into error along with negligent persons and goes early in the morning with sinners, without any road to lead or any Imam to guide.',
     source: 'Nahj al-Balagha, Sermon 153',
@@ -28886,12 +27822,6 @@ export const BASELINE_WISDOM: BaselineEntry[] = [
     theme: 'when sin tempts and the path back matters',
   },
   {
-    arabic: 'ومن كلام له (عليه السلام(',
-    english: 'What Amir al-Mu’minin said on the occasion of the burial of Sayyidatu\'n-nisa\' (Supreme lady) Fatimah (p.b.u.h.) while addressing the Holy Prophet at his grave.',
-    source: 'Nahj al-Balagha, Sermon 202',
-    theme: 'when mortality is the teacher, when death is the reminder',
-  },
-  {
     arabic: 'السَّلاَمُ عَلَيْكَ يَا رَسُولَ اللهِ عَنِّي، وَعَنِ ابْنَتِكَ النَّازِلَةِ فِي جِوَارِكَ، وَالسَّرِيعَةِ اللَّحَاقِ بِكَ! قَلَّ يَا رَسُولَ اللهِ، عَنْ صَفِيَّتِكَ صَبْرِي، وَرَقَّ عَنْهَا تَجَلُّدِي، إِلاَّ أَنَّ لِي فِي التَّأَسِّيِ بِعَظِيمِ فُرْقَتِكَ، وَفَادِحِ مُصِيبَتِكَ، مَوْضِعَ تَعَزّ، فَلَقَدْ وَسَّدْتُكَ فِي مَلْحُودَةِ قَبْرِكَ، وَفَاضَتْ بَيْنَ نَحْرِي وَصَدْرِي نَفْسُكَ. (إنَّا لله وَإِنَّا إِلَيْهِ رَاجِعُونَ).',
     english: '... Verily we are Allah\'s and verily unto Him shall we return. (Qur\'an 2:156 )',
     source: 'Nahj al-Balagha, Sermon 202',
@@ -29127,22 +28057,6 @@ export const BASELINE_LETTERS: LongFormEntry[] = [
       ar: 'كتبها الإمام عليّ على فراش الموت — إلى ابنَيه الحسن والحسين، وعبرهما إلى كلّ من يأتي بعدُه. وقد ترددت العبارة "كونا للظالم خصماً وللمظلوم عوناً" عبر أربعة عشر قرناً.',
     },
     theme: 'on what to leave behind, on justice, on dying well',
-  },
-  {
-    title: {
-      en: 'On Equity in Distribution',
-      ar: 'في إنصاف القسمة',
-    },
-    arabic:
-      'وَاللَّهِ لَوْ وَجَدْتُهُ قَدْ تُزُوِّجَ بِهِ النِّسَاءُ، وَمُلِكَ بِهِ الإِمَاءُ لَرَدَدْتُهُ. فَإِنَّ فِي العَدْلِ سَعَةً، وَمَنْ ضَاقَ عَلَيْهِ العَدْلُ فَالجَوْرُ عَلَيْهِ أَضْيَقُ.',
-    english:
-      'By God, were I to find that something had been given out improperly — even if it had been used to wed women or buy bondmaids — I would take it back. In justice there is room for all. And whoever finds justice constricting, will find injustice more constricting still.',
-    source: 'Nahj al-Balagha, Sermon 15 — on returning property unfairly distributed under Uthman',
-    brief: {
-      en: "Said when Imam Ali, on taking the caliphate, faced calls to leave alone the inequitable land distributions made under the previous administration. His answer was firm — and his caliphate followed it.",
-      ar: 'قاله الإمام عليّ حين تولّى الخلافة وواجه دعواتٍ ليترك تقسيمات الأرض غير العادلة تحت الإدارة السابقة. كان جوابه حازماً — وكانت خلافته تابعة لذلك.',
-    },
-    theme: 'on justice, on power, on what cannot be left alone',
   },
   {
     title: {
@@ -30100,14 +29014,6 @@ export const BASELINE_POETRY: BaselineEntry[] = [
       'When you do not act upon the knowledge you have, it becomes a proof against you — and you are not excused by what remains of your ignorance either.',
     source: 'Diwan attributed to Imam Ali (عليه السلام)',
     theme: 'on the difference between knowing and acting, on knowledge as responsibility, on hypocrisy',
-  },
-  {
-    arabic:
-      'النَّاسُ مِنْ جِهَةِ التِّمْثَالِ أَكْفَاءُ\nأَبُوهُمُ آدَمُ وَالأُمُّ حَوَّاءُ',
-    english:
-      'People, in the matter of their making, are equals / Their father is Adam and their mother is Hawwa.',
-    source: 'Diwan attributed to Imam Ali (عليه السلام)',
-    theme: 'on the shared origin and brevity of all human life',
   },
   {
     arabic:
