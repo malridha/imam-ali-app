@@ -4,6 +4,11 @@ token vercel.pages
 Untitled.pages
 *.pages
 
+# Local Claude Code tooling state (machine-specific; may hold cached commands/keys)
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+.claude/*.lock
+
 # macOS
 .DS_Store
 .AppleDouble
