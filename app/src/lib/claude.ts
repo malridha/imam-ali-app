@@ -106,7 +106,10 @@ export async function callClaude({
   lang,
   userId,
   retrievalQuery,
-  maxTokens = 500,
+  // Lower default cap = fewer tokens to generate = faster replies. The
+  // companion is instructed to be brief, so this rarely truncates and
+  // shaves noticeable time off each turn.
+  maxTokens = 350,
   temperature = 0.5,
 }: CallArgs): Promise<ClaudeResult> {
   const body = {

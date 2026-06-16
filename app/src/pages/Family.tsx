@@ -1,8 +1,11 @@
-// v49 §80 — The Family of Imam Ali. A readable family tree: parents and
-// the Prophet who raised him, his wives, and his children — each with
-// dates, how they passed, and a line you can take to the companion to
-// learn more.
+// v49 §80 — The Family of Imam Ali, drawn as a real tree.
+//
+// Roots (parents + the Prophet who raised him) at the top, Imam Ali at the
+// centre, then his wives branching to their children — joined by gold
+// connector lines. Tap any person to see their relationship to Imam Ali,
+// their dates, how they passed, and a link to learn more / their life.
 
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import ServiceNav from '../components/ServiceNav'
@@ -13,18 +16,33 @@ import {
   CHILDREN,
   type FamilyMember,
 } from '../data/family'
+import './Family.css'
+
+function stripHonorific(s: string): string {
+  return s.replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s+/g, ' ').trim()
+}
+function shortRelation(s: string): string {
+  return s.split(/\s+[—·]\s+/)[0].trim()
+}
 
 export default function Family() {
   const navigate = useNavigate()
   const { lang } = useLang()
   const isAr = lang === 'ar'
+  const [sel, setSel] = useState<FamilyMember | null>(null)
 
-  function discuss(m: FamilyMember) {
-    const seed = isAr
-      ? `أودّ أن أعرف المزيد عن ${m.name.ar} — ${m.relation.ar} للإمام علي (عليه السلام). حدّثني عن حياته/حياتها وما يُذكر عنه/عنها.`
-      : `I'd like to learn more about ${m.name.en} — ${m.relation.en}, in the family of Imam Ali. Tell me about their life.`
-    navigate(`/chat?q=${encodeURIComponent(seed)}`)
-  }
+  const Node = ({ m, center }: { m: FamilyMember; center?: boolean }) => (
+    <button
+      className={`fam-node${center ? ' center' : ''}`}
+      onClick={() => setSel(m)}
+      style={{ fontFamily: isAr ? 'var(--font-arabic-ui)' : undefined }}
+    >
+      <span className="nm" style={{ fontFamily: isAr ? 'var(--font-arabic)' : undefined }}>
+        {stripHonorific(m.name[lang])}
+      </span>
+      <span className="rel">{shortRelation(m.relation[lang])}</span>
+    </button>
+  )
 
   return (
     <>
@@ -33,78 +51,105 @@ export default function Family() {
           minHeight: '100dvh',
           background: 'var(--bg)',
           color: 'var(--text)',
-          maxWidth: 720,
+          maxWidth: 820,
           margin: '0 auto',
-          padding: '1rem 1rem 5rem',
+          padding: '1rem 0.5rem 5rem',
           direction: isAr ? 'rtl' : 'ltr',
         }}
       >
-        <button
-          onClick={() => navigate('/biography')}
-          style={{
-            fontSize: 11,
-            color: 'var(--gold)',
-            padding: '6px 12px',
-            border: '1px solid var(--border)',
-            borderRadius: 20,
-            background: 'transparent',
-            cursor: 'pointer',
-            marginBottom: '1rem',
-          }}
-        >
-          ↩ {isAr ? 'السيرة' : 'Biography'}
-        </button>
-
-        <div style={{ textAlign: 'center', marginBottom: '1.4rem' }}>
-          <div
+        <div style={{ padding: '0 0.5rem' }}>
+          <button
+            onClick={() => navigate('/biography')}
             style={{
               fontSize: 11,
-              letterSpacing: '0.22em',
-              textTransform: 'uppercase',
-              color: 'var(--muted)',
-              marginBottom: 8,
-            }}
-          >
-            {isAr ? 'العائلة' : 'Family Tree'}
-          </div>
-          <h1
-            style={{
-              fontSize: 25,
               color: 'var(--gold)',
-              fontWeight: 700,
-              margin: 0,
-              fontFamily: isAr ? 'var(--font-arabic)' : undefined,
-              lineHeight: 1.4,
+              padding: '6px 12px',
+              border: '1px solid var(--border)',
+              borderRadius: 20,
+              background: 'transparent',
+              cursor: 'pointer',
+              marginBottom: '1rem',
             }}
           >
-            {isAr ? 'آل الإمام علي' : 'The Family of Imam Ali'}
-          </h1>
+            ↩ {isAr ? 'السيرة' : 'Biography'}
+          </button>
+
+          <div style={{ textAlign: 'center', marginBottom: '1.2rem' }}>
+            <div
+              style={{
+                fontSize: 11,
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                color: 'var(--muted)',
+                marginBottom: 8,
+              }}
+            >
+              {isAr ? 'العائلة' : 'Family Tree'}
+            </div>
+            <h1
+              style={{
+                fontSize: 24,
+                color: 'var(--gold)',
+                fontWeight: 700,
+                margin: 0,
+                fontFamily: isAr ? 'var(--font-arabic)' : undefined,
+              }}
+            >
+              {isAr ? 'شجرة آل الإمام علي' : 'The Family of Imam Ali'}
+            </h1>
+            <div style={{ fontSize: 11, color: 'var(--dim)', marginTop: 6, fontStyle: 'italic' }}>
+              {isAr ? 'اضغط أيّ اسم لمعرفة صلته بالإمام وسيرته' : 'Tap any name for their relation to the Imam and their life'}
+            </div>
+          </div>
         </div>
 
-        {/* Ali himself */}
-        <MemberCard m={IMAM_ALI_SELF} lang={lang} isAr={isAr} onDiscuss={discuss} highlight />
+        {/* The tree */}
+        <div className="fam-scroll">
+          <div className="tree">
+            {/* Roots: parents + the Prophet who raised him */}
+            <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
+              {PARENTS.map((p) => (
+                <Node key={p.id} m={p} />
+              ))}
+            </div>
+            {/* connector down to Ali */}
+            <div style={{ width: 0, height: 20, borderInlineStart: '2px solid rgba(212,179,100,0.55)' }} />
 
-        <GroupTitle isAr={isAr} en="Parents & the Prophet who raised him" ar="الوالدان والنبيّ الذي ربّاه" />
-        {PARENTS.map((m) => (
-          <MemberCard key={m.id} m={m} lang={lang} isAr={isAr} onDiscuss={discuss} />
-        ))}
-
-        <GroupTitle isAr={isAr} en="His Wives" ar="زوجاته" />
-        {WIVES.map((m) => (
-          <MemberCard key={m.id} m={m} lang={lang} isAr={isAr} onDiscuss={discuss} />
-        ))}
-
-        <GroupTitle isAr={isAr} en="His Children" ar="أبناؤه وبناته" />
-        {CHILDREN.map((m) => (
-          <MemberCard key={m.id} m={m} lang={lang} isAr={isAr} onDiscuss={discuss} />
-        ))}
+            {/* Descendants tree rooted at Imam Ali */}
+            <ul>
+              <li className="only">
+                <Node m={IMAM_ALI_SELF} center />
+                <ul>
+                  {WIVES.map((w) => {
+                    const kids = CHILDREN.filter((c) => c.motherId === w.id)
+                    const onlyWife = WIVES.length === 1
+                    return (
+                      <li key={w.id} className={onlyWife ? 'only' : ''}>
+                        <Node m={w} />
+                        {kids.length > 0 && (
+                          <ul>
+                            {kids.map((c) => (
+                              <li key={c.id} className={kids.length === 1 ? 'only' : ''}>
+                                <Node m={c} />
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    )
+                  })}
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
 
         <div
           style={{
             fontSize: 10.5,
             color: 'var(--muted)',
             lineHeight: 1.7,
-            marginTop: '1.5rem',
+            margin: '1.2rem 0.8rem 0',
             fontStyle: 'italic',
             textAlign: 'center',
           }}
@@ -114,112 +159,148 @@ export default function Family() {
             : 'Approximate dates are marked “~”. Where Sunni and Shia accounts differ (e.g. the cause of Sayyida Fatima’s passing), only what is agreed is stated.'}
         </div>
       </main>
+
+      {/* Person detail modal */}
+      {sel && (
+        <PersonModal
+          m={sel}
+          lang={lang}
+          isAr={isAr}
+          onClose={() => setSel(null)}
+          onDiscuss={() => {
+            const seed = isAr
+              ? `أودّ أن أعرف المزيد عن ${sel.name.ar} — ${sel.relation.ar} في آل الإمام علي (عليه السلام). حدّثني عن سيرته/سيرتها.`
+              : `I'd like to learn more about ${sel.name.en} — ${sel.relation.en}, in the family of Imam Ali. Tell me about their life.`
+            navigate(`/chat?q=${encodeURIComponent(seed)}`)
+          }}
+          onBiography={sel.id === 'ali' ? () => navigate('/biography') : undefined}
+        />
+      )}
       <ServiceNav />
     </>
   )
 }
 
-function GroupTitle({ en, ar, isAr }: { en: string; ar: string; isAr: boolean }) {
-  return (
-    <h2
-      style={{
-        fontSize: 13,
-        color: 'var(--cream)',
-        fontWeight: 700,
-        letterSpacing: '0.06em',
-        textTransform: 'uppercase',
-        margin: '1.8rem 0 0.8rem',
-        textAlign: 'center',
-        fontFamily: isAr ? 'var(--font-arabic-ui)' : undefined,
-      }}
-    >
-      {isAr ? ar : en}
-    </h2>
-  )
-}
-
-function MemberCard({
+function PersonModal({
   m,
   lang,
   isAr,
+  onClose,
   onDiscuss,
-  highlight,
+  onBiography,
 }: {
   m: FamilyMember
   lang: 'en' | 'ar'
   isAr: boolean
-  onDiscuss: (m: FamilyMember) => void
-  highlight?: boolean
+  onClose: () => void
+  onDiscuss: () => void
+  onBiography?: () => void
 }) {
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      onClick={onClose}
       style={{
-        background: highlight ? 'rgba(212,179,100,0.10)' : 'var(--surface)',
-        border: `1px solid ${highlight ? 'var(--gold)' : 'var(--border)'}`,
-        borderInlineStart: '3px solid var(--gold)',
-        borderRadius: 10,
-        padding: '14px 16px',
-        marginBottom: 10,
+        position: 'fixed',
+        inset: 0,
+        zIndex: 100,
+        background: 'rgba(4,10,26,0.82)',
+        backdropFilter: 'blur(5px)',
+        WebkitBackdropFilter: 'blur(5px)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '1.2rem',
         direction: isAr ? 'rtl' : 'ltr',
       }}
     >
       <div
+        onClick={(e) => e.stopPropagation()}
         style={{
-          fontSize: 16,
-          fontWeight: 700,
-          color: 'var(--gold)',
-          marginBottom: 3,
-          fontFamily: isAr ? 'var(--font-arabic)' : undefined,
+          width: '100%',
+          maxWidth: 520,
+          background: 'var(--bg)',
+          border: '1px solid var(--gold)',
+          borderRadius: 14,
+          padding: '1.3rem 1.3rem 1.5rem',
+          maxHeight: '85vh',
+          overflowY: 'auto',
         }}
       >
-        {m.name[lang]}
-      </div>
-      <div style={{ fontSize: 11.5, color: 'var(--cream)', fontStyle: 'italic', marginBottom: 10, lineHeight: 1.5 }}>
-        {m.relation[lang]}
-      </div>
-
-      {m.born && <FactRow label={isAr ? 'وُلد' : 'Born'} value={m.born[lang]} isAr={isAr} />}
-      {m.died && <FactRow label={isAr ? 'تُوفّي' : 'Died'} value={m.died[lang]} isAr={isAr} />}
-      {m.howDied && <FactRow label={isAr ? 'كيف' : 'How'} value={m.howDied[lang]} isAr={isAr} />}
-      {m.note && (
-        <div style={{ fontSize: 12, color: 'var(--dim)', lineHeight: 1.6, marginTop: 6 }}>
-          {m.note[lang]}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 10 }}>
+          <h2
+            style={{
+              fontSize: 19,
+              color: 'var(--gold)',
+              fontWeight: 700,
+              margin: 0,
+              fontFamily: isAr ? 'var(--font-arabic)' : undefined,
+              lineHeight: 1.35,
+            }}
+          >
+            {m.name[lang]}
+          </h2>
+          <button
+            onClick={onClose}
+            aria-label={isAr ? 'إغلاق' : 'Close'}
+            style={{ background: 'transparent', border: 'none', color: 'var(--muted)', fontSize: 22, cursor: 'pointer', lineHeight: 1 }}
+          >
+            ✕
+          </button>
         </div>
-      )}
 
-      <button
-        onClick={() => onDiscuss(m)}
-        style={{
-          marginTop: 12,
-          padding: '5px 12px',
-          borderRadius: 6,
-          border: '1px solid var(--border)',
-          background: 'transparent',
-          color: 'var(--gold)',
-          cursor: 'pointer',
-          fontSize: 10.5,
-          letterSpacing: '0.04em',
-        }}
-      >
-        {isAr ? '💬 تعرّف أكثر' : '💬 Learn more'}
-      </button>
+        <div
+          style={{
+            fontSize: 10,
+            color: 'var(--gold)',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            margin: '4px 0 14px',
+          }}
+        >
+          {isAr ? 'صلته بالإمام' : 'Relation to the Imam'}
+        </div>
+        <div style={{ fontSize: 13, color: 'var(--cream)', lineHeight: 1.6, marginBottom: 16 }}>
+          {m.relation[lang]}
+        </div>
+
+        {m.born && <Fact label={isAr ? 'وُلد' : 'Born'} value={m.born[lang]} />}
+        {m.died && <Fact label={isAr ? 'تُوفّي' : 'Died'} value={m.died[lang]} />}
+        {m.howDied && <Fact label={isAr ? 'كيف' : 'How'} value={m.howDied[lang]} />}
+        {m.note && (
+          <div style={{ fontSize: 12.5, color: 'var(--dim)', lineHeight: 1.65, marginTop: 8 }}>
+            {m.note[lang]}
+          </div>
+        )}
+
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 18 }}>
+          <button onClick={onDiscuss} style={modalBtn(true)}>
+            {isAr ? '💬 تعرّف أكثر مع الرفيق' : '💬 Learn more with the companion'}
+          </button>
+          {onBiography && (
+            <button onClick={onBiography} style={modalBtn(false)}>
+              {isAr ? '📖 السيرة الكاملة' : '📖 Full biography'}
+            </button>
+          )}
+        </div>
+      </div>
     </div>
   )
 }
 
-function FactRow({ label, value, isAr }: { label: string; value: string; isAr: boolean }) {
+function Fact({ label, value }: { label: string; value: string }) {
   return (
-    <div style={{ display: 'flex', gap: 8, fontSize: 12, lineHeight: 1.6, marginBottom: 3 }}>
+    <div style={{ display: 'flex', gap: 10, fontSize: 12.5, lineHeight: 1.6, marginBottom: 5 }}>
       <span
         style={{
           flex: '0 0 auto',
-          minWidth: 38,
+          minWidth: 40,
           color: 'var(--muted)',
           fontSize: 10,
           textTransform: 'uppercase',
           letterSpacing: '0.06em',
           paddingTop: 2,
-          textAlign: isAr ? 'right' : 'left',
         }}
       >
         {label}
@@ -227,4 +308,17 @@ function FactRow({ label, value, isAr }: { label: string; value: string; isAr: b
       <span style={{ color: 'var(--cream)' }}>{value}</span>
     </div>
   )
+}
+
+function modalBtn(primary: boolean): React.CSSProperties {
+  return {
+    padding: '9px 14px',
+    borderRadius: 8,
+    border: '1px solid var(--gold)',
+    background: primary ? 'rgba(212,179,100,0.14)' : 'transparent',
+    color: 'var(--gold)',
+    cursor: 'pointer',
+    fontSize: 12,
+    fontWeight: 600,
+  }
 }

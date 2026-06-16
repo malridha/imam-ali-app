@@ -24,6 +24,8 @@ export type FamilyMember = {
   howDied?: Bilingual
   /** One line of context — lineage, significance, or which mother. */
   note?: Bilingual
+  /** For children: the id of their mother (a wife), to branch the tree. */
+  motherId?: string
 }
 
 // ── Imam Ali himself (the centre of the tree) ─────────────────────────
@@ -113,6 +115,7 @@ export const CHILDREN: FamilyMember[] = [
   {
     id: 'hasan',
     group: 'child',
+    motherId: 'fatima-zahra',
     name: { en: 'al-Hasan ibn Ali (عليه السلام)', ar: 'الحسن بن عليّ (عليه السلام)' },
     relation: { en: 'Son — the 2nd Imam · mother: Fatima al-Zahra', ar: 'الابن — الإمام الثاني · أمّه فاطمة الزهراء' },
     born: { en: '~625 CE · 3 AH · Madinah', ar: '~٦٢٥م · ٣هـ · المدينة' },
@@ -122,6 +125,7 @@ export const CHILDREN: FamilyMember[] = [
   {
     id: 'husayn',
     group: 'child',
+    motherId: 'fatima-zahra',
     name: { en: 'al-Husayn ibn Ali (عليه السلام)', ar: 'الحسين بن عليّ (عليه السلام)' },
     relation: { en: 'Son — the 3rd Imam · mother: Fatima al-Zahra', ar: 'الابن — الإمام الثالث · أمّه فاطمة الزهراء' },
     born: { en: '~626 CE · 4 AH · Madinah', ar: '~٦٢٦م · ٤هـ · المدينة' },
@@ -131,6 +135,7 @@ export const CHILDREN: FamilyMember[] = [
   {
     id: 'zaynab',
     group: 'child',
+    motherId: 'fatima-zahra',
     name: { en: 'Zaynab bint Ali (عليها السلام)', ar: 'زينب بنت عليّ (عليها السلام)' },
     relation: { en: 'Daughter — heroine of Karbala · mother: Fatima al-Zahra', ar: 'الابنة — بطلة كربلاء · أمّها فاطمة الزهراء' },
     born: { en: '~627 CE · ~6 AH · Madinah', ar: '~٦٢٧م · ~٦هـ · المدينة' },
@@ -140,6 +145,7 @@ export const CHILDREN: FamilyMember[] = [
   {
     id: 'umm-kulthum',
     group: 'child',
+    motherId: 'fatima-zahra',
     name: { en: 'Umm Kulthum bint Ali', ar: 'أمّ كلثوم بنت عليّ' },
     relation: { en: 'Daughter · mother: Fatima al-Zahra', ar: 'الابنة · أمّها فاطمة الزهراء' },
     note: { en: 'Present at Karbala alongside her sister Zaynab.', ar: 'كانت حاضرة بكربلاء إلى جانب أختها زينب.' },
@@ -147,6 +153,7 @@ export const CHILDREN: FamilyMember[] = [
   {
     id: 'abbas',
     group: 'child',
+    motherId: 'umm-al-banin',
     name: { en: 'al-Abbas ibn Ali (عليه السلام)', ar: 'العبّاس بن عليّ (عليه السلام)' },
     relation: { en: 'Son — the standard-bearer at Karbala · mother: Umm al-Banin', ar: 'الابن — حامل لواء كربلاء · أمّه أمّ البنين' },
     born: { en: '~647 CE · 26 AH · Madinah', ar: '~٦٤٧م · ٢٦هـ · المدينة' },
@@ -156,6 +163,7 @@ export const CHILDREN: FamilyMember[] = [
   {
     id: 'karbala-brothers',
     group: 'child',
+    motherId: 'umm-al-banin',
     name: { en: 'Abdullah, Ja’far & Uthman ibn Ali', ar: 'عبد الله وجعفر وعثمان بنو عليّ' },
     relation: { en: 'Sons — brothers of al-Abbas · mother: Umm al-Banin', ar: 'الأبناء — إخوة العبّاس · أمّهم أمّ البنين' },
     died: { en: '680 CE · 10 Muharram 61 AH · Karbala', ar: '٦٨٠م · ١٠ محرّم ٦١هـ · كربلاء' },
@@ -164,6 +172,7 @@ export const CHILDREN: FamilyMember[] = [
   {
     id: 'muhammad-hanafiyya',
     group: 'child',
+    motherId: 'khawla',
     name: { en: 'Muhammad ibn al-Hanafiyya', ar: 'محمّد بن الحنفيّة' },
     relation: { en: 'Son — a learned figure · mother: Khawla al-Hanafiyya', ar: 'الابن — من أهل العلم · أمّه خولة الحنفيّة' },
     born: { en: '~636 CE · ~16 AH', ar: '~٦٣٦م · ~١٦هـ' },

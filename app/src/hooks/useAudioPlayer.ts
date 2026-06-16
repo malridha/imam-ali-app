@@ -4,6 +4,11 @@ import type { Lang } from '../types/lang'
 
 const MUTE_KEY = 'ya-imam-ali:muted'
 
+// Client-side voice speed-up for the companion. 1.0 = ElevenLabs default
+// (already gentle); 1.18 makes replies noticeably brisker while pitch is
+// preserved. Tune here without redeploying the speak function.
+const VOICE_PLAYBACK_RATE = 1.18
+
 // 1 frame of silent WAV — used to unlock the audio element during a user
 // gesture so later programmatic .play() calls don't get blocked by
 // the browser's autoplay policy.
@@ -50,11 +55,19 @@ export function useAudioPlayer() {
     if (!audioRef.current) {
       const a = new Audio()
       a.preload = 'auto'
+      // Speed up the companion's voice ~18% without raising the pitch, so
+      // replies feel livelier and less slow. preservesPitch keeps the timbre.
+      a.playbackRate = VOICE_PLAYBACK_RATE
+      const ap = a as HTMLAudioElement & { preservesPitch?: boolean; mozPreservesPitch?: boolean }
+      ap.preservesPitch = true
+      ap.mozPreservesPitch = true
       a.addEventListener('ended', () => setSpeaking(false))
       a.addEventListener('pause', () => setSpeaking(false))
       a.addEventListener('error', () => setSpeaking(false))
       audioRef.current = a
     }
+    // Re-assert on every fetch (some browsers reset rate when src changes).
+    audioRef.current.playbackRate = VOICE_PLAYBACK_RATE
     return audioRef.current
   }
 

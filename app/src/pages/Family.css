@@ -1,0 +1,127 @@
+/* v49 §80 — Visual family tree with gold connector lines.
+   Classic nested-list tree: each <li> draws connectors up to its siblings'
+   horizontal bus, and each nested <ul> drops a vertical line from its
+   parent. Horizontally scrollable so wide generations fit on a phone. */
+
+.fam-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px 4px 16px;
+  scrollbar-width: thin;
+}
+
+.tree {
+  display: inline-flex;     /* shrink-to-fit so scroll works */
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.tree ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 18px 0 0;
+  margin: 0;
+}
+
+.tree li {
+  list-style: none;
+  position: relative;
+  padding: 18px 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Horizontal connectors between a node and its siblings' bus + the short
+   vertical drop into the node. */
+.tree li::before,
+.tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 18px;
+  border-top: 2px solid rgba(212, 179, 100, 0.55);
+}
+.tree li::before {
+  right: 50%;
+  border-right: 2px solid rgba(212, 179, 100, 0.55);
+}
+.tree li::after {
+  left: 50%;
+}
+
+/* A single child needs only a straight vertical line, no horizontal bus. */
+.tree li.only::before,
+.tree li.only::after {
+  border-top: 0;
+}
+.tree li.only::before {
+  right: 50%;
+  width: 0;
+}
+
+/* Ends of a sibling row: trim the outer half of the bus, round the corner. */
+.tree li:first-child::before { border: 0; }
+.tree li:last-child::after { border: 0; }
+.tree li:last-child::before { border-radius: 0 6px 0 0; }
+.tree li:first-child::after {
+  border-left: 2px solid rgba(212, 179, 100, 0.55);
+  border-radius: 6px 0 0 0;
+}
+
+/* Vertical line dropping from a parent node down to its children's bus. */
+.tree ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 18px;
+  border-left: 2px solid rgba(212, 179, 100, 0.55);
+}
+
+/* The root row carries no connectors above it. */
+.tree > ul:first-child { padding-top: 0; }
+.tree > ul:first-child::before { display: none; }
+
+/* Node chips */
+.fam-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 96px;
+  max-width: 150px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--gold);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+}
+.fam-node:hover { border-color: var(--gold); }
+.fam-node.center {
+  background: rgba(212, 179, 100, 0.14);
+  border-color: var(--gold);
+  min-width: 120px;
+}
+.fam-node .nm {
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.fam-node .rel {
+  font-size: 9.5px;
+  color: var(--muted);
+  line-height: 1.25;
+}
+.fam-node.center .nm { font-size: 14px; }
