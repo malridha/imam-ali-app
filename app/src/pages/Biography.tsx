@@ -5,11 +5,108 @@
 // presentation layer — section header, dateline caption, body with
 // preserved line breaks.
 
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import { BIOGRAPHY } from '../data/biography'
+import type { SectionPerspectives } from '../data/biography'
+import type { Lang } from '../types/lang'
 import ServiceNav from '../components/ServiceNav'
 import { useReadAloud } from '../hooks/useReadAloud'
+
+// Expandable Sunni + Shia perspectives panel for contested-event sections.
+// Shared ground first, then each tradition in its own voice with its own
+// sources — never adjudicating. See src/data/biography.ts (SectionPerspectives).
+function PerspectivesPanel({ p, lang, isAr }: { p: SectionPerspectives; lang: Lang; isAr: boolean }) {
+  const [open, setOpen] = useState(false)
+  const blocks: { key: 'shared' | 'sunni' | 'shia'; label: string; color: string; src?: string }[] = [
+    { key: 'shared', label: isAr ? 'أرضٌ مشترَكة' : 'Shared ground', color: 'var(--gold)' },
+    { key: 'sunni', label: isAr ? 'المنظور السنّيّ' : 'Sunni perspective', color: '#7EC1A3', src: p.sources?.sunni },
+    { key: 'shia', label: isAr ? 'المنظور الشيعيّ' : 'Shia perspective', color: '#9FB6E8', src: p.sources?.shia },
+  ]
+  return (
+    <div style={{ marginTop: 16 }}>
+      <button
+        onClick={() => setOpen((o) => !o)}
+        style={{
+          width: '100%',
+          textAlign: isAr ? 'right' : 'left',
+          padding: '10px 14px',
+          borderRadius: 10,
+          border: '1px solid var(--border)',
+          background: open ? 'rgba(233, 201, 122, 0.08)' : 'transparent',
+          color: 'var(--gold)',
+          cursor: 'pointer',
+          fontSize: 12.5,
+          fontWeight: 600,
+          letterSpacing: '0.04em',
+          display: 'flex',
+          alignItems: 'center',
+          gap: 8,
+          fontFamily: isAr ? 'var(--font-arabic)' : undefined,
+        }}
+      >
+        <span style={{ fontSize: 14 }}>⚖︎</span>
+        <span style={{ flex: 1 }}>{isAr ? 'منظورا أهل السنّة والشيعة' : 'Sunni & Shia perspectives'}</span>
+        <span style={{ opacity: 0.7 }}>{open ? '▲' : '▾'}</span>
+      </button>
+
+      {open && (
+        <div style={{ marginTop: 8, borderInlineStart: '2px solid var(--border)' }}>
+          {blocks.map((b) => (
+            <div key={b.key} style={{ padding: '10px 14px' }}>
+              <div
+                style={{
+                  fontSize: 10.5,
+                  fontWeight: 700,
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  color: b.color,
+                  marginBottom: 5,
+                  fontFamily: isAr ? 'var(--font-arabic)' : undefined,
+                }}
+              >
+                {b.label}
+              </div>
+              <div
+                style={{
+                  fontSize: 13.5,
+                  lineHeight: 1.8,
+                  color: 'var(--text)',
+                  whiteSpace: 'pre-line',
+                  fontFamily: isAr ? 'var(--font-arabic-body)' : undefined,
+                }}
+              >
+                {p[b.key][lang]}
+              </div>
+              {b.src && (
+                <div style={{ fontSize: 10.5, color: 'var(--muted)', marginTop: 5, fontStyle: 'italic' }}>
+                  {(isAr ? 'المصادر: ' : 'Sources: ') + b.src}
+                </div>
+              )}
+            </div>
+          ))}
+
+          {p.reviewPending && (
+            <div
+              style={{
+                margin: '4px 14px 6px',
+                fontSize: 10.5,
+                color: 'var(--muted)',
+                fontStyle: 'italic',
+                fontFamily: isAr ? 'var(--font-arabic-body)' : undefined,
+              }}
+            >
+              {isAr
+                ? '⚑ مسوّدة تنتظر مراجعة عالِمٍ مختصّ قبل اعتمادها.'
+                : '⚑ Draft — pending qualified-scholar review before it is treated as authoritative.'}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
 
 export default function Biography() {
   const navigate = useNavigate()
@@ -208,6 +305,8 @@ export default function Biography() {
                     .replace(/\*\*([^*]+)\*\*/g, '<strong style="color: var(--cream)">$1</strong>'),
                 }}
               />
+
+              {s.perspectives && <PerspectivesPanel p={s.perspectives} lang={lang} isAr={isAr} />}
 
               <div style={{ marginTop: 14, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 <button

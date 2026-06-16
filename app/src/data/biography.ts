@@ -9,6 +9,32 @@
 // This is not exhaustive. It is a starting library. Sections can be
 // expanded over time; each entry is data, not code.
 
+/** Bilingual text pair. */
+export type Bilingual = { en: string; ar: string }
+
+/**
+ * Sunni + Shia perspectives on a contested event, attached to a biography
+ * section and rendered as an expandable panel beneath the section body.
+ *
+ * Written per the anti-sectarian charter: shared ground is shown first, then
+ * each tradition speaks in its own voice with its own sources, and the app
+ * never adjudicates which reading is "true". `reviewPending` marks a first
+ * draft that still needs qualified-scholar verification before it is treated
+ * as authoritative.
+ */
+export type SectionPerspectives = {
+  /** What both traditions agree on — always shown first. */
+  shared: Bilingual
+  /** The Sunni reading, in its own voice. */
+  sunni: Bilingual
+  /** The Shia reading, in its own voice. */
+  shia: Bilingual
+  /** Short source citations per tradition (display-only). */
+  sources?: { sunni?: string; shia?: string }
+  /** True while awaiting scholar review. */
+  reviewPending?: boolean
+}
+
 export type BioSection = {
   /** Slug for anchor / URL fragment */
   id: string
@@ -18,6 +44,8 @@ export type BioSection = {
   dateline: { en: string; ar: string }
   /** Section body — Markdown-light. Line breaks preserved. */
   body: { en: string; ar: string }
+  /** Optional Sunni + Shia perspectives panel (contested events only). */
+  perspectives?: SectionPerspectives
 }
 
 export const BIOGRAPHY: BioSection[] = [
@@ -182,6 +210,133 @@ The companion's voice on Ghadir takes no side. The event happened. The words wer
 
 صوت الرفيق في الغدير لا يأخذ موقفاً. الحادثة وقعت. والكلمات قيلت. ورفع النبيّ يد عليّ. وأيّاً كان التأويل، فإنّ الحبّ لا يُنكَر.`,
     },
+    perspectives: {
+      reviewPending: true,
+      shared: {
+        en: `Both Sunni and Shia tradition narrate that the Prophet ﷺ took Ali's hand and said, "Whoever's mawla I am, Ali is his mawla." It is among the most widely transmitted reports about Ali, appearing in major Sunni collections and across Shia sources. Both traditions agree the event happened, that the Prophet honoured Ali publicly and uniquely, and that the community is bound to love and respect him. The whole divergence rests on the meaning of a single word — mawla.`,
+        ar: `يَروي التقليدان السنّيّ والشيعيّ أنّ النبيّ ﷺ أخذ بيد عليّ وقال: «مَنْ كُنْتُ مَوْلَاهُ فَعَلِيٌّ مَوْلَاهُ». وهو من أكثر ما رُوي في حقّ عليّ انتشاراً، وارد في كبرى المجاميع السنّيّة وفي المصادر الشيعيّة. ويتّفق التقليدان على وقوع الحدث، وعلى أنّ النبيّ أكرم عليّاً علناً وعلى نحوٍ فريد، وأنّ الأمّة مأمورةٌ بحبّه واحترامه. والخلاف كلّه قائمٌ على معنى كلمةٍ واحدة: «مَوْلى».`,
+      },
+      sunni: {
+        en: `In the Sunni reading, mawla here means friend, beloved, ally, protector. The Prophet was expressing his deep love for Ali and instructing the community to honour him — understood partly as a response to complaints raised against Ali after the expedition to Yemen. It is not read as an appointment to political succession. Sunnis revere the report and revere Ali as the fourth Rightly-Guided Caliph and one of the ten given glad tidings of Paradise.`,
+        ar: `في القراءة السنّيّة، تعني «المَوْلى» هنا: الوليّ والحبيب والنصير والحامي. كان النبيّ يُعبّر عن محبّته العظيمة لعليّ، ويأمر الأمّة بإكرامه — ويُفهَم ذلك جزئيّاً ردّاً على شكاوى أُثيرت ضدّ عليّ بعد سريّة اليمن. ولا يُقرأ تعييناً للخلافة السياسية. ويُجلّ أهل السنّة هذا الخبر، ويُجلّون عليّاً رابعَ الخلفاء الراشدين وأحدَ العشرة المبشّرين بالجنّة.`,
+      },
+      shia: {
+        en: `In the Shia reading, mawla means master and guardian (wali) — one possessing authority. Ghadir is the Prophet's explicit, public designation (nass) of Ali as his successor and the first Imam. Shia commemorate the day as Eid al-Ghadir on 18 Dhul-Hijja, among the greatest festivals of the year, and read it together with the verse of the completion of the religion.`,
+        ar: `في القراءة الشيعيّة، تعني «المَوْلى»: السيّد والوليّ وصاحب الأمر. فغدير خُمّ هو النصّ النبويّ الصريح العلنيّ على عليّ خليفةً ووصيّاً وإماماً أوّل. ويُحيي الشيعةُ هذا اليومَ عيداً عظيماً — عيد الغدير في الثامن عشر من ذي الحجّة — ويقرؤونه مع آية إكمال الدين.`,
+      },
+      sources: {
+        sunni: 'Musnad Aḥmad · Sunan al-Tirmidhī · Sunan al-Nasāʾī · al-Mustadrak (al-Ḥākim)',
+        shia: 'al-Kāfī (al-Kulaynī) · al-Irshād (al-Mufīd)',
+      },
+    },
+  },
+
+  {
+    id: 'saqifa',
+    title: {
+      en: 'The Saqifa & the First Succession',
+      ar: 'سقيفة بني ساعدة والخلافة الأولى',
+    },
+    dateline: { en: '11 AH · 632 CE · Madinah', ar: '١١هـ · ٦٣٢م · المدينة' },
+    body: {
+      en: `While the Prophet ﷺ was being prepared for burial, a gathering of the Ansar met at the Saqifa — the roofed portico — of Banu Sa'ida in Madinah to decide who would lead the community. Abu Bakr, Umar, and Abu Ubayda came to the gathering. After debate, the pledge of allegiance (bay'a) was given to Abu Bakr, who became the first Caliph. Ali and the Banu Hashim were occupied with the Prophet's funeral and were not present.
+
+This first transfer of leadership is where the paths of the two great traditions begin to part — not over what happened, but over what should have happened.`,
+      ar: `بينما كان النبيّ ﷺ يُجهَّز للدفن، اجتمعت جماعةٌ من الأنصار في سقيفة بني ساعدة بالمدينة ليقرّروا من يلي أمر الأمّة. وجاء إلى الاجتماع أبو بكر وعمر وأبو عبيدة. وبعد نقاش، أُعطيت البيعة لأبي بكر فصار الخليفة الأوّل. وكان عليّ وبنو هاشم مشغولَين بتجهيز النبيّ ولم يكونا حاضرَين.
+
+عند هذا الانتقال الأوّل للقيادة يبدأ افتراق طريقَي التقليدَين الكبيرَين — لا في ما حدث، بل في ما كان ينبغي أن يحدث.`,
+    },
+    perspectives: {
+      reviewPending: true,
+      shared: {
+        en: `Both traditions agree the Saqifa meeting took place, that Abu Bakr became the first Caliph, and that Ali ultimately gave his allegiance and chose the unity of the community over conflict. Both hold the early Companions in honour, and both record Ali's lifelong concern to protect the young umma from division.`,
+        ar: `يتّفق التقليدان على أنّ اجتماع السقيفة وقع، وأنّ أبا بكر صار الخليفة الأوّل، وأنّ عليّاً أعطى بيعته في النهاية واختار وحدة الأمّة على النزاع. ويُجلّ التقليدان الصحابة الأوائل، ويُسجّلان حرص عليّ طوال حياته على صون الأمّة الفتيّة من الفُرقة.`,
+      },
+      sunni: {
+        en: `In the Sunni view, the Prophet left no explicit successor, entrusting the choice to the community's consultation (shura). The Companions chose Abu Bakr — the closest friend of the Prophet, who had led the prayers during his final illness — as the most worthy. Ali's later pledge confirmed the legitimacy of the choice. The Saqifa is seen as consultation working as intended in a moment of crisis.`,
+        ar: `في الرأي السنّيّ، لم يترك النبيّ خليفةً منصوصاً، بل أوكل الأمر إلى شورى الأمّة. فاختار الصحابة أبا بكر — أقربَ أصحاب النبيّ، ومن أمّ الناس في الصلاة في مرضه الأخير — بوصفه الأحقّ. وجاءت بيعة عليّ لاحقاً تأكيداً لشرعيّة الاختيار. وتُرى السقيفة شورى عملت كما ينبغي في لحظة أزمة.`,
+      },
+      shia: {
+        en: `In the Shia view, the Prophet had already designated Ali at Ghadir Khumm, so the Saqifa set that designation aside. Ali judged that open dispute would endanger a fragile community more than patience would, and so he withheld confrontation, giving his pledge later for the sake of Islam's unity. His forbearance — recorded movingly in Nahj al-Balagha — is itself read as a model of placing the umma above the self.`,
+        ar: `في الرأي الشيعيّ، كان النبيّ قد نصّ على عليّ في غدير خُمّ، فجاءت السقيفة لتُنحّي ذلك النصّ. ورأى عليّ أنّ النزاع المكشوف أخطرُ على أمّةٍ هشّةٍ من الصبر، فكفّ عن المواجهة، وأعطى بيعته لاحقاً من أجل وحدة الإسلام. وصبرُه — المرويّ بمرارةٍ مؤثّرةٍ في نهج البلاغة — يُقرأ نموذجاً في تقديم الأمّة على النفس.`,
+      },
+      sources: {
+        sunni: 'Ṣaḥīḥ al-Bukhārī (the Saqifa report) · al-Ṭabarī, Tārīkh',
+        shia: 'al-Irshād (al-Mufīd) · Nahj al-Balāgha (Sermon 3) · al-Yaʿqūbī, Tārīkh',
+      },
+    },
+  },
+
+  {
+    id: 'fadak',
+    title: {
+      en: 'Fadak',
+      ar: 'فَدَك',
+    },
+    dateline: { en: '11 AH · 632 CE · Madinah', ar: '١١هـ · ٦٣٢م · المدينة' },
+    body: {
+      en: `Fadak was a fertile estate near Khaybar that had come to the Prophet ﷺ without warfare. After his death, his daughter Fatima (peace be upon her) regarded it as hers — whether as a gift given in his lifetime or as inheritance — and raised the matter with the new caliphate. Abu Bakr declined the claim, citing a report from the Prophet that prophets leave no inheritance: "What we leave behind is charity."
+
+The dispute over Fadak became one of the tender wounds of early Islamic history — remembered very differently by the two traditions, yet with shared reverence for Fatima herself.`,
+      ar: `كانت فدك ضيعةً خصبةً قرب خيبر آلت إلى النبيّ ﷺ من غير قتال. وبعد وفاته، عدّتها ابنته فاطمة (عليها السلام) لها — إمّا عطيّةً أعطاها إيّاها في حياته، وإمّا ميراثاً — ورفعت الأمر إلى الخلافة الجديدة. فامتنع أبو بكر عن إجابة الطلب، محتجّاً برواية عن النبيّ أنّ الأنبياء لا يُورِّثون: «ما تركناه صدقة».
+
+صار النزاع على فدك من الجراح الغائرة في تاريخ الإسلام المبكّر — يُذكَر على نحوَين مختلفَين جدّاً، مع إجلالٍ مشترَكٍ لفاطمة نفسها.`,
+    },
+    perspectives: {
+      reviewPending: true,
+      shared: {
+        en: `Both traditions record the dispute over Fadak, both hold Fatima in the very highest honour as the beloved daughter of the Prophet and "the chief of the women of Paradise," and both acknowledge the matter caused her grief. Reverence for Fatima is common ground; the reading of the decision is where the traditions differ.`,
+        ar: `يُسجّل التقليدان النزاع على فدك، ويُجلّان فاطمة أعلى الإجلال بوصفها ابنة النبيّ الحبيبة و«سيّدة نساء أهل الجنّة»، ويُقرّان بأنّ الأمر أحزنها. فإجلال فاطمة أرضٌ مشترَكة؛ وإنّما يختلف التقليدان في قراءة القرار.`,
+      },
+      sunni: {
+        en: `In the Sunni view, Abu Bakr acted on an authentic prophetic hadith that the estates of prophets are not inherited but become public charity. He bore no animosity toward the Prophet's family, whom he is recorded as loving and protecting; later caliphs administered Fadak as a charitable trust serving the community. The decision is seen as fidelity to the Prophet's own words, not a slight.`,
+        ar: `في الرأي السنّيّ، عمل أبو بكر بحديثٍ نبويٍّ صحيحٍ أنّ تركات الأنبياء لا تُورَّث بل تصير صدقةً عامّة. ولم يحمل عداوةً لآل النبيّ، بل رُوي عنه حبّهم وحمايتهم؛ وأدار الخلفاء بعده فدك وقفاً خيريّاً يخدم الأمّة. ويُرى القرار وفاءً لكلام النبيّ نفسه، لا انتقاصاً.`,
+      },
+      shia: {
+        en: `In the Shia view, Fadak was a gift the Prophet had given Fatima in his lifetime — connected to the command to "give the kinsman his due" — so it was not a question of inheritance at all. The denial is read as a serious wrong against the Prophet's household, and Fatima's address on the matter, the Fadakiyya sermon, is remembered as a landmark of eloquence and conscience.`,
+        ar: `في الرأي الشيعيّ، كانت فدك عطيّةً أعطاها النبيّ فاطمة في حياته — متّصلةً بأمر «وآتِ ذا القُربى حقّه» — فلم تكن مسألة ميراثٍ أصلاً. ويُقرأ المنعُ ظُلماً جسيماً لأهل بيت النبيّ، وتُذكَر خطبة فاطمة في ذلك — الخطبة الفدكيّة — معلماً من معالم البلاغة والضمير.`,
+      },
+      sources: {
+        sunni: 'Ṣaḥīḥ al-Bukhārī & Ṣaḥīḥ Muslim (ḥadīth "lā nūrithu")',
+        shia: 'al-Ṣadūq (al-Amālī) · the Fadakiyya sermon as recorded in Shia sources',
+      },
+    },
+  },
+
+  {
+    id: 'shura-uthman',
+    title: {
+      en: 'The Shura & Uthman’s Caliphate',
+      ar: 'الشورى وخلافة عثمان',
+    },
+    dateline: { en: '23–35 AH · 644–656 CE · Madinah', ar: '٢٣–٣٥هـ · ٦٤٤–٦٥٦م · المدينة' },
+    body: {
+      en: `When Umar was fatally stabbed in 644, he named a council of six senior Companions — Ali and Uthman among them — to choose the next Caliph from among themselves. After consultation led by Abd al-Rahman ibn Awf, the choice fell to Uthman ibn Affan: the modest early convert, twice a son-in-law of the Prophet, known as Dhu al-Nurayn — "Possessor of the Two Lights."
+
+Uthman's twelve-year caliphate saw the empire expand and, most enduringly, the Qur'an gathered into a single standardized text that every Muslim has recited ever since. His later years drew grievances over the appointment of kinsmen to high office. In 656, rebels besieged his house in Madinah and killed him — the act that opened the door to civil war.`,
+      ar: `لمّا طُعن عمر طعنته القاتلة سنة ٦٤٤م، عيّن مجلساً من ستّةٍ من كبار الصحابة — منهم عليّ وعثمان — ليختاروا الخليفة من بينهم. وبعد مشاورةٍ قادها عبد الرحمن بن عوف، وقع الاختيار على عثمان بن عفّان: السابق إلى الإسلام المتواضع، وصِهر النبيّ مرّتين، الملقّب بذي النورَين.
+
+وشهدت خلافته التي امتدّت اثنتي عشرة سنةً اتّساع الدولة، وأبقى أثراً باقياً: جمعَ القرآن في مصحفٍ موحَّدٍ يقرؤه كلّ مسلمٍ منذ ذلك الحين. ثمّ أثارت سنواته الأخيرة شكاوى من تولية أقاربه المناصب. وفي سنة ٦٥٦م حاصر الثوّار بيته في المدينة وقتلوه — وهو الفعل الذي فتح باب الحرب الأهليّة.`,
+    },
+    perspectives: {
+      reviewPending: true,
+      shared: {
+        en: `Both traditions honour Uthman as the third Rightly-Guided Caliph and owe him an immense debt for standardizing the Qur'an. Both condemn his murder as a grave crime. And both record that Ali opposed the killing — sending his sons Hasan and Husayn to help guard Uthman's door during the siege.`,
+        ar: `يُجلّ التقليدان عثمان بوصفه الخليفة الثالث الراشد، ولهما عليه دَينٌ عظيمٌ في توحيد مصحف القرآن. ويُدين التقليدان قتله بوصفه جريمةً جسيمة. ويُسجّلان أنّ عليّاً عارض القتل — فأرسل ابنيه الحسن والحسين للمعاونة في حراسة باب عثمان أثناء الحصار.`,
+      },
+      sunni: {
+        en: `In the Sunni view, Uthman was a worthy, gentle, and generous Caliph chosen through rightful consultation. His later troubles were stirred up by agitators and rebels rather than by his own failings, and he met his death as a patient martyr who refused to shed Muslim blood in his own defence.`,
+        ar: `في الرأي السنّيّ، كان عثمان خليفةً جليلاً ليّناً كريماً اختير بشورى حقّة. وأُثيرت محنته الأخيرة على يد مُحرّضين وثوّارٍ لا بتقصيرٍ منه، ولقي مَنيّته شهيداً صابراً أبى أن يُسفك في الدفاع عنه دمُ مسلم.`,
+      },
+      shia: {
+        en: `In the Shia view, Ali was passed over a third time — the council's condition to follow "the way of the two predecessors" effectively set him aside — and the elevation of Uthman's Umayyad kin to power sowed the discord that later erupted. Yet Ali defended Uthman's life and had no hand whatever in his death.`,
+        ar: `في الرأي الشيعيّ، أُقصي عليّ مرّةً ثالثة — إذ كان شرط المجلس باتّباع «سيرة الشيخَين» إبعاداً له في الواقع — وكان رفعُ أقارب عثمان الأمويّين إلى السلطة بذرةَ الفتنة التي انفجرت لاحقاً. ومع ذلك دافع عليّ عن حياة عثمان ولم تكن له في مقتله يدٌ البتّة.`,
+      },
+      sources: {
+        sunni: 'Ṣaḥīḥ al-Bukhārī · al-Ṭabarī, Tārīkh · Ibn Kathīr',
+        shia: 'Nahj al-Balāgha (Sermon 3, al-Shiqshiqiyya) · al-Yaʿqūbī · al-Mufīd',
+      },
+    },
   },
 
   {
@@ -272,6 +427,25 @@ These three wars were among the heaviest weights Ali carried. He referred to him
 
 كانت هذه الحروب الثلاث من أثقل ما حمله عليّ. وكان يصف نفسه كثيراً في تلك الفترة بأنّه طبيبٌ "بدوائه على عاتقه".`,
     },
+    perspectives: {
+      reviewPending: true,
+      shared: {
+        en: `Both traditions record the three conflicts — the Camel, Siffin, and Nahrawan — both affirm that Ali was the legitimate Caliph, both note that he sought reconciliation and sent envoys before any fighting, and both grieve deeply over the bloodshed between Muslims. The disagreement is not over the events but over how to judge those who opposed him.`,
+        ar: `يُسجّل التقليدان النزاعات الثلاثة — الجمل وصفّين والنهروان — ويؤكّدان أنّ عليّاً كان الخليفة الشرعيّ، ويذكران أنّه سعى إلى الصلح وأرسل السفراء قبل أيّ قتال، ويحزنان حزناً عميقاً على الدماء التي سُفكت بين المسلمين. والخلاف ليس في الأحداث، بل في الحكم على من ناوأه.`,
+      },
+      sunni: {
+        en: `In the Sunni view, these were tragic disputes among sincere Companions exercising their best judgement (ijtihad). Sunni doctrine holds Ali was nearer the truth, yet withholds final condemnation and asks God's mercy on all parties; Aisha, Talha, Zubayr, and Mu'awiya remain honoured Companions whose intentions are left to God.`,
+        ar: `في الرأي السنّيّ، كانت هذه نزاعاتٍ مأساويّةً بين صحابةٍ مخلصين اجتهدوا برأيهم. ويرى أهل السنّة أنّ عليّاً كان أقربَ إلى الحقّ، لكنّهم يكفّون عن الإدانة النهائيّة ويسألون الله الرحمة للجميع؛ وتبقى عائشة وطلحة والزبير ومعاوية صحابةً مُجلّين تُوكَل نيّاتهم إلى الله.`,
+      },
+      shia: {
+        en: `In the Shia view, Ali was the rightful Imam whose authority was binding, so those who took up arms against him had transgressed, and the Khawarij who turned on him were misguided. His patience, his repeated calls to peace, and his justice toward even his enemies are read as proofs of his Imamate.`,
+        ar: `في الرأي الشيعيّ، كان عليّ الإمامَ الحقَّ الذي تجب طاعته، فمن حمل السلاح عليه قد بغى، والخوارجُ الذين انقلبوا عليه كانوا ضالّين. ويُقرأ صبرُه، ودعواتُه المتكرّرة إلى السلم، وعدلُه حتّى مع أعدائه، أدلّةً على إمامته.`,
+      },
+      sources: {
+        sunni: 'Ṣaḥīḥ al-Bukhārī (Kitāb al-Fitan) · al-Ṭabarī · Ibn Kathīr',
+        shia: 'Nahj al-Balāgha (sermons on the Camel & Siffin) · al-Mufīd, al-Jamal',
+      },
+    },
   },
 
   {
@@ -339,6 +513,25 @@ The family of Ali and Fatima — the Ahl al-Bayt as the tradition has called the
 **أمّ كلثوم بنت عليّ** — وُلدت ~٦٣٠م. تزوّجت عمر بن الخطّاب — زيجةٌ أشار إليها بعض المؤرّخين على أنّها لحظة مصالحةٍ بين أهل بيت النبيّ والخليفة الثاني. تُوفّيت في المدينة.
 
 صارت عائلة عليٍّ وفاطمة — "أهل البيت" كما سمّتهم التقليد — واحدةً من أهمّ السلاسل الروحيّة المركزيّة في الإسلام.`,
+    },
+    perspectives: {
+      reviewPending: true,
+      shared: {
+        en: `Both Sunni and Shia revere Hasan and Husayn as the beloved grandsons of the Prophet, "the two masters of the youth of Paradise." Both regard the killing of Husayn at Karbala as one of history's great crimes and mourn it deeply. And both honour the Family of the Prophet (Ahl al-Bayt), invoking blessings upon them in every prayer.`,
+        ar: `يُجلّ التقليدان السنّيّ والشيعيّ الحسنَ والحسين بوصفهما سِبطَي النبيّ الحبيبَين، «سيّدَي شباب أهل الجنّة». ويرى التقليدان في قتل الحسين بكربلاء واحدةً من كبرى جرائم التاريخ، ويبكيانها بعمق. ويُكرّمان آل بيت النبيّ، ويُصلّيان عليهم في كلّ صلاة.`,
+      },
+      sunni: {
+        en: `Sunnis love and honour the Ahl al-Bayt and grieve Karbala as a terrible wrong, holding Husayn a martyr who refused to legitimize an unjust ruler. This reverence is expressed within the broader honouring of the Prophet's Companions and household, without a separate institution of mourning.`,
+        ar: `يحبّ أهل السنّة آل البيت ويُكرّمونهم، ويحزنون على كربلاء بوصفها ظُلماً فظيعاً، ويرون الحسين شهيداً أبى أن يُضفي الشرعيّة على حاكمٍ ظالم. ويُعبَّر عن هذا الإجلال ضمن التوقير الأوسع لصحابة النبيّ وأهل بيته، من غير مؤسّسةِ عزاءٍ مستقلّة.`,
+      },
+      shia: {
+        en: `For Shia Muslims, Karbala is the spiritual heart of the faith — Husayn's sacrifice to awaken the conscience of the umma against tyranny. Ashura (10 Muharram) and Arba'in are the year's most profound commemorations, and the Imamate of the Ahl al-Bayt is a foundation of belief.`,
+        ar: `أمّا عند الشيعة، فكربلاء قلبُ الإيمان الروحيّ — تضحيةُ الحسين لإيقاظ ضمير الأمّة في وجه الطغيان. وعاشوراء (العاشر من محرّم) والأربعين أعظمُ مواسم العزاء في السنة، وإمامةُ أهل البيت أصلٌ من أصول الاعتقاد.`,
+      },
+      sources: {
+        sunni: 'Ṣaḥīḥ al-Bukhārī & Sunan al-Tirmidhī (virtues of Ḥasan & Ḥusayn) · al-Ṭabarī',
+        shia: 'al-Irshād (al-Mufīd) · the Maqtal al-Ḥusayn tradition',
+      },
     },
   },
 
