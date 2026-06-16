@@ -11,18 +11,15 @@
 // pronunciation, elongation, or articulation. It helps you learn the
 // *words* of a du'a; it is no substitute for a qari.
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import ServiceNav from '../components/ServiceNav'
+import RecitationModal from '../components/RecitationModal'
 import { BASELINE_DUAS } from '../lib/prompts/baseline-corpus'
 import { useAudioPlayer } from '../hooks/useAudioPlayer'
 import { useSpeechRecognition } from '../hooks/useSpeechRecognition'
-import {
-  scoreRecitation,
-  splitIntoPhrases,
-  type RecitationScore,
-} from '../lib/arabicCompare'
+import { splitIntoPhrases, type RecitationScore } from '../lib/arabicCompare'
 import { callClaude } from '../lib/claude'
 import { cleanForTTS } from '../lib/cleanForTTS'
 import { getOrCreateUserId } from '../lib/userId'
@@ -126,34 +123,16 @@ function ReciteOne({
   const speech = useSpeechRecognition()
   const userId = useMemo(() => getOrCreateUserId(), [])
 
-  const [activeIdx, setActiveIdx] = useState<number | null>(null)
   const [scores, setScores] = useState<Record<number, RecitationScore>>({})
   const [listeningId, setListeningId] = useState<string | null>(null)
-  const transcriptRef = useRef('')
-  const activeRef = useRef<number | null>(null)
+  const [modalIdx, setModalIdx] = useState<number | null>(null)
 
   // Companion guidance state
   const [feedback, setFeedback] = useState('')
   const [feedbackBusy, setFeedbackBusy] = useState(false)
   const [feedbackErr, setFeedbackErr] = useState('')
 
-  // When listening ends (manual stop or silence timeout), finalize the
-  // score for the phrase that was active.
-  useEffect(() => {
-    if (speech.listening) return
-    const idx = activeRef.current
-    if (idx === null) return
-    const heard = transcriptRef.current.trim()
-    if (heard) {
-      setScores((s) => ({ ...s, [idx]: scoreRecitation(phrases[idx], heard) }))
-    }
-    activeRef.current = null
-    setActiveIdx(null)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [speech.listening])
-
   function listen(i: number, text: string) {
-    if (speech.listening) speech.stop()
     stopAudio()
     setListeningId(null)
     const id = `${i}`
@@ -161,24 +140,11 @@ function ReciteOne({
     void play(text, lang, 'verse').finally(() => setListeningId(null))
   }
 
-  function recite(i: number) {
-    // Toggle off if already reciting this phrase
-    if (speech.listening && activeRef.current === i) {
-      speech.stop()
-      return
-    }
+  // Open the focused recitation popup (follow-along + recite) for a phrase.
+  function openRecite(i: number) {
     stopAudio()
-    transcriptRef.current = ''
-    activeRef.current = i
-    setActiveIdx(i)
-    setScores((s) => {
-      const next = { ...s }
-      delete next[i]
-      return next
-    })
-    speech.start('ar', (chunk) => {
-      transcriptRef.current = (transcriptRef.current + ' ' + chunk).trim()
-    })
+    setListeningId(null)
+    setModalIdx(i)
   }
 
   async function getGuidance() {
@@ -263,7 +229,6 @@ function ReciteOne({
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           {phrases.map((phrase, i) => {
             const score = scores[i]
-            const isReciting = activeIdx === i && speech.listening
             return (
               <div
                 key={i}
@@ -303,23 +268,6 @@ function ReciteOne({
                     : <span style={{ color: 'var(--gold)' }}>{phrase}</span>}
                 </div>
 
-                {/* Live interim transcript while reciting */}
-                {isReciting && (
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-arabic)',
-                      fontSize: 13,
-                      color: 'var(--muted)',
-                      direction: 'rtl',
-                      textAlign: 'right',
-                      minHeight: 18,
-                      marginBottom: 10,
-                    }}
-                  >
-                    {speech.interim || (isAr ? '… أنصت' : '… listening')}
-                  </div>
-                )}
-
                 {/* Score line */}
                 {score && (
                   <div style={{ fontSize: 11, color: 'var(--muted)', marginBottom: 10 }}>
@@ -337,13 +285,8 @@ function ReciteOne({
                       : isAr ? '🔊 استمع' : '🔊 Listen'}
                   </button>
                   {speech.supported && (
-                    <button
-                      onClick={() => recite(i)}
-                      style={ctrlStyle(isReciting, isReciting ? '#c94a4a' : undefined)}
-                    >
-                      {isReciting
-                        ? isAr ? '⏹ أوقف' : '⏹ Stop'
-                        : isAr ? '🎙️ تلُ الآن' : '🎙️ Recite'}
+                    <button onClick={() => openRecite(i)} style={ctrlStyle(false)}>
+                      {isAr ? '🎙️ تلُ الآن' : '🎙️ Recite'}
                     </button>
                   )}
                 </div>
@@ -411,6 +354,17 @@ function ReciteOne({
         )}
       </main>
       <ServiceNav />
+
+      {modalIdx !== null && (
+        <RecitationModal
+          phrase={phrases[modalIdx]}
+          lang={lang}
+          onClose={() => setModalIdx(null)}
+          onScore={(score) =>
+            setScores((s) => ({ ...s, [modalIdx]: score }))
+          }
+        />
+      )}
     </>
   )
 }
