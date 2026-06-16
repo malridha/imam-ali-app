@@ -9,6 +9,7 @@ import Teachings from './pages/Teachings'
 import Search from './pages/Search'
 import Discuss from './pages/Discuss'
 import Recite from './pages/Recite'
+import Teaching from './pages/Teaching'
 
 export default function App() {
   return (
@@ -37,6 +38,8 @@ export default function App() {
       <Route path="/discuss" element={<Discuss />} />
       {/* v49 §78 — Du'a recitation coach: recite along, word-accuracy + AI guidance */}
       <Route path="/recite" element={<Recite />} />
+      {/* v49 §79 — Single-teaching page (one teaching per page, flip + explain) */}
+      <Route path="/teaching" element={<Teaching />} />
     </Routes>
   )
 }

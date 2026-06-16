@@ -15,6 +15,7 @@ import {
   DUA_SECTION,
   LETTERS_SECTION,
   SERMONS_SECTION,
+  ALL_WISDOM,
   type TeachingsTheme,
   type LongFormSection,
 } from '../data/teachings'
@@ -387,6 +388,16 @@ export default function Teachings() {
                   )
                 }
                 const isDuaSection = section.id === 'duas'
+                const isPoetrySection = section.id === 'poetry'
+                const openFor = (entry: BaselineEntry) => {
+                  const type = isDuaSection ? 'dua' : isPoetrySection ? 'poetry' : 'wisdom'
+                  const arr = isDuaSection
+                    ? DUA_SECTION.entries
+                    : isPoetrySection
+                      ? POETRY_SECTION.entries
+                      : ALL_WISDOM
+                  navigate(`/teaching?type=${type}&i=${arr.indexOf(entry)}`)
+                }
                 return (
                   <>
                     {section.entries.slice(0, limit).map((entry, i) => (
@@ -396,6 +407,7 @@ export default function Teachings() {
                         id={`${section.id}-${i}`}
                         speakingId={speakingId}
                         onSpeak={speak}
+                        onOpen={() => openFor(entry)}
                         onDiscuss={() => discussEntry(entry)}
                         onRecite={
                           isDuaSection
@@ -441,6 +453,7 @@ function TeachingCard({
   id,
   speakingId,
   onSpeak,
+  onOpen,
   onDiscuss,
   onRecite,
   lang,
@@ -449,6 +462,7 @@ function TeachingCard({
   id: string
   speakingId: string | null
   onSpeak: (id: string, text: string, useAr?: boolean) => void
+  onOpen?: () => void
   onDiscuss?: () => void
   onRecite?: () => void
   lang: 'en' | 'ar'
@@ -468,6 +482,8 @@ function TeachingCard({
         marginBottom: 12,
       }}
     >
+      {/* Tap the teaching text to open it on its own page */}
+      <div onClick={onOpen} style={{ cursor: onOpen ? 'pointer' : 'default' }}>
       {/* Arabic — full diacritics */}
       <div
         style={{
@@ -510,9 +526,15 @@ function TeachingCard({
       >
         — {entry.source}
       </div>
+      </div>
 
       {/* Controls */}
       <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+        {onOpen && (
+          <button onClick={onOpen} style={secondaryBtn}>
+            {isAr ? 'افتح ›' : 'Open ›'}
+          </button>
+        )}
         <button
           onClick={() => onSpeak(`${id}-ar`, entry.arabic, true)}
           style={{
