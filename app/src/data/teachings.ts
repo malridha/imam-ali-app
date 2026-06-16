@@ -137,6 +137,27 @@ function entriesMatching(keywords: string[]): BaselineEntry[] {
 // ── Themed library — what the user sees on the Teachings page.
 export const TEACHINGS_THEMES: TeachingsTheme[] = [
   {
+    id: 'philosophy',
+    title: { en: 'Philosophy & the Examined Life', ar: 'الفلسفة والحياة المُتأمَّلة' },
+    lead: {
+      en: 'On reason, the soul, knowledge, and what gives a life its meaning — the philosophical heart of his thought.',
+      ar: 'في العقل والنفس والمعرفة وما يمنح الحياة معناها — القلب الفلسفيّ لفكره.',
+    },
+    entries: entriesMatching([
+      'reason',
+      'intellect',
+      'the mind',
+      'the soul',
+      'self-knowledge',
+      'knowing yourself',
+      'the inner life',
+      'the examined',
+      'when logic must lead',
+      'wisdom must be lived',
+      'the hidden self',
+    ]),
+  },
+  {
     id: 'patience-grief',
     title: { en: 'On Patience and Grief', ar: 'في الصبر والحزن' },
     lead: {

@@ -31,6 +31,7 @@ type ShortSection = TeachingsTheme | typeof POETRY_SECTION | typeof DUA_SECTION
 // section's anchor id so a tap scrolls straight to that category.
 const CATEGORY_CHIPS: { id: string; label: { en: string; ar: string } }[] = [
   { id: 'duas', label: { en: "Du'as", ar: 'أدعية' } },
+  { id: 'philosophy', label: { en: 'Philosophy', ar: 'الفلسفة' } },
   { id: TEACHINGS_THEMES[0]?.id ?? 'duas', label: { en: 'By Theme', ar: 'حسب الموضوع' } },
   { id: 'src-ghurar', label: { en: 'Ghurar al-Hikam', ar: 'غرر الحكم' } },
   { id: 'src-nahj-sayings', label: { en: 'Nahj — Sayings', ar: 'نهج — الحكم' } },
@@ -183,7 +184,7 @@ export default function Teachings() {
               lineHeight: 1.4,
             }}
           >
-            {isAr ? 'الحكمة والأدعية والشعر' : 'Wisdom, Du\'as, and Poetry'}
+            {isAr ? 'تعاليم الإمام علي' : 'The Teachings of Imam Ali'}
           </h1>
           <div
             style={{
@@ -197,8 +198,8 @@ export default function Teachings() {
             }}
           >
             {isAr
-              ? 'مكتبة منسّقة من تعاليم الإمام عليّ (عليه السلام). تنمو هذه المكتبة بمرور الوقت — تبدأ صغيرة وتتوسّع باستمرار.'
-              : "A curated library from Imam Ali's authenticated teachings. The library grows over time — it begins small and expands as we add more."}
+              ? 'حِكَمه وفلسفته وأدعيته وشِعره ورسائله وخطبه — مصدرها موثّق، مرتّبة لتقرأها أو تتأمّلها أو تتحاور فيها مع الرفيق.'
+              : "His wisdom and philosophy, du'as, poetry, letters, and sermons — all authenticated, arranged to read, reflect on, or talk through with the companion."}
           </div>
         </div>
 

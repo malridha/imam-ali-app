@@ -162,8 +162,8 @@ export const T = {
   // Ali" — he is a companion carrying the light of Imam Ali's wisdom.
   // Shorter than the v18 version, which also helps timing.
   greetingIntro: {
-    en: "Peace be upon you. I am a companion carrying the light of Imam Ali's wisdom. I am here to listen, and to walk with you in what you carry.",
-    ar: 'السلام عليكم. أنا رفيق يحمل نور حكمة الإمام علي (عليه السلام). أنا هنا لأُصغي، ولأمشي معك فيما تحمله.',
+    en: "Peace be upon you, and welcome. I am a companion carrying the light of Imam Ali's wisdom — his teachings, the stories of his life, his poetry, and questions worth turning over together. I am so glad you are here.",
+    ar: 'السلام عليكم، وأهلاً بك. أنا رفيق أحمل نور حكمة الإمام علي (عليه السلام) — حِكَمه وقصص سيرته وشِعره وأسئلةً تستحقّ أن نتأمّلها معاً. يسعدني كثيراً أنك هنا.',
   },
   // v45 — The entry invocation. Replaces the plain "tap to enter"
   // line with a poetic invitation that holds the entire intent of
