@@ -133,10 +133,16 @@ export default function RecitationModal({
     setLiveScore(scoreRecitation(phrase, ''))
     recitingRef.current = true
     setMode('reciting')
-    speech.start('ar', (chunk) => {
-      transcriptRef.current = (transcriptRef.current + ' ' + chunk).trim()
-      setLiveScore(scoreRecitation(phrase, transcriptRef.current))
-    })
+    // holdUntilStopped: keep listening through pauses until the user taps
+    // Stop — recitation shouldn't cut off after a brief silence.
+    speech.start(
+      'ar',
+      (chunk) => {
+        transcriptRef.current = (transcriptRef.current + ' ' + chunk).trim()
+        setLiveScore(scoreRecitation(phrase, transcriptRef.current))
+      },
+      { holdUntilStopped: true },
+    )
   }, [phrase, cleanupAudio, speech])
 
   // Auto-start the follow-along recitation when the popup opens (the tap
