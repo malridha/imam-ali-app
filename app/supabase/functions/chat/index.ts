@@ -17,15 +17,14 @@ import { updateTSP, type TSP } from './tsp.ts'
 
 const ANTHROPIC_ENDPOINT = 'https://api.anthropic.com/v1/messages'
 const ANTHROPIC_VERSION = '2023-06-01'
-// v49 — chat uses a faster model (Haiku) for lower latency. Override the id
-// at runtime with the CHAT_MODEL secret if it needs adjusting without a
-// redeploy. Falls back to the previous Sonnet id if Haiku is ever unset.
+// v49 — chat model is runtime-configurable via the CHAT_MODEL secret.
+// Default is Sonnet, whose large context fits the full baseline-corpus
+// system prompt (~203K tokens). Haiku (200K limit) only works once that
+// prompt is trimmed — set CHAT_MODEL=claude-haiku-4-5 after trimming.
 const CHAT_MODEL =
   // @ts-expect-error Deno global in Edge Functions
   (typeof Deno !== 'undefined' && Deno.env.get('CHAT_MODEL')) ||
-  'claude-haiku-4-5'
-const FALLBACK_MODEL = 'claude-sonnet-4-6'
-void FALLBACK_MODEL
+  'claude-sonnet-4-6'
 
 const RETRIEVAL_THRESHOLD = 0.5
 const RETRIEVAL_LIMIT = 5
