@@ -261,16 +261,18 @@ export default function Companion() {
       return
     }
 
-    // ── Branch B: classic flow — stream the path-specific opener.
-    void streamTurn({
-      send: [{ role: 'user', content: prompt.opener }],
-      // No retrievalQuery for the opener — it's a meta-prompt, not a user
-      // message worth grounding against the corpus.
-      historyOnDone: (raw) => [
-        { role: 'user', content: prompt.opener },
-        { role: 'assistant', content: raw },
-      ],
-    })
+    // ── Branch B: the opener is a FIXED welcome. Render it directly instead
+    // of spending a full (~200K-token corpus) LLM call just to reproduce a
+    // fixed greeting — instant for the user, and free. History is seeded so
+    // the next message continues the conversation naturally.
+    const greeting = T.openerGreeting[lang]
+    setMessages([{ id: nextId.current++, role: 'ali', text: greeting }])
+    setState('peace')
+    setHistory([
+      { role: 'user', content: prompt.opener },
+      { role: 'assistant', content: greeting },
+    ])
+    if (greeting) void playAudio(cleanForTTS(greeting, lang), lang, 'salam')
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [prompt])
 

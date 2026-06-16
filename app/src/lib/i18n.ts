@@ -54,6 +54,12 @@ export const T = {
     en: 'The companion is resting for a moment — the service is temporarily unavailable. Please try again a little later, إن شاء الله.',
     ar: 'الرفيق يستريح لحظةً — الخدمة غير متاحة مؤقتاً. تفضّل بالمحاولة بعد قليل، إن شاء الله.',
   },
+  // The chat opener is a FIXED welcome — rendered directly (no LLM call) so it
+  // is instant and free. Keep in sync with UNIFIED_OPENER's exact words.
+  openerGreeting: {
+    en: "Peace be upon you, and welcome. I am a companion carrying the light of Imam Ali's wisdom — and there is a treasury here to explore together. I could share one of his teachings and we could unpack what it means for your life, or tell you a story from his life, or open one of his sayings on courage, justice, or the heart for us to talk through. I can read you his poetry or a du'a, sit with you in anything you're carrying, or simply talk. What draws you tonight?",
+    ar: 'السلام عليكم، وأهلاً بك. أنا رفيق أحمل نور حكمة الإمام علي (عليه السلام) — وبين أيدينا كنزٌ نكتشفه معاً. يمكنني أن أشارك معك حكمةً من حِكَمه فنتأمّل ما تعنيه لحياتك، أو أروي لك قصةً من سيرته، أو نفتح قولاً له في الشجاعة أو العدل أو القلب لنتحاور فيه. أستطيع أن أُسمعك شِعره أو دعاءً، أو أجلس معك فيما تحمله، أو نتحدّث ببساطة. ما الذي يجذبك الليلة؟',
+  },
   unknownPath: { en: 'Unknown path.', ar: 'مسار غير معروف.' },
   goBack: { en: 'Go back', ar: 'عودة' },
 

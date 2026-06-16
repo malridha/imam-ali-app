@@ -261,8 +261,8 @@ async function retrieveTeachings(query: string): Promise<Match[]> {
   }))
 }
 
-function buildAugmentedSystem(baseSystem: string, matches: Match[]): string {
-  if (matches.length === 0) return baseSystem
+function buildRetrievalBlock(matches: Match[]): string {
+  if (matches.length === 0) return ''
 
   // Context Explainer (Agent 3): each retrieved teaching carries its
   // historical context and plain-language bridge so the companion frames
@@ -280,18 +280,13 @@ function buildAugmentedSystem(baseSystem: string, matches: Match[]): string {
     })
     .join('\n\n')
 
-  return (
-    baseSystem +
-    `
-
-=== RETRIEVED AUTHENTICATED TEACHINGS ===
+  return `=== RETRIEVED AUTHENTICATED TEACHINGS ===
 The following verified teachings from the authenticated corpus are most relevant to the user's current message. You may ONLY use these when citing Arabic from Imam Ali (عليه السلام) using the VERSE::: format. The Arabic in your VERSE::: block MUST match one of these EXACTLY. If none truly fits the situation, do NOT invent or paraphrase a source — instead introduce the wisdom with "In the spirit of his wisdom:" and omit the VERSE::: block entirely.
 
 When you do cite a teaching, you MAY draw on its "Context" (when/why it was said) and its "Bridge" (modern, plain-language explanation) to frame the wisdom living rather than decorative — but never copy that text verbatim. Rewrite it for this user, in their words, for their situation.
 
 ${blocks}
 === END RETRIEVED TEACHINGS ===`
-  )
 }
 
 // ─── Verification (Agent 2) ────────────────────────────────────────────────
@@ -457,16 +452,18 @@ Deno.serve(async (req: Request) => {
     })
   }
 
-  // ── Normal flow
-  let system = body.system
-
-  // Memory: pull recent session summaries for this user and prepend to the
-  // system prompt. We only do this for known users.
+  // ── Normal flow. Build the system prompt as CACHE-AWARE blocks so the huge
+  // static baseline corpus (~200K tokens) is billed at ~1/10th the price on
+  // repeat calls within the cache window, instead of full price every time:
+  //   [0] the static corpus + instructions (body.system) — marked cacheable
+  //   [1] per-user memory (variable)        — after the cache breakpoint
+  //   [2] per-query retrieved teachings (variable)
   let memoryUsed = 0
+  let memoryText = ''
   if (body.user_id) {
     const summaries = await fetchRecentSummaries(body.user_id, 3)
     if (summaries.length > 0) {
-      system = formatMemoryBlock(summaries, lang) + '\n\n' + system
+      memoryText = formatMemoryBlock(summaries, lang)
       memoryUsed = summaries.length
     }
   }
@@ -474,8 +471,18 @@ Deno.serve(async (req: Request) => {
   let matches: Match[] = []
   if (body.retrieval_query && body.retrieval_query.trim()) {
     matches = await retrieveTeachings(body.retrieval_query.trim())
-    system = buildAugmentedSystem(system, matches)
   }
+
+  const systemParam: Array<Record<string, unknown>> = [
+    {
+      type: 'text',
+      text: body.system,
+      cache_control: { type: 'ephemeral' },
+    },
+  ]
+  if (memoryText) systemParam.push({ type: 'text', text: memoryText })
+  const retrievalText = buildRetrievalBlock(matches)
+  if (retrievalText) systemParam.push({ type: 'text', text: retrievalText })
 
   // ── Streaming path (v49): proxy Anthropic's SSE straight to the client so
   // the first words appear in well under a second. Verse-card verification
@@ -493,7 +500,7 @@ Deno.serve(async (req: Request) => {
         model: CHAT_MODEL,
         max_tokens: body.max_tokens ?? 350,
         temperature: body.temperature ?? 0.5,
-        system,
+        system: systemParam,
         messages: body.messages,
         stream: true,
       }),
@@ -526,7 +533,7 @@ Deno.serve(async (req: Request) => {
       model: CHAT_MODEL,
       max_tokens: body.max_tokens ?? 500,
       temperature: body.temperature ?? 0.5,
-      system,
+      system: systemParam,
       messages: body.messages,
     }),
   })
