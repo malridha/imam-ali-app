@@ -10,6 +10,7 @@ import Search from './pages/Search'
 import Discuss from './pages/Discuss'
 import Recite from './pages/Recite'
 import Teaching from './pages/Teaching'
+import Family from './pages/Family'
 
 export default function App() {
   return (
@@ -30,6 +31,8 @@ export default function App() {
       <Route path="/privacy" element={<Privacy />} />
       {/* v46 §74 — Biography of Imam Ali */}
       <Route path="/biography" element={<Biography />} />
+      {/* v49 §80 — Family tree (parents, wives, children) */}
+      <Route path="/family" element={<Family />} />
       {/* v46 §75 — Teachings library */}
       <Route path="/teachings" element={<Teachings />} />
       {/* v48 §76 — Global search across wisdom + du'as + poetry + letters + sermons + biography */}

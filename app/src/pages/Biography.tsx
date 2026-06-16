@@ -89,6 +89,27 @@ export default function Biography() {
           </div>
         </div>
 
+        {/* Family tree entry point */}
+        <button
+          onClick={() => navigate('/family')}
+          style={{
+            width: '100%',
+            padding: '12px 16px',
+            marginBottom: '1.2rem',
+            borderRadius: 10,
+            border: '1px solid var(--gold)',
+            background: 'rgba(212,179,100,0.12)',
+            color: 'var(--gold)',
+            cursor: 'pointer',
+            fontSize: 13,
+            fontWeight: 600,
+            letterSpacing: '0.02em',
+            fontFamily: isAr ? 'var(--font-arabic-ui)' : undefined,
+          }}
+        >
+          🌳 {isAr ? 'شجرة العائلة — الوالدان والأزواج والأبناء' : 'Family Tree — parents, wives & children'}
+        </button>
+
         {/* Table of contents */}
         <div
           style={{
@@ -188,7 +209,7 @@ export default function Biography() {
                 }}
               />
 
-              <div style={{ marginTop: 14 }}>
+              <div style={{ marginTop: 14, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 <button
                   onClick={() => speak(s.id, s.body[lang])}
                   style={{
@@ -205,6 +226,26 @@ export default function Biography() {
                   {isSpeaking
                     ? isAr ? '⏹ إيقاف' : '⏹ Stop'
                     : isAr ? '🔊 استمع' : '🔊 Read aloud'}
+                </button>
+                <button
+                  onClick={() => {
+                    const seed = isAr
+                      ? `أودّ أن أتحدّث عن هذه المحطّة من حياة الإمام علي (عليه السلام): «${s.title.ar}» (${s.dateline.ar}). حدّثني عنها أكثر وما تُعلّمنا إيّاه.`
+                      : `I'd like to talk about this moment in Imam Ali's life: "${s.title.en}" (${s.dateline.en}). Tell me more about it and what it teaches.`
+                    navigate(`/chat?q=${encodeURIComponent(seed)}`)
+                  }}
+                  style={{
+                    padding: '7px 14px',
+                    borderRadius: 8,
+                    border: '1px solid var(--border)',
+                    background: 'transparent',
+                    color: 'var(--gold)',
+                    cursor: 'pointer',
+                    fontSize: 11,
+                    letterSpacing: '0.06em',
+                  }}
+                >
+                  {isAr ? '💬 ناقش هذه المحطّة' : '💬 Discuss this'}
                 </button>
               </div>
             </article>
