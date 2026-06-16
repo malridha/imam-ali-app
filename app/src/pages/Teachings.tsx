@@ -23,8 +23,22 @@ import type {
   LongFormEntry,
 } from '../lib/prompts/baseline-corpus'
 import ServiceNav from '../components/ServiceNav'
+import { useReadAloud } from '../hooks/useReadAloud'
 
 type ShortSection = TeachingsTheme | typeof POETRY_SECTION | typeof DUA_SECTION
+
+// Quick-jump category chips shown under the search box. Each points at a
+// section's anchor id so a tap scrolls straight to that category.
+const CATEGORY_CHIPS: { id: string; label: { en: string; ar: string } }[] = [
+  { id: 'duas', label: { en: "Du'as", ar: 'أدعية' } },
+  { id: TEACHINGS_THEMES[0]?.id ?? 'duas', label: { en: 'By Theme', ar: 'حسب الموضوع' } },
+  { id: 'src-ghurar', label: { en: 'Ghurar al-Hikam', ar: 'غرر الحكم' } },
+  { id: 'src-nahj-sayings', label: { en: 'Nahj — Sayings', ar: 'نهج — الحكم' } },
+  { id: 'src-nahj-sermons', label: { en: 'Nahj — Sermons', ar: 'نهج — الخطب' } },
+  { id: 'letters', label: { en: 'Letters', ar: 'الرسائل' } },
+  { id: 'sermons', label: { en: 'Sermons', ar: 'الخطب' } },
+  { id: 'poetry', label: { en: 'Poetry', ar: 'الشعر' } },
+]
 
 function isLongForm(s: ShortSection | LongFormSection): s is LongFormSection {
   return (
@@ -37,7 +51,7 @@ export default function Teachings() {
   const { lang } = useLang()
   const isAr = lang === 'ar'
   const [search, setSearch] = useState('')
-  const [speakingId, setSpeakingId] = useState<string | null>(null)
+  const { speakingId, toggle: toggleReadAloud } = useReadAloud()
   // How many entries to render per section (large source sections are
   // paginated so the page stays light — "Show more" extends them).
   const [shown, setShown] = useState<Record<string, number>>({})
@@ -89,21 +103,23 @@ export default function Teachings() {
       .filter((s) => s.entries.length > 0)
   }, [search, allSections])
 
+  // Read aloud with the app's SELECTED (ElevenLabs) voice — not the
+  // browser's robotic speechSynthesis. Arabic uses the 'verse' preset
+  // (multilingual model, tuned for Qur'anic-register recitation); English
+  // uses the 'library' narration preset.
   function speak(id: string, text: string, useAr = false) {
-    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
-    window.speechSynthesis.cancel()
-    if (speakingId === id) {
-      setSpeakingId(null)
-      return
-    }
-    const utter = new SpeechSynthesisUtterance(text)
-    utter.lang = useAr ? 'ar-SA' : lang === 'ar' ? 'ar-SA' : 'en-US'
-    utter.rate = 0.92
-    utter.pitch = 0.95
-    setSpeakingId(id)
-    utter.onend = () => setSpeakingId(null)
-    utter.onerror = () => setSpeakingId(null)
-    window.speechSynthesis.speak(utter)
+    toggleReadAloud(id, text, useAr ? 'ar' : lang, useAr ? 'verse' : 'library')
+  }
+
+  // Jump to a category section. Clear any active search first so the
+  // target section is guaranteed to be rendered, then scroll to it.
+  function jumpTo(sectionId: string) {
+    setSearch('')
+    requestAnimationFrame(() => {
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
   }
 
   return (
@@ -191,11 +207,47 @@ export default function Teachings() {
             background: 'var(--surface)',
             color: 'var(--text)',
             fontSize: 16,
-            marginBottom: '1.5rem',
+            marginBottom: '0.85rem',
             outline: 'none',
             direction: isAr ? 'rtl' : 'ltr',
           }}
         />
+
+        {/* Category quick-jump chips — horizontal scroll on narrow screens */}
+        <div
+          style={{
+            display: 'flex',
+            gap: 8,
+            overflowX: 'auto',
+            paddingBottom: 6,
+            marginBottom: '1.4rem',
+            WebkitOverflowScrolling: 'touch',
+            scrollbarWidth: 'none',
+            direction: isAr ? 'rtl' : 'ltr',
+          }}
+        >
+          {CATEGORY_CHIPS.map((chip) => (
+            <button
+              key={chip.id + chip.label.en}
+              onClick={() => jumpTo(chip.id)}
+              style={{
+                flex: '0 0 auto',
+                padding: '6px 14px',
+                borderRadius: 20,
+                border: '1px solid var(--border)',
+                background: 'var(--surface)',
+                color: 'var(--gold)',
+                cursor: 'pointer',
+                fontSize: 12,
+                whiteSpace: 'nowrap',
+                letterSpacing: '0.02em',
+                fontFamily: isAr ? 'var(--font-arabic-ui)' : undefined,
+              }}
+            >
+              {chip.label[lang]}
+            </button>
+          ))}
+        </div>
 
         {/* Sections */}
         {filtered.length === 0 ? (

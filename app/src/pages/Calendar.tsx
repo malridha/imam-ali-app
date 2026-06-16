@@ -15,6 +15,7 @@ import { EVENTS, HIJRI_MONTHS, type CalendarEvent, type Tradition } from '../dat
 import { T } from '../lib/i18n'
 import { useLang } from '../contexts/LangContext'
 import ServiceNav from '../components/ServiceNav'
+import { useAudioPlayer } from '../hooks/useAudioPlayer'
 
 type Filter = 'all' | Tradition
 type Tab = 'history' | 'rituals' | 'companion'
@@ -49,7 +50,9 @@ export default function Calendar() {
   const [selected, setSelected] = useState<CalendarEvent | null>(null)
   const [tab, setTab] = useState<Tab>('history')
   const [search, setSearch] = useState('')
-  const [speaking, setSpeaking] = useState(false)
+  // Read aloud with the app's selected (ElevenLabs) voice via the
+  // 'calendar' preset — not the browser's robotic speechSynthesis.
+  const { play, stop, speaking } = useAudioPlayer()
 
   const visible = EVENTS.filter((e) => {
     if (filter !== 'all' && e.tradition !== 'both' && e.tradition !== filter) return false
@@ -69,22 +72,8 @@ export default function Calendar() {
   })
 
   function speak(text: string) {
-    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
-    window.speechSynthesis.cancel()
-    const utter = new SpeechSynthesisUtterance(text)
-    utter.lang = lang === 'ar' ? 'ar-SA' : 'en-US'
-    utter.rate = 0.87
-    utter.pitch = 0.9
-    setSpeaking(true)
-    utter.onend = () => setSpeaking(false)
-    utter.onerror = () => setSpeaking(false)
-    window.speechSynthesis.speak(utter)
-  }
-
-  function stop() {
-    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
-    window.speechSynthesis.cancel()
-    setSpeaking(false)
+    // ElevenLabs caps a single request at 5000 characters; stay under it.
+    void play(text.slice(0, 4800), lang, 'calendar')
   }
 
   const sc = selected ? TRADITION_STYLE[selected.tradition] : TRADITION_STYLE.both

@@ -6,32 +6,21 @@
 // preserved line breaks.
 
 import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
 import { useLang } from '../contexts/LangContext'
 import { BIOGRAPHY } from '../data/biography'
 import ServiceNav from '../components/ServiceNav'
+import { useReadAloud } from '../hooks/useReadAloud'
 
 export default function Biography() {
   const navigate = useNavigate()
   const { lang } = useLang()
   const isAr = lang === 'ar'
-  const [speakingId, setSpeakingId] = useState<string | null>(null)
+  const { speakingId, toggle: toggleReadAloud } = useReadAloud()
 
+  // Narrate biography sections with the app's selected (ElevenLabs) voice
+  // via the 'library' preset, not the browser's robotic speechSynthesis.
   function speak(id: string, text: string) {
-    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
-    window.speechSynthesis.cancel()
-    if (speakingId === id) {
-      setSpeakingId(null)
-      return
-    }
-    const utter = new SpeechSynthesisUtterance(text)
-    utter.lang = lang === 'ar' ? 'ar-SA' : 'en-US'
-    utter.rate = 0.92
-    utter.pitch = 0.95
-    setSpeakingId(id)
-    utter.onend = () => setSpeakingId(null)
-    utter.onerror = () => setSpeakingId(null)
-    window.speechSynthesis.speak(utter)
+    toggleReadAloud(id, text, lang, 'library')
   }
 
   return (

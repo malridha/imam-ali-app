@@ -63,6 +63,11 @@ export type ClaudeResult = {
  * `.context`. Read its JSON body and return the server's `error` string
  * (e.g. the Anthropic "credit balance is too low" message) if present.
  */
+// Number of extra attempts after the first, for transient network errors.
+const MAX_CHAT_RETRIES = 2
+// Linear backoff base (ms): waits 500ms, then 1000ms between retries.
+const RETRY_BASE_MS = 500
+
 async function readEdgeErrorBody(error: unknown): Promise<string> {
   const ctx = (error as { context?: unknown })?.context
   if (ctx instanceof Response) {
@@ -104,20 +109,33 @@ export async function callClaude({
   maxTokens = 500,
   temperature = 0.5,
 }: CallArgs): Promise<ClaudeResult> {
-  const { data, error } = await supabase.functions.invoke<EdgeResponse>(
-    'chat',
-    {
-      body: {
-        system,
-        messages,
-        lang,
-        user_id: userId,
-        retrieval_query: retrievalQuery,
-        max_tokens: maxTokens,
-        temperature,
-      },
-    },
-  )
+  const body = {
+    system,
+    messages,
+    lang,
+    user_id: userId,
+    retrieval_query: retrievalQuery,
+    max_tokens: maxTokens,
+    temperature,
+  }
+
+  // Retry transient network failures. supabase-js distinguishes them by
+  // shape: a FunctionsHttpError (real non-2xx response, e.g. 400 out of
+  // credits) carries a Response on `.context`; a FunctionsFetchError
+  // (the request never reached the server — the "Failed to send a request
+  // to the Edge Function" case) does not. We retry only the latter, since
+  // retrying a definitive HTTP error is pointless.
+  let data: EdgeResponse | null = null
+  let error: { message?: string; context?: unknown } | null = null
+  for (let attempt = 0; attempt <= MAX_CHAT_RETRIES; attempt++) {
+    const res = await supabase.functions.invoke<EdgeResponse>('chat', { body })
+    data = res.data
+    error = res.error
+    if (!error) break
+    const isHttpError = error.context instanceof Response
+    if (isHttpError || attempt === MAX_CHAT_RETRIES) break
+    await new Promise((r) => setTimeout(r, RETRY_BASE_MS * (attempt + 1)))
+  }
 
   if (error) {
     // supabase-js wraps a non-2xx response in a FunctionsHttpError whose
