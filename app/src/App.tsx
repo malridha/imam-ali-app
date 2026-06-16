@@ -7,6 +7,8 @@ import Privacy from './pages/Privacy'
 import Biography from './pages/Biography'
 import Teachings from './pages/Teachings'
 import Search from './pages/Search'
+import Discuss from './pages/Discuss'
+import Recite from './pages/Recite'
 
 export default function App() {
   return (
@@ -31,6 +33,10 @@ export default function App() {
       <Route path="/teachings" element={<Teachings />} />
       {/* v48 §76 — Global search across wisdom + du'as + poetry + letters + sermons + biography */}
       <Route path="/search" element={<Search />} />
+      {/* v49 §77 — Discussion hub: explore philosophy, poetry, wisdom with the companion */}
+      <Route path="/discuss" element={<Discuss />} />
+      {/* v49 §78 — Du'a recitation coach: recite along, word-accuracy + AI guidance */}
+      <Route path="/recite" element={<Recite />} />
     </Routes>
   )
 }

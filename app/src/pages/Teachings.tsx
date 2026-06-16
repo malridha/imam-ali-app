@@ -111,6 +111,15 @@ export default function Teachings() {
     toggleReadAloud(id, text, useAr ? 'ar' : lang, useAr ? 'verse' : 'library')
   }
 
+  // Open a focused discussion of a specific teaching: seed the companion
+  // chat with the entry so the conversation starts from this text.
+  function discussEntry(entry: BaselineEntry) {
+    const seed = isAr
+      ? `أودّ أن أناقش هذا التعليم من «${entry.source}»: «${entry.arabic}» — «${entry.english}». ما معناه، وكيف أعيشه في حياتي؟`
+      : `I'd like to discuss this teaching from ${entry.source}: "${entry.arabic}" — "${entry.english}". What does it mean, and how might I live it?`
+    navigate(`/chat?q=${encodeURIComponent(seed)}`)
+  }
+
   // Jump to a category section. Clear any active search first so the
   // target section is guaranteed to be rendered, then scroll to it.
   function jumpTo(sectionId: string) {
@@ -212,6 +221,46 @@ export default function Teachings() {
             direction: isAr ? 'rtl' : 'ltr',
           }}
         />
+
+        {/* Primary actions — recite a du'a or open a discussion */}
+        <div style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
+          <button
+            onClick={() => navigate('/recite')}
+            style={{
+              flex: 1,
+              padding: '10px 12px',
+              borderRadius: 10,
+              border: '1px solid var(--gold)',
+              background: 'rgba(212,179,100,0.12)',
+              color: 'var(--gold)',
+              cursor: 'pointer',
+              fontSize: 12.5,
+              fontWeight: 600,
+              letterSpacing: '0.02em',
+              fontFamily: isAr ? 'var(--font-arabic-ui)' : undefined,
+            }}
+          >
+            🎙️ {isAr ? 'تلاوة دعاء' : "Recite a Du'a"}
+          </button>
+          <button
+            onClick={() => navigate('/discuss')}
+            style={{
+              flex: 1,
+              padding: '10px 12px',
+              borderRadius: 10,
+              border: '1px solid var(--gold)',
+              background: 'rgba(212,179,100,0.12)',
+              color: 'var(--gold)',
+              cursor: 'pointer',
+              fontSize: 12.5,
+              fontWeight: 600,
+              letterSpacing: '0.02em',
+              fontFamily: isAr ? 'var(--font-arabic-ui)' : undefined,
+            }}
+          >
+            💬 {isAr ? 'حوار' : 'Discuss'}
+          </button>
+        </div>
 
         {/* Category quick-jump chips — horizontal scroll on narrow screens */}
         <div
@@ -336,6 +385,7 @@ export default function Teachings() {
                     </>
                   )
                 }
+                const isDuaSection = section.id === 'duas'
                 return (
                   <>
                     {section.entries.slice(0, limit).map((entry, i) => (
@@ -345,6 +395,15 @@ export default function Teachings() {
                         id={`${section.id}-${i}`}
                         speakingId={speakingId}
                         onSpeak={speak}
+                        onDiscuss={() => discussEntry(entry)}
+                        onRecite={
+                          isDuaSection
+                            ? () =>
+                                navigate(
+                                  `/recite?dua=${DUA_SECTION.entries.indexOf(entry)}`,
+                                )
+                            : undefined
+                        }
                         lang={lang}
                       />
                     ))}
@@ -381,12 +440,16 @@ function TeachingCard({
   id,
   speakingId,
   onSpeak,
+  onDiscuss,
+  onRecite,
   lang,
 }: {
   entry: BaselineEntry
   id: string
   speakingId: string | null
   onSpeak: (id: string, text: string, useAr?: boolean) => void
+  onDiscuss?: () => void
+  onRecite?: () => void
   lang: 'en' | 'ar'
 }) {
   const isSpeakingAr = speakingId === `${id}-ar`
@@ -483,9 +546,30 @@ function TeachingCard({
             ? isAr ? '⏹ إيقاف' : '⏹ Stop'
             : isAr ? '🔊 الإنجليزية' : '🔊 English'}
         </button>
+        {onRecite && (
+          <button onClick={onRecite} style={secondaryBtn}>
+            {isAr ? '🎙️ تلاوة' : '🎙️ Recite'}
+          </button>
+        )}
+        {onDiscuss && (
+          <button onClick={onDiscuss} style={secondaryBtn}>
+            {isAr ? '💬 ناقش' : '💬 Discuss'}
+          </button>
+        )}
       </div>
     </div>
   )
+}
+
+const secondaryBtn: React.CSSProperties = {
+  padding: '5px 12px',
+  borderRadius: 6,
+  border: '1px solid var(--border)',
+  background: 'transparent',
+  color: 'var(--gold)',
+  cursor: 'pointer',
+  fontSize: 10,
+  letterSpacing: '0.04em',
 }
 
 
