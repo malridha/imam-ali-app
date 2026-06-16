@@ -50,6 +50,10 @@ export const T = {
     en: 'Could not reach the companion: ',
     ar: 'تعذر الوصول إلى الرفيق: ',
   },
+  outOfCredits: {
+    en: 'The companion is resting for a moment — the service is temporarily unavailable. Please try again a little later, إن شاء الله.',
+    ar: 'الرفيق يستريح لحظةً — الخدمة غير متاحة مؤقتاً. تفضّل بالمحاولة بعد قليل، إن شاء الله.',
+  },
   unknownPath: { en: 'Unknown path.', ar: 'مسار غير معروف.' },
   goBack: { en: 'Go back', ar: 'عودة' },
 

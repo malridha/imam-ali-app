@@ -59,6 +59,36 @@ export type ClaudeResult = {
 }
 
 /**
+ * supabase-js's FunctionsHttpError carries the failing Response on
+ * `.context`. Read its JSON body and return the server's `error` string
+ * (e.g. the Anthropic "credit balance is too low" message) if present.
+ */
+async function readEdgeErrorBody(error: unknown): Promise<string> {
+  const ctx = (error as { context?: unknown })?.context
+  if (ctx instanceof Response) {
+    try {
+      const body = await ctx.clone().json()
+      if (body && typeof body.error === 'string') return body.error
+    } catch {
+      // body wasn't JSON — fall through to the generic message
+    }
+  }
+  return ''
+}
+
+/**
+ * True when a thrown chat error is the Anthropic billing-exhaustion case
+ * (the account is out of API credits). Lets the UI show calm "temporarily
+ * unavailable" copy instead of a raw billing string or a generic network
+ * error.
+ */
+export function isOutOfCreditsError(message: string): boolean {
+  return /credit balance is too low|insufficient.*credit|billing.*(hard )?limit|quota (has been )?exceeded/i.test(
+    message,
+  )
+}
+
+/**
  * Calls /functions/v1/chat. The server holds CLAUDE_API_KEY and (when a
  * retrievalQuery is supplied) does corpus retrieval before invoking Claude.
  * If a crisis signal is detected in the user's input, the server short-
@@ -90,7 +120,13 @@ export async function callClaude({
   )
 
   if (error) {
-    throw new Error(error.message || 'Failed to reach the chat function')
+    // supabase-js wraps a non-2xx response in a FunctionsHttpError whose
+    // useful body (e.g. { error: "Your credit balance is too low…" }) lives
+    // on error.context (the raw Response), NOT in error.message — which is
+    // just the generic "Edge Function returned a non-2xx status code".
+    // Surface the real reason so callers can react to it.
+    const detail = await readEdgeErrorBody(error)
+    throw new Error(detail || error.message || 'Failed to reach the chat function')
   }
   if (!data) {
     throw new Error('Empty response from the chat function')

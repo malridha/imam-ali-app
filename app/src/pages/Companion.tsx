@@ -11,6 +11,7 @@ import { useTSP } from '../contexts/TSPContext'
 import { type EmotionalState } from '../types/paths'
 import {
   callClaude,
+  isOutOfCreditsError,
   type ClaudeMessage,
   type CrisisResource,
 } from '../lib/claude'
@@ -292,7 +293,13 @@ export default function Companion() {
         if (parsed.text) void playAudio(cleanForTTS(buildSpeakable(parsed.text, parsed.verse), lang), lang)
       })
       .catch((e: Error) => {
-        setError(e.message || String(e))
+        const raw = e.message || String(e)
+        // Log the precise reason (e.g. the Anthropic billing string) for
+        // the operator; the UI shows calmer copy below.
+        if (isOutOfCreditsError(raw)) {
+          console.error('[chat] Anthropic API credits exhausted:', raw)
+        }
+        setError(raw)
         setState('peace')
       })
       .finally(() => setBusy(false))
@@ -479,8 +486,9 @@ export default function Companion() {
               border: '1px solid rgba(180,80,30,0.3)',
             }}
           >
-            {T.errorPrefix[lang]}
-            {error}
+            {isOutOfCreditsError(error)
+              ? T.outOfCredits[lang]
+              : `${T.errorPrefix[lang]}${error}`}
           </div>
         )}
         {audioError && (
