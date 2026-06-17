@@ -1,4 +1,4 @@
-import { supabase } from './supabase'
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from './supabase'
 
 const FUNCTION_PATH = '/functions/v1/speak'
 
@@ -27,14 +27,11 @@ export async function speak(
   text: string,
   useCase: UseCase = 'conversation',
 ): Promise<string> {
-  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string
-  const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string
-
-  const res = await fetch(`${supabaseUrl}${FUNCTION_PATH}`, {
+  const res = await fetch(`${SUPABASE_URL}${FUNCTION_PATH}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${anonKey}`,
+      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
     },
     body: JSON.stringify({
       text,
@@ -50,5 +47,3 @@ export async function speak(
   const blob = await res.blob()
   return URL.createObjectURL(blob)
 }
-
-void supabase

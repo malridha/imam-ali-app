@@ -1,4 +1,4 @@
-import { supabase } from './supabase'
+import { supabase, SUPABASE_URL, SUPABASE_ANON_KEY } from './supabase'
 import type { Lang } from '../types/lang'
 import type { TSP } from '../types/tsp'
 
@@ -196,14 +196,11 @@ export async function streamClaude(
   }: CallArgs,
   onDelta: (fullSoFar: string, delta: string) => void,
 ): Promise<StreamResult> {
-  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string
-  const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string
-
-  const res = await fetch(`${supabaseUrl}/functions/v1/chat`, {
+  const res = await fetch(`${SUPABASE_URL}/functions/v1/chat`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${anonKey}`,
+      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
     },
     body: JSON.stringify({
       system,

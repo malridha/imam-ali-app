@@ -14,3 +14,11 @@ const url = (import.meta.env.VITE_SUPABASE_URL as string) || FALLBACK_URL
 const anonKey = (import.meta.env.VITE_SUPABASE_ANON_KEY as string) || FALLBACK_ANON_KEY
 
 export const supabase = createClient(url, anonKey)
+
+// Resolved values (env var when set, else the committed fallback). Modules that
+// call Edge Functions with a raw fetch (speak.ts, claude.ts streaming) must use
+// THESE — never read import.meta.env directly, since the var can be empty in a
+// host build, producing `Authorization: Bearer undefined` (401, silent voice
+// failure). This is what caused voice to fail on Netlify.
+export const SUPABASE_URL = url
+export const SUPABASE_ANON_KEY = anonKey
