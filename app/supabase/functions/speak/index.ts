@@ -2,7 +2,7 @@
 //
 // v27 §53 — Companion voice locked. The ElevenLabs voice ID is no
 // longer caller-selectable. The function uses the confirmed voice
-// (GyRvpxTDRCiU2T93jzNl, overridable via ELEVENLABS_VOICE_ID env var
+// (rsOXDVFGaI5AVpPm72uR, overridable via ELEVENLABS_VOICE_ID env var
 // for staging) and routes voice_settings through a per-use-case
 // preset table.
 //
@@ -15,10 +15,10 @@
 
 const ELEVENLABS_ENDPOINT = 'https://api.elevenlabs.io/v1/text-to-speech'
 
-// v27 §53.1 — Confirmed by the founder through direct voice testing.
-// Do NOT change without founder sign-off. May be overridden by env
-// var for staging only.
-const LOCKED_VOICE_ID = 'GyRvpxTDRCiU2T93jzNl'
+// v27 §53.1 / v50 — Confirmed by the founder through direct voice testing.
+// Updated to the founder's new voice (v50 sign-off). Do NOT change without
+// founder sign-off. May be overridden by the ELEVENLABS_VOICE_ID env var.
+const LOCKED_VOICE_ID = 'rsOXDVFGaI5AVpPm72uR'
 
 // v45.1 — Per-use-case model + latency. Chat replies + calendar +
 // library use turbo (~2× faster synthesis) for snappy back-and-forth;
