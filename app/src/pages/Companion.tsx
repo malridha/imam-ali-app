@@ -176,7 +176,6 @@ export default function Companion() {
               m.id === id ? { ...m, text: raw, crisisResources: crisis.resources } : m,
             ),
           )
-          if (raw) void playAudio(cleanForTTS(raw, lang), lang)
           return
         }
         const parsed = parseReply(raw)
@@ -188,8 +187,8 @@ export default function Companion() {
           ),
         )
         setHistory(opts.historyOnDone(raw))
-        if (parsed.text)
-          void playAudio(cleanForTTS(buildSpeakable(parsed.text, parsed.verse), lang), lang)
+        // Replies are no longer auto-voiced (saves ElevenLabs credit) — the
+        // user taps "Listen" on a message to hear it. The opener stays voiced.
       }
 
       try {
@@ -477,6 +476,32 @@ export default function Companion() {
             )}
             {m.crisisResources && (
               <CrisisCard resources={m.crisisResources} />
+            )}
+            {m.role === 'ali' && (m.text ?? '').trim() && (
+              <button
+                onClick={() =>
+                  void playAudio(
+                    cleanForTTS(buildSpeakable(m.text ?? '', m.verse), lang),
+                    lang,
+                  )
+                }
+                aria-label={lang === 'ar' ? 'استمع' : 'Listen'}
+                style={{
+                  marginTop: 8,
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  padding: '5px 12px',
+                  borderRadius: 999,
+                  border: '1px solid var(--border)',
+                  background: 'transparent',
+                  color: 'var(--gold)',
+                  cursor: 'pointer',
+                  fontSize: 12,
+                }}
+              >
+                🔊 {lang === 'ar' ? 'استمع' : 'Listen'}
+              </button>
             )}
           </MessageBubble>
         ))}
