@@ -18,6 +18,42 @@ import type { BaselineEntry } from '../lib/prompts/baseline-corpus'
 const POOL_SIZE = 80
 const STORAGE_KEY = 'reels.saved.v1'
 
+type Card = BaselineEntry & { long?: boolean }
+
+// A few longer-form reflections (du'a, letter, poem) interleaved into the feed
+// so it isn't only one-line aphorisms. Length comes from genuinely longer
+// AUTHENTICATED sources — never from padding a short saying. Marked long: true
+// so the card renders the fuller passage at a calmer size.
+const LONG_SAMPLES: Card[] = [
+  {
+    long: true,
+    theme: 'humility',
+    arabic:
+      'النَّاسُ مِنْ جِهَةِ التِّمْثَالِ أَكْفَاءُ\nأَبُوهُمْ آدَمُ وَالأُمُّ حَوَّاءُ\nفَإِنْ يَكُنْ لَهُمُ مِنْ أَصْلِهِمْ شَرَفٌ\nيُفَاخِرُونَ بِهِ فَالطِّينُ وَالمَاءُ',
+    english:
+      'People, in their making, are equals — their father is Adam and their mother is Eve. If they have in their origin any nobility to boast of, it is but clay and water.',
+    source: 'Attributed to the Diwan of Imam Ali',
+  },
+  {
+    long: true,
+    theme: 'justice',
+    arabic:
+      'وَأَشْعِرْ قَلْبَكَ الرَّحْمَةَ لِلرَّعِيَّةِ، وَالمَحَبَّةَ لَهُمْ، وَاللُّطْفَ بِهِمْ، وَلَا تَكُونَنَّ عَلَيْهِمْ سَبُعًا ضَارِيًا تَغْتَنِمُ أَكْلَهُمْ، فَإِنَّهُمْ صِنْفَانِ: إِمَّا أَخٌ لَكَ فِي الدِّينِ، أَوْ نَظِيرٌ لَكَ فِي الخَلْقِ',
+    english:
+      'Infuse your heart with mercy for the people, and love and gentleness toward them. Do not be a ravenous beast over them, seizing their food — for they are of two kinds: either a brother to you in religion, or your equal in creation.',
+    source: 'Nahj al-Balagha, Letter 53 (to Malik al-Ashtar)',
+  },
+  {
+    long: true,
+    theme: 'forgiveness',
+    arabic:
+      'اللَّهُمَّ اغْفِرْ لِيَ الذُّنُوبَ الَّتِي تَهْتِكُ العِصَمَ\nاللَّهُمَّ اغْفِرْ لِيَ الذُّنُوبَ الَّتِي تُنْزِلُ النِّقَمَ\nاللَّهُمَّ اغْفِرْ لِيَ الذُّنُوبَ الَّتِي تُغَيِّرُ النِّعَمَ',
+    english:
+      'O God, forgive me the sins that tear away protections; O God, forgive me the sins that bring down calamities; O God, forgive me the sins that change blessings.',
+    source: "Du'a Kumayl",
+  },
+]
+
 // Stable shuffle for the session so the order doesn't jump on re-render.
 function shuffled<T>(arr: T[], n: number): T[] {
   const a = arr.slice()
@@ -42,7 +78,12 @@ export default function Reels() {
   const isAr = lang === 'ar'
   const { speakingId, toggle: toggleReadAloud, stop } = useReadAloud()
 
-  const cards = useMemo<BaselineEntry[]>(() => shuffled(ALL_WISDOM, POOL_SIZE), [])
+  const cards = useMemo<Card[]>(() => {
+    const base = shuffled(ALL_WISDOM, POOL_SIZE) as Card[]
+    // Drop a longer reflection in early and then every ~14 cards.
+    LONG_SAMPLES.forEach((s, k) => base.splice(2 + k * 14, 0, s))
+    return base
+  }, [])
   const [active, setActive] = useState(0)
   const [saved, setSaved] = useState<Set<string>>(loadSaved)
 
@@ -185,7 +226,10 @@ export default function Reels() {
             {/* Tap anywhere on the verse area to listen */}
             <div
               onClick={() => toggleReadAloud(id, c.arabic, lang, 'verse')}
-              style={{ cursor: 'pointer', maxWidth: 680, margin: '0 auto', textAlign: 'center' }}
+              style={{
+                cursor: 'pointer', maxWidth: 680, margin: '0 auto', textAlign: 'center',
+                maxHeight: '74svh', overflowY: 'auto', paddingTop: c.long ? 44 : 0,
+              }}
             >
               <div
                 style={{
@@ -201,8 +245,9 @@ export default function Reels() {
                 dir="rtl"
                 style={{
                   fontFamily: 'var(--font-arabic), serif',
-                  fontSize: 'clamp(24px, 6.4vw, 40px)',
-                  lineHeight: 1.7,
+                  fontSize: c.long ? 'clamp(17px, 4.3vw, 25px)' : 'clamp(24px, 6.4vw, 40px)',
+                  lineHeight: c.long ? 1.95 : 1.7,
+                  whiteSpace: 'pre-line',
                   color: 'var(--cream)',
                   fontWeight: 600,
                   margin: '0 0 22px',
@@ -212,8 +257,9 @@ export default function Reels() {
               </p>
               <p
                 style={{
-                  fontSize: 'clamp(15px, 3.6vw, 19px)',
+                  fontSize: c.long ? 'clamp(13px, 3vw, 16px)' : 'clamp(15px, 3.6vw, 19px)',
                   lineHeight: 1.65,
+                  whiteSpace: 'pre-line',
                   color: 'var(--text)',
                   margin: '0 0 18px',
                   fontFamily: isAr ? 'var(--font-arabic-body)' : undefined,
