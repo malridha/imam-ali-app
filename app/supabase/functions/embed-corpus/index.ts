@@ -37,11 +37,16 @@ Deno.serve(async (req: Request) => {
     Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
   )
 
-  // Find teachings that don't have an embedding yet.
-  const { data: rows, error: fetchErr } = await supabase
+  // Find teachings that don't have an embedding yet. Optional ?limit=N caps
+  // how many are embedded per invocation so large backfills stay within the
+  // function time budget — call repeatedly (it's idempotent) until done.
+  const limitParam = parseInt(new URL(req.url).searchParams.get('limit') || '0', 10)
+  let query = supabase
     .from('teachings')
     .select('id, english, domain')
     .is('embedding', null)
+  if (limitParam > 0) query = query.limit(limitParam)
+  const { data: rows, error: fetchErr } = await query
 
   if (fetchErr) {
     return jsonResponse({ error: fetchErr.message }, 500)

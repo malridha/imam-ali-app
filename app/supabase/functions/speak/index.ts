@@ -1,3 +1,5 @@
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.45.4'
+
 // Edge Function: /functions/v1/speak
 //
 // v27 §53 — Companion voice locked. The ElevenLabs voice ID is no
@@ -135,6 +137,41 @@ async function callElevenLabs(
   )
 }
 
+// ── Audio cache (generate-once, serve-forever) ──────────────────────────
+// Voice is billed per character, and most plays are FIXED text (du'as,
+// teachings, biography). Without caching, the same text is re-billed on every
+// play. We cache each clip in a private Storage bucket keyed by a hash of
+// (voice, model, use_case, text): the first request generates + stores it;
+// every later request — from ANY user — is served free from Storage. All cache
+// ops are best-effort; on any failure we fall back to live synthesis so voice
+// never breaks.
+const CACHE_BUCKET = 'voice-cache'
+let bucketReady = false
+
+function storageClient() {
+  try {
+    const url = Deno.env.get('SUPABASE_URL')
+    const key = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
+    if (!url || !key) return null
+    return createClient(url, key)
+  } catch {
+    return null
+  }
+}
+
+async function audioKey(voiceId: string, model: string, useCase: string, text: string): Promise<string> {
+  const buf = new TextEncoder().encode(`${voiceId}|${model}|${useCase}|${text}`)
+  const digest = await crypto.subtle.digest('SHA-256', buf)
+  return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('') + '.mp3'
+}
+
+const AUDIO_HEADERS = {
+  ...CORS_HEADERS,
+  'Content-Type': 'audio/mpeg',
+  // Audio for a given (voice, model, use_case, text) never changes.
+  'Cache-Control': 'public, max-age=31536000, immutable',
+}
+
 Deno.serve(async (req: Request) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { status: 204, headers: CORS_HEADERS })
@@ -172,6 +209,24 @@ Deno.serve(async (req: Request) => {
   const latency = LATENCY_BY_USECASE[useCase]
   const voiceId = Deno.env.get('ELEVENLABS_VOICE_ID') || LOCKED_VOICE_ID
 
+  // ── Cache hit? Serve stored audio and skip ElevenLabs entirely. ──
+  const sb = storageClient()
+  let key = ''
+  if (sb) {
+    try {
+      key = await audioKey(voiceId, primaryModel, useCase, text)
+      const { data: cached } = await sb.storage.from(CACHE_BUCKET).download(key)
+      if (cached) {
+        return new Response(await cached.arrayBuffer(), {
+          status: 200,
+          headers: { ...AUDIO_HEADERS, 'X-Voice-Cache': 'hit' },
+        })
+      }
+    } catch {
+      // cache unavailable — fall through to live synthesis
+    }
+  }
+
   // Primary attempt: the use-case-appropriate model.
   let upstream = await callElevenLabs(voiceId, apiKey, text, primaryModel, settings, latency)
 
@@ -193,12 +248,26 @@ Deno.serve(async (req: Request) => {
     )
   }
 
-  return new Response(upstream.body, {
+  // Read the full audio so we can both store it and return it.
+  const audioBuf = await upstream.arrayBuffer()
+
+  // Store for next time (best-effort — never block or fail the response).
+  if (sb && key) {
+    try {
+      if (!bucketReady) {
+        await sb.storage.createBucket(CACHE_BUCKET, { public: false }).catch(() => {})
+        bucketReady = true
+      }
+      await sb.storage
+        .from(CACHE_BUCKET)
+        .upload(key, new Uint8Array(audioBuf), { contentType: 'audio/mpeg', upsert: true })
+    } catch {
+      // ignore — caching is an optimization, not a requirement
+    }
+  }
+
+  return new Response(audioBuf, {
     status: 200,
-    headers: {
-      ...CORS_HEADERS,
-      'Content-Type': 'audio/mpeg',
-      'Cache-Control': 'no-store',
-    },
+    headers: { ...AUDIO_HEADERS, 'X-Voice-Cache': 'miss' },
   })
 })

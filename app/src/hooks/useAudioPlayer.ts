@@ -118,9 +118,6 @@ export function useAudioPlayer() {
           const msg = (e as Error)?.message ?? String(e)
           setError(msg)
           console.error('[audio] play failed:', e)
-          // TEMP DIAGNOSTIC (v50.x) — surface the real failure on-device so we
-          // can see why voice fails on mobile. Remove once resolved.
-          try { window.alert('Voice error: ' + msg) } catch { /* ignore */ }
         }
       }
     },
