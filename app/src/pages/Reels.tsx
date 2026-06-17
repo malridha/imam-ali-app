@@ -211,6 +211,7 @@ export default function Reels() {
             key={id}
             data-idx={i}
             ref={(el) => { cardRefs.current[i] = el }}
+            className="refl-card"
             style={{
               height: '100svh',
               scrollSnapAlign: 'start',
@@ -219,68 +220,84 @@ export default function Reels() {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              padding: '0 22px',
-              background: `radial-gradient(120% 80% at 50% 30%, #${tint} 0%, var(--bg) 70%)`,
+              padding: '0 30px',
+              overflow: 'hidden',
+              background: `radial-gradient(72% 50% at 50% 30%, #${tint} 0%, transparent 72%), radial-gradient(140% 120% at 50% 48%, #14233f 0%, #0a1426 60%, #070f1f 100%)`,
             }}
           >
+            {/* Atmosphere — soft aurora, faint stars, a breathing glow, a vignette */}
+            <div className="refl-aurora" aria-hidden="true" />
+            <div className="refl-stars" aria-hidden="true" />
+            <div className="refl-glow" aria-hidden="true" />
+            <div className="refl-vignette" aria-hidden="true" />
+
             {/* Tap anywhere on the verse area to listen */}
             <div
               onClick={() => toggleReadAloud(id, c.arabic, lang, 'verse')}
               style={{
+                position: 'relative', zIndex: 2,
                 cursor: 'pointer', maxWidth: 680, margin: '0 auto', textAlign: 'center',
                 maxHeight: '74svh', overflowY: 'auto', paddingTop: c.long ? 44 : 0,
+                animation: i === active ? 'reflRise 1s ease both' : undefined,
               }}
             >
               <div
                 style={{
-                  display: 'inline-block', padding: '4px 12px', borderRadius: 999,
-                  border: '1px solid rgba(233,201,122,0.4)', color: 'var(--gold)',
-                  fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 26,
+                  fontSize: 10.5, letterSpacing: '0.3em', textTransform: 'uppercase',
+                  color: 'var(--gold)', opacity: 0.8, marginBottom: 22,
+                  fontFamily: isAr ? 'var(--font-arabic)' : undefined,
                 }}
               >
                 {c.theme}
               </div>
+              <div className="refl-hair" />
               <p
                 lang="ar"
                 dir="rtl"
                 style={{
                   fontFamily: 'var(--font-arabic), serif',
-                  fontSize: c.long ? 'clamp(17px, 4.3vw, 25px)' : 'clamp(24px, 6.4vw, 40px)',
-                  lineHeight: c.long ? 1.95 : 1.7,
+                  fontSize: c.long ? 'clamp(17px, 4.3vw, 25px)' : 'clamp(23px, 6.1vw, 38px)',
+                  lineHeight: c.long ? 2.0 : 1.95,
                   whiteSpace: 'pre-line',
-                  color: 'var(--cream)',
-                  fontWeight: 600,
-                  margin: '0 0 22px',
+                  color: '#f6efdd',
+                  fontWeight: 500,
+                  textShadow: '0 1px 18px rgba(0,0,0,0.35)',
+                  margin: '0 0 24px',
                 }}
               >
                 {c.arabic}
               </p>
               <p
                 style={{
-                  fontSize: c.long ? 'clamp(13px, 3vw, 16px)' : 'clamp(15px, 3.6vw, 19px)',
-                  lineHeight: 1.65,
+                  fontSize: c.long ? 'clamp(13px, 3vw, 16px)' : 'clamp(15px, 3.5vw, 18px)',
+                  lineHeight: 1.72,
                   whiteSpace: 'pre-line',
-                  color: 'var(--text)',
-                  margin: '0 0 18px',
+                  color: 'var(--dim)',
+                  fontStyle: 'italic',
+                  fontWeight: 300,
+                  opacity: 0.92,
+                  margin: '0 0 24px',
                   fontFamily: isAr ? 'var(--font-arabic-body)' : undefined,
                 }}
               >
                 {isAr ? '' : c.english}
               </p>
-              <div style={{ color: 'var(--muted)', fontSize: 12.5, letterSpacing: '0.04em' }}>
-                — {isAr ? 'الإمام عليّ' : 'Imam Ali'} · {c.source}
+              <div style={{ color: 'var(--muted)', fontSize: 11.5, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+                {isAr ? 'الإمام عليّ' : 'Imam Ali'} · {c.source}
               </div>
             </div>
 
-            {/* Action rail */}
+            {/* Action rail — dimmed so the verse breathes; brightens on interaction */}
             <div
+              className="refl-rail"
               style={{
                 position: 'absolute',
-                insetInlineEnd: 14,
-                bottom: 96,
+                insetInlineEnd: 16,
+                bottom: 110,
+                zIndex: 3,
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 18,
+                gap: 22,
                 alignItems: 'center',
               }}
             >
@@ -304,7 +321,7 @@ export default function Reels() {
             {i === 0 && (
               <div
                 style={{
-                  position: 'absolute', bottom: 30, left: 0, right: 0, textAlign: 'center',
+                  position: 'absolute', bottom: 28, left: 0, right: 0, textAlign: 'center', zIndex: 3,
                   color: 'var(--muted)', fontSize: 12, animation: 'reelHint 1.8s ease-in-out infinite',
                 }}
               >
@@ -327,7 +344,32 @@ export default function Reels() {
         </div>
       )}
 
-      <style>{`@keyframes reelHint { 0%,100% { opacity: .35; transform: translateY(0) } 50% { opacity: .9; transform: translateY(-4px) } }`}</style>
+      <style>{`
+        @keyframes reelHint { 0%,100% { opacity:.35; transform:translateY(0) } 50% { opacity:.9; transform:translateY(-4px) } }
+        @keyframes reflGlow { 0%,100% { opacity:.5; transform:translate(-50%,-50%) scale(1) } 50% { opacity:.85; transform:translate(-50%,-50%) scale(1.06) } }
+        @keyframes reflRise { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:translateY(0) } }
+        .refl-aurora { position:absolute; inset:0; pointer-events:none; background:
+          radial-gradient(80% 60% at 78% 12%, rgba(60,148,102,0.10), transparent 65%),
+          radial-gradient(90% 70% at 18% 88%, rgba(40,70,140,0.16), transparent 70%); }
+        .refl-stars { position:absolute; inset:0; pointer-events:none; background-image:
+          radial-gradient(1.5px 1.5px at 20% 18%, rgba(205,210,232,0.7), transparent),
+          radial-gradient(1.5px 1.5px at 72% 24%, rgba(205,210,232,0.55), transparent),
+          radial-gradient(1.5px 1.5px at 44% 32%, rgba(205,210,232,0.5), transparent),
+          radial-gradient(1.5px 1.5px at 26% 70%, rgba(205,210,232,0.6), transparent),
+          radial-gradient(1.5px 1.5px at 82% 76%, rgba(205,210,232,0.5), transparent),
+          radial-gradient(1.5px 1.5px at 88% 14%, rgba(205,210,232,0.55), transparent); }
+        .refl-glow { position:absolute; top:42%; left:50%; width:min(430px,92vw); height:min(430px,92vw);
+          transform:translate(-50%,-50%); pointer-events:none; filter:blur(8px);
+          background:radial-gradient(circle, rgba(212,179,100,0.13), transparent 62%);
+          animation:reflGlow 7s ease-in-out infinite; }
+        .refl-vignette { position:absolute; inset:0; pointer-events:none;
+          background:radial-gradient(75% 60% at 50% 45%, transparent 55%, rgba(4,8,18,0.6) 100%); }
+        .refl-hair { width:34px; height:1px; margin:0 auto 26px; opacity:.55;
+          background:linear-gradient(to right, transparent, var(--gold), transparent); }
+        .refl-rail { opacity:.55; transition:opacity .45s ease; }
+        .refl-card:hover .refl-rail, .refl-rail:focus-within { opacity:1; }
+        @media (prefers-reduced-motion: reduce) { .refl-glow { animation:none } }
+      `}</style>
     </div>
   )
 }
