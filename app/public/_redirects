@@ -1,0 +1,6 @@
+# SPA fallback for static hosts (Cloudflare Pages / Netlify).
+# Every non-asset path serves index.html so client-side routes like
+# /biography, /reflections, /chat resolve instead of 404ing.
+# Ignored by Vercel (which auto-handles SPA routing), so this is safe
+# to keep on the current host too.
+/*    /index.html   200
