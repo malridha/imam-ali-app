@@ -196,8 +196,8 @@ export default function Unity() {
           }}
         >
           {isAr
-            ? 'بُني «يا إمام علي» ليجمع الناس، لا ليأخذ جانباً. وحيث يختلف المسلمون، نحمل الرأيَين باحترام، وندَع كلام الله وكلام الإمام علي (عليه السلام) يتقدّم. خصومتنا للفُرقة نفسها — وهي ما سمّاه القرآن صراحةً — لا لمذهبٍ ولا لمؤمن.'
-            : 'Ya Imam Ali is built to bring people together, not to take a side. Where Muslims differ, we hold both views with respect and let the words of God and of Imam Ali (peace be upon him) lead. Our opposition is to division itself — a thing the Qur’an names plainly — not to any school, and not to any believer.'}
+            ? 'بُني «الإمام علي» ليجمع الناس، لا ليأخذ جانباً. وحيث يختلف المسلمون، نحمل الرأيَين باحترام، وندَع كلام الله وكلام الإمام علي (عليه السلام) يتقدّم. خصومتنا للفُرقة نفسها — وهي ما سمّاه القرآن صراحةً — لا لمذهبٍ ولا لمؤمن.'
+            : 'Imam Ali is built to bring people together, not to take a side. Where Muslims differ, we hold both views with respect and let the words of God and of Imam Ali (peace be upon him) lead. Our opposition is to division itself — a thing the Qur’an names plainly — not to any school, and not to any believer.'}
         </p>
 
         <h2 style={{ fontSize: 14, color: 'var(--cream)', letterSpacing: '0.1em', textTransform: 'uppercase', margin: '0 0 12px', fontFamily: isAr ? 'var(--font-arabic)' : undefined }}>

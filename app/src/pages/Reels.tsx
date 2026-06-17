@@ -141,7 +141,7 @@ export default function Reels() {
   }
 
   async function onShare(c: BaselineEntry) {
-    const text = `"${c.english}"\n${c.arabic}\n— Imam Ali · ${c.source}\n\nYa Imam Ali`
+    const text = `"${c.english}"\n${c.arabic}\n— Imam Ali · ${c.source}\n\nImam Ali`
     try {
       if (navigator.share) await navigator.share({ text })
       else {

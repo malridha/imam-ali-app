@@ -77,7 +77,7 @@ export const T = {
   myStory: { en: 'My Story', ar: 'حكايتي' },
   myStoryDesc: {
     en: 'This is everything Imam Ali remembers about your sessions. It stays here for you — you can delete any moment, or all of it, at any time.',
-    ar: 'هذا كل ما يتذكره يا إمام علي عن جلساتك. يبقى هنا لأجلك — يمكنك حذف أي لحظة، أو كل شيء، في أي وقت.',
+    ar: 'هذا كل ما يتذكره الإمام علي عن جلساتك. يبقى هنا لأجلك — يمكنك حذف أي لحظة، أو كل شيء، في أي وقت.',
   },
   myStoryEmpty: {
     en: 'No sessions yet. After your first real conversation, what was carried will appear here.',
