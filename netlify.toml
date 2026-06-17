@@ -1,0 +1,21 @@
+# Netlify build configuration.
+#
+# The Vite PWA lives in app/ (not the repo root), so Netlify must build from
+# there. Supabase edge functions in supabase/ are deployed separately and are
+# not part of this static build.
+
+[build]
+  base = "app"
+  command = "npm run build"
+  publish = "dist"          # relative to base -> app/dist
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Single-page-app fallback: serve index.html for any non-asset path so
+# client-side routes (/biography, /reflections, /chat) resolve on deep links
+# and refreshes instead of returning 404. Mirrors app/public/_redirects.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
