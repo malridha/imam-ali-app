@@ -12,6 +12,7 @@ import Recite from './pages/Recite'
 import Teaching from './pages/Teaching'
 import Family from './pages/Family'
 import Reels from './pages/Reels'
+import Unity from './pages/Unity'
 
 export default function App() {
   return (
@@ -46,6 +47,8 @@ export default function App() {
       <Route path="/teaching" element={<Teaching />} />
       {/* v50 §81 — Reflections: calm full-screen swipe-feed of authenticated teachings */}
       <Route path="/reels" element={<Reels />} />
+      {/* v50 §82 — Our stance on unity: the anti-sectarian charter (Qur'an + Imam Ali) */}
+      <Route path="/unity" element={<Unity />} />
     </Routes>
   )
 }

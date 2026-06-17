@@ -19,6 +19,7 @@ import { useReadAloud } from '../hooks/useReadAloud'
 // sources — never adjudicating. See src/data/biography.ts (SectionPerspectives).
 function PerspectivesPanel({ p, lang, isAr }: { p: SectionPerspectives; lang: Lang; isAr: boolean }) {
   const [open, setOpen] = useState(false)
+  const navigate = useNavigate()
   const blocks: { key: 'shared' | 'sunni' | 'shia'; label: string; color: string; src?: string }[] = [
     { key: 'shared', label: isAr ? 'أرضٌ مشترَكة' : 'Shared ground', color: 'var(--gold)' },
     { key: 'sunni', label: isAr ? 'المنظور السنّيّ' : 'Sunni perspective', color: '#7EC1A3', src: p.sources?.sunni },
@@ -102,6 +103,22 @@ function PerspectivesPanel({ p, lang, isAr }: { p: SectionPerspectives; lang: La
                 : '⚑ Draft — pending qualified-scholar review before it is treated as authoritative.'}
             </div>
           )}
+
+          <button
+            onClick={() => navigate('/unity')}
+            style={{
+              margin: '2px 14px 8px',
+              background: 'transparent',
+              border: 'none',
+              color: 'var(--gold)',
+              cursor: 'pointer',
+              fontSize: 11.5,
+              padding: 0,
+              fontFamily: isAr ? 'var(--font-arabic)' : undefined,
+            }}
+          >
+            {isAr ? 'لماذا نعرض الرأيَين؟ · موقفنا من الوحدة ←' : 'Why we show both → Our stance on unity'}
+          </button>
         </div>
       )}
     </div>
