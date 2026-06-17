@@ -10,6 +10,12 @@ export default defineConfig({
       includeAssets: ['favicon.svg', 'icons/apple-touch-icon.png'],
       workbox: {
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024, // 4 MiB — corpus growth
+        // Make a freshly deployed build take over immediately instead of
+        // waiting for every tab to close — this is what stops users (and us)
+        // from being stuck on a stale cached version after a deploy.
+        skipWaiting: true,
+        clientsClaim: true,
+        cleanupOutdatedCaches: true,
       },
       manifest: {
         name: 'Imam Ali',
