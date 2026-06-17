@@ -13,6 +13,7 @@ import Teaching from './pages/Teaching'
 import Family from './pages/Family'
 import Reels from './pages/Reels'
 import Unity from './pages/Unity'
+import Testimonies from './pages/Testimonies'
 
 export default function App() {
   return (
@@ -51,6 +52,8 @@ export default function App() {
       <Route path="/reels" element={<Navigate to="/reflections" replace />} />
       {/* v50 §82 — Our stance on unity: the anti-sectarian charter (Qur'an + Imam Ali) */}
       <Route path="/unity" element={<Unity />} />
+      {/* v51 §83 — What was said about him: searchable testimonies + works, all traditions */}
+      <Route path="/testimonies" element={<Testimonies />} />
     </Routes>
   )
 }

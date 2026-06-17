@@ -325,6 +325,20 @@ export default function Biography() {
 
               {s.perspectives && <PerspectivesPanel p={s.perspectives} lang={lang} isAr={isAr} />}
 
+              {s.id === 'about-him' && (
+                <button
+                  onClick={() => navigate('/testimonies')}
+                  style={{
+                    marginTop: 14, padding: '9px 16px', borderRadius: 10,
+                    border: '1px solid var(--gold-b)', background: 'rgba(212,179,100,0.12)',
+                    color: 'var(--gold)', cursor: 'pointer', fontSize: 13, fontWeight: 600,
+                    fontFamily: isAr ? 'var(--font-arabic)' : undefined,
+                  }}
+                >
+                  {isAr ? 'اقرأ المزيد — ما قيلَ فيه عبر التقاليد والأديان ←' : 'Read more — what was said about him, across traditions & faiths →'}
+                </button>
+              )}
+
               <div style={{ marginTop: 14, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 <button
                   onClick={() => speak(s.id, s.body[lang])}

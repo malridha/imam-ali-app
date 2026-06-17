@@ -84,6 +84,17 @@ const ITEMS: Item[] = [
     ),
   },
   {
+    // v51 §83 — What was said about him: testimonies across traditions
+    to: '/testimonies',
+    matchPrefix: '/testimonies',
+    label: { en: 'Voices', ar: 'شهادات' },
+    icon: (
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+      </svg>
+    ),
+  },
+  {
     to: '/calendar',
     matchPrefix: '/calendar',
     label: { en: 'Calendar', ar: 'التقويم' },
