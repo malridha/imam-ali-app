@@ -51,6 +51,17 @@ const ITEMS: Item[] = [
     ),
   },
   {
+    // v50 §81 — Reflections: calm full-screen swipe-feed of teachings
+    to: '/reels',
+    matchPrefix: '/reels',
+    label: { en: 'Reels', ar: 'تأمّلات' },
+    icon: (
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm6 3.5v9l7-4.5-7-4.5z" />
+      </svg>
+    ),
+  },
+  {
     // v48 §76 — Global search across every authored piece of content
     to: '/search',
     matchPrefix: '/search',

@@ -11,6 +11,7 @@ import Discuss from './pages/Discuss'
 import Recite from './pages/Recite'
 import Teaching from './pages/Teaching'
 import Family from './pages/Family'
+import Reels from './pages/Reels'
 
 export default function App() {
   return (
@@ -43,6 +44,8 @@ export default function App() {
       <Route path="/recite" element={<Recite />} />
       {/* v49 §79 — Single-teaching page (one teaching per page, flip + explain) */}
       <Route path="/teaching" element={<Teaching />} />
+      {/* v50 §81 — Reflections: calm full-screen swipe-feed of authenticated teachings */}
+      <Route path="/reels" element={<Reels />} />
     </Routes>
   )
 }
