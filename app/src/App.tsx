@@ -46,7 +46,9 @@ export default function App() {
       {/* v49 §79 — Single-teaching page (one teaching per page, flip + explain) */}
       <Route path="/teaching" element={<Teaching />} />
       {/* v50 §81 — Reflections: calm full-screen swipe-feed of authenticated teachings */}
-      <Route path="/reels" element={<Reels />} />
+      <Route path="/reflections" element={<Reels />} />
+      {/* legacy alias so any early /reels links still resolve */}
+      <Route path="/reels" element={<Navigate to="/reflections" replace />} />
       {/* v50 §82 — Our stance on unity: the anti-sectarian charter (Qur'an + Imam Ali) */}
       <Route path="/unity" element={<Unity />} />
     </Routes>
