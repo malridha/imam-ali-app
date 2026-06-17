@@ -29435,6 +29435,15 @@ export const BASELINE_POETRY: BaselineEntry[] = [
  * Render the baseline content as a structured block to inject into
  * the system prompt. The LLM reads this once per call.
  */
+// RAG migration (v50): the FULL ~4,720-entry corpus now lives in the pgvector
+// `teachings` table and is retrieved per message server-side (chat/index.ts
+// buildRetrievalBlock injects the most relevant teachings above this block).
+// To keep the system prompt small — and within Haiku's 200K limit — we inject
+// only a small always-on CORE here as a fallback for when retrieval is thin.
+// The corpus arrays themselves stay in the bundle for the Teachings/Search/
+// Reflections browse features; only the PROMPT is trimmed.
+const CORE_SIZES = { duas: 10, wisdom: 20, poetry: 4, letters: 1, sermons: 1 }
+
 export function renderBaselineCorpusBlock(): string {
   const renderList = (label: string, list: BaselineEntry[]) =>
     list
@@ -29452,26 +29461,26 @@ export function renderBaselineCorpusBlock(): string {
       )
       .join('\n\n')
 
-  return `——— REFERENCE LIBRARY · BASELINE CORPUS ———
+  return `——— REFERENCE LIBRARY · CORE SAMPLE ———
 
-This is a curated set of authentic du'as, wisdom teachings, Diwan poetry, and excerpts from the most famous letters and sermons in Nahj al-Balagha. When the user asks for any of these categories, you MUST draw from these entries (or from RAG-retrieved teachings, if any are provided above) — never fabricate or guess. Cite the source exactly as written.
+This is a SMALL core of authentic teachings. The FULL authenticated library (thousands of du'as, wisdom, poetry, letters, and sermons) is retrieved per message and appears above under "RETRIEVED AUTHENTICATED TEACHINGS" when relevant — ALWAYS prefer those. Use this core only as a fallback when nothing relevant was retrieved. Never fabricate or guess; cite sources exactly as written. If neither the retrieved teachings nor this core truly fits the moment, introduce wisdom with "In the spirit of his wisdom:" and omit the VERSE::: block.
 
 DU'AS — when the user asks to hear a du'a or for a prayer:
-${renderList('DUA', BASELINE_DUAS)}
+${renderList('DUA', BASELINE_DUAS.slice(0, CORE_SIZES.duas))}
 
 WISDOM TEACHINGS — short sayings from Nahj al-Balagha and Ghurar al-Hikam:
-${renderList('WISDOM', BASELINE_WISDOM)}
+${renderList('WISDOM', BASELINE_WISDOM.slice(0, CORE_SIZES.wisdom))}
 
 POETRY FROM THE DIWAN — when the user asks for poetry or reflection:
-${renderList('POEM', BASELINE_POETRY)}
+${renderList('POEM', BASELINE_POETRY.slice(0, CORE_SIZES.poetry))}
 
-LETTERS — substantial excerpts from Imam Ali's most famous letters in Nahj al-Balagha. When the user asks about parenting, governance, justice, or wants something deeper than a single saying:
-${renderLongList('LETTER', BASELINE_LETTERS)}
+LETTER — one example of long-form (full letters are retrieved on demand) for governance, parenting, justice:
+${renderLongList('LETTER', BASELINE_LETTERS.slice(0, CORE_SIZES.letters))}
 
-SERMONS — substantial excerpts from the most famous sermons. When the user asks about character, the world, power, or the inner life:
-${renderLongList('SERMON', BASELINE_SERMONS)}
+SERMON — one example of long-form (full sermons are retrieved on demand) for character, the world, the inner life:
+${renderLongList('SERMON', BASELINE_SERMONS.slice(0, CORE_SIZES.sermons))}
 
-——— END REFERENCE LIBRARY ———
+——— END CORE ———
 
 `
 }
