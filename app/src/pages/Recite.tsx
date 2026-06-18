@@ -159,11 +159,6 @@ function ReciteOne({
     const total = Object.values(scores).reduce((a, s) => a + s.total, 0)
     const pct = total ? Math.round((matched / total) * 100) : 0
 
-    const system =
-      lang === 'ar'
-        ? 'أنت معلّم تلاوة لطيف يساعد شخصاً على حفظ دعاءٍ للإمام علي (عليه السلام). يُعطى النصّ الصحيح وما تُلي (منقولاً آلياً وقد يكون ناقصاً). في جملتين أو ثلاث دافئة: شجّعه، اذكر ما أحسن فيه، وأشِر إلى كلمة أو كلمتين يراجعها. لا تَقسُ؛ فالنقل تقريبي. أجب بالعربية فقط.'
-        : 'You are a gentle recitation teacher helping someone learn a du\'a of Imam Ali. You are given the correct text and what they recited (auto-transcribed and possibly imperfect). In 2-3 warm sentences: encourage them, name what they did well, and point to one or two words to revisit. Do not be harsh — the transcription is approximate. Reply in English only.'
-
     const content =
       `Correct du'a:\n${dua.arabic}\n\n` +
       (heard
@@ -173,7 +168,7 @@ function ReciteOne({
 
     try {
       const { text } = await callClaude({
-        system,
+        mode: 'recite',
         messages: [{ role: 'user', content }],
         lang,
         userId,

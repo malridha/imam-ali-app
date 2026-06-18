@@ -25,8 +25,11 @@ export type CrisisInfo = {
   resources: CrisisResource[]
 }
 
+/** v50 (B1): the server owns the system prompt; the client selects one by mode. */
+export type ChatMode = 'companion' | 'teaching' | 'recite'
+
 type CallArgs = {
-  system: string
+  mode: ChatMode
   messages: ClaudeMessage[]
   /** UI language; the server uses it for the crisis fallback text. */
   lang?: Lang
@@ -101,7 +104,7 @@ export function isOutOfCreditsError(message: string): boolean {
  * called in that case.
  */
 export async function callClaude({
-  system,
+  mode,
   messages,
   lang,
   userId,
@@ -113,7 +116,7 @@ export async function callClaude({
   temperature = 0.5,
 }: CallArgs): Promise<ClaudeResult> {
   const body = {
-    system,
+    mode,
     messages,
     lang,
     user_id: userId,
@@ -186,7 +189,7 @@ export type StreamResult = {
  */
 export async function streamClaude(
   {
-    system,
+    mode,
     messages,
     lang,
     userId,
@@ -203,7 +206,7 @@ export async function streamClaude(
       Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
     },
     body: JSON.stringify({
-      system,
+      mode,
       messages,
       lang,
       user_id: userId,

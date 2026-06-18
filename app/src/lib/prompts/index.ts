@@ -1,9 +1,10 @@
 import type { Lang } from '../../types/lang'
-import { UNIFIED_SYSTEM, UNIFIED_OPENER } from './unified'
-import { UNIFIED_SYSTEM_AR, UNIFIED_OPENER_AR } from './ar/unified'
+import { UNIFIED_OPENER } from './unified'
+import { UNIFIED_OPENER_AR } from './ar/unified'
 
+// v50 (B1): the system prompt now lives server-side (in the chat Edge
+// Function). The client only carries the opener — a user-message meta-prompt.
 export type PathPrompt = {
-  system: string
   opener: string
 }
 
@@ -15,8 +16,8 @@ export type PathPrompt = {
  * Section 25 + 35 of Ya_Imam_Ali_Brief_v15_Final.
  */
 export const UNIFIED_PROMPTS: Record<Lang, PathPrompt> = {
-  en: { system: UNIFIED_SYSTEM, opener: UNIFIED_OPENER },
-  ar: { system: UNIFIED_SYSTEM_AR, opener: UNIFIED_OPENER_AR },
+  en: { opener: UNIFIED_OPENER },
+  ar: { opener: UNIFIED_OPENER_AR },
 }
 
 export function getPrompt(lang: Lang): PathPrompt {

@@ -194,7 +194,7 @@ export default function Companion() {
       try {
         const r = await streamClaude(
           {
-            system: prompt.system,
+            mode: 'companion',
             messages: opts.send,
             lang,
             userId,
@@ -207,7 +207,7 @@ export default function Companion() {
         // Streaming failed (network blip / unsupported) — fall back once.
         try {
           const r = await callClaude({
-            system: prompt.system,
+            mode: 'companion',
             messages: opts.send,
             lang,
             userId,

@@ -14,6 +14,7 @@
 
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.45.4'
 import { updateTSP, type TSP } from './tsp.ts'
+import { SYSTEM_PROMPTS, isMode, type Mode } from '../_shared/prompts.ts'
 
 const ANTHROPIC_ENDPOINT = 'https://api.anthropic.com/v1/messages'
 const ANTHROPIC_VERSION = '2023-06-01'
@@ -41,7 +42,8 @@ type ClaudeMessage = {
 }
 
 type RequestBody = {
-  system: string
+  /** v50 (B1): the server owns the system prompt; the client selects one by mode. */
+  mode?: Mode
   messages: ClaudeMessage[]
   lang?: Lang
   user_id?: string
@@ -420,22 +422,15 @@ Deno.serve(async (req: Request) => {
     return jsonResponse({ error: 'Invalid JSON body' }, 400)
   }
 
-  if (!body?.system || !Array.isArray(body?.messages)) {
-    return jsonResponse(
-      { error: 'Body must include { system, messages[] }' },
-      400,
-    )
+  if (!Array.isArray(body?.messages)) {
+    return jsonResponse({ error: 'Body must include { messages[] }' }, 400)
   }
 
-  // Payload caps — a cost/memory abuse guard (not a usage limit on real users;
-  // these ceilings are far above any genuine conversation). body.system is
-  // currently client-supplied, so it's capped too until it moves server-side.
+  // Payload caps — cost/memory abuse guard (far above any genuine conversation).
   const MAX_MESSAGES = 80
   const MAX_MSG_CHARS = 8000
-  const MAX_SYSTEM_CHARS = 200_000
   const oversize =
     body.messages.length > MAX_MESSAGES ||
-    body.system.length > MAX_SYSTEM_CHARS ||
     body.messages.some((m) => {
       const c = (m as { content?: unknown }).content
       const len = typeof c === 'string' ? c.length : JSON.stringify(c ?? '').length
@@ -446,6 +441,11 @@ Deno.serve(async (req: Request) => {
   }
 
   const lang: Lang = body.lang === 'ar' ? 'ar' : 'en'
+  // v50 (B1) — the server owns the system prompt. The client selects by mode;
+  // any client-sent `system` is ignored, so callers can't inject their own
+  // prompt (closes the persona-bypass / free-proxy hole).
+  const mode: Mode = isMode(body.mode) ? body.mode : 'companion'
+  const baseSystem = SYSTEM_PROMPTS[mode][lang]
 
   // Abuse guard (fail-open) — real users never reach these thresholds.
   if (await isRateLimited(req, body.user_id)) {
@@ -519,7 +519,7 @@ Deno.serve(async (req: Request) => {
   // ── Normal flow. Build the system prompt as CACHE-AWARE blocks so the huge
   // static baseline corpus (~200K tokens) is billed at ~1/10th the price on
   // repeat calls within the cache window, instead of full price every time:
-  //   [0] the static corpus + instructions (body.system) — marked cacheable
+  //   [0] the static corpus + instructions (server-owned, by mode) — cacheable
   //   [1] per-user memory (variable)        — after the cache breakpoint
   //   [2] per-query retrieved teachings (variable)
   let memoryUsed = 0
@@ -540,7 +540,7 @@ Deno.serve(async (req: Request) => {
   const systemParam: Array<Record<string, unknown>> = [
     {
       type: 'text',
-      text: body.system,
+      text: baseSystem,
       cache_control: { type: 'ephemeral' },
     },
   ]

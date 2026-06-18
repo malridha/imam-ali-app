@@ -84,13 +84,9 @@ export default function Teaching() {
     setExplainErr('')
     setExplainBusy(true)
     setExplanation('')
-    const system =
-      lang === 'ar'
-        ? 'أنت رفيق عالِم دافئ تشرح تعليماً للإمام علي (عليه السلام). في ثلاث أو أربع جُمَل قصيرة: اشرح ما يعنيه هذا التعليم وكيف يُعاش، ببساطة ودفء، وانسب الحكمة إلى الإمام علي. أجب بالعربية فقط.'
-        : "You are a warm scholar-companion explaining a teaching of Imam Ali. In 3-4 short sentences, explain plainly and warmly what this teaching means and how to live it, attributing the wisdom to Imam Ali. Reply in English only."
     try {
       const { text } = await callClaude({
-        system,
+        mode: 'teaching',
         messages: [
           {
             role: 'user',
