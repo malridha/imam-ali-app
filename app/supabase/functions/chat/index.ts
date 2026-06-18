@@ -362,6 +362,33 @@ function verifyAndStrip(
   return { text: cleaned, verifications: records }
 }
 
+// ── Abuse rate limiting (NOT a usage cap) ───────────────────────────────
+// Thresholds are set far above any real human's pace; the goal is only to
+// stop a script that extracted the public anon key from draining the Claude
+// bill. FAILS OPEN: any error (incl. the rate_limits table not existing yet)
+// allows the request, so real users are never wrongly blocked. When auth +
+// paid tiers exist, exempt paying users by returning false before the checks.
+async function rlHit(sb: ReturnType<typeof createClient>, bucket: string, max: number, win: number): Promise<boolean> {
+  const { data, error } = await sb.rpc('rate_limit_hit', { p_bucket: bucket, p_max: max, p_window_seconds: win })
+  if (error) return true // fail-open: treat as allowed if the limiter isn't available
+  return data === true
+}
+async function isRateLimited(req: Request, userId?: string): Promise<boolean> {
+  try {
+    const url = Deno.env.get('SUPABASE_URL')
+    const key = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
+    if (!url || !key) return false
+    const sb = createClient(url, key)
+    const ip = (req.headers.get('x-forwarded-for') || '').split(',')[0].trim() || 'unknown'
+    const checks = [rlHit(sb, `chat:ip:${ip}`, 150, 60)]
+    if (userId) checks.push(rlHit(sb, `chat:u:${userId}`, 40, 60))
+    const allowed = await Promise.all(checks)
+    return allowed.some((ok) => ok === false)
+  } catch {
+    return false // fail-open
+  }
+}
+
 // ─── Handler ───────────────────────────────────────────────────────────────
 
 Deno.serve(async (req: Request) => {
@@ -395,6 +422,19 @@ Deno.serve(async (req: Request) => {
   }
 
   const lang: Lang = body.lang === 'ar' ? 'ar' : 'en'
+
+  // Abuse guard (fail-open) — real users never reach these thresholds.
+  if (await isRateLimited(req, body.user_id)) {
+    return jsonResponse(
+      {
+        error:
+          lang === 'ar'
+            ? 'طلبات كثيرة جدًا. تمهّل لحظةً من فضلك.'
+            : 'Too many requests — please slow down a moment.',
+      },
+      429,
+    )
+  }
 
   // ── Memory Agent (Agent 5) · presence ping + TSP update.
   //

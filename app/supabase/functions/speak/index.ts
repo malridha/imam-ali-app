@@ -172,6 +172,42 @@ const AUDIO_HEADERS = {
   'Cache-Control': 'public, max-age=31536000, immutable',
 }
 
+// ── Abuse rate limiting (NOT a usage cap) ───────────────────────────────
+// The anon key ships in the public bundle, so /speak is callable by anyone.
+// This guards the ElevenLabs spend from automated abuse without limiting real
+// users: the threshold is far above any human's playback pace, and the check
+// fails OPEN — any error allows the request. See 20260618000000_rate_limits.sql.
+// Note: cache hits never reach ElevenLabs, so this only meaningfully bites on
+// floods of NOVEL text (the actual cost vector).
+async function rlHit(
+  sb: ReturnType<typeof createClient>,
+  bucket: string,
+  max: number,
+  win: number,
+): Promise<boolean> {
+  const { data, error } = await sb.rpc('rate_limit_hit', {
+    p_bucket: bucket,
+    p_max: max,
+    p_window_seconds: win,
+  })
+  if (error) return true // fail-open
+  return data === true
+}
+
+async function isRateLimited(req: Request): Promise<boolean> {
+  try {
+    const sb = storageClient()
+    if (!sb) return false
+    const ip = (req.headers.get('x-forwarded-for') || '').split(',')[0].trim() || 'unknown'
+    // 250 syntheses/min/IP — an order of magnitude past any human's listening
+    // pace, so real users (paying or not) never see it; only floods trip it.
+    const allowed = await rlHit(sb, `speak:ip:${ip}`, 250, 60)
+    return allowed === false
+  } catch {
+    return false
+  }
+}
+
 Deno.serve(async (req: Request) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { status: 204, headers: CORS_HEADERS })
@@ -201,6 +237,11 @@ Deno.serve(async (req: Request) => {
   }
   if (text.length > 5000) {
     return errorResponse('Text too long (max 5000 characters)')
+  }
+
+  // Abuse guard — far above any human's pace, fail-open. Real users never hit it.
+  if (await isRateLimited(req)) {
+    return errorResponse('Too many requests — please slow down a moment.', 429)
   }
 
   const useCase: UseCase = isValidUseCase(body.use_case) ? body.use_case : 'conversation'
