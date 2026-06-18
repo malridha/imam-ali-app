@@ -62,6 +62,7 @@ export default function Threshold({ onCross }: Props) {
   // Becomes true once playback has actually started, so we don't treat
   // the "still loading" initial speaking=false as the end of the voice.
   const voiceHasStartedRef = useRef(false)
+  const rootRef = useRef<HTMLDivElement>(null)
 
   // Invocation auto-advances to reveal after the fixed black-+-voice runway.
   useEffect(() => {
@@ -108,6 +109,13 @@ export default function Threshold({ onCross }: Props) {
     return () => window.clearTimeout(t)
   }, [phase, onCross])
 
+  // a11y: focus the overlay on mount so keyboard / screen-reader users can
+  // cross the threshold. The idle screen has no auto-advance — it waits for a
+  // gesture — so without this, keyboard-only users were stranded at the door.
+  useEffect(() => {
+    rootRef.current?.focus()
+  }, [])
+
   // The single sacred touch — crosses the threshold and unlocks audio.
   function crossThreshold() {
     if (phase !== 'idle') return
@@ -130,11 +138,24 @@ export default function Threshold({ onCross }: Props) {
 
   return (
     <div
+      ref={rootRef}
       className={`threshold phase-${phase} ${phase === 'fade' ? 'is-fading' : ''}`}
       onClick={handleTap}
-      onKeyDown={handleTap}
-      role="presentation"
-      aria-hidden="true"
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          handleTap()
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label={
+        phase === 'idle'
+          ? T.tapToHear[lang]
+          : lang === 'ar'
+            ? 'تخطّي المقدّمة'
+            : 'Skip introduction'
+      }
     >
       {/* The luminous figure — hidden until REVEAL, then fades up from
           black. v41 §55.2: light that has chosen a human shape. No face,

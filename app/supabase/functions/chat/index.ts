@@ -407,6 +407,12 @@ Deno.serve(async (req: Request) => {
     )
   }
 
+  // Reject oversized bodies before parsing them into memory.
+  const contentLength = parseInt(req.headers.get('content-length') || '0', 10)
+  if (contentLength > 1_000_000) {
+    return jsonResponse({ error: 'Request too large' }, 413)
+  }
+
   let body: RequestBody
   try {
     body = await req.json()
@@ -419,6 +425,24 @@ Deno.serve(async (req: Request) => {
       { error: 'Body must include { system, messages[] }' },
       400,
     )
+  }
+
+  // Payload caps — a cost/memory abuse guard (not a usage limit on real users;
+  // these ceilings are far above any genuine conversation). body.system is
+  // currently client-supplied, so it's capped too until it moves server-side.
+  const MAX_MESSAGES = 80
+  const MAX_MSG_CHARS = 8000
+  const MAX_SYSTEM_CHARS = 200_000
+  const oversize =
+    body.messages.length > MAX_MESSAGES ||
+    body.system.length > MAX_SYSTEM_CHARS ||
+    body.messages.some((m) => {
+      const c = (m as { content?: unknown }).content
+      const len = typeof c === 'string' ? c.length : JSON.stringify(c ?? '').length
+      return len > MAX_MSG_CHARS
+    })
+  if (oversize) {
+    return jsonResponse({ error: 'Request payload too large' }, 413)
   }
 
   const lang: Lang = body.lang === 'ar' ? 'ar' : 'en'

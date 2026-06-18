@@ -38,7 +38,8 @@ export default function Teaching() {
   const isAr = lang === 'ar'
   const [params, setParams] = useSearchParams()
 
-  const type = (params.get('type') as TType) || 'wisdom'
+  const rawType = params.get('type')
+  const type: TType = rawType === 'dua' || rawType === 'poetry' ? rawType : 'wisdom'
   const list = arrayFor(type)
   const i = Math.max(0, Math.min(list.length - 1, Number(params.get('i') ?? 0) || 0))
   const entry = list[i]

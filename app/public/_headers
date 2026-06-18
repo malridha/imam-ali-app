@@ -1,3 +1,13 @@
+# Security headers — applied to every response. Blocks clickjacking
+# (frame embedding), MIME-sniffing, and referrer leakage, and denies unused
+# powerful features. NOTE: microphone stays allowed (self) because voice input
+# and the recitation feature use the Web Speech API.
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), geolocation=(), payment=(), microphone=(self)
+
 # Always revalidate the app shell and service worker so a new deploy is
 # detected on the very next visit (no stale cached version).
 /index.html

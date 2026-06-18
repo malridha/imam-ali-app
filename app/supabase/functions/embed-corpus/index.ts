@@ -32,6 +32,15 @@ Deno.serve(async (req: Request) => {
     return new Response(null, { status: 204, headers: CORS_HEADERS })
   }
 
+  // Admin-only maintenance endpoint. The anon key ships in the public bundle,
+  // so without this anyone could trigger embedding compute on our dime. Require
+  // a secret header and fail CLOSED (unlike the user-facing functions): if
+  // EMBED_ADMIN_KEY is unset or the header doesn't match, refuse.
+  const adminKey = Deno.env.get('EMBED_ADMIN_KEY')
+  if (!adminKey || req.headers.get('x-admin-key') !== adminKey) {
+    return jsonResponse({ error: 'Forbidden' }, 403)
+  }
+
   const supabase = createClient(
     Deno.env.get('SUPABASE_URL')!,
     Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
