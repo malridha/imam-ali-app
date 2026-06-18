@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { LangProvider } from './contexts/LangContext'
 import { TSPProvider } from './contexts/TSPContext'
+import './fonts.css'
 import './index.css'
 import App from './App'
 
