@@ -400,6 +400,7 @@ function WelcomeVideo() {
       <video
         ref={videoRef}
         src="/welcome.mp4"
+        poster="/welcome-poster.jpg"
         autoPlay
         muted
         loop

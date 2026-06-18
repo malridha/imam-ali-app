@@ -11,3 +11,12 @@
 # changes), so they are safe to cache hard for a year.
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+# The welcome video + poster are large-ish and change rarely. Cache 30 days so
+# returning visitors don't re-download (~3.6 MB) every session. Not "immutable"
+# because the filename is stable — the window still revalidates eventually, so a
+# future swap propagates without a forced cache-bust.
+/welcome.mp4
+  Cache-Control: public, max-age=2592000
+/welcome-poster.jpg
+  Cache-Control: public, max-age=2592000
