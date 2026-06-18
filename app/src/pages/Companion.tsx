@@ -6,6 +6,7 @@ import VerseCard from '../components/VerseCard'
 import TypingIndicator from '../components/TypingIndicator'
 import ChatInput from '../components/ChatInput'
 import ServiceNav from '../components/ServiceNav'
+import AppHeader from '../components/AppHeader'
 import { useLang } from '../contexts/LangContext'
 import { useTSP } from '../contexts/TSPContext'
 import { type EmotionalState } from '../types/paths'
@@ -25,7 +26,6 @@ import { supabase } from '../lib/supabase'
 import { useAudioPlayer } from '../hooks/useAudioPlayer'
 import { cleanForTTS } from '../lib/cleanForTTS'
 import { T } from '../lib/i18n'
-import { LANG_LABELS, type Lang } from '../types/lang'
 import CrisisCard from '../components/CrisisCard'
 import '../components/Chat.css'
 
@@ -64,7 +64,7 @@ function cleanStreaming(raw: string): string {
 
 export default function Companion() {
   const navigate = useNavigate()
-  const { lang, setLang } = useLang()
+  const { lang } = useLang()
   const { setTSP } = useTSP()
   const [searchParams, setSearchParams] = useSearchParams()
   const seededMessage = searchParams.get('q')?.trim() ?? ''
@@ -74,11 +74,10 @@ export default function Companion() {
 
   const userId = useMemo(() => getOrCreateUserId(), [])
   const {
-    muted,
-    setMuted,
     speaking,
     error: audioError,
     play: playAudio,
+    stop,
   } = useAudioPlayer()
   const [state, setState] = useState<EmotionalState>('peace')
   const [avatarVerse, setAvatarVerse] = useState<ParsedVerse | undefined>(
@@ -271,7 +270,7 @@ export default function Companion() {
       { role: 'user', content: prompt.opener },
       { role: 'assistant', content: greeting },
     ])
-    if (greeting) void playAudio(cleanForTTS(greeting, lang), lang, 'salam')
+    // Voice is user-initiated only — tap "Listen" on any message to hear it.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [prompt])
 
@@ -312,9 +311,10 @@ export default function Companion() {
 
   return (
     <>
+    <AppHeader isSubPage />
     <main
       style={{
-        height: '100dvh',
+        height: 'calc(100dvh - var(--header-h, 57px) - env(safe-area-inset-top))',
         display: 'flex',
         flexDirection: 'column',
         background: 'var(--bg)',
@@ -325,111 +325,6 @@ export default function Companion() {
         paddingBottom: '4.25rem',
       }}
     >
-      <header
-        style={{
-          background: 'var(--surface)',
-          borderBottom: '1px solid var(--border)',
-          padding: '11px 18px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: 10,
-          flexShrink: 0,
-        }}
-      >
-        {/* Live presence dot */}
-        <span
-          aria-hidden="true"
-          style={{
-            width: 7,
-            height: 7,
-            borderRadius: '50%',
-            background: 'var(--green)',
-            animation: 'pulse 2.5s ease-in-out infinite',
-            flexShrink: 0,
-          }}
-        />
-        <div className="ar" style={{ fontSize: 18, color: 'var(--gold)' }}>
-          {T.appTitleAr[lang]}
-        </div>
-
-        {/* Right-side pill group */}
-        <div
-          style={{
-            marginInlineStart: 'auto',
-            display: 'flex',
-            gap: 6,
-            alignItems: 'center',
-          }}
-        >
-          {/* Mute / unmute */}
-          <button
-            onClick={() => setMuted(!muted)}
-            title={muted ? 'Unmute voice' : 'Mute voice'}
-            aria-label={muted ? 'Unmute voice' : 'Mute voice'}
-            style={{
-              width: 28,
-              height: 24,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'var(--gold)',
-              padding: 0,
-              border: '1px solid var(--border)',
-              borderRadius: 20,
-              background: 'transparent',
-              cursor: 'pointer',
-              opacity: muted ? 0.55 : 1,
-            }}
-          >
-            <svg
-              viewBox="0 0 24 24"
-              width="14"
-              height="14"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              {muted ? (
-                <path d="M16.5 12l3.5-3.5-1.4-1.4L15 10.6 11.5 7H7v10h4.5l3.5-3.6 3.6 3.6 1.4-1.4L16.5 12z" />
-              ) : (
-                <path d="M3 9v6h4l5 4V5L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4.03v8.06A4.5 4.5 0 0 0 16.5 12zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4-1 7-4.66 7-8.77S18 4.23 14 3.23z" />
-              )}
-            </svg>
-          </button>
-
-          {/* Language toggle — shows the OTHER language as the click target */}
-          <button
-            onClick={() => setLang((lang === 'en' ? 'ar' : 'en') as Lang)}
-            title={`Switch to ${LANG_LABELS[lang === 'en' ? 'ar' : 'en']}`}
-            style={{
-              fontSize: 10,
-              color: 'var(--gold)',
-              padding: '3px 10px',
-              border: '1px solid var(--border)',
-              borderRadius: 20,
-              background: 'transparent',
-              cursor: 'pointer',
-            }}
-          >
-            {LANG_LABELS[lang === 'en' ? 'ar' : 'en']}
-          </button>
-
-          <button
-            onClick={() => navigate('/')}
-            title={T.goBack[lang]}
-            style={{
-              fontSize: 10,
-              color: 'var(--gold)',
-              padding: '3px 10px',
-              border: '1px solid var(--border)',
-              borderRadius: 20,
-              background: 'transparent',
-              cursor: 'pointer',
-            }}
-          >
-            ↩ {T.goBack[lang]}
-          </button>
-        </div>
-      </header>
 
       {/* v44 §73 — the chat avatar is the cinematic scholar portrait.
           State-coloured glow, breathing pulse, and speaking animation
@@ -544,6 +439,29 @@ export default function Companion() {
         )}
       </div>
 
+      {/* Stop button — visible while audio is playing so user can always halt it */}
+      {speaking && (
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '4px 0' }}>
+          <button
+            onClick={() => stop()}
+            aria-label={lang === 'ar' ? 'إيقاف الصوت' : 'Stop voice'}
+            style={{
+              padding: '5px 16px',
+              borderRadius: 999,
+              border: '1px solid var(--border)',
+              background: 'rgba(12,26,58,0.7)',
+              color: 'var(--gold)',
+              cursor: 'pointer',
+              fontSize: 11,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 6,
+            }}
+          >
+            ◼ {lang === 'ar' ? 'إيقاف' : 'Stop'}
+          </button>
+        </div>
+      )}
       <ChatInput
         disabled={busy}
         onSend={handleSend}

@@ -67,6 +67,12 @@
   --content-narrow: 520px;                    /* setup, story */
   --content-wide: 720px;                      /* teachings, biography */
 
+  /* Shared header height — used by pages that calculate their own height
+     relative to the header (Companion, Reels). The header itself also
+     adds env(safe-area-inset-top) on top of this, so pages using
+     `height: calc(100dvh - var(--header-h))` must account for that too. */
+  --header-h: 57px;
+
   color-scheme: dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;

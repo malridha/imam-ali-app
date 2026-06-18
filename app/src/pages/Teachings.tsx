@@ -24,6 +24,7 @@ import type {
   LongFormEntry,
 } from '../lib/prompts/baseline-corpus'
 import ServiceNav from '../components/ServiceNav'
+import AppHeader from '../components/AppHeader'
 import { useReadAloud } from '../hooks/useReadAloud'
 
 type ShortSection = TeachingsTheme | typeof POETRY_SECTION | typeof DUA_SECTION
@@ -135,6 +136,7 @@ export default function Teachings() {
 
   return (
     <>
+      <AppHeader isSubPage />
       <main
         style={{
           minHeight: '100dvh',
@@ -146,22 +148,6 @@ export default function Teachings() {
           direction: isAr ? 'rtl' : 'ltr',
         }}
       >
-        <button
-          onClick={() => navigate('/')}
-          style={{
-            fontSize: 11,
-            color: 'var(--gold)',
-            padding: '6px 12px',
-            border: '1px solid var(--border)',
-            borderRadius: 20,
-            background: 'transparent',
-            cursor: 'pointer',
-            marginBottom: '1rem',
-          }}
-        >
-          ↩ {isAr ? 'الرئيسية' : 'Home'}
-        </button>
-
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '1.3rem' }}>
           <div

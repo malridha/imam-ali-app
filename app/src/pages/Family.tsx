@@ -9,6 +9,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import ServiceNav from '../components/ServiceNav'
+import AppHeader from '../components/AppHeader'
 import {
   IMAM_ALI_SELF,
   PARENTS,
@@ -46,6 +47,7 @@ export default function Family() {
 
   return (
     <>
+      <AppHeader isSubPage />
       <main
         style={{
           minHeight: '100dvh',
@@ -58,21 +60,6 @@ export default function Family() {
         }}
       >
         <div style={{ padding: '0 0.5rem' }}>
-          <button
-            onClick={() => navigate('/biography')}
-            style={{
-              fontSize: 11,
-              color: 'var(--gold)',
-              padding: '6px 12px',
-              border: '1px solid var(--border)',
-              borderRadius: 20,
-              background: 'transparent',
-              cursor: 'pointer',
-              marginBottom: '1rem',
-            }}
-          >
-            ↩ {isAr ? 'السيرة' : 'Biography'}
-          </button>
 
           <div style={{ textAlign: 'center', marginBottom: '1.2rem' }}>
             <div

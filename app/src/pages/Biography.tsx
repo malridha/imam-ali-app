@@ -12,6 +12,7 @@ import { BIOGRAPHY } from '../data/biography'
 import type { SectionPerspectives } from '../data/biography'
 import type { Lang } from '../types/lang'
 import ServiceNav from '../components/ServiceNav'
+import AppHeader from '../components/AppHeader'
 import { useReadAloud } from '../hooks/useReadAloud'
 
 // Expandable Sunni + Shia perspectives panel for contested-event sections.
@@ -139,6 +140,7 @@ export default function Biography() {
 
   return (
     <>
+      <AppHeader isSubPage />
       <main
         style={{
           minHeight: '100dvh',
@@ -150,22 +152,6 @@ export default function Biography() {
           direction: isAr ? 'rtl' : 'ltr',
         }}
       >
-        <button
-          onClick={() => navigate('/')}
-          style={{
-            fontSize: 11,
-            color: 'var(--gold)',
-            padding: '6px 12px',
-            border: '1px solid var(--border)',
-            borderRadius: 20,
-            background: 'transparent',
-            cursor: 'pointer',
-            marginBottom: '1rem',
-          }}
-        >
-          ↩ {isAr ? 'الرئيسية' : 'Home'}
-        </button>
-
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
           <div

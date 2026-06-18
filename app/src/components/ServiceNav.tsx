@@ -30,16 +30,6 @@ const ITEMS: Item[] = [
     ),
   },
   {
-    to: '/chat',
-    matchPrefix: '/chat',
-    label: { en: 'Companion', ar: 'الرفيق' },
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-        <path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM7 9h10v2H7V9zm6 5H7v-2h6v2z" />
-      </svg>
-    ),
-  },
-  {
     // v46 §75 — Teachings library
     to: '/teachings',
     matchPrefix: '/teachings',
@@ -58,28 +48,6 @@ const ITEMS: Item[] = [
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
         <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm6 3.5v9l7-4.5-7-4.5z" />
-      </svg>
-    ),
-  },
-  {
-    // v48 §76 — Global search across every authored piece of content
-    to: '/search',
-    matchPrefix: '/search',
-    label: { en: 'Search', ar: 'بحث' },
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-        <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
-      </svg>
-    ),
-  },
-  {
-    // v46 §74 — Biography of Imam Ali
-    to: '/biography',
-    matchPrefix: '/biography',
-    label: { en: 'Biography', ar: 'السيرة' },
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
       </svg>
     ),
   },

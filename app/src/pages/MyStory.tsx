@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import { useTSP } from '../contexts/TSPContext'
 import ServiceNav from '../components/ServiceNav'
+import AppHeader from '../components/AppHeader'
 import { supabase } from '../lib/supabase'
 import { getOrCreateUserId } from '../lib/userId'
 import { T } from '../lib/i18n'
@@ -18,7 +18,6 @@ type StoredSummary = {
 }
 
 export default function MyStory() {
-  const navigate = useNavigate()
   const { lang } = useLang()
   const { resetTSP } = useTSP()
   const userId = useMemo(() => getOrCreateUserId(), [])
@@ -83,6 +82,7 @@ export default function MyStory() {
 
   return (
     <>
+    <AppHeader isSubPage />
     <main
       style={{
         minHeight: '100dvh',
@@ -93,33 +93,9 @@ export default function MyStory() {
         padding: '1.5rem 1.5rem 5rem',
       }}
     >
-      <header
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: 10,
-          marginBottom: '1.5rem',
-        }}
-      >
-        <div className="ar" style={{ fontSize: 22, color: 'var(--gold)' }}>
-          {T.myStory[lang]}
-        </div>
-        <button
-          onClick={() => navigate('/')}
-          style={{
-            marginInlineStart: 'auto',
-            fontSize: 10,
-            color: 'var(--gold)',
-            padding: '3px 10px',
-            border: '1px solid var(--border)',
-            borderRadius: 20,
-            background: 'transparent',
-            cursor: 'pointer',
-          }}
-        >
-          ↩ {T.goBack[lang]}
-        </button>
-      </header>
+      <div className="ar" style={{ fontSize: 22, color: 'var(--gold)', marginBottom: '1.5rem' }}>
+        {T.myStory[lang]}
+      </div>
 
       <p
         style={{

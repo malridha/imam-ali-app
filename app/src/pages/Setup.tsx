@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import { useAudioPlayer } from '../hooks/useAudioPlayer'
 import { T } from '../lib/i18n'
-import { LANG_LABELS } from '../types/lang'
 import ChatInput from '../components/ChatInput'
 import ServiceNav from '../components/ServiceNav'
+import AppHeader from '../components/AppHeader'
 import Threshold from '../components/Threshold'
 import { useTSP } from '../contexts/TSPContext'
 import { findTodaysSurfacedEvent } from '../lib/tsp/calendar-surface'
@@ -15,7 +15,7 @@ const THRESHOLD_SHOWN_KEY = 'ya-imam-ali:threshold-crossed'
 
 export default function Setup() {
   const navigate = useNavigate()
-  const { lang, setLang } = useLang()
+  const { lang } = useLang()
   useAudioPlayer() // mount the audio player so the gesture unlock fires
   const { tsp } = useTSP()
   const surfaced = findTodaysSurfacedEvent(tsp)
@@ -57,6 +57,7 @@ export default function Setup() {
   return (
     <>
       {showThreshold && <Threshold onCross={crossThreshold} />}
+      <AppHeader isSubPage={false} />
     <main
       style={{
         minHeight: '100dvh',
@@ -69,34 +70,6 @@ export default function Setup() {
         margin: '0 auto',
       }}
     >
-      {/* Top utility bar — only the language toggle now. All other
-          sections live in the bottom service nav. */}
-      <div
-        style={{
-          width: '100%',
-          maxWidth: 420,
-          display: 'flex',
-          gap: 8,
-          marginBottom: '1rem',
-        }}
-      >
-        <button
-          onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
-          title={`Switch to ${LANG_LABELS[lang === 'en' ? 'ar' : 'en']}`}
-          style={{
-            fontSize: 10,
-            color: 'var(--gold)',
-            padding: '4px 12px',
-            border: '1px solid var(--border)',
-            borderRadius: 20,
-            background: 'transparent',
-            cursor: 'pointer',
-            marginInlineEnd: 'auto',
-          }}
-        >
-          {LANG_LABELS[lang === 'en' ? 'ar' : 'en']}
-        </button>
-      </div>
 
       {/* Centered welcome content */}
       <div
@@ -205,84 +178,6 @@ export default function Setup() {
         >
           {T.enterCompanion[lang]}
         </button>
-
-        {/* v46 §75 — Featured Teachings + Biography links on home */}
-        <div
-          style={{
-            display: 'flex',
-            gap: 10,
-            marginTop: '1rem',
-            width: '100%',
-            maxWidth: 420,
-          }}
-        >
-          <button
-            onClick={() => navigate('/teachings')}
-            style={{
-              flex: 1,
-              padding: '10px 14px',
-              background: 'var(--surface)',
-              border: '1px solid var(--border)',
-              borderLeft: '3px solid var(--gold)',
-              borderRadius: 10,
-              color: 'var(--text)',
-              cursor: 'pointer',
-              textAlign: lang === 'ar' ? 'right' : 'left',
-              direction: lang === 'ar' ? 'rtl' : 'ltr',
-            }}
-          >
-            <div
-              style={{
-                fontSize: 9,
-                color: 'var(--gold)',
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                marginBottom: 3,
-              }}
-            >
-              {lang === 'ar' ? 'مكتبة' : 'Library'}
-            </div>
-            <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--cream)' }}>
-              {lang === 'ar' ? 'الحكمة والأدعية' : 'Wisdom & Du\'as'}
-            </div>
-            <div style={{ fontSize: 10, color: 'var(--muted)', marginTop: 2 }}>
-              {lang === 'ar' ? 'تعاليمه — اقرأها أو استمع' : 'His teachings — read or listen'}
-            </div>
-          </button>
-          <button
-            onClick={() => navigate('/biography')}
-            style={{
-              flex: 1,
-              padding: '10px 14px',
-              background: 'var(--surface)',
-              border: '1px solid var(--border)',
-              borderLeft: '3px solid var(--gold)',
-              borderRadius: 10,
-              color: 'var(--text)',
-              cursor: 'pointer',
-              textAlign: lang === 'ar' ? 'right' : 'left',
-              direction: lang === 'ar' ? 'rtl' : 'ltr',
-            }}
-          >
-            <div
-              style={{
-                fontSize: 9,
-                color: 'var(--gold)',
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                marginBottom: 3,
-              }}
-            >
-              {lang === 'ar' ? 'سيرة' : 'A Life'}
-            </div>
-            <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--cream)' }}>
-              {lang === 'ar' ? 'حياة الإمام عليّ' : 'Imam Ali\'s life'}
-            </div>
-            <div style={{ fontSize: 10, color: 'var(--muted)', marginTop: 2 }}>
-              {lang === 'ar' ? 'مولده وأهله ومسيرته' : 'Birth, family, journey'}
-            </div>
-          </button>
-        </div>
 
         {/* "or just tell me" divider */}
         <div

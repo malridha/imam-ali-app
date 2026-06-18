@@ -11,6 +11,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
+import AppHeader from '../components/AppHeader'
 import { useReadAloud } from '../hooks/useReadAloud'
 import { ALL_WISDOM } from '../data/teachings'
 import type { BaselineEntry } from '../lib/prompts/baseline-corpus'
@@ -165,41 +166,21 @@ export default function Reels() {
   }
 
   return (
+    <>
+    <AppHeader isSubPage />
     <div
       ref={containerRef}
       dir={isAr ? 'rtl' : 'ltr'}
       style={{
         position: 'fixed',
         inset: 0,
+        top: 'var(--header-h, 57px)',
         background: 'var(--bg)',
         overflowY: 'scroll',
         scrollSnapType: 'y mandatory',
         WebkitOverflowScrolling: 'touch',
       }}
     >
-      {/* Top bar */}
-      <div
-        style={{
-          position: 'fixed', top: 0, left: 0, right: 0, zIndex: 20,
-          display: 'flex', alignItems: 'center', gap: 10,
-          padding: '14px 16px',
-          background: 'linear-gradient(to bottom, rgba(8,16,34,0.85), rgba(8,16,34,0))',
-        }}
-      >
-        <button
-          onClick={() => navigate('/')}
-          aria-label={isAr ? 'رجوع' : 'Back'}
-          style={{ background: 'transparent', border: 'none', color: 'var(--cream)', fontSize: 22, cursor: 'pointer', lineHeight: 1 }}
-        >
-          {isAr ? '›' : '‹'}
-        </button>
-        <span style={{ color: 'var(--cream)', fontWeight: 700, fontSize: 15, fontFamily: isAr ? 'var(--font-arabic)' : undefined }}>
-          {isAr ? 'تأمّلات' : 'Reflections'}
-        </span>
-        <span style={{ marginInlineStart: 'auto', color: 'var(--muted)', fontSize: 12 }}>
-          {active + 1} / {cards.length}
-        </span>
-      </div>
 
       {cards.map((c, i) => {
         const id = `reel-${i}`
@@ -371,6 +352,7 @@ export default function Reels() {
         @media (prefers-reduced-motion: reduce) { .refl-glow { animation:none } }
       `}</style>
     </div>
+    </>
   )
 }
 

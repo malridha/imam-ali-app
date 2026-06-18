@@ -5,10 +5,10 @@
 // and books written about him. Content lives in src/data/testimonies.ts.
 
 import { useMemo, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import { useReadAloud } from '../hooks/useReadAloud'
 import ServiceNav from '../components/ServiceNav'
+import AppHeader from '../components/AppHeader'
 import {
   TESTIMONIES,
   WORKS,
@@ -20,7 +20,6 @@ type Filter = 'all' | TestimonyCategory
 const ORDER: TestimonyCategory[] = ['prophet', 'companions', 'sunni', 'shia', 'sufi', 'western', 'other-faiths']
 
 export default function Testimonies() {
-  const navigate = useNavigate()
   const { lang } = useLang()
   const isAr = lang === 'ar'
   const { speakingId, toggle } = useReadAloud()
@@ -63,6 +62,7 @@ export default function Testimonies() {
 
   return (
     <>
+      <AppHeader isSubPage />
       <main
         style={{
           minHeight: '100dvh',
@@ -74,16 +74,6 @@ export default function Testimonies() {
           direction: isAr ? 'rtl' : 'ltr',
         }}
       >
-        <button
-          onClick={() => navigate('/')}
-          style={{
-            fontSize: 11, color: 'var(--gold)', padding: '6px 12px',
-            border: '1px solid var(--border)', borderRadius: 20, background: 'transparent',
-            cursor: 'pointer', marginBottom: '1rem',
-          }}
-        >
-          ↩ {isAr ? 'عودة' : 'Back'}
-        </button>
 
         <h1 style={{ fontSize: 25, color: 'var(--gold)', margin: '0 0 4px', fontWeight: 700, fontFamily: isAr ? 'var(--font-arabic)' : undefined }}>
           {isAr ? 'ما قيلَ فيه' : 'What Was Said About Him'}

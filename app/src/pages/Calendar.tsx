@@ -10,11 +10,11 @@
 // which is parked as a separate dedicated batch.
 
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { EVENTS, HIJRI_MONTHS, type CalendarEvent, type Tradition } from '../data/calendar'
 import { T } from '../lib/i18n'
 import { useLang } from '../contexts/LangContext'
 import ServiceNav from '../components/ServiceNav'
+import AppHeader from '../components/AppHeader'
 import { useAudioPlayer } from '../hooks/useAudioPlayer'
 
 type Filter = 'all' | Tradition
@@ -44,7 +44,6 @@ function monthOf(event: CalendarEvent): string {
 }
 
 export default function Calendar() {
-  const navigate = useNavigate()
   const { lang } = useLang()
   const [filter, setFilter] = useState<Filter>('all')
   const [selected, setSelected] = useState<CalendarEvent | null>(null)
@@ -400,6 +399,7 @@ export default function Calendar() {
   // ── List view ──────────────────────────────────────────────────────
   return (
     <>
+    <AppHeader isSubPage />
     <main
       style={{
         minHeight: '100dvh',
@@ -410,33 +410,6 @@ export default function Calendar() {
         padding: '1rem 1rem 2rem',
       }}
     >
-      {/* Top bar */}
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: 10,
-          marginBottom: '1rem',
-        }}
-      >
-        <button
-          onClick={() => navigate('/')}
-          title={lang === 'ar' ? 'عودة' : 'Back'}
-          style={{
-            fontSize: 11,
-            color: 'var(--gold)',
-            padding: '6px 12px',
-            border: '1px solid var(--border)',
-            borderRadius: 20,
-            background: 'transparent',
-            cursor: 'pointer',
-          }}
-        >
-          ↩
-        </button>
-        <div style={{ flex: 1 }} />
-      </div>
-
       {/* Header */}
       <div style={{ textAlign: 'center', marginBottom: '1.2rem' }}>
         <div
