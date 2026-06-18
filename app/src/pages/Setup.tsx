@@ -356,20 +356,29 @@ export default function Setup() {
 // user tap so the voice in the video can be heard when wanted.
 // ─────────────────────────────────────────────────────────────────────
 function WelcomeVideo() {
+  const { lang } = useLang()
   const videoRef = useRef<HTMLVideoElement>(null)
   const [muted, setMuted] = useState(true)
 
+  // v50.x — Language-matched welcome. Arabic users get the original
+  // (Arabic captions + voice); everyone else gets the English render
+  // (same locked voice, English narration + captions).
+  const src = lang === 'ar' ? '/welcome.mp4' : '/welcome-en.mp4'
+  const poster = lang === 'ar' ? '/welcome-poster.jpg' : '/welcome-en-poster.jpg'
+
   // Ensure autoplay actually starts on mount even if the browser
-  // ignored the autoPlay attribute (some Safari versions).
+  // ignored the autoPlay attribute (some Safari versions). Re-runs when
+  // the language (and therefore the source) changes.
   useEffect(() => {
     const v = videoRef.current
     if (!v) return
     v.muted = true
+    setMuted(true)
     v.play().catch(() => {
       // muted autoplay should never fail; if it does we silently
       // surface the first frame and let the user tap to start.
     })
-  }, [])
+  }, [src])
 
   function toggleMute() {
     const v = videoRef.current
@@ -399,8 +408,9 @@ function WelcomeVideo() {
     >
       <video
         ref={videoRef}
-        src="/welcome.mp4"
-        poster="/welcome-poster.jpg"
+        key={src}
+        src={src}
+        poster={poster}
         autoPlay
         muted
         loop
