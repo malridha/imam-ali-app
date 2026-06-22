@@ -19,6 +19,9 @@ export default function Setup() {
   useAudioPlayer() // mount the audio player so the gesture unlock fires
   const { tsp } = useTSP()
   const surfaced = findTodaysSurfacedEvent(tsp)
+  // True once the person engages (taps the portrait, or focuses the input),
+  // used to silence the welcome video so it never talks over them.
+  const [writing, setWriting] = useState(false)
 
   // Show the threshold animation on first visit of the browser session.
   // sessionStorage means: once per tab/session, not on every internal
@@ -89,7 +92,7 @@ export default function Setup() {
             presence. Tap the speaker icon to unmute and hear the
             voice in the video. The v21 §41 sub-avatar attribution
             sits beneath. */}
-        <WelcomeVideo />
+        <WelcomeVideo onEnter={enterChat} silenced={writing} />
 
         {/* v21 §41 / v44 §73.3 — permanent attribution caption.
             Mirrors the Avatar component's built-in caption now that
@@ -156,27 +159,25 @@ export default function Setup() {
           </button>
         )}
 
-        {/* v15 — no path picker. A single open door. The self-introduction
-            (voice + caption) is delivered during the threshold, so there is
-            no static greeting block here. */}
+        {/* The portrait itself is now the door — tapping it begins the
+            conversation. This is a quiet, keyboard-accessible hint in case
+            the affordance isn't obvious (also starts the chat). */}
         <button
           onClick={enterChat}
           style={{
-            marginTop: '1.75rem',
-            background: 'var(--green)',
-            color: 'var(--cream)',
-            border: '1px solid var(--border)',
-            borderRadius: 999,
-            padding: '12px 28px',
+            marginTop: '1.25rem',
+            background: 'transparent',
+            color: 'var(--gold)',
+            border: 'none',
             cursor: 'pointer',
-            fontSize: 12,
+            fontSize: 11,
             fontWeight: 600,
             letterSpacing: '0.18em',
             textTransform: 'uppercase',
-            boxShadow: '0 0 28px rgba(201, 160, 58, 0.18)',
+            opacity: 0.85,
           }}
         >
-          {T.enterCompanion[lang]}
+          {lang === 'ar' ? 'انقر على الصورة للبدء' : 'Tap the portrait to begin'}
         </button>
 
         {/* "or just tell me" divider */}
@@ -208,6 +209,7 @@ export default function Setup() {
 
       {/* Sticky chat-style input at the bottom */}
       <div
+        onFocusCapture={() => setWriting(true)}
         style={{
           width: '100%',
           maxWidth: 520,
@@ -250,7 +252,7 @@ export default function Setup() {
 // loops as ambient presence. A small speaker glyph toggles mute on
 // user tap so the voice in the video can be heard when wanted.
 // ─────────────────────────────────────────────────────────────────────
-function WelcomeVideo() {
+function WelcomeVideo({ onEnter, silenced }: { onEnter: () => void; silenced: boolean }) {
   const { lang } = useLang()
   const videoRef = useRef<HTMLVideoElement>(null)
   const [muted, setMuted] = useState(true)
@@ -275,6 +277,16 @@ function WelcomeVideo() {
     })
   }, [src])
 
+  // The moment the person engages (taps the portrait or starts writing),
+  // silence the welcome video so nothing speaks over them.
+  useEffect(() => {
+    const v = videoRef.current
+    if (silenced && v) {
+      v.muted = true
+      setMuted(true)
+    }
+  }, [silenced])
+
   function toggleMute() {
     const v = videoRef.current
     if (!v) return
@@ -288,6 +300,8 @@ function WelcomeVideo() {
 
   return (
     <div
+      onClick={onEnter}
+      title={lang === 'ar' ? 'انقر للبدء' : 'Tap to begin'}
       style={{
         position: 'relative',
         width: 'min(320px, 78vw)',
@@ -299,6 +313,7 @@ function WelcomeVideo() {
           '0 0 40px 6px rgba(212, 179, 100, 0.18), 0 0 120px 24px rgba(0, 0, 0, 0.45)',
         marginBottom: '0.5rem',
         background: '#02050d',
+        cursor: 'pointer',
       }}
     >
       <video
@@ -334,7 +349,7 @@ function WelcomeVideo() {
       {/* Speaker control — bottom-right, gentle gold. */}
       <button
         type="button"
-        onClick={toggleMute}
+        onClick={(e) => { e.stopPropagation(); toggleMute() }}
         aria-label={muted ? 'Hear the welcome' : 'Mute'}
         style={{
           position: 'absolute',

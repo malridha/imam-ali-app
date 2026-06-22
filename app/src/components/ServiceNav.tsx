@@ -52,33 +52,12 @@ const ITEMS: Item[] = [
     ),
   },
   {
-    // v51 §83 — What was said about him: testimonies across traditions
-    to: '/testimonies',
-    matchPrefix: '/testimonies',
-    label: { en: 'Voices', ar: 'شهادات' },
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-        <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
-      </svg>
-    ),
-  },
-  {
     to: '/calendar',
     matchPrefix: '/calendar',
     label: { en: 'Calendar', ar: 'التقويم' },
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
         <path d="M19 3h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 18H5V8h14v13zM7 10h5v5H7v-5z" />
-      </svg>
-    ),
-  },
-  {
-    to: '/story',
-    matchPrefix: '/story',
-    label: { en: 'My Story', ar: 'حكايتي' },
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-        <path d="M19 2H6a2 2 0 0 0-2 2v18l4-2 4 2 4-2 4 2V4a2 2 0 0 0-2-2zm0 17l-3-1.5L12 19l-4-1.5L5 19V4h14v15z" />
       </svg>
     ),
   },
@@ -154,9 +133,9 @@ export default function ServiceNav() {
               <span
                 style={{
                   // Fluid label size: shrinks to 8px on iPhone SE,
-                  // grows to 11px on iPad. The clamp keeps the seven
+                  // grows to 11px on iPad. The clamp keeps the four
                   // nav buttons fitting comfortably at every width.
-                  fontSize: 'clamp(8px, 2.3vw, 11px)',
+                  fontSize: 'clamp(9px, 2.6vw, 12px)',
                   letterSpacing: '0.08em',
                   textTransform: 'uppercase',
                   fontWeight: active ? 600 : 500,

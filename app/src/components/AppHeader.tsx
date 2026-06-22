@@ -33,13 +33,18 @@ export default function AppHeader({ isSubPage = false }: Props) {
     return () => document.removeEventListener('pointerdown', onPointerDown)
   }, [])
 
+  // The bottom bar holds the daily-use destinations (Home · Library ·
+  // Reflections · Calendar). This menu holds the "learn / about" sections so
+  // nothing is duplicated and the bottom bar stays uncluttered.
   const MENU_ITEMS = [
     ...(isSubPage
       ? [{ label: { en: 'Home', ar: 'الرئيسية' }, to: '/', icon: '⌂' }]
       : []),
-    { label: { en: "Today's Observance", ar: 'مناسبة اليوم' }, to: '/calendar', icon: '◎' },
-    { label: { en: "Life of Imam Ali", ar: 'حياة الإمام علي' }, to: '/biography', icon: '◈' },
-    { label: { en: "Library, Wisdom & Du'as", ar: 'المكتبة والحكمة والأدعية' }, to: '/teachings', icon: '◉' },
+    { label: { en: 'Life of Imam Ali', ar: 'حياة الإمام علي' }, to: '/biography', icon: '◈' },
+    { label: { en: 'His Family', ar: 'عائلته' }, to: '/family', icon: '◉' },
+    { label: { en: 'What Was Said of Him', ar: 'ما قيل فيه' }, to: '/testimonies', icon: '◎' },
+    { label: { en: 'On Unity', ar: 'في الوحدة' }, to: '/unity', icon: '◇' },
+    { label: { en: 'My Story', ar: 'حكايتي' }, to: '/story', icon: '✦' },
   ]
 
   const LANGS: { code: Lang; label: string }[] = [
@@ -138,7 +143,7 @@ export default function AppHeader({ isSubPage = false }: Props) {
           </button>
 
           {menuOpen && (
-            <div style={dropdown('right')}>
+            <div style={dropdown(isAr ? 'left' : 'right')}>
               {MENU_ITEMS.map((item) => (
                 <button
                   key={item.to + item.label.en}

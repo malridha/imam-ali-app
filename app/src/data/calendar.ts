@@ -42,7 +42,7 @@ export const EVENTS: CalendarEvent[] = [
   {
     id: 'muharram-new-year',
     hijri: '1 Muharram',
-    greg: { '1447': '18 Jun 2025', '1448': '16 Jun 2026' },
+    greg: { '1447': '27 Jun 2025', '1448': '16 Jun 2026' },
     name: { en: 'Islamic New Year', ar: 'رأس السنة الهجرية' },
     tradition: 'both',
     type: 'observance',
@@ -63,7 +63,7 @@ export const EVENTS: CalendarEvent[] = [
   {
     id: 'ashura',
     hijri: '10 Muharram',
-    greg: { '1447': '6 Jul 2025', '1448': '26 Jun 2026' },
+    greg: { '1447': '6 Jul 2025', '1448': '25 Jun 2026' },
     name: { en: 'Ashura', ar: 'يوم عاشوراء' },
     tradition: 'both',
     type: 'observance',

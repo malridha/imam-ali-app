@@ -43,6 +43,21 @@ function monthOf(event: CalendarEvent): string {
   return parts.length >= 3 ? parts.slice(1).join(' ') : parts[parts.length - 1]
 }
 
+// Pick the Gregorian date to show: the soonest upcoming occurrence, or — if
+// every listed AH year is already past — the most recent. Avoids displaying a
+// stale earlier-year date (the greg map is keyed by AH year, so plain [0] would
+// always show the oldest year).
+function displayGreg(greg: Record<string, string>): string {
+  const vals = Object.values(greg)
+  const todayT = new Date().setHours(0, 0, 0, 0)
+  const parsed = vals
+    .map((g) => ({ g, t: new Date(g).getTime() }))
+    .filter((x) => !Number.isNaN(x.t))
+  if (parsed.length === 0) return vals[0] ?? ''
+  const upcoming = parsed.filter((x) => x.t >= todayT).sort((a, b) => a.t - b.t)
+  return (upcoming[0] ?? parsed.sort((a, b) => b.t - a.t)[0]).g
+}
+
 export default function Calendar() {
   const { lang } = useLang()
   const [filter, setFilter] = useState<Filter>('all')
@@ -519,7 +534,7 @@ export default function Calendar() {
             </div>
             {evts.map((e) => {
               const ec = TRADITION_STYLE[e.tradition]
-              const firstGreg = Object.values(e.greg)[0]
+              const firstGreg = displayGreg(e.greg)
               return (
                 <div
                   key={e.id}
