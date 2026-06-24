@@ -5,7 +5,6 @@ import MessageBubble, { type MessageRole } from '../components/MessageBubble'
 import VerseCard from '../components/VerseCard'
 import TypingIndicator from '../components/TypingIndicator'
 import ChatInput from '../components/ChatInput'
-import ServiceNav from '../components/ServiceNav'
 import AppHeader from '../components/AppHeader'
 import { useLang } from '../contexts/LangContext'
 import { useTSP } from '../contexts/TSPContext'
@@ -287,7 +286,6 @@ export default function Companion() {
           {T.unknownPath[lang]}{' '}
           <button onClick={() => navigate('/')}>{T.goBack[lang]}</button>
         </main>
-        <ServiceNav />
       </>
     )
   }
@@ -322,7 +320,7 @@ export default function Companion() {
         maxWidth: 520,
         margin: '0 auto',
         overflow: 'hidden',
-        paddingBottom: '4.25rem',
+        paddingBottom: 'env(safe-area-inset-bottom)',
       }}
     >
 
@@ -469,7 +467,6 @@ export default function Companion() {
         placeholder={T.chatPlaceholder[lang]}
       />
     </main>
-    <ServiceNav />
     </>
   )
 }

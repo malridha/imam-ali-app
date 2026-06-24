@@ -192,6 +192,59 @@ button {
   font-family: inherit;
 }
 
+/* ── Interaction polish (app-wide) ─────────────────────────────
+   Small, universal refinements that lift the felt quality of
+   every screen without changing any component's layout. */
+
+/* Kill the grey flash iOS/Android paint over tapped elements — it
+   reads as cheap against the deep-blue surfaces. We supply our own
+   press feedback below instead. */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Gentle, consistent press feedback on every button. Subtle enough
+   not to fight any component's own hover/active styling. */
+button,
+a[role='button'] {
+  transition: transform 0.08s ease, opacity 0.18s ease, color 0.18s ease,
+    background-color 0.18s ease, border-color 0.18s ease;
+}
+@media (pointer: coarse) {
+  button:active,
+  a[role='button']:active {
+    transform: scale(0.97);
+  }
+}
+
+/* Keyboard accessibility: a clear gold focus ring for people
+   tabbing through, while pointer users see nothing (focus-visible
+   only fires for keyboard/AT navigation). */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Momentum scrolling on iOS for any overflow region that forgets it. */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Respect the OS "reduce motion" setting — important for a calm,
+   contemplative app used by a wide audience. Honour intent without
+   fully freezing essential transitions. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 3px;
 }

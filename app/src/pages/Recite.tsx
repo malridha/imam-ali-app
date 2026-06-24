@@ -15,6 +15,7 @@ import { useMemo, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import ServiceNav from '../components/ServiceNav'
+import AppHeader from '../components/AppHeader'
 import RecitationModal from '../components/RecitationModal'
 import { BASELINE_DUAS } from '../lib/prompts/baseline-corpus'
 import { useAudioPlayer } from '../hooks/useAudioPlayer'
@@ -50,6 +51,7 @@ function DuaPicker() {
   const isAr = lang === 'ar'
   return (
     <>
+      <AppHeader isSubPage />
       <main style={pageStyle(isAr)}>
         <BackButton onClick={() => navigate('/teachings')} label={isAr ? 'التعاليم' : 'Teachings'} />
         <Header
@@ -187,6 +189,7 @@ function ReciteOne({
 
   return (
     <>
+      <AppHeader isSubPage />
       <main style={pageStyle(isAr)}>
         <BackButton onClick={onBack} label={isAr ? 'كل الأدعية' : 'All du\'as'} />
 

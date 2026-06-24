@@ -7,6 +7,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import ServiceNav from '../components/ServiceNav'
+import AppHeader from '../components/AppHeader'
 
 type Topic = {
   id: string
@@ -83,6 +84,7 @@ export default function Discuss() {
 
   return (
     <>
+      <AppHeader isSubPage />
       <main
         style={{
           minHeight: '100dvh',

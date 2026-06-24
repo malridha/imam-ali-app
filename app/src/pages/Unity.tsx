@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import { useReadAloud } from '../hooks/useReadAloud'
 import ServiceNav from '../components/ServiceNav'
+import AppHeader from '../components/AppHeader'
 
 type Quote = {
   id: string
@@ -147,6 +148,7 @@ export default function Unity() {
 
   return (
     <>
+      <AppHeader isSubPage />
       <main
         style={{
           minHeight: '100dvh',

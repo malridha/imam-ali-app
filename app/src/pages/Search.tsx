@@ -36,6 +36,7 @@ import type {
   LongFormEntry,
 } from '../lib/prompts/baseline-corpus'
 import ServiceNav from '../components/ServiceNav'
+import AppHeader from '../components/AppHeader'
 
 // ── Strip Arabic diacritics so a user typing undecorated text still
 //    matches the voweled corpus. Covers harakat, tanwin, shadda, sukun,
@@ -249,6 +250,7 @@ export default function Search() {
 
   return (
     <>
+      <AppHeader isSubPage />
       <main
         style={{
           minHeight: '100dvh',

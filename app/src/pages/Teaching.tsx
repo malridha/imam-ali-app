@@ -8,6 +8,7 @@ import { useMemo, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import ServiceNav from '../components/ServiceNav'
+import AppHeader from '../components/AppHeader'
 import { useReadAloud } from '../hooks/useReadAloud'
 import { ALL_WISDOM } from '../data/teachings'
 import {
@@ -107,6 +108,7 @@ export default function Teaching() {
 
   return (
     <>
+      <AppHeader isSubPage />
       <main style={pageStyle(isAr)}>
         <Back onClick={() => navigate('/teachings')} isAr={isAr} />
 
