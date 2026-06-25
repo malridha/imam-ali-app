@@ -151,7 +151,7 @@ export default function Calendar() {
                   letterSpacing: '0.12em',
                 }}
               >
-                {sc.label[lang]} · {selected.type === 'celebration' ? (lang === 'ar' ? 'احتفال' : 'celebration') : (lang === 'ar' ? 'ذكرى' : 'observance')}
+                {selected.type === 'celebration' ? (lang === 'ar' ? 'احتفال' : 'celebration') : (lang === 'ar' ? 'ذكرى' : 'observance')}
               </div>
               <div
                 style={{
@@ -289,51 +289,28 @@ export default function Calendar() {
                   </div>
                 ))
               ) : (
-                (Object.entries(ritualsList) as Array<['sunni' | 'shia', string[]]>).map(
-                  ([trad, list]) => (
-                    <div key={trad} style={{ marginBottom: 16 }}>
-                      <div
-                        style={{
-                          fontSize: 10,
-                          fontWeight: 700,
-                          marginBottom: 6,
-                          color: trad === 'sunni' ? 'var(--gold)' : '#5a8cd4',
-                          textTransform: 'uppercase',
-                          letterSpacing: '0.10em',
-                        }}
-                      >
-                        {trad === 'sunni'
-                          ? lang === 'ar' ? '☽ الممارسة السنية' : '☽ Sunni practice'
-                          : lang === 'ar' ? '◈ الممارسة الشيعية' : '◈ Shia practice'}
-                      </div>
-                      {list.map((r, i) => (
-                        <div
-                          key={i}
-                          style={{
-                            display: 'flex',
-                            gap: 10,
-                            padding: '7px 0',
-                            borderBottom: '1px solid var(--border-soft)',
-                            fontSize: 12,
-                            color: 'var(--text)',
-                            alignItems: 'flex-start',
-                          }}
-                        >
-                          <span
-                            style={{
-                              color: trad === 'sunni' ? 'var(--gold)' : '#5a8cd4',
-                              fontWeight: 700,
-                              flexShrink: 0,
-                            }}
-                          >
-                            ◦
-                          </span>
-                          {r}
-                        </div>
-                      ))}
+                // v52 — practices are shown as one combined list, without
+                // attributing each item to a tradition. Variation in how a
+                // day is observed is presented as variation, not division.
+                (Object.values(ritualsList) as string[][])
+                  .flat()
+                  .map((r, i) => (
+                    <div
+                      key={i}
+                      style={{
+                        display: 'flex',
+                        gap: 10,
+                        padding: '7px 0',
+                        borderBottom: '1px solid var(--border-soft)',
+                        fontSize: 12,
+                        color: 'var(--text)',
+                        alignItems: 'flex-start',
+                      }}
+                    >
+                      <span style={{ color: sc.accent, fontWeight: 700, flexShrink: 0 }}>◦</span>
+                      {r}
                     </div>
-                  ),
-                )
+                  ))
               )}
             </>
           )}
@@ -444,8 +421,8 @@ export default function Calendar() {
         </div>
         <div style={{ fontSize: 10, color: 'var(--muted)', marginTop: 4, lineHeight: 1.5 }}>
           {lang === 'ar'
-            ? '٢٠ حدثاً · الشيعة والسنة · تاريخ · شعائر · صوت الرفيق · بالعربية والإنجليزية'
-            : '20 events · Both traditions · History · Rituals · Companion voice · Arabic & English'}
+            ? '٢٠ حدثاً · تاريخ · شعائر · صوت الرفيق · بالعربية والإنجليزية'
+            : '20 events · History · Rituals · Companion voice · Arabic & English'}
         </div>
       </div>
 
@@ -463,16 +440,10 @@ export default function Calendar() {
           [
             ['all', lang === 'ar' ? 'الكل' : 'All'],
             ['both', lang === 'ar' ? 'مشترك' : 'Universal'],
-            ['sunni', lang === 'ar' ? 'سنّي' : 'Sunni'],
-            ['shia', lang === 'ar' ? 'شيعي' : 'Shia'],
           ] as const
         ).map(([v, label]) => {
           const active = filter === v
-          const colour =
-            v === 'sunni' ? 'var(--gold)'
-            : v === 'shia' ? '#5a8cd4'
-            : v === 'both' ? 'var(--green)'
-            : 'var(--border-strong)'
+          const colour = v === 'both' ? 'var(--green)' : 'var(--border-strong)'
           return (
             <button
               key={v}
@@ -576,19 +547,6 @@ export default function Calendar() {
                       {e.hijri} · {firstGreg}
                     </div>
                   </div>
-                  <span
-                    style={{
-                      fontSize: 9,
-                      padding: '3px 10px',
-                      borderRadius: 20,
-                      background: ec.wash,
-                      color: ec.accent,
-                      fontWeight: 700,
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    {ec.label[lang]}
-                  </span>
                   <span style={{ color: 'var(--muted)', fontSize: 14 }}>›</span>
                 </div>
               )

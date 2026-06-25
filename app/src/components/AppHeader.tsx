@@ -45,6 +45,7 @@ export default function AppHeader({ isSubPage = false }: Props) {
     { label: { en: 'What Was Said of Him', ar: 'ما قيل فيه' }, to: '/testimonies', icon: '◎' },
     { label: { en: 'On Unity', ar: 'في الوحدة' }, to: '/unity', icon: '◇' },
     { label: { en: 'My Story', ar: 'حكايتي' }, to: '/story', icon: '✦' },
+    { label: { en: 'Settings', ar: 'الإعدادات' }, to: '/settings', icon: '⚙' },
   ]
 
   const LANGS: { code: Lang; label: string }[] = [
@@ -78,6 +79,12 @@ export default function AppHeader({ isSubPage = false }: Props) {
           padding: '10px 14px',
           maxWidth: 520,
           margin: '0 auto',
+          // Always LTR regardless of UI language — the globe stays left,
+          // the hamburger stays right. Without this, document.dir = 'rtl'
+          // (set whenever Arabic is selected) mirrors this flex row and
+          // the two icons swap sides, which is disorienting on every
+          // language switch.
+          direction: 'ltr',
         }}
       >
         {/* ── Globe / Language picker ── */}
@@ -94,7 +101,7 @@ export default function AppHeader({ isSubPage = false }: Props) {
           </button>
 
           {langOpen && (
-            <div style={dropdown(isAr ? 'right' : 'left')}>
+            <div style={dropdown('left')}>
               {LANGS.map(({ code, label }) => (
                 <button
                   key={code}
@@ -143,7 +150,7 @@ export default function AppHeader({ isSubPage = false }: Props) {
           </button>
 
           {menuOpen && (
-            <div style={dropdown(isAr ? 'left' : 'right')}>
+            <div style={dropdown('right')}>
               {MENU_ITEMS.map((item) => (
                 <button
                   key={item.to + item.label.en}

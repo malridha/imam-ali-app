@@ -72,6 +72,10 @@
      adds env(safe-area-inset-top) on top of this, so pages using
      `height: calc(100dvh - var(--header-h))` must account for that too. */
   --header-h: 57px;
+  /* Bottom ServiceNav height (icon row + label + its own vertical padding),
+     excluding the safe-area inset it also pads itself with — callers that
+     need to clear it should add env(safe-area-inset-bottom) on top. */
+  --bottom-nav-h: 64px;
 
   color-scheme: dark;
   font-synthesis: none;

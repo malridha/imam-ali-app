@@ -1,7 +1,7 @@
 import { supabase, SUPABASE_URL, SUPABASE_ANON_KEY } from './supabase'
 import type { Lang } from '../types/lang'
 import type { TSP } from '../types/tsp'
-import type { UserProfile } from '../types/profile'
+import { computeAgeRange, type UserProfile } from '../types/profile'
 
 export type ClaudeMessage = {
   role: 'user' | 'assistant'
@@ -127,7 +127,8 @@ export async function callClaude({
     messages,
     lang,
     user_id: userId,
-    age_range: profile?.ageRange ?? undefined,
+    name: profile?.name ?? undefined,
+    age_range: computeAgeRange(profile?.dob ?? null) ?? undefined,
     gender: profile?.gender ?? undefined,
     retrieval_query: retrievalQuery,
     max_tokens: maxTokens,
@@ -220,7 +221,8 @@ export async function streamClaude(
       messages,
       lang,
       user_id: userId,
-      age_range: profile?.ageRange ?? undefined,
+      name: profile?.name ?? undefined,
+      age_range: computeAgeRange(profile?.dob ?? null) ?? undefined,
       gender: profile?.gender ?? undefined,
       retrieval_query: retrievalQuery,
       max_tokens: maxTokens,

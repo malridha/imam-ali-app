@@ -183,12 +183,13 @@ export default function Threshold({ onCross }: Props) {
       </div>
 
       {/* IDLE — the breath before. A single gold glyph pulses on pure
-          black, with the Arabic invitation to cross the threshold. */}
+          black. The poetic invitation line was redundant with the rest
+          of the arrival sequence, so the glyph now stands alone — the
+          aria-label on the root element still carries it for screen
+          readers. */}
       {phase === 'idle' && (
         <div className="threshold-invite">
           <div className="threshold-invite-glyph" aria-hidden="true">◉</div>
-          <div className="threshold-invite-ar">{T.tapToHear.ar}</div>
-          <div className="threshold-invite-en">{T.tapToHear.en}</div>
         </div>
       )}
     </div>

@@ -20,6 +20,7 @@ const Family = lazy(() => import('./pages/Family'))
 const Reels = lazy(() => import('./pages/Reels'))
 const Unity = lazy(() => import('./pages/Unity'))
 const Testimonies = lazy(() => import('./pages/Testimonies'))
+const Settings = lazy(() => import('./pages/Settings'))
 
 // Brief, on-brand placeholder shown while a route chunk loads. Uses the app
 // background so there's no white flash, with the threshold glyph dimmed.
@@ -82,6 +83,9 @@ export default function App() {
         <Route path="/unity" element={<Unity />} />
         {/* v51 §83 — What was said about him: searchable testimonies + works, all traditions */}
         <Route path="/testimonies" element={<Testimonies />} />
+        {/* v53 — Settings: name, date of birth, gender, language. Collected once
+            at first launch (Onboarding), editable any time from here on. */}
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </Suspense>
   )

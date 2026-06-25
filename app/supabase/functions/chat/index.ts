@@ -48,6 +48,7 @@ type RequestBody = {
   lang?: Lang
   user_id?: string
   /** Locally-stored, user-volunteered context. Optional; absent fields are just omitted. */
+  name?: string
   age_range?: string
   gender?: string
   retrieval_query?: string
@@ -61,24 +62,39 @@ const VALID_AGE_RANGES = new Set(['13-17', '18-24', '25-44', '45-64', '65+'])
 const VALID_GENDERS = new Set(['male', 'female', 'unspecified'])
 
 /**
+ * Strips control characters and collapses whitespace so a user-supplied
+ * name can't break out of the system-prompt text block (e.g. via embedded
+ * newlines) and can't bloat the prompt. Caps at 40 chars — plenty for a
+ * first name or short nickname.
+ */
+function sanitizeName(raw: string | undefined): string | null {
+  if (!raw) return null
+  const cleaned = raw.replace(/[\r\n\t]+/g, ' ').replace(/\s+/g, ' ').trim()
+  if (!cleaned) return null
+  return cleaned.slice(0, 40)
+}
+
+/**
  * Short "who you're speaking with" block built from optional, locally-stored
  * client context. Never asked about, never required — just folded in as a
- * gentle steer on tone/register when present. No age range/gender implies
- * nothing; the prompt is simply omitted.
+ * gentle steer on tone/register/address when present. No name/age range/
+ * gender implies nothing; the prompt is simply omitted.
  */
 function formatProfileBlock(body: RequestBody, lang: Lang): string {
+  const name = sanitizeName(body.name)
   const age = VALID_AGE_RANGES.has(body.age_range ?? '') ? body.age_range : null
   const gender =
     VALID_GENDERS.has(body.gender ?? '') && body.gender !== 'unspecified' ? body.gender : null
-  if (!age && !gender) return ''
+  if (!name && !age && !gender) return ''
 
   const bits: string[] = []
+  if (name) bits.push(lang === 'ar' ? `الاسم: ${name}` : `name: ${name}`)
   if (age) bits.push(lang === 'ar' ? `العمر: ${age}` : `age range: ${age}`)
   if (gender) bits.push(lang === 'ar' ? `الجنس: ${gender}` : `gender: ${gender}`)
 
   return lang === 'ar'
-    ? `سياق عن المستخدم (اختياريّ، لا تذكره مباشرة، استخدمه فقط لتعديل نغمتك بلطف): ${bits.join('، ')}.`
-    : `Context on who you're speaking with (optional, never state it back, only use it to gently calibrate your tone): ${bits.join(', ')}.`
+    ? `سياق عن المستخدم (اختياريّ، استخدمه فقط لتعديل نغمتك بلطف؛ إن وُجد اسم فيمكنك مناداته به أحياناً، لا في كل رسالة): ${bits.join('، ')}.`
+    : `Context on who you're speaking with (optional, only use it to gently calibrate your tone — if a name is given you may address them by it occasionally, not in every message): ${bits.join(', ')}.`
 }
 
 type Match = {

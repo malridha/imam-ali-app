@@ -7,6 +7,8 @@ import ChatInput from '../components/ChatInput'
 import ServiceNav from '../components/ServiceNav'
 import AppHeader from '../components/AppHeader'
 import Threshold from '../components/Threshold'
+import Onboarding from '../components/Onboarding'
+import { useProfile } from '../contexts/ProfileContext'
 import { useTSP } from '../contexts/TSPContext'
 import { findTodaysSurfacedEvent } from '../lib/tsp/calendar-surface'
 import '../components/Chat.css'
@@ -17,6 +19,7 @@ export default function Setup() {
   const navigate = useNavigate()
   const { lang } = useLang()
   useAudioPlayer() // mount the audio player so the gesture unlock fires
+  const { onboarded } = useProfile()
   const { tsp } = useTSP()
   const surfaced = findTodaysSurfacedEvent(tsp)
   // True once the person engages (taps the portrait, or focuses the input),
@@ -55,6 +58,13 @@ export default function Setup() {
 
   function enterChat() {
     navigate('/chat')
+  }
+
+  // First-time-only setup screen (name, DOB, gender, language). Gates
+  // everything else — the threshold ritual and the welcome screen only
+  // ever appear once this has been completed (or skipped) on this device.
+  if (!onboarded) {
+    return <Onboarding onDone={() => {}} />
   }
 
   return (

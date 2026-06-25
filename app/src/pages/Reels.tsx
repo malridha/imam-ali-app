@@ -12,6 +12,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useLang } from '../contexts/LangContext'
 import AppHeader from '../components/AppHeader'
+import ServiceNav from '../components/ServiceNav'
 import { useReadAloud } from '../hooks/useReadAloud'
 import { ALL_WISDOM } from '../data/teachings'
 import type { BaselineEntry } from '../lib/prompts/baseline-corpus'
@@ -173,8 +174,13 @@ export default function Reels() {
       dir={isAr ? 'rtl' : 'ltr'}
       style={{
         position: 'fixed',
-        inset: 0,
+        left: 0,
+        right: 0,
         top: 'var(--header-h, 57px)',
+        // Leave room for the always-visible bottom ServiceNav so it never
+        // gets covered by the snap-scroll feed and the back/home route is
+        // always one tap away from any card.
+        bottom: 'calc(var(--bottom-nav-h, 64px) + env(safe-area-inset-bottom))',
         background: 'var(--bg)',
         overflowY: 'scroll',
         scrollSnapType: 'y mandatory',
@@ -194,7 +200,7 @@ export default function Reels() {
             ref={(el) => { cardRefs.current[i] = el }}
             className="refl-card"
             style={{
-              height: '100svh',
+              height: '100%',
               scrollSnapAlign: 'start',
               scrollSnapStop: 'always',
               position: 'relative',
@@ -316,7 +322,9 @@ export default function Reels() {
       {toast && (
         <div
           style={{
-            position: 'fixed', bottom: 40, left: '50%', transform: 'translateX(-50%)', zIndex: 30,
+            position: 'fixed',
+            bottom: 'calc(var(--bottom-nav-h, 64px) + env(safe-area-inset-bottom) + 16px)',
+            left: '50%', transform: 'translateX(-50%)', zIndex: 30,
             background: 'rgba(8,16,34,0.92)', color: 'var(--cream)', padding: '10px 18px',
             borderRadius: 10, fontSize: 13, border: '1px solid var(--border)',
           }}
@@ -352,6 +360,7 @@ export default function Reels() {
         @media (prefers-reduced-motion: reduce) { .refl-glow { animation:none } }
       `}</style>
     </div>
+    <ServiceNav />
     </>
   )
 }
