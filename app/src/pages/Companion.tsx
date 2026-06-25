@@ -8,6 +8,7 @@ import ChatInput from '../components/ChatInput'
 import AppHeader from '../components/AppHeader'
 import { useLang } from '../contexts/LangContext'
 import { useTSP } from '../contexts/TSPContext'
+import { useProfile } from '../contexts/ProfileContext'
 import { type EmotionalState } from '../types/paths'
 import {
   callClaude,
@@ -65,6 +66,7 @@ export default function Companion() {
   const navigate = useNavigate()
   const { lang } = useLang()
   const { setTSP } = useTSP()
+  const { profile } = useProfile()
   const [searchParams, setSearchParams] = useSearchParams()
   const seededMessage = searchParams.get('q')?.trim() ?? ''
   // v15 — one prompt, no path selection. The companion reads what the
@@ -196,6 +198,7 @@ export default function Companion() {
             messages: opts.send,
             lang,
             userId,
+            profile,
             retrievalQuery: opts.retrievalQuery,
           },
           (full) => showDelta(full),
@@ -209,6 +212,7 @@ export default function Companion() {
             messages: opts.send,
             lang,
             userId,
+            profile,
             retrievalQuery: opts.retrievalQuery,
           })
           finalize(r.text, r.crisis, r.tsp)
@@ -230,7 +234,7 @@ export default function Companion() {
         opts.onAfter?.()
       }
     },
-    [prompt, lang, userId, playAudio, setTSP],
+    [prompt, lang, userId, profile, playAudio, setTSP],
   )
 
   // First load: either greet (no seeded message) or respond directly to the

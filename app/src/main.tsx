@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { LangProvider } from './contexts/LangContext'
 import { TSPProvider } from './contexts/TSPContext'
+import { ProfileProvider } from './contexts/ProfileContext'
 import './fonts.css'
 import './index.css'
 import App from './App'
@@ -23,9 +24,11 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <LangProvider>
       <TSPProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        <ProfileProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </ProfileProvider>
       </TSPProvider>
     </LangProvider>
   </StrictMode>,

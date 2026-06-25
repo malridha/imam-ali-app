@@ -1,6 +1,7 @@
 import { supabase, SUPABASE_URL, SUPABASE_ANON_KEY } from './supabase'
 import type { Lang } from '../types/lang'
 import type { TSP } from '../types/tsp'
+import type { UserProfile } from '../types/profile'
 
 export type ClaudeMessage = {
   role: 'user' | 'assistant'
@@ -35,6 +36,11 @@ type CallArgs = {
   lang?: Lang
   /** Anonymous browser user ID — used for cross-session memory. */
   userId?: string
+  /**
+   * Locally-stored, user-volunteered context (age range, gender). Optional —
+   * undefined fields are simply omitted from the prompt server-side.
+   */
+  profile?: UserProfile
   /**
    * Free-text query used by the chat function to pull authenticated teachings
    * from the corpus. Pass the user's latest natural-language message; leave
@@ -108,6 +114,7 @@ export async function callClaude({
   messages,
   lang,
   userId,
+  profile,
   retrievalQuery,
   // Lower default cap = fewer tokens to generate = faster replies. The
   // companion is instructed to be brief, so this rarely truncates and
@@ -120,6 +127,8 @@ export async function callClaude({
     messages,
     lang,
     user_id: userId,
+    age_range: profile?.ageRange ?? undefined,
+    gender: profile?.gender ?? undefined,
     retrieval_query: retrievalQuery,
     max_tokens: maxTokens,
     temperature,
@@ -193,6 +202,7 @@ export async function streamClaude(
     messages,
     lang,
     userId,
+    profile,
     retrievalQuery,
     maxTokens = 350,
     temperature = 0.5,
@@ -210,6 +220,8 @@ export async function streamClaude(
       messages,
       lang,
       user_id: userId,
+      age_range: profile?.ageRange ?? undefined,
+      gender: profile?.gender ?? undefined,
       retrieval_query: retrievalQuery,
       max_tokens: maxTokens,
       temperature,

@@ -47,11 +47,38 @@ type RequestBody = {
   messages: ClaudeMessage[]
   lang?: Lang
   user_id?: string
+  /** Locally-stored, user-volunteered context. Optional; absent fields are just omitted. */
+  age_range?: string
+  gender?: string
   retrieval_query?: string
   max_tokens?: number
   temperature?: number
   /** v49 — when true, proxy Anthropic's token stream straight to the client. */
   stream?: boolean
+}
+
+const VALID_AGE_RANGES = new Set(['13-17', '18-24', '25-44', '45-64', '65+'])
+const VALID_GENDERS = new Set(['male', 'female', 'unspecified'])
+
+/**
+ * Short "who you're speaking with" block built from optional, locally-stored
+ * client context. Never asked about, never required — just folded in as a
+ * gentle steer on tone/register when present. No age range/gender implies
+ * nothing; the prompt is simply omitted.
+ */
+function formatProfileBlock(body: RequestBody, lang: Lang): string {
+  const age = VALID_AGE_RANGES.has(body.age_range ?? '') ? body.age_range : null
+  const gender =
+    VALID_GENDERS.has(body.gender ?? '') && body.gender !== 'unspecified' ? body.gender : null
+  if (!age && !gender) return ''
+
+  const bits: string[] = []
+  if (age) bits.push(lang === 'ar' ? `العمر: ${age}` : `age range: ${age}`)
+  if (gender) bits.push(lang === 'ar' ? `الجنس: ${gender}` : `gender: ${gender}`)
+
+  return lang === 'ar'
+    ? `سياق عن المستخدم (اختياريّ، لا تذكره مباشرة، استخدمه فقط لتعديل نغمتك بلطف): ${bits.join('، ')}.`
+    : `Context on who you're speaking with (optional, never state it back, only use it to gently calibrate your tone): ${bits.join(', ')}.`
 }
 
 type Match = {
@@ -545,6 +572,8 @@ Deno.serve(async (req: Request) => {
     },
   ]
   if (memoryText) systemParam.push({ type: 'text', text: memoryText })
+  const profileText = formatProfileBlock(body, lang)
+  if (profileText) systemParam.push({ type: 'text', text: profileText })
   const retrievalText = buildRetrievalBlock(matches)
   if (retrievalText) systemParam.push({ type: 'text', text: retrievalText })
 

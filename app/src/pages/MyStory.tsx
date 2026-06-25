@@ -1,12 +1,19 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { useLang } from '../contexts/LangContext'
 import { useTSP } from '../contexts/TSPContext'
+import { useProfile } from '../contexts/ProfileContext'
 import ServiceNav from '../components/ServiceNav'
 import AppHeader from '../components/AppHeader'
 import { supabase } from '../lib/supabase'
 import { getOrCreateUserId } from '../lib/userId'
 import { T } from '../lib/i18n'
 import { PATH_META, type PathKey } from '../types/paths'
+import {
+  AGE_RANGE_LABELS,
+  GENDER_LABELS,
+  type AgeRange,
+  type Gender,
+} from '../types/profile'
 
 type StoredSummary = {
   id: number
@@ -19,7 +26,9 @@ type StoredSummary = {
 
 export default function MyStory() {
   const { lang } = useLang()
+  const isAr = lang === 'ar'
   const { resetTSP } = useTSP()
+  const { profile, setProfile, resetProfile } = useProfile()
   const userId = useMemo(() => getOrCreateUserId(), [])
 
   const [summaries, setSummaries] = useState<StoredSummary[]>([])
@@ -96,6 +105,91 @@ export default function MyStory() {
       <div className="ar" style={{ fontSize: 22, color: 'var(--gold)', marginBottom: '1.5rem' }}>
         {T.myStory[lang]}
       </div>
+
+      {/* About you — optional, local-only context (age range, gender) that
+          helps the companion address the person more naturally. Stored only
+          on this device; never required to use the app. */}
+      <section
+        style={{
+          background: 'var(--card)',
+          border: '1px solid var(--border)',
+          borderRadius: 12,
+          padding: '1rem 1.1rem',
+          marginBottom: '1.5rem',
+          direction: isAr ? 'rtl' : 'ltr',
+        }}
+      >
+        <div
+          style={{
+            fontSize: 11,
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+            color: 'var(--gold)',
+            marginBottom: 4,
+          }}
+        >
+          {isAr ? 'عنك' : 'About you'}
+        </div>
+        <p style={{ fontSize: 11, color: 'var(--muted)', lineHeight: 1.6, marginBottom: 12 }}>
+          {isAr
+            ? 'اختياري ومحفوظ على هذا الجهاز فقط — يساعد الرفيق على التحدّث معك بشكل أنسب.'
+            : 'Optional, stored only on this device — helps the companion speak with you more naturally.'}
+        </p>
+
+        <div style={{ marginBottom: 12 }}>
+          <div style={{ fontSize: 10.5, color: 'var(--dim)', marginBottom: 6 }}>
+            {isAr ? 'العمر' : 'Age range'}
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+            {(Object.keys(AGE_RANGE_LABELS) as AgeRange[]).map((range) => (
+              <button
+                key={range}
+                onClick={() =>
+                  setProfile({ ageRange: profile.ageRange === range ? null : range })
+                }
+                style={pillStyle(profile.ageRange === range)}
+              >
+                {AGE_RANGE_LABELS[range][lang]}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <div style={{ fontSize: 10.5, color: 'var(--dim)', marginBottom: 6 }}>
+            {isAr ? 'الجنس' : 'Gender'}
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+            {(Object.keys(GENDER_LABELS) as Gender[]).map((g) => (
+              <button
+                key={g}
+                onClick={() => setProfile({ gender: profile.gender === g ? null : g })}
+                style={pillStyle(profile.gender === g)}
+              >
+                {GENDER_LABELS[g][lang]}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {(profile.ageRange || profile.gender) && (
+          <button
+            onClick={resetProfile}
+            style={{
+              marginTop: 12,
+              fontSize: 10.5,
+              color: 'var(--muted)',
+              background: 'transparent',
+              border: 'none',
+              cursor: 'pointer',
+              textDecoration: 'underline',
+              padding: 0,
+            }}
+          >
+            {isAr ? 'محو هذه المعلومات' : 'Clear this info'}
+          </button>
+        )}
+      </section>
 
       <p
         style={{
@@ -308,4 +402,17 @@ export default function MyStory() {
     <ServiceNav />
     </>
   )
+}
+
+function pillStyle(active: boolean): React.CSSProperties {
+  return {
+    fontSize: 11.5,
+    color: active ? 'var(--bg)' : 'var(--text)',
+    background: active ? 'var(--gold)' : 'transparent',
+    border: '1px solid var(--border)',
+    borderRadius: 16,
+    padding: '5px 12px',
+    cursor: 'pointer',
+    fontWeight: active ? 700 : 400,
+  }
 }
