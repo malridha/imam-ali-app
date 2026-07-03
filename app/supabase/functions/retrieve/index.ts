@@ -59,7 +59,9 @@ Deno.serve(async (req: Request) => {
     return jsonResponse({ error: 'Invalid JSON body' }, 400)
   }
 
-  const query = (body?.query ?? '').trim()
+  // typeof + length bound: the query goes straight into the embedder, so an
+  // unbounded string is compute abuse; a non-string would throw on .trim().
+  const query = typeof body?.query === 'string' ? body.query.slice(0, 2000).trim() : ''
   if (!query) {
     return jsonResponse({ error: 'Body must include { query: string }' }, 400)
   }

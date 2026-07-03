@@ -63,7 +63,10 @@ Deno.serve(async (req: Request) => {
     return jsonResponse({ error: 'Invalid JSON body' }, 400)
   }
 
-  const query = body?.query?.trim()
+  // typeof + length bound: this text is forwarded to Claude as input tokens,
+  // so an unbounded string is a direct cost vector. Classification only ever
+  // needs the first message — 2000 chars is generous.
+  const query = typeof body?.query === 'string' ? body.query.slice(0, 2000).trim() : ''
   if (!query) {
     return jsonResponse({ error: 'Body must include { query: string }' }, 400)
   }

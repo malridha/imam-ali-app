@@ -117,6 +117,28 @@ async function summarizeWithClaude(
   }
 }
 
+// ── Abuse rate limiting (NOT a usage cap) ───────────────────────────────
+// Same fail-open pattern as /chat and /speak: any limiter error allows the
+// request, so real users are never wrongly blocked. See rate_limits migration.
+async function isRateLimited(req: Request): Promise<boolean> {
+  try {
+    const url = Deno.env.get('SUPABASE_URL')
+    const key = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
+    if (!url || !key) return false
+    const sb = createClient(url, key)
+    const ip = (req.headers.get('x-forwarded-for') || '').split(',')[0].trim() || 'unknown'
+    const { data, error } = await sb.rpc('rate_limit_hit', {
+      p_bucket: `summarize:ip:${ip}`,
+      p_max: 20,
+      p_window_seconds: 60,
+    })
+    if (error) return false // fail-open
+    return data === false
+  } catch {
+    return false
+  }
+}
+
 Deno.serve(async (req: Request) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { status: 204, headers: CORS_HEADERS })
@@ -130,6 +152,14 @@ Deno.serve(async (req: Request) => {
     return jsonResponse({ error: 'CLAUDE_API_KEY missing' }, 500)
   }
 
+  // Reject oversized bodies before parsing them into memory (same guard as
+  // /chat). This function forwards the transcript to Claude, so unbounded
+  // input is a direct cost vector.
+  const contentLength = parseInt(req.headers.get('content-length') || '0', 10)
+  if (contentLength > 1_000_000) {
+    return jsonResponse({ error: 'Request too large' }, 413)
+  }
+
   let body: RequestBody
   try {
     body = await req.json()
@@ -137,19 +167,43 @@ Deno.serve(async (req: Request) => {
     return jsonResponse({ error: 'Invalid JSON body' }, 400)
   }
 
-  const userId = body.user_id?.trim()
-  const path = body.path?.trim()
-  const transcript = body.transcript ?? []
+  const userId =
+    typeof body.user_id === 'string' && body.user_id.trim() && body.user_id.length <= 64
+      ? body.user_id.trim()
+      : ''
+  const path = typeof body.path === 'string' ? body.path.trim() : ''
+  const transcript = Array.isArray(body.transcript) ? body.transcript : []
 
   if (!userId || !path || !KNOWN_PATHS.has(path)) {
     return jsonResponse(
-      { error: 'Body must include { user_id, path: wisdom|poetry|venting|counsel, transcript[] }' },
+      { error: 'Body must include { user_id, path: open|wisdom|poetry|venting|counsel, transcript[] }' },
       400,
     )
   }
+
+  // Same payload discipline as /chat: bound what we forward to Claude.
+  const MAX_MESSAGES = 80
+  const MAX_MSG_CHARS = 8000
+  const malformed = transcript.some(
+    (m) =>
+      !m ||
+      (m.role !== 'user' && m.role !== 'assistant') ||
+      typeof m.content !== 'string' ||
+      m.content.length > MAX_MSG_CHARS,
+  )
+  if (malformed || transcript.length > MAX_MESSAGES) {
+    return jsonResponse({ error: 'Transcript malformed or too large' }, 413)
+  }
+
   if (transcript.length < 2) {
     // Not enough to summarize — silently accept, no row written
     return jsonResponse({ ok: true, skipped: 'transcript too short' })
+  }
+
+  // Abuse guard (fail-open, same pattern as /chat): one summary per session
+  // end is the honest rate — 20/min/IP only ever bites a script.
+  if (await isRateLimited(req)) {
+    return jsonResponse({ error: 'Too many requests — please slow down a moment.' }, 429)
   }
 
   let summary: SummaryShape

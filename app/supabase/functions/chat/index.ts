@@ -472,16 +472,46 @@ Deno.serve(async (req: Request) => {
   // Payload caps — cost/memory abuse guard (far above any genuine conversation).
   const MAX_MESSAGES = 80
   const MAX_MSG_CHARS = 8000
+  const malformed = body.messages.some(
+    (m) =>
+      !m ||
+      (m.role !== 'user' && m.role !== 'assistant') ||
+      typeof m.content !== 'string',
+  )
+  if (malformed) {
+    return jsonResponse(
+      { error: 'Each message must be { role: user|assistant, content: string }' },
+      400,
+    )
+  }
   const oversize =
     body.messages.length > MAX_MESSAGES ||
-    body.messages.some((m) => {
-      const c = (m as { content?: unknown }).content
-      const len = typeof c === 'string' ? c.length : JSON.stringify(c ?? '').length
-      return len > MAX_MSG_CHARS
-    })
+    body.messages.some((m) => m.content.length > MAX_MSG_CHARS)
   if (oversize) {
     return jsonResponse({ error: 'Request payload too large' }, 413)
   }
+
+  // Clamp caller-tunable generation knobs. Without this, a script with the
+  // public anon key could request max_tokens=64000 per call and multiply the
+  // Claude bill ~180x per request — the rate limiter alone doesn't bound
+  // per-request output cost. Clamps, not rejections: a well-behaved client
+  // is unaffected, an abusive one is silently bounded.
+  const maxTokens = Math.min(Math.max(Math.floor(Number(body.max_tokens)) || 350, 1), 1000)
+  const rawTemp = Number(body.temperature)
+  const temperature = Number.isFinite(rawTemp) ? Math.min(Math.max(rawTemp, 0), 1) : 0.5
+
+  // Identity + retrieval inputs are free-text from the wire: bound them.
+  // user_id is a client-generated UUID (36 chars) — anything much longer is
+  // abuse and would bloat rate-limit buckets and the users table; treat it
+  // as absent rather than failing the whole chat.
+  const userId =
+    typeof body.user_id === 'string' && body.user_id.trim().length > 0 && body.user_id.length <= 64
+      ? body.user_id.trim()
+      : undefined
+  // The retrieval query only ever needs the user's latest message; cap it so
+  // a 900KB string can't be shoved through the embedder (compute abuse).
+  const retrievalQuery =
+    typeof body.retrieval_query === 'string' ? body.retrieval_query.slice(0, 2000).trim() : ''
 
   const lang: Lang = body.lang === 'ar' ? 'ar' : 'en'
   // v50 (B1) — the server owns the system prompt. The client selects by mode;
@@ -491,7 +521,7 @@ Deno.serve(async (req: Request) => {
   const baseSystem = SYSTEM_PROMPTS[mode][lang]
 
   // Abuse guard (fail-open) — real users never reach these thresholds.
-  if (await isRateLimited(req, body.user_id)) {
+  if (await isRateLimited(req, userId)) {
     return jsonResponse(
       {
         error:
@@ -511,7 +541,7 @@ Deno.serve(async (req: Request) => {
   // surfacing) adaptations. We pull the locale hint from accept-language
   // so first-contact country priors work for unauthenticated callers.
   let nextTSP: TSP | null = null
-  if (body.user_id) {
+  if (userId) {
     const sb = createClient(
       Deno.env.get('SUPABASE_URL')!,
       Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
@@ -521,7 +551,7 @@ Deno.serve(async (req: Request) => {
       const { data: existing } = await sb
         .from('users')
         .select('tsp')
-        .eq('id', body.user_id)
+        .eq('id', userId)
         .maybeSingle()
 
       const latestUserMessage = [...body.messages]
@@ -534,7 +564,7 @@ Deno.serve(async (req: Request) => {
       // Upsert the user row including the new tsp. Fire-and-forget the
       // write — we already have the value for the response.
       sb.from('users')
-        .upsert({ id: body.user_id, lang, tsp: nextTSP }, { onConflict: 'id' })
+        .upsert({ id: userId, lang, tsp: nextTSP }, { onConflict: 'id' })
         .then(({ error }) => {
           if (error) console.error('users upsert failed:', error)
         })
@@ -548,7 +578,7 @@ Deno.serve(async (req: Request) => {
   const lastUser = [...body.messages]
     .reverse()
     .find((m) => m.role === 'user')?.content
-  const crisisInput = `${body.retrieval_query ?? ''} ${lastUser ?? ''}`
+  const crisisInput = `${retrievalQuery} ${lastUser ?? ''}`
   if (detectCrisis(crisisInput)) {
     return jsonResponse({
       text: CRISIS_TEXT[lang],
@@ -567,8 +597,8 @@ Deno.serve(async (req: Request) => {
   //   [2] per-query retrieved teachings (variable)
   let memoryUsed = 0
   let memoryText = ''
-  if (body.user_id) {
-    const summaries = await fetchRecentSummaries(body.user_id, 3)
+  if (userId) {
+    const summaries = await fetchRecentSummaries(userId, 3)
     if (summaries.length > 0) {
       memoryText = formatMemoryBlock(summaries, lang)
       memoryUsed = summaries.length
@@ -576,8 +606,8 @@ Deno.serve(async (req: Request) => {
   }
 
   let matches: Match[] = []
-  if (body.retrieval_query && body.retrieval_query.trim()) {
-    matches = await retrieveTeachings(body.retrieval_query.trim())
+  if (retrievalQuery) {
+    matches = await retrieveTeachings(retrievalQuery)
   }
 
   const systemParam: Array<Record<string, unknown>> = [
@@ -607,8 +637,8 @@ Deno.serve(async (req: Request) => {
       },
       body: JSON.stringify({
         model: CHAT_MODEL,
-        max_tokens: body.max_tokens ?? 350,
-        temperature: body.temperature ?? 0.5,
+        max_tokens: maxTokens,
+        temperature,
         system: systemParam,
         messages: body.messages,
         stream: true,
@@ -640,8 +670,8 @@ Deno.serve(async (req: Request) => {
     },
     body: JSON.stringify({
       model: CHAT_MODEL,
-      max_tokens: body.max_tokens ?? 500,
-      temperature: body.temperature ?? 0.5,
+      max_tokens: maxTokens,
+      temperature,
       system: systemParam,
       messages: body.messages,
     }),

@@ -224,14 +224,23 @@ Deno.serve(async (req: Request) => {
     )
   }
 
-  let body: { text?: string; use_case?: unknown }
+  // Reject oversized bodies before parsing them into memory (same guard as
+  // /chat) — the 5000-char text cap below only runs after a full parse.
+  const contentLength = parseInt(req.headers.get('content-length') || '0', 10)
+  if (contentLength > 1_000_000) {
+    return errorResponse('Request too large', 413)
+  }
+
+  let body: { text?: unknown; use_case?: unknown }
   try {
     body = await req.json()
   } catch {
     return errorResponse('Invalid JSON body')
   }
 
-  const text = body?.text?.trim()
+  // typeof check matters: a non-string `text` (number, object) would throw on
+  // .trim() and surface as an opaque 500 instead of a clean 400.
+  const text = typeof body?.text === 'string' ? body.text.trim() : ''
   if (!text) {
     return errorResponse('Body must include { text: string }')
   }

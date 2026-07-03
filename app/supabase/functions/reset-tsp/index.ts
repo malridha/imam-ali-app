@@ -49,7 +49,10 @@ Deno.serve(async (req) => {
     return jsonResponse({ error: 'Invalid JSON body' }, 400)
   }
 
-  const userId = body.user_id?.trim()
+  // user_id is a client-generated UUID (36 chars) — bound it so arbitrary
+  // multi-KB strings never reach the query layer.
+  const userId =
+    typeof body?.user_id === 'string' && body.user_id.length <= 64 ? body.user_id.trim() : ''
   if (!userId) {
     return jsonResponse({ error: 'user_id required' }, 400)
   }
