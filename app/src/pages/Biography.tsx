@@ -126,6 +126,68 @@ function PerspectivesPanel({ p, lang, isAr }: { p: SectionPerspectives; lang: La
   )
 }
 
+// v53 — "The Deeper Meaning": an interpretive reading placed beneath the body,
+// before the Sunni/Shia panel (narrative → meaning → the two commentaries).
+// Expandable so an already-long section stays scannable; gold-framed to set the
+// analysis apart from the neutral narrative. Same markdown-light **bold** and
+// preserved line breaks as the body.
+function MeaningPanel({ m, lang, isAr }: { m: { en: string; ar: string }; lang: Lang; isAr: boolean }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div style={{ marginTop: 16 }}>
+      <button
+        onClick={() => setOpen((o) => !o)}
+        style={{
+          width: '100%',
+          textAlign: isAr ? 'right' : 'left',
+          padding: '10px 14px',
+          borderRadius: 10,
+          border: '1px solid var(--gold-b)',
+          background: open ? 'rgba(212,179,100,0.12)' : 'rgba(212,179,100,0.06)',
+          color: 'var(--gold)',
+          cursor: 'pointer',
+          fontSize: 12.5,
+          fontWeight: 600,
+          letterSpacing: '0.04em',
+          display: 'flex',
+          alignItems: 'center',
+          gap: 8,
+          fontFamily: isAr ? 'var(--font-arabic)' : undefined,
+        }}
+      >
+        <span style={{ fontSize: 14 }}>◈</span>
+        <span style={{ flex: 1 }}>{isAr ? 'المعنى الأعمق' : 'The Deeper Meaning'}</span>
+        <span style={{ opacity: 0.7 }}>{open ? '▲' : '▾'}</span>
+      </button>
+
+      {open && (
+        <div
+          style={{
+            marginTop: 8,
+            padding: '13px 16px',
+            borderRadius: 10,
+            border: '1px solid var(--gold-b)',
+            background: 'rgba(212,179,100,0.05)',
+            fontSize: 13.5,
+            lineHeight: 1.85,
+            color: 'var(--text)',
+            whiteSpace: 'pre-line',
+            fontFamily: isAr ? 'var(--font-arabic-body)' : undefined,
+          }}
+          // Markdown-light: bold **...** rendered manually, matching the body.
+          dangerouslySetInnerHTML={{
+            __html: m[lang]
+              .replace(/&/g, '&amp;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/\*\*([^*]+)\*\*/g, '<strong style="color: var(--cream)">$1</strong>'),
+          }}
+        />
+      )}
+    </div>
+  )
+}
+
 export default function Biography() {
   const navigate = useNavigate()
   const { lang } = useLang()
@@ -308,6 +370,8 @@ export default function Biography() {
                     .replace(/\*\*([^*]+)\*\*/g, '<strong style="color: var(--cream)">$1</strong>'),
                 }}
               />
+
+              {s.meaning && <MeaningPanel m={s.meaning} lang={lang} isAr={isAr} />}
 
               {s.perspectives && <PerspectivesPanel p={s.perspectives} lang={lang} isAr={isAr} />}
 
