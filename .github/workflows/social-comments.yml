@@ -1,0 +1,41 @@
+name: Social — comment sweep
+
+# Sweeps comments on recent reels, classifies them against social/charter.md, and
+# writes social/review_queue/<date>.md for a human. Auto-replies are OFF by default:
+# only Tier-1 benign appreciation is ever auto-sent, and only when AUTO_REPLY=1.
+# Crisis and red-line comments are never auto-answered — they are flagged for a human.
+
+on:
+  schedule:
+    - cron: "0 */4 * * *"     # every 4 hours
+  workflow_dispatch:
+    inputs:
+      auto_reply:
+        description: "Enable Tier-1 auto acknowledgements"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  comments:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sweep comments
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          AUTO_REPLY: ${{ (github.event_name == 'workflow_dispatch' && inputs.auto_reply) && '1' || '0' }}
+        run: python social/reply_agent.py
+      - name: Commit review queue
+        run: |
+          git config user.name  "ya-imam-ali-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add social/review_queue social/data/replied_ids.json
+          git commit -m "social: comment review queue [skip ci]" || echo "nothing to commit"
+          git push
