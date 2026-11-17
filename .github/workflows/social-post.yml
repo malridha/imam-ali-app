@@ -1,0 +1,44 @@
+name: Social — post next reel
+
+# Publishes the next due reel from social/reels_manifest.json once a day,
+# then commits the updated manifest (posted_media_id) back to the repo.
+
+on:
+  schedule:
+    - cron: "0 17 * * *"      # 17:00 UTC daily — adjust to your best slot
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (validate only, post nothing)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Post next reel
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run) && '1' || '0' }}
+        run: python social/post_reel.py
+      - name: Commit manifest update
+        if: ${{ env.DRY_RUN != '1' }}
+        run: |
+          git config user.name  "ya-imam-ali-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add social/reels_manifest.json
+          git commit -m "social: mark reel posted [skip ci]" || echo "nothing to commit"
+          git push
