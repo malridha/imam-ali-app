@@ -5,7 +5,8 @@ name: Social — post next reel
 
 on:
   schedule:
-    - cron: "0 17 * * *"      # 17:00 UTC daily — adjust to your best slot
+    - cron: "0 8 * * *"       # 08:00 UTC — Arabic reel (morning in the Gulf)
+    - cron: "0 16 * * *"      # 16:00 UTC — English reel (evening). Manifest is ordered AR,EN per theme.
   workflow_dispatch:
     inputs:
       dry_run:
