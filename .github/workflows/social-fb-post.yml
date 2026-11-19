@@ -1,0 +1,45 @@
+name: Social — post next reel to Facebook
+
+# Cross-posts the next due reel from social/reels_manifest.json to the Facebook Page,
+# tracking Facebook separately via fb_posted_id. Runs once a day (and on demand).
+
+on:
+  schedule:
+    - cron: "0 12 * * *"      # 12:00 UTC daily — Facebook slot (between the IG AR/EN slots)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (validate only, post nothing)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-fb-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Post next reel to Facebook
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run) && '1' || '0' }}
+        run: python social/post_fb_reel.py
+      - name: Commit manifest update
+        if: ${{ env.DRY_RUN != '1' }}
+        run: |
+          git config user.name  "ya-imam-ali-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add social/reels_manifest.json
+          git commit -m "social: mark reel fb-posted [skip ci]" || echo "nothing to commit"
+          git push
