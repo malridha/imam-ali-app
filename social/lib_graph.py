@@ -8,9 +8,10 @@ Reads credentials from the environment so nothing secret ever lives in the repo:
 import os, json, time, urllib.parse, urllib.request, urllib.error
 
 GRAPH_VERSION = os.environ.get("GRAPH_VERSION", "v21.0")
-# Instagram API with Instagram Login uses graph.instagram.com (not graph.facebook.com).
-# The IG_USER_ID + system-user token resolve directly here — no Facebook Page token needed.
-BASE = os.environ.get("IG_API_BASE", f"https://graph.instagram.com/{GRAPH_VERSION}")
+# Instagram Content Publishing via the Facebook Graph API (graph.facebook.com).
+# The IG_ACCESS_TOKEN is a Facebook (EAA…) token; publishing posts to
+# graph.facebook.com/{IG_USER_ID}/media where IG_USER_ID is the IG Business account id.
+BASE = os.environ.get("IG_API_BASE", f"https://graph.facebook.com/{GRAPH_VERSION}")
 
 
 def _token():
